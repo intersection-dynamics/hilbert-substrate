@@ -1,3 +1,21 @@
+"""
+EXPERIMENT 08: THE THERMODYNAMICS OF TIME (DERIVED)
+===================================================
+Objective: 
+  Demonstrate that the "Arrow of Time" and "Classical Fact" emerge 
+  naturally from the finite information capacity of the Universe.
+
+Derivation:
+  - We do NOT assume a collapse parameter.
+  - We derive the "Vacuum Noise Limit" (epsilon) from the system size N.
+  - epsilon = sqrt(2 / N)
+  - Any probability amplitude below this noise floor is indistinguishable 
+    from vacuum fluctuations and is "garbage collected" (forgotten).
+
+Hypothesis:
+  - This derived limit will produce a self-regulating "Sawtooth" entropy cycle.
+"""
+
 import sys
 import os
 import numpy as np
@@ -5,7 +23,7 @@ import scipy.sparse as sp
 from scipy.sparse.linalg import expm_multiply
 import matplotlib.pyplot as plt
 
-# Add parent directory to path
+# Path hack to import engine
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 try:
     from engine.substrate import UnifiedSubstrate
@@ -18,126 +36,118 @@ except ImportError:
         print("Error: Could not import engine.substrate. Check your folder structure.")
         sys.exit(1)
 
+def get_shannon_entropy(psi):
+    """Calculates Spatial Shannon Entropy S = -Sum p * log(p)"""
+    # 1. Project to Spatial Probability (Sum spins)
+    prob_full = np.abs(psi)**2
+    prob_spatial = prob_full[0::2] + prob_full[1::2]
+    
+    # 2. Normalize 
+    norm = np.sum(prob_spatial)
+    if norm < 1e-9: return 0.0
+    p = prob_spatial / norm
+    
+    # 3. Calculate Entropy
+    p_safe = p[p > 1e-15] # Avoid log(0)
+    S = -np.sum(p_safe * np.log(p_safe))
+    return S
+
 def run_experiment():
-    print("--- Experiment 08: Memory Resolution & The Emergence of Fact ---")
-    print("Hypothesis: Time is a sequence of memory commits (Coarse-Graining).")
+    print("--- Experiment 08: Derived Memory & Entropy Cycles ---")
     
     # 1. Setup Universe
+    # -----------------
     L = 60
     uni = UnifiedSubstrate(L_size=L)
     uni.build_hamiltonian()
     
-    # Physics Parameters
-    # The 'Grain': The smallest probability the Substrate bothers to remember.
-    MEMORY_GRAIN = 0.02 
+    # 2. THE DERIVATION
+    # -----------------
+    # N_spatial = L^3. 
+    # The vacuum noise floor scales as 1/sqrt(Vol) for coherent states.
+    N_sites = L**3
+    MEMORY_GRAIN = np.sqrt(2.0 / N_sites)
     
-    # 2. Initialize a Fuzzy Superposition
-    # A wavepacket spreading out
+    print(f"  > Universe Size (N): {N_sites} sites")
+    print(f"  > Derived Vacuum Noise Limit (epsilon): {MEMORY_GRAIN:.6f}")
+    print("    (Amplitudes below this are thermodynamically free to be forgotten)")
+    
+    # 3. Initialize Wavepacket
+    # ------------------------
     center = L // 2
-    uni.set_wavepacket(center=[center, L//2, L//2], width=3.0, k_vec=[1.5, 0, 0])
+    uni.set_wavepacket(center=[center, L//2, L//2], width=2.5, k_vec=[1.8, 0, 0])
     
-    # 3. Evolution Loop
-    # We compare "Unitary" (Standard QM) vs "Coarse Grained" (Your Theory)
+    # 4. Evolution Loop
+    # -----------------
+    steps = 80
+    dt = 0.4
     
-    psi_unitary = uni.psi.copy()
-    psi_memory  = uni.psi.copy()
+    psi_sys = uni.psi.copy()
     
-    steps = 60
-    dt = 0.5
+    entropy_history = []
+    density_map = []
     
-    history_unitary = []
-    history_memory = []
-    commit_events = [] # The "Ticks" of time
-    
-    print(f"  > Simulating with Memory Grain threshold: {MEMORY_GRAIN}")
+    print("  > Evolving System...")
     
     for t in range(steps):
-        # A. Standard Unitary Evolution (Infinite Resolution)
-        # ---------------------------------------------------
-        psi_unitary = expm_multiply(-1j * uni.H * dt, psi_unitary)
+        # A. Unitary Step (Dispersion / Possibility Generation)
+        psi_sys = expm_multiply(-1j * uni.H * dt, psi_sys)
         
-        # B. Coarse-Grained Evolution (The Commit)
-        # ----------------------------------------
-        # 1. Evolve potential (Calculation phase)
-        psi_temp = expm_multiply(-1j * uni.H * dt, psi_memory)
+        # B. Measure Entropy (The "Cost" of the state)
+        S_pre = get_shannon_entropy(psi_sys)
         
-        # 2. THE COMMIT (Resolution Event)
-        # Calculate Probability Density (Summing Spin Up + Down)
-        prob_full = np.abs(psi_temp)**2
-        # Collapse spin dimensions to spatial dimension
+        # C. The Memory Commit (Garbage Collection)
+        # -----------------------------------------
+        prob_full = np.abs(psi_sys)**2
         prob_spatial = prob_full[0::2] + prob_full[1::2]
         
-        # Identify "Real" facts vs "Ghost" possibilities
-        # Where is the spatial density high enough to warrant a memory slot?
+        # Check against DERIVED limit
         mask_spatial = prob_spatial > MEMORY_GRAIN
         
-        # "N is counting resolution events"
-        n_events = np.sum(mask_spatial) 
-        commit_events.append(n_events)
-        
-        if n_events > 0:
-            # Commit the Fact: Filter out low-probability sites
-            # We must apply the mask to the FULL spinor (both up and down components)
-            # Create full mask (interleaved)
+        # If the wave has "tails" that are just noise...
+        if np.sum(mask_spatial) > 0:
+            # Apply Filter to full spinor
             mask_full = np.zeros_like(prob_full, dtype=bool)
             mask_full[0::2] = mask_spatial
             mask_full[1::2] = mask_spatial
             
-            psi_temp[~mask_full] = 0.0
+            # Forget the noise
+            psi_sys[~mask_full] = 0.0
             
-            # Re-Normalize (The Substrate commits to this new reality)
-            norm = np.linalg.norm(psi_temp)
+            # Re-Normalize (Commit to Fact)
+            norm = np.linalg.norm(psi_sys)
             if norm > 1e-9:
-                psi_memory = psi_temp / norm
-            else:
-                psi_memory = psi_temp # Should not happen if n_events > 0
-        else:
-            # Wave has spread too thin to be real!
-            pass
+                psi_sys /= norm
             
-        # Store for Viz
-        # Project 3D -> 1D density
+        # D. Store Data
+        entropy_history.append(S_pre)
         
-        # Unitary History
-        p_u_full = np.abs(psi_unitary)**2
-        p_u_spatial = p_u_full[0::2] + p_u_full[1::2]
-        # Sum over Y and Z to get 1D profile along X
-        p_u_1d = np.sum(p_u_spatial.reshape(L,L,L), axis=(1,2))
-        history_unitary.append(p_u_1d)
-        
-        # Memory History
-        p_m_full = np.abs(psi_memory)**2
-        p_m_spatial = p_m_full[0::2] + p_m_full[1::2]
-        p_m_1d = np.sum(p_m_spatial.reshape(L,L,L), axis=(1,2))
-        history_memory.append(p_m_1d)
+        # Save 1D projection for visualization
+        p_viz_spatial = np.abs(psi_sys)**2
+        p_viz_spatial = p_viz_spatial[0::2] + p_viz_spatial[1::2]
+        p_1d = np.sum(p_viz_spatial.reshape(L,L,L), axis=(1,2))
+        density_map.append(p_1d)
 
-    # 4. Visualization
+    # 5. Visualization
     # ----------------
-    fig = plt.figure(figsize=(10, 8))
+    fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(10, 8), sharex=True)
     
-    # Plot 1: Standard QM (The Cloud)
-    ax1 = fig.add_subplot(2, 2, 1)
-    ax1.imshow(history_unitary, aspect='auto', origin='lower', cmap='Blues')
-    ax1.set_title("Standard Unitary Physics\n(Infinite Memory / No Collapse)")
-    ax1.set_ylabel("Time Steps")
-    ax1.set_xlabel("Space")
+    # Plot 1: The Emergent Classical Trajectory
+    ax1.imshow(np.array(density_map).T, aspect='auto', origin='lower', cmap='inferno')
+    ax1.set_ylabel("Space (X)")
+    ax1.set_title(f"Emergent Trajectory (Derived Grain $\epsilon$={MEMORY_GRAIN:.5f})")
     
-    # Plot 2: Substrate Memory (The Trajectory)
-    ax2 = fig.add_subplot(2, 2, 2)
-    ax2.imshow(history_memory, aspect='auto', origin='lower', cmap='Reds')
-    ax2.set_title(f"Coarse-Grained Physics\n(Grain={MEMORY_GRAIN}: Facts Only)")
-    ax2.set_xlabel("Space")
+    # Plot 2: The Thermodynamic Heartbeat
+    ax2.plot(entropy_history, 'b-o', linewidth=2, label="Spatial Entropy (S)")
     
-    # Plot 3: The "Ticks" of Time
-    ax3 = fig.add_subplot(2, 1, 2)
-    ax3.plot(commit_events, 'k-o', linewidth=2)
-    ax3.set_title("Resolution Events ('N') per Time Step")
-    ax3.set_ylabel("Number of Commited Facts (N)")
-    ax3.set_xlabel("Time Step")
-    ax3.grid(True, alpha=0.3)
+    ax2.set_ylabel("Shannon Entropy (Uncertainty)")
+    ax2.set_xlabel("Time Step")
+    ax2.set_title("The Thermodynamics of Time: Information Generation vs. Erasure")
+    ax2.grid(True, alpha=0.3)
+    ax2.legend()
     
     plt.tight_layout()
-    output_file = "08_memory_commit.png"
+    output_file = "08_derived_memory.png"
     plt.savefig(output_file)
     print(f"  > Result saved to {output_file}")
 
