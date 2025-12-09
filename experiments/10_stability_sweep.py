@@ -1,155 +1,108 @@
-"""
-EXPERIMENT 10: THE BASIN OF STABILITY (PARAMETER SWEEP)
-=======================================================
-Objective: 
-  Map the Phase Diagram of the Substrate.
-  Identify the "Goldilocks Zone" where stable matter (bound states) emerges.
-
-Axes:
-  X: Gauge Stiffness (Electric Cost 'g')
-  Y: Monopole Strength (Charge 'Q')
-  Color: Binding Energy (E_vacuum - E_ground)
-
-Hypothesis:
-  - We expect a stable "continent" in the center.
-  - Low g = "Melting Phase" (No binding).
-  - High g = "Freezing Phase" (Deep confinement).
-"""
-
-import sys
-import os
 import numpy as np
 import scipy.sparse as sp
 from scipy.sparse.linalg import eigsh
 import matplotlib.pyplot as plt
+import time
 
-# Path hack
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-try:
-    from engine.substrate import UnifiedSubstrate
-except ImportError:
-    # Fallback
-    sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../engine')))
-    try:
-        from substrate import UnifiedSubstrate
-    except ImportError:
-        print("Error: Could not import engine.")
-        sys.exit(1)
-
-def run_experiment():
-    print("--- Experiment 10: Stability Parameter Sweep ---")
+def run_sweep():
+    print("--- EXPERIMENT 10 REVISITED: The Geometry of Trapping ---")
+    print("Mapping the stability of Topological Knots (Solitons).")
     
     # 1. Configuration
-    # We use a smaller universe for the sweep to keep it fast
-    L_SWEEP = 7 
-    RESOLUTION = 15 # 15x15 grid = 225 simulations
+    L = 15
+    N = L**3
+    res = 20
     
-    g_vals = np.linspace(0.1, 5.0, RESOLUTION)    # Gauge Stiffness
-    q_vals = np.linspace(0.5, 10.0, RESOLUTION)   # Monopole Charge
+    # Sweep Parameters
+    # g_peak: From Vacuum (1.0) to Strong Knot (5.0)
+    g_vals = np.linspace(1.0, 5.0, res)
+    # sigma: From Point Defect (0.5) to Large Blob (3.0)
+    sigma_vals = np.linspace(0.5, 3.5, res)
     
-    phase_diagram = np.zeros((RESOLUTION, RESOLUTION))
+    phase_map = np.zeros((res, res))
     
-    print(f"  > Sweeping {RESOLUTION}x{RESOLUTION} points (Total: {RESOLUTION**2} universes)...")
+    # Pre-compute indices for speed
+    c = L // 2
+    x, y, z = np.indices((L, L, L))
+    r_sq = (x - c)**2 + (y - c)**2 + (z - c)**2
     
-    # 2. The Sweep Loop
-    for i, g in enumerate(g_vals):
-        for j, q in enumerate(q_vals):
-            # Progress indicator
-            if j == 0:
-                print(f"    Processing Column i={i+1}/{RESOLUTION} (g={g:.2f})...")
+    # 2. The Sweep
+    print(f"Sweeping {res}x{res} geometries...")
+    start_time = time.time()
+    
+    for i, sigma in enumerate(sigma_vals):
+        # Pre-calculate Gaussian shape for this radius
+        # Shape: 0 at inf, 1 at center (normalized later)
+        gaussian_shape = np.exp(-r_sq / (2 * sigma**2))
+        
+        for j, g_peak in enumerate(g_vals):
+            # A. Construct Geometry
+            # g(r) = 1.0 + (g_peak - 1.0) * Gaussian(r)
+            g_map = 1.0 + (g_peak - 1.0) * gaussian_shape
             
-            # A. Initialize Universe
-            uni = UnifiedSubstrate(L_size=L_SWEEP)
+            # B. Build Hamiltonian (Broken Symmetry Logic)
+            g_flat = g_map.flatten()
+            shifts = [1, -1, L, -L, L**2, -L**2]
+            diagonals = []
+            offsets = []
             
-            # B. Hack Parameters (Inject custom physics)
-            # We override the class constants for this instance
-            # Note: In a real engine, these would be init params.
-            # We assume the build_hamiltonian uses a parameter we can set.
-            # Since our engine usually hardcodes them, we might need to
-            # adjust the engine class or just manually scale the defect.
+            for shift in shifts:
+                g_shifted = np.roll(g_flat, -shift)
+                # Hopping scales with Connectivity
+                bond_strength = -0.5 * (g_flat + g_shifted)
+                diagonals.append(bond_strength)
+                offsets.append(shift)
             
-            # Inject Defect with specific Charge Q
-            uni.inject_defect(strength=q)
+            T_off_diag = sp.diags(diagonals, offsets, shape=(N, N))
             
-            # C. Build Hamiltonian with specific Stiffness g
-            # We need to manually control the "Electric Cost" in the builder.
-            # If the engine doesn't support it, we simulate it by scaling the potential.
-            # Potential V ~ Cost * Flux^2.
-            # So scaling the defect strength effectively scales the interaction energy?
-            # Actually, let's look at how we implemented Exp 03.
-            # We treat 'g' as the pre-factor for the link energy.
-            # Since UnifiedSubstrate might not expose 'g', we will assume 
-            # modifying the potential map directly is the equivalent.
-            # V_eff = g * V_raw
+            # Fixed Site Energy (Vacuum Level)
+            # This is the "Broken Symmetry" that creates the trap
+            H_diagonal = sp.diags(np.full(N, 6.0), 0)
             
-            # We assume uni.potential contains the geometric costs.
-            # We scale it by 'g'.
-            uni.build_hamiltonian() # Builds standard H
+            H = H_diagonal + T_off_diag
             
-            # Modify the Diagonal (Potential) by factor 'g'
-            # The Hamiltonian is T + V. 
-            # T (Hopping) is fixed at 1.0. 
-            # V (Geometry) scales with 'g'.
-            
-            # We extract the diagonal, scale it, and rebuild H
-            diag = uni.H.diagonal()
-            # Identify potential part (non-zero elements usually)
-            # Or better: we assume the 'defect' created a potential well.
-            # Let's just scale the *entire* diagonal (Mass + Potential).
-            # This is a good proxy for "Gauge Stiffness".
-            
-            new_diag = diag * g
-            
-            # Reconstruct Sparse Matrix with new diagonal
-            H_new = sp.diags(new_diag) + sp.triu(uni.H, k=1) + sp.tril(uni.H, k=-1)
-            
-            # D. Solve for Eigenstates
-            # We look for the Binding Energy (Gap between vacuum and ground)
-            # Vacuum energy ~ 0 (or low). Ground state < 0.
-            # Deep negative energy = Tightly Bound.
+            # C. Solve for Ground State
             try:
-                # We need the lowest algebraic value (SA = Smallest Algebraic)
-                vals, _ = eigsh(H_new, k=1, which='SA')
+                # We want the lowest algebraic eigenvalue (SA)
+                vals, _ = eigsh(H, k=1, which='SA')
                 E_ground = vals[0]
                 
-                # Binding Energy is roughly magnitude of negative energy
-                # If E_ground > 0, it's unbound (or just vacuum fluctuations).
-                # We store -E_ground to make "Stability" positive.
-                if E_ground < -0.1:
-                    binding_energy = -E_ground
+                # In this model, Vacuum Energy ~ 0.
+                # Bound states have E < 0.
+                # We store magnitude of binding.
+                if E_ground < -0.01:
+                    phase_map[i, j] = -E_ground
                 else:
-                    binding_energy = 0.0 # Unbound / Melted
-                    
-                phase_diagram[j, i] = binding_energy
-                
+                    phase_map[i, j] = 0.0 # Unbound
             except:
-                phase_diagram[j, i] = 0.0 # Numerical failure = Unstable
+                phase_map[i, j] = 0.0
+
+    print(f"Sweep complete in {time.time() - start_time:.1f}s.")
 
     # 3. Visualization
-    print("  > Plotting Phase Diagram...")
-    
     plt.figure(figsize=(10, 8))
     
-    # Heatmap
-    # X axis = g (Stiffness), Y axis = Q (Charge)
-    plt.imshow(phase_diagram, origin='lower', aspect='auto', cmap='magma',
-               extent=[g_vals.min(), g_vals.max(), q_vals.min(), q_vals.max()])
+    # Plot Heatmap
+    # X = g_peak, Y = sigma
+    plt.imshow(phase_map, origin='lower', aspect='auto', cmap='magma',
+               extent=[g_vals.min(), g_vals.max(), sigma_vals.min(), sigma_vals.max()])
     
     cbar = plt.colorbar()
     cbar.set_label("Binding Energy (Stability)")
     
-    plt.xlabel("Gauge Stiffness (g)")
-    plt.ylabel("Monopole Charge (Q)")
-    plt.title("The Basin of Stability: Phase Diagram of the Substrate")
+    plt.xlabel("Peak Connectivity ($g_{max}$)")
+    plt.ylabel("Knot Radius ($\sigma$)")
+    plt.title("Phase Diagram of Topological Matter")
     
-    # Annotate Regions
-    plt.text(0.5, 9.0, "Freezing Phase\n(Deep Potential)", color='white', ha='center')
-    plt.text(4.0, 1.0, "Melting Phase\n(No Binding)", color='white', ha='center')
-    plt.text(2.5, 5.0, "Goldilocks Zone\n(Stable Atoms)", color='white', ha='center', weight='bold')
+    # Annotate
+    plt.text(2.0, 3.0, "Stable Solitons", color='white', ha='center', weight='bold')
+    plt.text(1.5, 0.8, "Vacuum / Unbound", color='white', ha='center')
     
-    output_file = "10_stability_basin.png"
-    plt.savefig(output_file)
-    print(f"  > Result saved to {output_file}")
+    # Mark Experiment 14 Result (Approx g=4.6, sigma~1.5)
+    plt.plot(4.6, 1.5, 'gx', markersize=12, markeredgewidth=3, label="Exp 14 Result")
+    plt.legend()
+    
+    plt.show()
 
 if __name__ == "__main__":
-    run_experiment()
+    run_sweep()
