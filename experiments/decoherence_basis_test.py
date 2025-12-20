@@ -11,7 +11,7 @@ def run_experiment_3():
     print("="*60)
     
     # --- CONFIGURATION ---
-    N = 4                   # System size (qubits)
+    N = 3                   # System size (qubits)
     dim_sys = 2**N
     coupling_strength = 5.0 # Strong system-environment coupling
     
