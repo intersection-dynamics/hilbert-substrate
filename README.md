@@ -1,134 +1,172 @@
-# Finite-Memory Unitary Lattice Simulations
+# The Hilbert Substrate Framework
 
-**Investigating emergent decoherence in unitary quantum systems under information-theoretic constraints.**
+**Emergent Spacetime from Quantum Information Geometry**
 
-![Build Status](https://img.shields.io/badge/status-experimental-orange.svg) ![License](https://img.shields.io/badge/license-MIT-blue.svg) ![Python](https://img.shields.io/badge/python-3.8+-yellow.svg)
+Benjamin August Bray  
+Independent Researcher  
+December 2025
 
-## The Core Result: Parameter-Free Decoherence
+---
 
-This repository contains numerical experiments testing the hypothesis that **wavefunction collapse** can be modeled as a "memory commit" event in a finite-resource unitary system.
+## Overview
 
-Our primary finding (Experiment 08) demonstrates that imposing a *derived* information density limit on a unitary lattice induces a **sawtooth entropy cycle**, effectively reproducing classical trajectories from quantum dispersion without external noise or arbitrary collapse parameters.
+This repository contains the numerical experiments supporting the paper *The Hilbert Substrate Framework: Emergent Spacetime from Quantum Information Geometry*.
 
-The key insight: the vacuum noise floor of a finite lattice scales as
+We demonstrate that classical spacetime structure emerges from purely quantum-mechanical principles through two competing selection mechanisms:
 
-$$\varepsilon = \sqrt{\frac{2}{N}}$$
+1. **Dynamical Simplicity** — The Hamiltonian selects a factorization minimizing locality cost, yielding collective modes (harmonions)
+2. **Observational Stability** — Environmental decoherence selects a pointer basis, yielding spatial structure
 
-where $N$ is the number of lattice sites. Probability amplitudes below this threshold are thermodynamically indistinguishable from vacuum fluctuations. This is not a tunable parameter—it follows from system size.
+The central result: **Space is not fundamental. Space is what survives when the substrate observes itself.**
 
-![Sawtooth Entropy](experiments/08_derived_memory.png)
+---
 
-*Fig 1: Shannon entropy of a wavepacket on a 60³ lattice. The sawtooth pattern represents cycles of unitary dispersion (entropy rise) followed by memory commit events (entropy drop) when low-density tails fall below the vacuum noise floor.*
-
-## Key Experiments
-
-| Experiment | Script | Result |
-|------------|--------|--------|
-| Memory Commit | `08_memory_commit.py` | Classical trajectories emerge from derived ε = √(2/N) |
-| Fermionic Statistics | `02_derive_fermions.py` | Exact −1 phase shift from SU(2) holonomy |
-| Causal Bounds | `01_emergent_space.py` | Lieb-Robinson bound yields effective c |
-| Topological Atom | `05_topological_atom.py` | Hydrogen-like orbitals from monopole defects |
-| Light-Matter Coupling | `06_qed_laser.py` | Vacuum Rabi oscillations |
-| Bell Test | `09_chsh_violation.py` | S = 2.8284 (Tsirelson bound, exact) |
-| Stability Basin | `10_stability_basin.py` | Phase diagram shows narrow window for stable atoms |
-
-### Quantitative Results
-
-| Phenomenon | Result | Target | Status |
-|------------|--------|--------|--------|
-| CHSH Bell Parameter | 2.8284 | 2√2 | **Exact** |
-| Fermion Exchange Phase | −1.0000 | −1 | **Exact** |
-| Memory Grain ε | 0.00304 | √(2/N) | **Derived** |
-| Stability Window | Q ∈ [5, 7] | — | **Discovered** |
-
-## Quick Start
-
-Requires Python 3.8+ and standard scientific libraries.
-
-```bash
-# Clone the repository
-git clone https://github.com/intersection-dynamics/hilbert-substrate.git
-cd hilbert-substrate
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Run the core memory experiment
-python experiments/08_memory_commit.py
-```
-
-**Requirements:** `numpy`, `scipy`, `matplotlib`
-
-## The Memory Commit Mechanism
-
-The central experiment (`08_memory_commit.py`) works as follows:
-
-1. Initialize a Gaussian wavepacket on a 3D lattice
-2. Evolve unitarily via sparse Hamiltonian exponentiation
-3. At each timestep, prune amplitudes where |ψ|² < ε
-4. Renormalize and continue
-
-The system self-regulates. Instead of spreading indefinitely (pure unitary dispersion), the wavepacket maintains a coherent, localized trajectory. The entropy oscillates in a characteristic sawtooth pattern:
-
-- **Rise:** Unitary evolution disperses the wavepacket, increasing spatial entropy
-- **Drop:** Memory commit prunes sub-threshold tails, decreasing entropy
-
-This cycle continues without external intervention. Classical behavior emerges from quantum dynamics plus finite information capacity.
-
-## Project Structure
+## Requirements
 
 ```
-hilbert-substrate/
-├── engine/
-│   └── substrate.py          # Core lattice simulation class
-├── experiments/
-│   ├── 01_emergent_space.py  # Lieb-Robinson bound
-│   ├── 02_derive_fermions.py # Exchange statistics
-│   ├── 05_topological_atom.py# Atomic orbitals
-│   ├── 06_qed_laser.py       # Rabi oscillations
-│   ├── 08_memory_commit.py   # Core decoherence result
-│   ├── 09_chsh_violation.py  # Bell test
-│   └── 10_stability_basin.py # Phase diagram
-├── demos/
-│   └── universality_test.py  # CZ gate implementation
+numpy>=1.20.0
+scipy>=1.7.0
+```
+
+---
+
+## Experiments
+
+### Experiment 1: The Humpty Dumpty Test
+
+**Script:** `experiments/reconstruction_and_analysis.py`
+
+Scramble a local Hamiltonian with a random unitary, then recover the optimal factorization by minimizing locality cost.
+
+```
+python experiments/reconstruction_and_analysis.py
+```
+
+**Output:**
+```
+--- TARGET (Original Chain) Interaction Matrix ---
+   Q0  Q1  Q2
+Q0  -  **3.0 .
+Q1 **3.0 -  **3.0
+Q2  .  **3.0 -
+
+--- SCRAMBLED (Hidden Geometry) Interaction Matrix ---
+   Q0  Q1  Q2
+Q0  -  **9.9**8.2
+Q1 **9.9 -  **8.8
+Q2 **8.2**8.8 -
+
+--- RECOVERED (Emergent Geometry) Interaction Matrix ---
+   Q0  Q1  Q2
+Q0  -  **1.1**1.1
+Q1 **1.1 -  **2.8
+Q2 **1.1**2.8 -
+
+Original Cost:  16.0000
+Scrambled Cost: 37.9110
+Recovered Cost: 4.7500
+```
+
+**Result:** The optimizer finds a basis with *lower* locality cost than the original spatial representation. It discovered the quasiparticle (harmonion) basis.
+
+---
+
+### Experiment 2: Basis Structure Analysis
+
+**Script:** `experiments/analyze_recovered_unitary.py`
+
+Examine what the recovered basis vectors look like in the original spatial frame.
+
+```
+python experiments/analyze_recovered_unitary.py
+```
+
+**Output:**
+```
+--- BASIS ANALYSIS ---
+Mapping: Basis State (Rec) -> State Vector (Target/Site Frame)
+
+|110_rec>  =>  0.79*|111>
+|001_rec>  =>  0.70*|000> + tails
+Others     =>  Delocalized magnon superpositions
+```
+
+**Result:** The vacuum state |111⟩ (ferromagnetic eigenstate) is preserved with 79% fidelity. Other basis vectors correspond to collective excitations (magnons). The optimizer found the quasiparticle basis.
+
+---
+
+### Experiment 3: The Battle of the Bases
+
+**Script:** `experiments/decoherence_basis_test.py`
+
+Couple both spatial and harmonion states to an environment and track decoherence.
+
+```
+python experiments/decoherence_basis_test.py
+```
+
+**Output:**
+```
+    Results: Purity vs Time
+    Time   | Purity (Spatial)   | Purity (Harmonion)
+    --------------------------------------------------
+    0.00   | 1.0000             | 1.0000
+    0.10   | 0.9748             | 0.3063
+    0.20   | 0.8745             | 0.2352
+    0.50   | 0.6260             | 0.2098
+
+    CONCLUSION: CONFIRMED.
+    The Spatial basis survived. The Harmonion basis was destroyed.
+    Space is the 'Pointer Basis' selected by the environment.
+```
+
+**Result:** The harmonion basis, despite being dynamically optimal (lower locality cost), is fragile under decoherence. The spatial basis survives. Environmental monitoring selects for spatial structure.
+
+---
+
+## The Core Result
+
+| Principle | Selection Criterion | Produces |
+|-----------|---------------------|----------|
+| Dynamical Simplicity | Minimize locality cost | Harmonion basis |
+| Observational Stability | Survive decoherence | Spatial basis |
+
+The substrate wants to be harmonions.  
+The environment forces it to be spatial.  
+**Reality is the compromise.**
+
+---
+
+## Repository Structure
+
+```
+hilbert_substrate/
+├── README.md
 ├── requirements.txt
-└── README.md
+├── The_Hilbert_Substrate_Framework.pdf
+├── experiments/
+│   ├── humpty_dumpty.py              # Basic locality cost test
+│   ├── reconstruction_and_analysis.py # Geometry recovery + analysis
+│   ├── analyze_recovered_unitary.py   # Basis structure examination
+│   └── decoherence_basis_test.py      # Battle of the Bases
 ```
 
-## Theoretical Context
-
-This work relates to several active research programs:
-
-- **Objective Collapse Models (GRW, Penrose-Diósi):** These postulate collapse parameters. We derive ε from system size.
-- **Loop Quantum Gravity:** Shares SU(2) spin-network structure. We prioritize computational tractability.
-- **Tensor Networks:** Shares geometry-entanglement connection. We focus on dynamics rather than ground states.
-
-The novel contribution is demonstrating that a *derived* (not postulated) information limit can induce decoherence-like behavior in a purely unitary system.
-
-## Limitations
-
-This is exploratory numerical work, not a complete theory. Known limitations:
-
-- Lattice artifacts at high momentum (Lorentz violation at k → π/a)
-- No continuum limit proof
-- Collapse mechanism is phenomenological, not derived from first principles
-- Stability basin boundaries not yet mapped to physical constants
-
-## License
-
-MIT License. See [LICENSE](LICENSE) for details.
+---
 
 ## Citation
 
 ```bibtex
-@software{bray2025finitemem,
-  author = {Bray, Ben},
-  title = {Finite-Memory Unitary Lattice Simulations},
-  year = {2025},
-  url = {https://github.com/intersection-dynamics/hilbert-substrate}
+@article{bray2025substrate,
+  title={The Hilbert Substrate Framework: Emergent Spacetime 
+         from Quantum Information Geometry},
+  author={Bray, Benjamin August},
+  year={2025}
 }
 ```
 
 ---
 
-*Independent research project. Contact: [your email if desired]*
+## Contact
+
+Benjamin August Bray  
+sjbbray@gmail.com
