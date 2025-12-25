@@ -1,0 +1,69 @@
+{
+  "run": {
+    "timestamp": "20251225_043322",
+    "backend": "cupy",
+    "args": {
+      "device": "cuda",
+      "N": 10,
+      "graph": "random_regular",
+      "deg": 3,
+      "p": 0.2,
+      "ham": "random_2local",
+      "times": "0.2,0.5,1.0,2.0",
+      "samples": 24,
+      "ops": 24,
+      "seed": 0,
+      "trials": 1,
+      "topk": 3,
+      "symmetry_break": true,
+      "permutation_null": true,
+      "plots": true
+    }
+  },
+  "aggregate": {
+    "times": [
+      0.2,
+      0.5,
+      1.0,
+      2.0
+    ],
+    "mean_HIP": [
+      9.226253529292029e-05,
+      0.0006839515345760349,
+      0.001861126241397929,
+      0.004007243280156393
+    ],
+    "mean_edge_perm": [
+      0.10969942047676357,
+      0.25911824907153824,
+      0.4297107574384174,
+      0.4517396702614675
+    ],
+    "mean_rank_spearman_to_t0": [
+      1.0,
+      0.9030303030303031,
+      0.8303030303030303,
+      0.5515151515151515
+    ],
+    "mean_topk_overlap_to_t0": [
+      1.0,
+      0.6666666666666666,
+      0.6666666666666666,
+      0.3333333333333333
+    ]
+  },
+  "trials": [
+    {
+      "graph_type": "random_regular",
+      "ham_type": "random_2local",
+      "N": 10,
+      "samples": 24,
+      "ops": 24,
+      "seed": 0,
+      "deg": 3,
+      "p": 0.2,
+      "symmetry_break": true,
+      "permutation_null": true
+    }
+  ]
+}
