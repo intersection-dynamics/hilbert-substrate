@@ -5,50 +5,39 @@ r"""
 HSF Constraint-Separation Refolding Suite (random sparse target)
 ===============================================================
 
-What you asked for:
-- NO required output path argument.
-- By default, it writes output into the SAME FOLDER this script lives in.
-  (Specifically: ./REFOLD_SEP_SPARSE_<timestamp>/ next to this .py file)
+Default output:
+- Writes into a folder NEXT TO this script:
+    ./REFOLD_SEP_SPARSE_<timestamp>/
 
 Goal: Constraint separation test between:
-  - no-signaling (local gate dynamics; locality-only objective), and
-  - no-refolding (preserve existing matter structure while attempting to refold geometry).
+  - no-signaling: local gate dynamics; locality-only objective
+  - no-refolding: preserve existing matter structure while attempting to refold geometry
 
-We attempt to "refold" a Hamiltonian that is local on a SOURCE geometry A (1D ring)
-into being local on a TARGET geometry B (random sparse graph),
-using ONLY adjacent 2-qubit local gates (so no-signaling is always respected).
+We start with a SOURCE geometry A = ring on N sites.
+We generate TARGET geometry B = random sparse graph on N nodes.
+We attempt to make H local on B using ONLY adjacent 2-qubit gates (local dynamics).
 
 Two regimes per seed:
-  1) free:          minimize leak_B(H)                        (no-refolding OFF)
-  2) no_refolding:  minimize leak_B(H) w/ anchor constraint   (no-refolding ON)
+  1) free:          minimize leak_B(H)
+  2) no_refolding:  minimize leak_B(H) subject to an anchor constraint (matter preserved)
 
-If (1) succeeds but (2) stalls, no-refolding is independent of no-signaling.
+IMPORTANT FIX (2026-01-08):
+- Matter anchor extraction now uses properly normalized Hilbert–Schmidt projection:
+    coeff = Tr(O† H) / Tr(O† O)
+  NOT / d. The old normalization caused a constant 0.25 anchor artifact.
 
-Outputs (streaming):
+Outputs:
   <script_dir>/REFOLD_SEP_SPARSE_<timestamp>/
     manifest.json
     baseline.json
     targets.jsonl
-    runs/
-      runs.jsonl
+    runs/runs.jsonl
     summary.json
     REPORT.md
 
-Windows examples (single-line):
-  python hsf_refolding_separation_sparse.py --N 8 --seeds 12 --steps 2500 --cost-every 5 --anchor-min 0.85 --progress
-  python hsf_refolding_separation_sparse.py --out ".\my_output_folder" --N 8 --seeds 20 --hard-anchor --anchor source_hop --anchor-min 0.90 --progress
-
-Notes:
-- "Matter" model: free-fermion hopping Hamiltonian on the ring, built via Jordan–Wigner.
-- "Anchor" measures (matter preservation):
-    quadratic_fraction: how quadratic (hopping-like) the Hamiltonian remains
-    source_hopping_ratio: how much hopping amplitude stays on SOURCE edges
-    min_both: min(quadratic_fraction, source_hopping_ratio)
-
-Speed:
-- Uses a fast locality proxy (projection onto on-site + 2-body Pauli terms on a given edge set):
-    leak ≈ 1 - ||P_local(H)||^2 / ||H||^2
-- Avoids full 4^N Pauli enumeration.
+Windows examples:
+  python hsf_refolding_separation_sparse.py --N 8 --seeds 12 --steps 2500 --cost-every 5 --progress
+  python hsf_refolding_separation_sparse.py --N 8 --seeds 12 --steps 2500 --cost-every 5 --anchor quadratic --anchor-min 0.98 --hard-anchor --progress
 """
 
 from __future__ import annotations
@@ -67,7 +56,7 @@ import numpy as np
 
 
 # -------------------------
-# IO helpers (streaming)
+# IO helpers
 # -------------------------
 
 def now_utc_iso() -> str:
@@ -128,9 +117,6 @@ def two_site_term(opA: np.ndarray, opB: np.ndarray, N: int, i: int, j: int) -> n
     return kron_all(mats)
 
 def embed_two_qubit_gate_adjacent(U2: np.ndarray, N: int, i: int) -> np.ndarray:
-    """
-    Embed a 4x4 gate U2 onto adjacent qubits (i, i+1) in an N-qubit Hilbert space.
-    """
     assert 0 <= i < N - 1
     out = None
     q = 0
@@ -145,7 +131,7 @@ def embed_two_qubit_gate_adjacent(U2: np.ndarray, N: int, i: int) -> np.ndarray:
 
 
 # -------------------------
-# Random unitaries (local gates)
+# Local gates
 # -------------------------
 
 def hermitian_rand(dim: int, rng: np.random.Generator) -> np.ndarray:
@@ -159,7 +145,7 @@ def unitary_from_hermitian(h: np.ndarray, t: float) -> np.ndarray:
 
 
 # -------------------------
-# Graphs / geometries
+# Graphs
 # -------------------------
 
 def ring_edges(N: int) -> List[Tuple[int, int]]:
@@ -175,9 +161,6 @@ def edge_set_undirected(edges: List[Tuple[int, int]]) -> List[Tuple[int, int]]:
     return sorted(s)
 
 def random_sparse_edges(N: int, M: int, rng: np.random.Generator, force_connected: bool = True) -> List[Tuple[int,int]]:
-    """
-    Random undirected graph with M edges. Optionally force connected by seeding a random spanning tree first.
-    """
     if force_connected and N > 1 and M < (N - 1):
         raise ValueError(f"M={M} too small to force connectivity on N={N} (need at least N-1).")
 
@@ -218,7 +201,7 @@ def degree_stats(N: int, edges: List[Tuple[int,int]]) -> Dict[str, float]:
 
 
 # -------------------------
-# Locality proxy (fast)
+# Fast locality proxy
 # -------------------------
 
 @dataclass
@@ -227,10 +210,6 @@ class LocalBasis:
     tags: List[str]
 
 def build_local_basis_from_edges(N: int, edges: List[Tuple[int,int]]) -> LocalBasis:
-    """
-    Local basis = onsite {X,Y,Z} on each qubit + 2-body Pauli products on each edge.
-    Basis size ~ 3N + 9|E|.
-    """
     ops: List[np.ndarray] = []
     tags: List[str] = []
 
@@ -252,9 +231,6 @@ def frob2(H: np.ndarray) -> float:
     return float(np.vdot(H, H).real)
 
 def proj_local_norm2(H: np.ndarray, basis: LocalBasis, N: int) -> float:
-    """
-    Uses orthonormality up to scale: sum |Tr(P^† H)|^2 / d
-    """
     d = 2 ** N
     acc = 0.0
     for P in basis.ops:
@@ -275,9 +251,6 @@ def locality_proxy(H: np.ndarray, basis: LocalBasis, N: int) -> Tuple[float, flo
 # -------------------------
 
 def jordan_wigner_ops(N: int) -> Tuple[List[np.ndarray], List[np.ndarray]]:
-    """
-    Returns (c_create, c_destroy) for N sites under standard ordering 0..N-1.
-    """
     b_create  = np.array([[0,0],[1,0]], dtype=np.complex128)   # |1><0|
     b_destroy = np.array([[0,1],[0,0]], dtype=np.complex128)   # |0><1|
 
@@ -296,43 +269,40 @@ def jordan_wigner_ops(N: int) -> Tuple[List[np.ndarray], List[np.ndarray]]:
                 ops_c.append(I2); ops_d.append(I2)
         c_create.append(kron_all(ops_c))
         c_destroy.append(kron_all(ops_d))
-
     return c_create, c_destroy
 
 def free_fermion_hopping_H(N: int, edges: List[Tuple[int,int]], t_hop: float) -> np.ndarray:
-    """
-    H = -t Σ_{<i,j>} (c†_i c_j + c†_j c_i)
-    """
     c_create, c_destroy = jordan_wigner_ops(N)
     dim = 2 ** N
     H = np.zeros((dim, dim), dtype=np.complex128)
     for (i, j) in edge_set_undirected(edges):
         H -= float(t_hop) * (c_create[i] @ c_destroy[j] + c_create[j] @ c_destroy[i])
-    H = (H + H.conj().T) / 2.0
-    return H
+    return (H + H.conj().T) / 2.0
 
 def hopping_matrix_from_H(H: np.ndarray, N: int) -> np.ndarray:
     """
-    t_ij = Tr(H c†_i c_j)/d
+    FIXED: Proper normalized Hilbert–Schmidt projection coefficients.
+      t_ij = Tr( (c†_i c_j)† H ) / Tr( (c†_i c_j)† (c†_i c_j) )
     """
     c_create, c_destroy = jordan_wigner_ops(N)
-    d = 2 ** N
     tmat = np.zeros((N, N), dtype=np.complex128)
+
     for i in range(N):
         for j in range(N):
             op = c_create[i] @ c_destroy[j]
-            tmat[i, j] = np.trace(H @ op) / d
+            num = np.trace(op.conj().T @ H)
+            den = np.trace(op.conj().T @ op)
+            denr = float(np.real(den))
+            if denr < 1e-18:
+                tmat[i, j] = 0.0
+            else:
+                tmat[i, j] = num / den
     return tmat
 
 def matter_anchor_metrics(H: np.ndarray, N: int, source_edges: List[Tuple[int,int]]) -> Dict[str, float]:
-    """
-    Matter anchor (cheap, operational):
-      - quadratic_fraction: how well H is approximated by quadratic hopping terms c†_i c_j
-      - source_hopping_ratio: fraction of hopping amplitude on SOURCE edge set
-    """
     tmat = hopping_matrix_from_H(H, N)
 
-    # reconstruct quadratic Hamiltonian
+    # reconstruct quadratic Hamiltonian from tmat
     c_create, c_destroy = jordan_wigner_ops(N)
     Hq = np.zeros_like(H)
     for i in range(N):
@@ -374,7 +344,7 @@ def anchor_value(anchor_kind: str, a: Dict[str, float]) -> float:
 
 
 # -------------------------
-# Refolding optimizer (Metropolis local conjugations)
+# Refolding optimizer
 # -------------------------
 
 @dataclass
@@ -411,13 +381,7 @@ def refold_flow(
     cost_every: int,
     anchor_every: int,
 ) -> Tuple[np.ndarray, RefoldDiag]:
-    """
-    Minimize leak_B(H) by local adjacent 2-qubit conjugations.
-    If mode == "no_refolding", enforce an anchor constraint to preserve "matter".
 
-    hard_anchor=True: reject steps that drop anchor below anchor_min
-    hard_anchor=False: add penalty lam * max(0, anchor_min - anchor)^2
-    """
     H = H_start.copy()
     bestH = H.copy()
 
@@ -429,7 +393,7 @@ def refold_flow(
         if mode != "no_refolding":
             return float(leak)
         if hard_anchor:
-            return float(leak)  # rejection handles constraint
+            return float(leak)
         deficit = max(0.0, float(anchor_min) - float(anchor))
         return float(leak + float(lam) * deficit * deficit)
 
@@ -441,32 +405,27 @@ def refold_flow(
     accepted = 0
     evaluated = 0
     rejected_by_anchor = 0
-
-    # cached anchor (update on schedule)
     anchor_cached = float(anch)
 
     for step in range(int(params.steps)):
         i = int(rng.integers(0, N - 1))
         U2 = unitary_from_hermitian(hermitian_rand(4, rng), t=float(params.eps))
         G = embed_two_qubit_gate_adjacent(U2, N, i)
-        Hn = G @ H @ G.conj().T
+        Hn = (G @ H @ G.conj().T)
         Hn = (Hn + Hn.conj().T) / 2.0
 
-        # leak evaluation schedule
         if (step % max(1, int(cost_every))) == 0:
             evaluated += 1
             leakB_n, _, _ = locality_proxy(Hn, basis_B, N)
         else:
             leakB_n = leakB
 
-        # anchor evaluation schedule
         anchor_n = anchor_cached
         if mode == "no_refolding":
             need_anchor = hard_anchor or ((step % max(1, int(anchor_every))) == 0) or ((step % max(1, int(cost_every))) == 0)
             if need_anchor:
                 anchor_n = anchor_value(anchor_kind, matter_anchor_metrics(Hn, N, source_edges))
 
-        # hard anchor rejection
         if mode == "no_refolding" and hard_anchor and (anchor_n < float(anchor_min)):
             rejected_by_anchor += 1
             temp *= float(params.temp_decay)
@@ -474,7 +433,6 @@ def refold_flow(
 
         cn = cost_fn(float(leakB_n), float(anchor_n))
 
-        # Metropolis accept
         accept = False
         if cn <= cost:
             accept = True
@@ -491,7 +449,6 @@ def refold_flow(
             anchor_cached = float(anchor_n)
             anch = float(anchor_n)
             cost = float(cn)
-
             if cost < best_cost:
                 best_cost = float(cost)
                 bestH = H.copy()
@@ -500,7 +457,6 @@ def refold_flow(
 
         temp *= float(params.temp_decay)
 
-    # final metrics
     leakB_f, _, _ = locality_proxy(H, basis_B, N)
     anch_f = anchor_value(anchor_kind, matter_anchor_metrics(H, N, source_edges))
     cost_f = cost_fn(float(leakB_f), float(anch_f))
@@ -556,15 +512,7 @@ def checkpoint_summary(outdir: Path, rows: List[dict]) -> None:
     write_text(outdir / "summary.json", json.dumps(summ, indent=2))
 
 
-# -------------------------
-# Output directory selection
-# -------------------------
-
 def default_outdir() -> Path:
-    """
-    Default output directory: sibling of this script file.
-    <script_dir>/REFOLD_SEP_SPARSE_<timestamp>/
-    """
     script_dir = Path(__file__).resolve().parent
     return script_dir / f"REFOLD_SEP_SPARSE_{now_stamp()}"
 
@@ -580,15 +528,12 @@ def main() -> int:
     ap.add_argument("--seeds", type=int, default=12)
     ap.add_argument("--seed-start", type=int, default=0)
 
-    # Source (A) geometry is a ring on N
-    ap.add_argument("--t-hop", type=float, default=1.0, help="hopping strength for source matter Hamiltonian")
+    ap.add_argument("--t-hop", type=float, default=1.0)
 
-    # Target (B) random sparse
-    ap.add_argument("--M", type=int, default=12, help="number of edges in target random sparse graph")
-    ap.add_argument("--force-connected", action="store_true", help="seed a spanning tree first")
+    ap.add_argument("--M", type=int, default=12)
+    ap.add_argument("--force-connected", action="store_true")
     ap.set_defaults(force_connected=True)
 
-    # Flow knobs
     ap.add_argument("--steps", type=int, default=2500)
     ap.add_argument("--eps", type=float, default=0.06)
     ap.add_argument("--temp0", type=float, default=0.02)
@@ -596,13 +541,11 @@ def main() -> int:
     ap.add_argument("--cost-every", type=int, default=5)
     ap.add_argument("--anchor-every", type=int, default=5)
 
-    # No-refolding constraint knobs
     ap.add_argument("--anchor", choices=["quadratic", "source_hop", "min_both"], default="min_both")
-    ap.add_argument("--anchor-min", type=float, default=0.85, help="minimum anchor value enforced under no-refolding")
-    ap.add_argument("--hard-anchor", action="store_true", help="hard-reject violating steps instead of soft penalty")
-    ap.add_argument("--lambda", dest="lam", type=float, default=10.0, help="soft-penalty weight (ignored if --hard-anchor)")
+    ap.add_argument("--anchor-min", type=float, default=0.85)
+    ap.add_argument("--hard-anchor", action="store_true")
+    ap.add_argument("--lambda", dest="lam", type=float, default=10.0)
 
-    # Misc
     ap.add_argument("--progress", action="store_true")
     ap.add_argument("--checkpoint-every", type=int, default=1)
     ap.add_argument("--zip", action="store_true")
@@ -616,7 +559,6 @@ def main() -> int:
     ensure_dir(outdir)
     ensure_dir(outdir / "runs")
 
-    # Write manifest
     write_text(outdir / "manifest.json", json.dumps({
         "created_utc": now_utc_iso(),
         "tool": Path(__file__).name,
@@ -624,15 +566,14 @@ def main() -> int:
         "args": vars(args),
     }, indent=2))
 
-    # Source geometry A
     edges_A = ring_edges(N)
     basis_A = build_local_basis_from_edges(N, edges_A)
 
-    # Baseline source matter Hamiltonian (pre-geometric "matter" anchored to A)
     H0 = free_fermion_hopping_H(N, edges_A, t_hop=float(args.t_hop))
 
     leakA0, localA0, norm0 = locality_proxy(H0, basis_A, N)
     anch0 = matter_anchor_metrics(H0, N, edges_A)
+    anch0_val = anchor_value(args.anchor, anch0)
 
     write_text(outdir / "baseline.json", json.dumps({
         "created_utc": now_utc_iso(),
@@ -641,9 +582,9 @@ def main() -> int:
         "source_edges": edge_set_undirected(edges_A),
         "baseline_locality_A": {"leakA": leakA0, "local_fracA": localA0, "norm2": norm0},
         "baseline_matter_anchor": anch0,
+        "baseline_anchor_selected": {"anchor": args.anchor, "value": anch0_val},
     }, indent=2))
 
-    # Streaming files
     targets_jsonl = outdir / "targets.jsonl"
     runs_jsonl = outdir / "runs" / "runs.jsonl"
     if targets_jsonl.exists():
@@ -657,7 +598,6 @@ def main() -> int:
     for s in range(int(args.seed_start), int(args.seed_start) + int(args.seeds)):
         rng = np.random.default_rng(int(s))
 
-        # Build target geometry B (random sparse)
         edges_B = random_sparse_edges(N, int(args.M), rng, force_connected=bool(args.force_connected))
         basis_B = build_local_basis_from_edges(N, edges_B)
 
@@ -671,14 +611,13 @@ def main() -> int:
             "deg_stats": degree_stats(N, edges_B),
         })
 
-        # How nonlocal H0 looks on target geometry B
         leakB0, localB0, _ = locality_proxy(H0, basis_B, N)
 
         if args.progress:
             print(
                 f"[seed {s}] out={outdir.name}  M={len(edges_B)}  "
                 f"leakB0={leakB0:.4f} localB0={localB0:.4f}  "
-                f"anchor0={anchor_value(args.anchor, anch0):.4f}"
+                f"anchor0({args.anchor})={anch0_val:.4f}"
             )
 
         fp = FlowParams(
@@ -688,7 +627,6 @@ def main() -> int:
             temp_decay=float(args.temp_decay),
         )
 
-        # Run 1: free refolding (no-refolding OFF)
         _, diag_free = refold_flow(
             H_start=H0,
             N=N,
@@ -705,7 +643,6 @@ def main() -> int:
             anchor_every=int(args.anchor_every),
         )
 
-        # Run 2: constrained refolding (no-refolding ON)
         rng2 = np.random.default_rng(int(s) + 10_000_000)
         _, diag_con = refold_flow(
             H_start=H0,
@@ -757,31 +694,11 @@ def main() -> int:
                 "leakB0": float(leakB0),
                 "localB0": float(localB0),
                 "anchor0": {k: float(v) for k, v in anch0.items()},
-                "anchor0_value": float(anchor_value(args.anchor, anch0)),
+                "anchor0_value": float(anch0_val),
             },
             "results": {
-                "free": {
-                    "best_cost": float(diag_free.best_cost),
-                    "best_leakB": float(diag_free.best_leakB),
-                    "best_anchor": float(diag_free.best_anchor),
-                    "final_cost": float(diag_free.final_cost),
-                    "final_leakB": float(diag_free.final_leakB),
-                    "final_anchor": float(diag_free.final_anchor),
-                    "accepted": int(diag_free.accepted),
-                    "evaluated": int(diag_free.evaluated),
-                    "rejected_by_anchor": int(diag_free.rejected_by_anchor),
-                },
-                "no_refolding": {
-                    "best_cost": float(diag_con.best_cost),
-                    "best_leakB": float(diag_con.best_leakB),
-                    "best_anchor": float(diag_con.best_anchor),
-                    "final_cost": float(diag_con.final_cost),
-                    "final_leakB": float(diag_con.final_leakB),
-                    "final_anchor": float(diag_con.final_anchor),
-                    "accepted": int(diag_con.accepted),
-                    "evaluated": int(diag_con.evaluated),
-                    "rejected_by_anchor": int(diag_con.rejected_by_anchor),
-                },
+                "free": diag_free.__dict__,
+                "no_refolding": diag_con.__dict__,
                 "barrier": {
                     "best_leakB_no_refolding_minus_free": float(diag_con.best_leakB - diag_free.best_leakB),
                     "final_leakB_no_refolding_minus_free": float(diag_con.final_leakB - diag_free.final_leakB),
@@ -807,16 +724,9 @@ def main() -> int:
         f"- No-refolding: anchor={str(args.anchor)} anchor_min={float(args.anchor_min)} hard_anchor={bool(args.hard_anchor)} lambda={float(args.lam)}",
         f"- runtime_sec: {runtime:.2f}",
         "",
-        "## What to check",
-        "Open `runs/runs.jsonl` and compare per seed:",
-        "- initial.leakB0 (how nonlocal H0 looks on the sparse target geometry)",
-        "- results.free.best_leakB (how far refolding goes with locality-only)",
-        "- results.no_refolding.best_leakB (how far refolding goes while preserving matter)",
-        "- results.barrier.best_leakB_no_refolding_minus_free (positive => no-refolding blocks refolding)",
-        "",
-        "## Key separation criterion",
+        "## Separation criterion",
         "If free refolding reduces leakB substantially but constrained refolding cannot,",
-        "then no-refolding is separated from no-signaling (both runs use only local adjacent gates).",
+        "then no-refolding is separated from no-signaling (both use only local adjacent gates).",
         "",
         "## Files",
         "- baseline.json",
