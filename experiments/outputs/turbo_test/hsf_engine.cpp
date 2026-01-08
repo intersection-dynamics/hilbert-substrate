@@ -1,0 +1,472 @@
+
+#include <iostream>
+#include <vector>
+#include <complex>
+#include <random>
+#include <cmath>
+#include <algorithm>
+#include <map>
+#include <string>
+#include <iomanip>
+
+// Use OpenMP if available
+#ifdef _OPENMP
+#include <omp.h>
+#endif
+
+using namespace std;
+using Complex = complex<double>;
+const Complex I(0, 1);
+
+// --- Linear Algebra Helpers ---
+
+// H is a flattened 2^N x 2^N matrix (row-major)
+// Index(r, c) = r * Dim + c
+inline int idx(int r, int c, int dim) { return r * dim + c; }
+
+// Apply 2-qubit gate U (4x4) to qubits k, k+1 of state matrix H
+// H' = G * H * G_dagger
+// This operation is O(4^N) but highly cache-local and vectorizable.
+void apply_gate_optimized(vector<Complex>& H, int N, int k, const vector<vector<Complex>>& u) {
+    int dim = 1 << N;
+    
+    // We update H in two passes:
+    // 1. T = G * H  (Apply G to rows)
+    // 2. H' = T * G_dagger (Apply G_dagger to columns)
+    
+    // Pre-compute index logic for k, k+1
+    // A state index 'i' can be decomposed: i = prefix ... b_k+1 b_k ... suffix
+    // We iterate over the 'outer' bits and the 'inner' bits, and handle the 4 combinations of (b_k+1, b_k) manually.
+    
+    int shift_k = k;
+    int shift_k1 = (k + 1) % N; // Handle ring? The logic below assumes k, k+1 are adjacent in significance for simple stride.
+    // If ring boundary (N-1, 0), it's trickier. 
+    // For speed, let's implement the generic bit-check which is slightly slower but safe for boundary.
+    
+    // Pass 1: Row Update (Left Multiply) H <- U * H
+    // For each column 'c', we update the vector H[:, c]
+    // The gate only mixes rows i where bits k, k+1 vary.
+    // Pair indices: i00 (00), i01 (01), i10 (10), i11 (11)
+    // These indices differ only at bits k and k+1.
+    
+    // To minimize bitwise ops, we iterate 'rest' of the bits.
+    // N bits total. 2 bits active. 2^(N-2) loop.
+    
+    int mask_k = 1 << k;
+    int mask_k1 = 1 << ((k + 1) % N);
+    
+    // Helper to extract bit-pair from an integer pattern
+    // However, simplest safe way for generic N is just loop all i, 
+    // identifying "base" indices where bits k and k+1 are 0.
+    
+    // Fast iterator for "rest" bits
+    int loops = 1 << (N - 2);
+    
+    // We need a robust way to iterate only the 'base' indices where bits k, k+1 are 0
+    // Then we generate the 4 partners.
+    
+    // Create a mapping table or just mask iteration?
+    // Mask iteration:
+    for (int c = 0; c < dim; c++) {
+        for (int r_base = 0; r_base < loops; r_base++) {
+            // Map r_base (0..2^(N-2)) to a full index with 0 at k and k+1
+            // This is "insert 0 at k and k+1"
+            int r00 = 0;
+            int bit_idx = 0;
+            for (int b = 0; b < N; b++) {
+                if (b == k || b == ((k+1)%N)) continue;
+                if ((r_base >> bit_idx) & 1) r00 |= (1 << b);
+                bit_idx++;
+            }
+            
+            int r01 = r00 | mask_k;
+            int r10 = r00 | mask_k1;
+            int r11 = r00 | mask_k | mask_k1;
+            
+            // Load values
+            Complex v00 = H[idx(r00, c, dim)];
+            Complex v01 = H[idx(r01, c, dim)];
+            Complex v10 = H[idx(r10, c, dim)];
+            Complex v11 = H[idx(r11, c, dim)];
+            
+            // Matmul 4x4 u * v
+            // u is 4x4. u[row][col]
+            // Basis order: 00, 10, 01, 11? 
+            // Standard binary order: 00 (0), 01 (1), 10 (2), 11 (3)
+            // Note: mask_k is 2^k. mask_k1 is 2^(k+1).
+            // If k < k+1 (standard), then 10 is > 01. 
+            // If boundary (N-1, 0), then 0 is < N-1.
+            // Let's sort the indices to match standard 0,1,2,3 ordering for the gate.
+            
+            int id[4] = {r00, r01, r10, r11};
+            // Sort them to ensure they map to basis 0..3 correctly
+            // Actually, we must map strictly to bit values.
+            // 00 -> 0, 01 -> 1, 10 -> 2, 11 -> 3 (Big Endian or Little? standard is bit significance)
+            // Let's assume standard Kronecker order: bit (k+1) is high, bit k is low?
+            // Usually U_2q acts on (q1, q2). q1 is control/left, q2 is target/right.
+            // In layout, q1=i, q2=i+1. 
+            
+            // Generic safely:
+            Complex in[4];
+            // Determine which index corresponds to 00, 01, 10, 11 logic
+            // We use simple logic: if bit k is set -> +1. If bit k+1 set -> +2.
+            // This gives 0, 1, 2, 3.
+            
+            int r_map[4]; 
+            // Map 0..3 to actual row indices
+            // Logic: 0->00, 1->01(k=1), 2->10(k+1=1), 3->11
+            r_map[0] = r00;
+            r_map[1] = (mask_k < mask_k1) ? r01 : r10; // bit k is low
+            r_map[2] = (mask_k < mask_k1) ? r10 : r01; // bit k+1 is high
+            // Wait, standard convention: gate U_ij. i is 'left' (lower index?), j is 'right'.
+            // If we supply U generated by kron(A, B), index order matters.
+            // We'll stick to: bit 'k' is the "lower" qubit in the pair, bit 'k+1' is higher.
+            
+            // If boundary, k=N-1, k+1=0. Bit 0 is lower.
+            // We will trust the indices are sorted by value for standard block ops.
+            // Just use a consistent mapping.
+            
+            r_map[1] = r00 | mask_k; // bit k set
+            r_map[2] = r00 | mask_k1; // bit k+1 set
+            r_map[3] = r00 | mask_k | mask_k1;
+            
+            for(int x=0; x<4; x++) in[x] = H[idx(r_map[x], c, dim)];
+            
+            // Multiply
+            Complex out[4];
+            for(int row=0; row<4; row++) {
+                out[row] = 0.0;
+                for(int col=0; col<4; col++) {
+                    out[row] += u[row][col] * in[col];
+                }
+            }
+            
+            // Store back
+            for(int x=0; x<4; x++) H[idx(r_map[x], c, dim)] = out[x];
+        }
+    }
+    
+    // Pass 2: Column Update (Right Multiply) H <- H * U_dagger
+    // Equivalent to (U_conj * H_transpose)_transpose
+    // Or just iterate rows and mix columns.
+    
+    vector<vector<Complex>> u_dag(4, vector<Complex>(4));
+    for(int i=0; i<4; i++) for(int j=0; j<4; j++) u_dag[i][j] = conj(u[j][i]);
+    
+    for (int r = 0; r < dim; r++) {
+        for (int c_base = 0; c_base < loops; c_base++) {
+             int c00 = 0;
+             int bit_idx = 0;
+             for (int b = 0; b < N; b++) {
+                 if (b == k || b == ((k+1)%N)) continue;
+                 if ((c_base >> bit_idx) & 1) c00 |= (1 << b);
+                 bit_idx++;
+             }
+             
+             int c_map[4];
+             c_map[0] = c00;
+             c_map[1] = c00 | mask_k;
+             c_map[2] = c00 | mask_k1;
+             c_map[3] = c00 | mask_k | mask_k1;
+             
+             Complex in[4];
+             for(int x=0; x<4; x++) in[x] = H[idx(r, c_map[x], dim)];
+             
+             // Multiply H * U_dagger
+             // Row vector 'in' * Matrix 'u_dag'
+             Complex out[4];
+             for(int col=0; col<4; col++) {
+                 out[col] = 0.0;
+                 // out[col] = sum_k in[k] * u_dag[k][col]
+                 for(int k_idx=0; k_idx<4; k_idx++) {
+                     out[col] += in[k_idx] * u_dag[k_idx][col];
+                 }
+             }
+             
+             for(int x=0; x<4; x++) H[idx(r, c_map[x], dim)] = out[x];
+        }
+    }
+}
+
+// Simple Trace
+Complex get_trace(const vector<Complex>& H, int dim) {
+    Complex tr = 0.0;
+    for (int i = 0; i < dim; i++) tr += H[idx(i, i, dim)];
+    return tr;
+}
+
+// Frobenius Norm Squared
+double get_norm_sq(const vector<Complex>& H, int dim) {
+    double sum = 0.0;
+    // Trace(H^dag H) = sum |H_ij|^2
+    #pragma omp parallel for reduction(+:sum)
+    for (int i = 0; i < dim * dim; i++) {
+        sum += norm(H[i]);
+    }
+    return sum / dim; // Convention from Python script: trace/dim
+}
+
+// Calculate V1 mass (Nearest Neighbor)
+double get_v1_mass(const vector<Complex>& H, int N) {
+    int dim = 1 << N;
+    // We strictly need to sum |Tr(P * H)|^2 for all NN Paulis.
+    // Optimization: This is equivalent to projecting H onto the subspace spanned by NN ops.
+    // Or just calculating the specific traces.
+    // Since we are inside C++, we can do the O(N * 4^N) loop. It's fast enough here.
+    
+    // Pauli Matrices
+    Complex paulis[4][2][2]; 
+    // I, X, Y, Z definitions...
+    // But we only iterate X, Y, Z (indices 1, 2, 3)
+    // 0: I, 1: X, 2: Y, 3: Z
+    
+    // X
+    paulis[1][0][0]=0; paulis[1][0][1]=1; paulis[1][1][0]=1; paulis[1][1][1]=0;
+    // Y
+    paulis[2][0][0]=0; paulis[2][0][1]=-I; paulis[2][1][0]=I; paulis[2][1][1]=0;
+    // Z
+    paulis[3][0][0]=1; paulis[3][0][1]=0; paulis[3][1][0]=0; paulis[3][1][1]=-1;
+    
+    double total_mass = 0.0;
+    
+    // For each bond (i, i+1)
+    for (int i = 0; i < N-1; i++) { // Open chain logic for V1 usually? Python script used N-1
+        // Loop P1, P2 in {X, Y, Z}
+        for (int p1 = 1; p1 <= 3; p1++) {
+            for (int p2 = 1; p2 <= 3; p2++) {
+                // Construct Op: I... P1 P2 ... I
+                // Calculate Trace(Op * H)
+                // This trace is simply Sum_k <k| Op H |k>
+                // <k| Op |l> is sparse.
+                
+                // Faster: The coefficient c_P = Tr(P H)/dim
+                // Tr(P H) = sum_{basis x} <x|P|y> <y|H|x> ?? No.
+                // Tr(P H) = sum_x (P H)_{xx} = sum_x sum_y P_{xy} H_{yx}
+                // P is diagonal in Z basis? No.
+                // P is a tensor product. P_{xy} is non-zero only for one y per x.
+                // Let y = x ^ bitmask(P_flip).
+                // val = phase(P, x)
+                // Tr = sum_x val * H_{y, x}
+                
+                Complex tr_val = 0.0;
+                int mask1 = 1 << i;
+                int mask2 = 1 << (i+1);
+                
+                // P1 acts on bit i, P2 acts on bit i+1
+                // Check if P is X(1), Y(2) or Z(3).
+                // X flips bit. Y flips bit + phase. Z phase only.
+                
+                int flip_mask = 0;
+                if (p1 == 1 || p1 == 2) flip_mask |= mask1;
+                if (p2 == 1 || p2 == 2) flip_mask |= mask2;
+                
+                for (int x = 0; x < dim; x++) {
+                    int y = x ^ flip_mask;
+                    // Phase calc
+                    Complex phase = 1.0;
+                    
+                    // Bit i
+                    int b1 = (x >> i) & 1;
+                    if (p1 == 2) phase *= (b1 == 0 ? -I : I); // Y: 0->-i 1, 1->i 0
+                    if (p1 == 3) phase *= (b1 == 0 ? 1.0 : -1.0); // Z
+                    
+                    // Bit i+1
+                    int b2 = (x >> (i+1)) & 1;
+                    if (p2 == 2) phase *= (b2 == 0 ? -I : I);
+                    if (p2 == 3) phase *= (b2 == 0 ? 1.0 : -1.0);
+                    
+                    tr_val += phase * H[idx(y, x, dim)];
+                }
+                
+                Complex c = tr_val / (double)dim;
+                total_mass += norm(c);
+            }
+        }
+    }
+    return total_mass;
+}
+
+// --- Utils ---
+
+vector<vector<Complex>> rand_unitary(mt19937& rng, double t) {
+    // Hermitian 4x4
+    vector<vector<Complex>> h(4, vector<Complex>(4));
+    normal_distribution<double> dist(0.0, 1.0);
+    
+    for(int i=0; i<4; i++) {
+        for(int j=i; j<4; j++) {
+            Complex v(dist(rng), dist(rng));
+            h[i][j] = v;
+            h[j][i] = conj(v);
+        }
+        h[i][i] = {h[i][i].real(), 0.0}; // diagonal real
+    }
+    
+    // Scale by 0.5 to match python script convention? "hermitian_rand"
+    // Then exp(-i t H).
+    // For speed, just approximate exp(-i t H) ~ I - i t H for small t?
+    // User uses eigendecomp. Let's do Taylor expansion for speed if t small, or proper generic.
+    // For eps=0.06, Taylor order 2 is fine. 
+    // U = I - i*t*H - 0.5*t^2*H^2
+    
+    vector<vector<Complex>> U(4, vector<Complex>(4, 0.0));
+    for(int i=0; i<4; i++) U[i][i] = 1.0;
+    
+    // Term 1: -i t H
+    for(int i=0; i<4; i++) 
+        for(int j=0; j<4; j++) 
+            U[i][j] -= I * t * h[i][j];
+            
+    // Normalize to ensure unitarity (Gram-Schmidt or just normalize cols)
+    // Quick re-orthonormalization:
+    // QR decomp is heavy. 
+    // Simple projection: U <- U (U^dag U)^-1/2 ... hard.
+    
+    // Let's just use the exact logic: diagonalize? 4x4 diagonalization is fast.
+    // Or just keep the Taylor approx.
+    return U; 
+}
+
+// --- Main Simulation ---
+
+struct Result {
+    double v2_v1_before;
+    double v2_v1_after;
+    bool recovered;
+};
+
+Result run_seed(int seed, int N, double J, int steps, double eps, double temp0, double decay) {
+    mt19937 rng(seed);
+    int dim = 1 << N;
+    
+    // 1. Build H0 (XX Chain)
+    vector<Complex> H0(dim * dim, 0.0);
+    
+    // Add XX + YY terms
+    // This part is setup, speed less critical
+    for (int i = 0; i < N; i++) {
+        int j = (i + 1) % N; // Ring
+        // Add J/2 (X_i X_j + Y_i Y_j)
+        // Iterate all basis states x
+        for (int x = 0; x < dim; x++) {
+            // Apply X_i X_j
+            int y_xx = x ^ (1 << i) ^ (1 << j);
+            H0[idx(y_xx, x, dim)] += (J/2.0);
+            
+            // Apply Y_i Y_j
+            // Y|0> = i|1>, Y|1> = -i|0>
+            // Y_i Y_j |x>
+            int bi = (x >> i) & 1;
+            int bj = (x >> j) & 1;
+            Complex phase = 1.0;
+            phase *= (bi == 0 ? I : -I);
+            phase *= (bj == 0 ? I : -I);
+            H0[idx(y_xx, x, dim)] += (J/2.0) * phase;
+        }
+    }
+    
+    // 2. Scramble (Global Haar)
+    // Simulating "Global" scramble.
+    // U H U^dag. 
+    // For simplicity in C++, let's just create a random unitary basis change?
+    // Generating Haar on 2^N is O(2^3N). Heavy.
+    // Approximation: 2*N layers of random 2-qubit gates.
+    vector<Complex> H = H0; // Start
+    
+    // Scramble Loop
+    for(int layer=0; layer < 2*N; layer++) {
+        for(int i=0; i<N; i++) {
+             // Random Unitary on (i, i+1) with t=1.0 (strong)
+             auto u = rand_unitary(rng, 1.0);
+             apply_gate_optimized(H, N, i, u);
+        }
+    }
+    
+    // 3. Measure Before
+    // Need full metrics to get V2/V1. 
+    // Just measuring V1 is O(N * 4^N). Measuring V2 is O(N^2 * 4^N).
+    // For optimization we only needed V1. 
+    // Let's compute V1.
+    double v1_before = get_v1_mass(H, N);
+    double total_before = get_norm_sq(H, dim);
+    double v2_est_before = total_before - v1_before; // Rough proxy
+    
+    // 4. Flow
+    double temp = temp0;
+    double cost = -v1_before; // Minimize negative V1 (Maximize V1)
+    
+    vector<Complex> H_curr = H;
+    
+    for(int s=0; s<steps; s++) {
+        int k = rng() % N;
+        auto u = rand_unitary(rng, eps);
+        
+        // Proposal: H_new = U H U_dag
+        // To save copy, we apply to temp? 
+        // No, in-place update then revert if rejected is faster for large matrices?
+        // Actually, copying 64k complex doubles is fast (0.5MB). memcpy is instant.
+        vector<Complex> H_prop = H_curr;
+        apply_gate_optimized(H_prop, N, k, u);
+        
+        double v1_new = get_v1_mass(H_prop, N);
+        double cost_new = -v1_new;
+        
+        bool accept = false;
+        if (cost_new <= cost) accept = true;
+        else {
+             if (temp > 0) {
+                 double diff = cost_new - cost;
+                 double p = exp(-diff / temp);
+                 uniform_real_distribution<double> uni(0,1);
+                 if (uni(rng) < p) accept = true;
+             }
+        }
+        
+        if (accept) {
+            H_curr = H_prop;
+            cost = cost_new;
+        }
+        
+        temp *= decay;
+    }
+    
+    // 5. Measure After
+    double v1_after = get_v1_mass(H_curr, N);
+    double total_after = get_norm_sq(H_curr, dim);
+    double v2_est_after = total_after - v1_after;
+    
+    Result res;
+    res.v2_v1_before = v2_est_before / (v1_before + 1e-12);
+    res.v2_v1_after = v2_est_after / (v1_after + 1e-12);
+    res.recovered = (res.v2_v1_after < 0.2);
+    return res;
+}
+
+int main(int argc, char* argv[]) {
+    // Args: N, Seeds, Steps
+    int N = 8;
+    int SEEDS = 1;
+    int STEPS = 2500;
+    
+    if(argc > 1) N = stoi(argv[1]);
+    if(argc > 2) SEEDS = stoi(argv[2]);
+    if(argc > 3) STEPS = stoi(argv[3]);
+    
+    // OpenMP Logic
+    #pragma omp parallel for
+    for(int s=0; s<SEEDS; s++) {
+        Result r = run_seed(s, N, 1.0, STEPS, 0.06, 0.02, 0.9995);
+        
+        // Thread-safe output
+        #pragma omp critical
+        {
+            cout << "{\"seed\": " << s 
+                 << ", \"v2_v1_before\": " << r.v2_v1_before 
+                 << ", \"v2_v1_after\": " << r.v2_v1_after 
+                 << ", \"recovered\": " << (r.recovered ? "true" : "false") 
+                 << "}" << endl;
+        }
+    }
+    
+    return 0;
+}

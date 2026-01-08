@@ -6,7 +6,7 @@ import time
 
 def run_humpty_dumpty_test():
     # --- Configuration ---
-    N = 3  # Keep small (3-4) for fast convergence. N=5+ requires GPU/PyTorch.
+    N = 6  # Keep small (3-4) for fast convergence. N=5+ requires GPU/PyTorch.
     print(f"--- THE HUMPTY DUMPTY TEST (N={N} Qubits) ---")
 
     # --- 1. Basic Operators ---
