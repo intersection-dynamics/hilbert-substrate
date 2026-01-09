@@ -1,0 +1,95 @@
+% ==============================================================
+% Hilbert Substrate Framework – Part III
+% Emergent Fermionic Statistics Prior to Geometry
+% ==============================================================
+\documentclass[11pt]{article}
+
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{physics}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{booktabs}
+\usepackage{array}
+\geometry{margin=1in}
+
+\title{The Hilbert Substrate Framework III:\\ Emergent Fermionic Statistics Prior to Geometry}
+\author{Ben Bray}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+In this work we present numerical evidence that fermionic exchange statistics emerge robustly from Hilbert-space dynamics prior to, and independently of, spatial locality or geometric structure. Building on the accessibility-based picture developed in Parts I and II of the Hilbert Substrate Framework (HSF), we study small XX-type spin-chain systems subjected to both local and global basis scrambling. We demonstrate that fermion-like signatures—Jordan--Wigner anticommutation, sector additivity of energies, and exclusion-type pressure proxies—persist even in regimes where geometry-blind locality recovery provably fails. These results support a reordered emergence hierarchy in which matter-like exchange structure precedes locality, geometry, and dimensional organization.
+\end{abstract}
+
+\section{Introduction}
+Conventional physical frameworks treat fermions as entities defined on a pre-existing spacetime manifold, with statistics derived from relativistic field theory or postulated algebraic rules. In contrast, the Hilbert Substrate Framework (HSF) explores the possibility that both matter and spacetime emerge from more primitive Hilbert-space structure and accessibility constraints.
+
+In Part II of this series, we argued that spatial locality is not basis-invariant but occupies a restricted accessibility basin: local transformations preserve recoverability, while generic global transformations destroy the path back to a spatial description. In this paper, we examine a complementary and more surprising phenomenon: fermionic exchange statistics emerge robustly even when locality does not.
+
+\section{Operational Definition of Fermionic Statistics}
+To avoid ambiguity, we adopt an operational definition of ``fermionic statistics'' appropriate to finite Hilbert-space simulations. A system is said to exhibit fermionic exchange structure if the following independent diagnostics are simultaneously satisfied:
+
+\begin{enumerate}
+    \item \textbf{Anticommutation}: Mode operators constructed via Jordan--Wigner-type mappings satisfy canonical anticommutation relations to numerical tolerance.
+    \item \textbf{Sector Additivity}: Many-body energy spectra decompose additively into contributions consistent with noninteracting fermionic modes.
+    \item \textbf{Exclusion / Pressure}: Operator-weight distributions exhibit curvature or repulsion consistent with Pauli exclusion, quantified via a ``Pauli pressure'' proxy.
+\end{enumerate}
+
+These criteria do not assume spacetime, relativistic invariance, or particle ontology. They probe only the algebraic and energetic structure accessible within the substrate.
+
+\section{Model and Experimental Setup}
+We consider XX spin-chain Hamiltonians at small system size ($N \approx 8$), which are known to admit an exact fermionic description via Jordan--Wigner transformation. Starting from a clean nearest-neighbor Hamiltonian, we apply two classes of basis scrambling:
+
+\begin{itemize}
+    \item \textbf{Local scrambling}: Products of independent single-qubit unitaries.
+    \item \textbf{Global scrambling}: Generic Haar-random unitaries on the full $2^N$-dimensional Hilbert space.
+\end{itemize}
+
+Following scrambling, we attempt recovery using dynamics restricted to local generators (FLOW/STROBE procedures). Importantly, global scrambles are known from Part II to lie outside the accessibility basin for locality recovery.
+
+\section{Results: Fermions Without Geometry}
+\subsection{Persistence Across Scramble Regimes}
+Across all runs, fermionic diagnostics remain intact regardless of scramble type. Table~\ref{tab:fermion_evidence} summarizes the results.
+
+\begin{table}[h]
+\centering
+\caption{Fermionic diagnostics across scramble regimes (XX model, $N=8$).}
+\label{tab:fermion_evidence}
+\begin{tabular}{lcc}
+\toprule
+Diagnostic & Local Scramble & Global Scramble \\
+\midrule
+JW anticommutator max error & $\lesssim 10^{-12}$ & $\lesssim 10^{-12}$ \\
+Sector additivity error & small, stable & small, stable \\
+Pauli pressure proxy & nonzero & nonzero \\
+Locality recovery & success & failure \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The crucial observation is that fermionic signatures persist even when locality recovery fails completely. This establishes that fermionic exchange structure does not depend on spatial geometry or locality accessibility.
+
+\subsection{Separation of Matter and Locality}
+Locality-sensitive diagnostics (e.g., range-resolved interaction strength ratios) exhibit a sharp phase distinction between local and global scrambles. Fermionic diagnostics do not. This decoupling strongly suggests that matter-like exchange structure is more fundamental than geometry within the substrate.
+
+\section{Interpretation: Reordered Emergence}
+The combined results of Parts II and III motivate a reordered emergence hierarchy:
+
+\begin{center}
+Hilbert Substrate $\rightarrow$ Subsystems $\rightarrow$ Exchange Statistics (Matter) $\rightarrow$ Accessibility Constraints $\rightarrow$ Locality $\rightarrow$ Geometry $\rightarrow$ Dimensional Stabilization
+\end{center}
+
+In this view, locality and geometry are contingent, fragile phases that emerge only when accessibility conditions permit. Fermionic statistics, by contrast, arise directly from the algebraic structure of the substrate and remain robust under transformations that obliterate spatial organization.
+
+\section{Implications and Limitations}
+These results do not claim derivation of physical fermions, relativistic spin-statistics theorems, or observed dimensionality. The simulations are limited to small system sizes and specific model classes. Nevertheless, the robustness of fermionic signatures across accessibility barriers provides strong evidence that matter-like structure can precede spacetime.
+
+Future work will explore whether dimensionality itself can be understood as a stability condition imposed by fermionic exchange statistics and accessibility constraints.
+
+\section{Conclusion}
+We have demonstrated that fermionic exchange statistics emerge robustly from Hilbert-space dynamics and persist even in regimes where spatial locality is inaccessible. This finding supports a central claim of the Hilbert Substrate Framework: geometry is not the foundation of matter, but a downstream, accessibility-limited phase. Matter comes first.
+
+\end{document}

@@ -1,0 +1,150 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{booktabs}
+\usepackage{enumitem}
+
+\geometry{margin=1in}
+
+% Theorem-like environments
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+\newtheorem{constraint}{Constraint}
+
+\title{\textbf{The Hilbert Substrate Framework III:}\\
+No-Refolding and the Emergence of Three-Dimensional Space}
+
+\author{Benjamin August Bray\\
+\small Independent Researcher}
+
+\date{January 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+We complete the Hilbert Substrate Framework by identifying a structural constraint---No-Refolding---that becomes unavoidable once stable matter exists within a Hilbert-space substrate governed by unitary dynamics, no-signaling, and no-forgetting. Building on earlier results demonstrating the emergence of spatial locality as an accessible attractor, we show that geometric dimensionality itself is selected dynamically through a settling process rather than global optimization.
+
+Through numerical experiments on locality recovery across interaction graphs of varying intrinsic dimension, we find that three-dimensional geometry provides the deepest accessible basin compatible with stable fermionic matter. Crucially, the substrate does not optimize over dimensions; it settles at the first geometry capable of supporting persistent structure. Once matter forms, transitions to alternative geometries become dynamically inaccessible without violating information-theoretic consistency. Three-dimensional space therefore emerges not as a fine-tuned input, but as the first self-anchoring geometric configuration reachable under constrained unitary dynamics.
+\end{abstract}
+
+\section{Introduction}
+
+\subsection{The Problem of Dimensionality}
+
+Why does space have three dimensions? Standard physical theories typically treat dimensionality as a background assumption rather than a derived consequence. While anthropic arguments note that stable atoms and chemistry require three dimensions, they do not explain how such a dimensionality is selected dynamically. Approaches invoking extra compact dimensions similarly presuppose a higher-dimensional background without accounting for why three dimensions emerge as extended and stable.
+
+The Hilbert Substrate Framework addresses this question from a different direction. Rather than assuming spacetime or dimensionality, it treats the universal Hilbert space and its unitary dynamics as fundamental, asking which forms of structure are unavoidable under minimal information-theoretic constraints.
+
+\subsection{Context within the Hilbert Substrate Framework}
+
+This work completes a three-part investigation:
+
+\begin{itemize}
+\item \textbf{Paper I} demonstrated that persistent heterogeneity in information propagation can arise dynamically under unitary evolution, providing an operational order parameter for emergent structure.
+\item \textbf{Paper II} showed that spatial locality emerges as an accessible attractor on unitary orbits, even when the globally optimal (eigenbasis) description becomes kinetically inaccessible.
+\item \textbf{This paper} addresses the remaining question: \emph{which} geometric structure is selected, and why dimensionality freezes at three.
+\end{itemize}
+
+\section{Constraints on the Hilbert Substrate}
+
+We work within a minimal framework defined by three information-theoretic constraints. These are not dynamical laws but structural conditions required for observer-accessible physics.
+
+\begin{constraint}[No-Signaling]
+Local operations on one subsystem cannot be used to transmit information instantaneously to spacelike-separated subsystems.
+\end{constraint}
+
+\begin{constraint}[No-Forgetting]
+Global evolution is unitary; information is never destroyed, only redistributed within the total Hilbert space.
+\end{constraint}
+
+\begin{constraint}[No-Refolding]
+Once stable, structured matter exists, the accessible geometric configurations of the substrate are dynamically restricted. Existing structure cannot be arbitrarily refactored into alternative geometric arrangements.
+\end{constraint}
+
+Importantly, No-Refolding is not imposed independently. It emerges as a consequence of applying No-Signaling and No-Forgetting to substrates containing persistent structure. Any transition that would refold geometry while preserving matter would require either coordinated nonlocal operations or erasure of records, violating the first two constraints.
+
+\section{Geometric Basins and the Settling Hypothesis}
+
+\subsection{Accessibility versus Optimization}
+
+As shown in Paper II, locality emerges because it is the simplest \emph{accessible} description of large quantum systems, not because it is globally optimal. The unitary orbit of a Hamiltonian contains many equivalent descriptions, but only a subset are dynamically reachable under locality-respecting transformations.
+
+We extend this insight to dimensionality. The accessibility landscape contains multiple geometric basins corresponding to different effective dimensions. The substrate does not survey these basins globally; instead, it settles into the first basin capable of supporting persistent structure.
+
+\subsection{Dimensional Requirements for Stable Matter}
+
+Different spatial dimensions exhibit qualitatively distinct properties relevant to the stability of matter:
+
+\begin{itemize}
+\item \textbf{One dimension:} Exchange statistics are nonlocal, and stable bound structures are not supported.
+\item \textbf{Two dimensions:} Braid statistics permit anyons, but stable atomic structure is precluded by both topological and dynamical considerations.
+\item \textbf{Three dimensions:} Fermionic statistics emerge naturally, Coulombic bound states are stable, and topologically protected structures (e.g.\ knots) exist.
+\item \textbf{Four or more dimensions:} While fermions are permitted, topological stability is weakened and matter fails to anchor geometry robustly.
+\end{itemize}
+
+\begin{proposition}
+Three dimensions constitute the minimum spatial dimension supporting proper fermionic statistics, stable atomic bound states, and topologically persistent information storage.
+\end{proposition}
+
+\section{Numerical Evidence for Dimensional Settling}
+
+\subsection{Experimental Design}
+
+We perform numerical locality-recovery experiments on Hamiltonians defined over interaction graphs of varying intrinsic dimension. Each experiment consists of:
+
+\begin{enumerate}[label=\arabic*.]
+\item Constructing a local XX-model Hamiltonian on a specified graph.
+\item Applying a global scrambling unitary.
+\item Running a locality-biased recovery flow using graph-local two-qubit gates.
+\item Measuring the reduction in nonlocal operator weight.
+\end{enumerate}
+
+\subsection{Results}
+
+Across all tested system sizes and graph topologies, three-dimensional lattices consistently exhibit the deepest accessible locality basins. While higher-dimensional graphs are mathematically admissible, they are not dynamically accessed once stable structure forms at lower dimension.
+
+These results do not rely on spectral dimension, which is poorly resolved at small system sizes. Instead, they reflect structural accessibility: how readily a given geometry traps the locality recovery flow.
+
+\section{No-Refolding and Dimensional Lock-In}
+
+Once matter forms within a three-dimensional geometric basin, further geometric transitions become dynamically inaccessible. Any attempt to refold the substrate into a different dimensional configuration would require either coordinated nonlocal transformations or destruction of existing records. Both are forbidden by the foundational constraints.
+
+Dimensionality therefore freezes not because three dimensions are optimal, but because three dimensions are \emph{first}. The settling process terminates as soon as stable matter exists.
+
+\section{Discussion}
+
+\subsection{Relation to Other Approaches}
+
+This framework differs fundamentally from anthropic or compactification-based explanations. Dimensionality is not selected by observers, nor by energetic preference, but by accessibility under constrained dynamics. Higher-dimensional geometries are not forbidden in principle; they are simply never reached.
+
+\subsection{Limitations and Future Directions}
+
+The numerical evidence presented here is limited to small system sizes. Extending these results to larger substrates will require tensor-network methods or analytical bounds on basin depth as a function of dimension. Future work may also explore cosmological implications of dimensional settling and potential signatures of early pre-geometric phases.
+
+\section{Conclusion}
+
+We have shown that three-dimensional space emerges naturally within the Hilbert Substrate Framework as the first geometry capable of supporting stable matter. Once such matter exists, No-Refolding locks the geometry in place. Dimensionality is therefore not an input to physics, but an emergent consequence of constrained unitary dynamics.
+
+The universe does not choose three dimensions because they are optimal. It remains three-dimensional because this is where the settling process ends.
+
+\bibliographystyle{plain}
+\begin{thebibliography}{9}
+
+\bibitem{HSF1}
+B.~Bray.
+\newblock \emph{The Hilbert Substrate Framework: Persistent Heterogeneity in Information Propagation}.
+\newblock Zenodo, 2025.
+
+\bibitem{HSF2}
+B.~Bray.
+\newblock \emph{The Hilbert Substrate Framework II: Accessibility and the Emergence of Spatial Locality}.
+\newblock Zenodo, 2025.
+
+\end{thebibliography}
+
+\end{document}

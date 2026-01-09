@@ -1,0 +1,132 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{physics}
+\usepackage{geometry}
+\usepackage{hyperref}
+
+\geometry{margin=1in}
+
+\title{Why Three Dimensions?\\
+Locality, Exchange Stability, and Dimensional Locking in a Hilbert-Space Substrate}
+\author{Ben Bray}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Why macroscopic space is three-dimensional has traditionally been treated as either an anthropic fact or a kinematic assumption. In this note we summarize recent numerical and conceptual results showing that, within a Hilbert-space-first framework with unitary dynamics and locality constraints, three-dimensional structure is dynamically selected. The mechanism is neither aesthetic nor postulated: it arises from the stability of fermionic exchange structure and the accessibility of locality basins under constrained unitary evolution. We argue that three dimensions are uniquely favored because only in three dimensions do locality, fermionic identity, and topological minimality coexist as a stable fixed point of the dynamics.
+\end{abstract}
+
+\section{Framework and Question}
+
+We work within a \emph{Hilbert substrate} framework in which:
+\begin{itemize}
+    \item The fundamental ontology is a single Hilbert space $\mathcal{H}$.
+    \item All dynamics are unitary.
+    \item Subsystems, geometry, and particles are emergent structures.
+    \item Locality and causal structure arise from constraints on admissible unitary operations.
+\end{itemize}
+
+The central question addressed here is:
+
+\begin{quote}
+\emph{Why does emergent space appear three-dimensional rather than one-, two-, or higher-dimensional?}
+\end{quote}
+
+Importantly, this question is not answered by assuming geometry at the outset. Instead, we ask which interaction structures are dynamically stable and accessible under constrained unitary evolution.
+
+\section{Locality Recovery and Dimensional Basins}
+
+Given a Hamiltonian $H$ defined on a graph of interactions, one may define a \emph{locality metric} measuring the fraction of $H$ supported on local operators (single-site and graph-adjacent two-site terms). Starting from a geometrically local Hamiltonian, we apply a global (Haar-random) basis scrambling and attempt to recover locality using only admissible local unitaries constrained by the interaction graph.
+
+Numerical experiments comparing graphs of different intrinsic dimension (1D chains, 2D lattices, 3D lattices, 4D lattices, and degree-matched random regular graphs) show that:
+\begin{itemize}
+    \item All geometries permit some degree of locality recovery at small system size.
+    \item The \emph{depth} of the recovered locality basin depends strongly on intrinsic dimension.
+    \item Three-dimensional graphs exhibit systematically deeper and more stable locality basins than lower-dimensional or non-geometric graphs under identical dynamics.
+\end{itemize}
+
+This already suggests that three-dimensional locality is not merely allowed but \emph{preferred} by the dynamics.
+
+\section{Exchange Statistics as a Dynamical Property}
+
+In this framework, particle statistics are not imposed by symmetrization postulates. Instead, they are defined \emph{operationally} via the stability of exchange phases under local unitary evolution.
+
+Let $\phi$ denote the phase accumulated under an operational exchange of two defect-like excitations. One can define a long-time stability functional $S(\phi)$ measuring the persistence of this phase under admissible local dynamics.
+
+Numerical studies show:
+\begin{equation}
+S(\phi) \to 0 \quad \text{for} \quad \phi \neq 0,\pi,
+\end{equation}
+while $\phi = 0$ (bosonic) and $\phi = \pi$ (fermionic) remain stable as system size grows.
+
+Crucially, this result is \emph{dimension-dependent}. The mechanism is topological rather than kinematic.
+
+\section{Why Intermediate Phases Decay in Three Dimensions}
+
+The decay of intermediate exchange phases is not a failure of unitarity, but a failure of \emph{topological protection}.
+
+In three dimensions:
+\begin{itemize}
+    \item Worldline exchange loops can be continuously deformed and unwound.
+    \item The relevant configuration space of identical excitations has fundamental group $\pi_1 \cong \mathbb{Z}_2$.
+    \item Only two homotopy classes of exchanges exist.
+\end{itemize}
+
+As a result, there is no invariant capable of protecting a continuous $U(1)$ exchange phase. Under local unitary evolution, any attempt to store such a phase delocalizes into microscopic degrees of freedom and becomes unobservable under coarse-grained probes.
+
+Thus, fermionic exchange ($\phi=\pi$) is not merely allowed but \emph{dynamically enforced} as a stable fixed point.
+
+\section{Why Two Dimensions Fail}
+
+In two dimensions, braid groups permit infinitely many exchange classes. While this allows anyonic phases, it also implies:
+\begin{itemize}
+    \item No intrinsic collapse to a minimal set of exchange sectors.
+    \item No dynamical mechanism enforcing $\phi=\pi$ as a uniquely stable phase.
+\end{itemize}
+
+Within the Hilbert substrate framework, fermions in two dimensions are therefore not forbidden but \emph{not self-protecting}. Stable intermediate phases require additional protection mechanisms (energy gaps, topological order, nonlocal encoding). Without such protection, fermionic identity is unstable under local dynamics.
+
+\section{Why Four Dimensions Are Not Better}
+
+For dimensions $d \geq 3$, exchange topology already collapses to $\mathbb{Z}_2$, so higher dimensions do not provide additional protection for fermionic statistics. However, higher dimensions introduce new complications:
+\begin{itemize}
+    \item Increased coordination and entanglement pathways accelerate nonlocal mixing.
+    \item Spinor representations become larger and less minimal.
+    \item Locality basins are empirically shallower and less stiff under perturbation.
+\end{itemize}
+
+Thus, three dimensions appear to be the \emph{minimal} dimension in which fermionic exchange is both enforced and compatible with deep, stable locality basins.
+
+\section{Dimensional Locking via No-Refolding}
+
+Once stable fermionic records exist, the system is subject to a \emph{no-refolding constraint}: global refactorizations of Hilbert space that would erase fermionic identity are dynamically inaccessible.
+
+This implies a form of hysteresis:
+\begin{itemize}
+    \item Prior to fermionic stabilization, effective dimensionality may fluctuate.
+    \item After fermions emerge as stable records, dimensionality becomes locked.
+\end{itemize}
+
+Macroscopic three-dimensional space is therefore not assumed but \emph{frozen in} by the existence of stable fermionic structure.
+
+\section{Observational Implications}
+
+This framework yields concrete, testable expectations:
+\begin{itemize}
+    \item Effective two-dimensional systems can support anyons only when protected by gaps or topological order.
+    \item Loss of such protection should lead to rapid decoherence of intermediate exchange phases.
+    \item Any early-universe dimensional running must freeze out by the epoch at which fermionic stability becomes possible.
+\end{itemize}
+
+These predictions align with known features of quantum Hall systems, topological phases, and constraints on exotic dimensional scenarios.
+
+\section{Conclusion}
+
+The question ``Why three dimensions?'' admits a dynamical answer. Three dimensions are selected not because they are assumed, but because they are the unique setting in which locality, fermionic exchange stability, and minimal topological structure coexist as a stable attractor of constrained unitary evolution.
+
+In this sense, the dimensionality of space is not a background fact but a consequence of what information structures are capable of surviving.
+\end{document}

@@ -1,0 +1,126 @@
+\section*{Note on Constraint Separation and the No-Refolding Condition}
+
+We report a numerical result demonstrating the separation between two distinct constraints
+on Hilbert-space dynamics: \emph{no-signaling} and a stronger constraint we call
+\emph{no-refolding}. Central to this result is a precise operational definition of
+``existing matter,'' formalized via a quadratic (fermionic) anchor.
+
+\subsection*{Hilbert Space and Matter Anchor}
+
+We consider a finite Hilbert space
+\[
+\mathcal{H} = (\mathbb{C}^2)^{\otimes N}, \quad N = 8,
+\]
+and an initial Hamiltonian $H_0$ describing fermionic matter.
+Specifically, $H_0$ is a free-fermion hopping Hamiltonian defined on a one-dimensional
+ring graph,
+\[
+H_0 = -t \sum_{\langle i,j\rangle \in A} \left( c_i^\dagger c_j + c_j^\dagger c_i \right),
+\]
+where $c_i^\dagger, c_i$ are Jordan--Wigner fermionic creation and annihilation operators
+defined with respect to a fixed site ordering, and $A$ denotes the edge set of the ring.
+
+This Hamiltonian is exactly quadratic in the fermionic operators and therefore defines
+a stable fermionic matter sector. We take preservation of this quadratic structure as
+our operational criterion for the persistence of matter.
+
+\paragraph{Quadratic Anchor.}
+For a general Hamiltonian $H$, we extract its quadratic component via a Hilbert--Schmidt
+projection onto the fermionic bilinear operator basis $\{c_i^\dagger c_j\}$:
+\[
+t_{ij} \equiv
+\frac{\mathrm{Tr}\!\left[(c_i^\dagger c_j)^\dagger H\right]}
+     {\mathrm{Tr}\!\left[(c_i^\dagger c_j)^\dagger (c_i^\dagger c_j)\right]} .
+\]
+Using these coefficients, we reconstruct the best-fit quadratic Hamiltonian
+\[
+H_{\mathrm{quad}} = \sum_{i,j} t_{ij}\, c_i^\dagger c_j .
+\]
+
+We then define the \emph{quadratic fraction}
+\[
+Q(H) \equiv 1 - \frac{\|H - H_{\mathrm{quad}}\|}{\|H\|},
+\]
+where $\|\cdot\|$ denotes the Frobenius norm. By construction,
+$Q(H)=1$ if and only if $H$ is exactly quadratic.
+
+In our simulations, $Q(H_0)=1$ to numerical precision. We use $Q(H)$ as a
+\emph{matter anchor}: values $Q(H)\approx 1$ indicate intact fermionic matter,
+while $Q(H)\ll 1$ indicate destruction of quadratic (particle-like) structure.
+
+\subsection*{Locality and Target Geometries}
+
+Locality is defined relative to a chosen geometry via a signaling (locality) proxy.
+Given a target graph $B$ on the same $N$ sites, we define a local operator subspace
+consisting of on-site Pauli operators and two-body Pauli products supported on the edges
+of $B$. The fraction of $\|H\|^2$ captured by this subspace defines the local weight,
+and we denote the complementary nonlocal fraction as
+\[
+\mathrm{leak}_B(H) \equiv 1 - \frac{\|P_B(H)\|^2}{\|H\|^2}.
+\]
+
+As target geometries, we use connected random sparse graphs, which generically share
+few or no edges with the original ring.
+
+\subsection*{Dynamics}
+
+We attempt to reduce $\mathrm{leak}_B(H)$ using only local unitary dynamics: conjugation
+by adjacent two-qubit gates. This move set is identical in all runs and respects
+no-signaling throughout.
+
+We compare two dynamical regimes:
+\begin{enumerate}
+  \item \textbf{Free refolding}: minimize $\mathrm{leak}_B(H)$ without constraints.
+  \item \textbf{No-refolding enforced}: minimize $\mathrm{leak}_B(H)$ subject to the
+        hard constraint
+        \[
+        Q(H) \ge 0.98
+        \]
+        at every step of the evolution.
+\end{enumerate}
+
+The second regime enforces preservation of existing fermionic matter.
+
+\subsection*{Result}
+
+For certain target graphs, including cases where the target edge set is disjoint from
+the source ring, we observe the following:
+
+\begin{itemize}
+  \item In the \emph{free} regime, $\mathrm{leak}_B(H)$ can be reduced substantially
+        (e.g.\ from $1.0$ to $\sim 0.79$) using only local unitary gates.
+        However, this reduction is accompanied by a catastrophic loss of quadratic
+        structure, with final values $Q(H)\sim 10^{-3}$.
+  \item In the \emph{no-refolding} regime, every proposed local update violates the
+        quadratic constraint and is rejected. The dynamics stalls entirely:
+        $\mathrm{leak}_B(H)$ remains equal to its initial value, while $Q(H)=1$ is
+        preserved exactly.
+\end{itemize}
+
+Both regimes satisfy no-signaling identically; the sole difference is the requirement
+that existing matter structure be preserved.
+
+\subsection*{Constraint Separation}
+
+These observations establish the following empirical fact:
+
+\begin{quote}
+There exist directions in Hilbert space that reduce signaling cost relative to a new
+geometry but are dynamically accessible under local evolution \emph{only if} existing
+fermionic (quadratic) structure is destroyed. When quadratic structure is preserved,
+those geometries become dynamically inaccessible.
+\end{quote}
+
+We therefore identify \emph{no-refolding} as an independent constraint on Hilbert-space
+dynamics, distinct from no-signaling. Once stable matter exists, the set of geometries
+reachable by local unitary evolution is strictly restricted.
+
+\subsection*{Implication}
+
+Not all unitarily equivalent factorizations of Hilbert space are physically accessible
+once matter is present. Geometry becomes history-dependent: the presence of matter
+constrains which refactorizations of the Hilbert substrate can be dynamically realized.
+
+This provides a concrete mechanism by which pre-geometric matter constrains emergent
+spatial structure and motivates further investigation of dimensional selection as a
+compatibility condition between matter and geometry.

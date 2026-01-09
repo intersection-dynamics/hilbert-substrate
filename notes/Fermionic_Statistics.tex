@@ -1,0 +1,120 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{physics}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{bm}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+\title{Hilbert Substrate Framework III:\\
+Emergent Fermionic Statistics from a Qubit Substrate}
+\author{ }
+\date{ }
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+The Hilbert Substrate Framework (HSF) proposes that spacetime, matter, and forces emerge from a geometry-free quantum substrate governed only by unitary dynamics and accessibility constraints. In Parts I and II, we demonstrated emergent metric structure and spatial locality. In this note (Part III), we address a central remaining challenge: whether fermionic matter---characterized by Pauli exclusion and resistance to compression---can emerge from a substrate composed of distinguishable qubits. Using geometry-blind recovery and spectral audits of recovered Hamiltonians, we show that fermionic statistics arise dynamically, without being imposed at the substrate level. In particular, we identify Jordan--Wigner fermions, sector additivity consistent with a Fermi sea, and a discrete analogue of Pauli pressure. These results demonstrate that ``steel'' (fermionic matter) can emerge from a qubit substrate that contains no fundamental fermionic degrees of freedom.
+\end{abstract}
+
+\section{Motivation: ``Mush'' versus ``Steel''}
+
+A universe composed solely of bosonic degrees of freedom permits unlimited occupation of a single state. Such a universe generically collapses into highly condensed configurations (``mush''), lacking the rigidity and incompressibility observed in ordinary matter. In contrast, fermionic matter obeys the Pauli exclusion principle, which prevents multiple particles from occupying the same quantum state. This exclusion underlies electron shells, degeneracy pressure, and the solidity of everyday objects (``steel'').
+
+Any framework claiming that matter emerges from a more primitive quantum substrate must therefore explain how fermionic statistics arise dynamically. In the HSF, the substrate consists of a finite-dimensional Hilbert space factorized into distinguishable qubits. No antisymmetry, particle labels, or spacetime structure are assumed a priori. The question addressed here is:
+
+\begin{quote}
+Can generic unitary dynamics on a qubit substrate produce effective quasiparticles that obey fermionic statistics?
+\end{quote}
+
+\section{Substrate Model and Recovery Procedure}
+
+We study spin-chain Hamiltonians acting on $N=8$ qubits, focusing primarily on the XX model,
+\begin{equation}
+H_{\mathrm{XX}} = \sum_{j} \left( X_j X_{j+1} + Y_j Y_{j+1} \right),
+\end{equation}
+which is known in one dimension to be exactly equivalent to free fermions under the Jordan--Wigner transformation.
+
+Crucially, our analysis does not rely on this equivalence being imposed. Instead, we:
+\begin{enumerate}
+    \item Scramble the Hamiltonian by applying global unitary transformations.
+    \item Recover an accessible basis using a geometry-blind optimization objective that minimizes nonlocal operator complexity (``sparse recovery'').
+    \item Audit the recovered Hamiltonian for fermionic behavior using spectral and algebraic diagnostics.
+\end{enumerate}
+
+The recovery step does not assume any notion of spatial geometry. Graphs (e.g.\ rings) are used only as \emph{diagnostic rulers}, not as fundamental structure.
+
+\section{Fermionic Audit Metrics}
+
+To determine whether fermionic matter has emerged, we introduce three independent and operationally meaningful diagnostics.
+
+\subsection{Sector Additivity (Fermi Sea Structure)}
+
+We decompose the Hilbert space into magnetization sectors labeled by the number $n$ of spin-down excitations. These sectors correspond to particle-number sectors in a fermionic interpretation.
+
+Let $\varepsilon_k$ denote the eigenvalues of $H$ restricted to the one-particle sector ($n=1$). For free fermions, the energies in the two-particle sector ($n=2$) satisfy
+\begin{equation}
+E^{(2)} \approx \varepsilon_{k_1} + \varepsilon_{k_2}, \quad k_1 \neq k_2.
+\end{equation}
+
+We compute the root-mean-square deviation between the actual two-particle energies and all allowed sums of distinct one-particle energies. Across seeds, this residual is found to be small, indicating that the many-body spectrum is well-approximated by a Fermi sea rather than by bosonic piling.
+
+\subsection{Jordan--Wigner Anticommutation Test}
+
+We explicitly construct fermionic operators from qubits using the Jordan--Wigner map,
+\begin{equation}
+c_j = \left( \prod_{m<j} Z_m \right) \sigma^-_j, \quad
+c_j^\dagger = \left( \prod_{m<j} Z_m \right) \sigma^+_j.
+\end{equation}
+
+We then evaluate expectation values of anticommutators on the recovered ground state $\ket{\psi_0}$:
+\begin{align}
+\langle \psi_0 | \{c_i, c_j\} | \psi_0 \rangle &\approx 0, \\
+\langle \psi_0 | \{c_i, c_j^\dagger\} | \psi_0 \rangle &\approx \delta_{ij}.
+\end{align}
+
+Numerically, the maximum absolute violation of these relations is at or near machine precision. This demonstrates that the recovered Hamiltonian supports operators obeying fermionic anticommutation relations, even though no fermions were introduced at the substrate level.
+
+\subsection{Pauli Pressure Proxy}
+
+As a discrete analogue of degeneracy pressure, we examine the curvature of the ground-state energy as a function of particle number:
+\begin{equation}
+\kappa^{-1}(n) = E_0(n+1) - 2E_0(n) + E_0(n-1).
+\end{equation}
+
+For fermionic systems, $E_0(n)$ is convex due to the progressive filling of higher-energy modes. We observe precisely this convexity, distinguishing the recovered behavior from bosonic collapse scenarios.
+
+\section{Results}
+
+Across multiple random scrambles and geometry-blind recoveries:
+\begin{itemize}
+    \item Fermionic anticommutation relations emerge robustly.
+    \item Many-body spectra exhibit additive structure characteristic of free fermions.
+    \item Ground-state energies display convexity consistent with Pauli exclusion and compression resistance.
+\end{itemize}
+
+Importantly, these results hold even in runs where spatial geometry is not cleanly recovered. This indicates that fermionic statistics are a more primitive emergent feature than geometry itself.
+
+\section{Interpretation within HSF}
+
+These findings support a central claim of the Hilbert Substrate Framework:
+\begin{quote}
+Fermionic matter is not fundamental, but emerges as a stable quasiparticle algebra supported by accessible unitary dynamics.
+\end{quote}
+
+In this view, a fermion is not a point particle but a structured excitation of the substrate, accompanied (in one dimension) by a nonlocal Jordan--Wigner string. The Pauli exclusion principle arises from algebraic constraints on these excitations, not from antisymmetrization imposed at the outset.
+
+\section{Limitations and Outlook}
+
+At $N=8$, geometry-blind recovery of spatial locality is inconsistent, which is expected at small system sizes. Larger systems and refined objectives are required to demonstrate spontaneous selection of spatial dimension without scaffolding. However, the emergence of fermionic statistics does not depend on successful geometry recovery and is already firmly established.
+
+This completes Part III of the HSF program. Part IV will address the co-emergence of geometry and fermionic matter in larger systems and the transition from algebraic locality to spatial dimensionality.
+
+\section*{Conclusion}
+
+We have shown that a qubit substrate governed by unitary dynamics can dynamically generate fermionic matter, complete with Pauli exclusion and resistance to compression. This resolves the ``mush versus steel'' problem within the Hilbert Substrate Framework and demonstrates that matter-like behavior need not be fundamental, but can emerge from a deeper quantum substrate.
+
+\end{document}
