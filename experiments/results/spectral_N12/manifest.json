@@ -1,0 +1,684 @@
+{
+  "created_utc": "2026-01-10T15:06:57.740300Z",
+  "tool": "hsf_spectral_dimension_study.py",
+  "args": {
+    "out": ".\\results\\spectral_N12",
+    "N": 12,
+    "include": "3d,rr4,rr6",
+    "shapes": "auto",
+    "t_min": 0.001,
+    "t_max": 1000.0,
+    "t_points": 120,
+    "fit_windows": "0.20-0.50,0.33-0.66,0.50-0.80",
+    "bootstrap_window": "0.33-0.66",
+    "bootstrap_B": 200,
+    "rr_repeats": 25,
+    "rr_seed": 0,
+    "progress": true,
+    "zip": false
+  },
+  "graphs_planned": [
+    {
+      "name": "3D_lattice_2x2x3",
+      "dimension": 3,
+      "N": 12,
+      "edges": 36,
+      "metadata": {
+        "boundary": "periodic",
+        "Lx": 2,
+        "Ly": 2,
+        "Lz": 3
+      }
+    },
+    {
+      "name": "random_regular_d4",
+      "dimension": null,
+      "N": 12,
+      "edges": 24,
+      "metadata": {
+        "degree": 4,
+        "method": "circulant+swaps",
+        "swaps": 480,
+        "target_swaps": 480,
+        "rr_repeat": 0
+      }
+    },
+    {
+      "name": "random_regular_d4",
+      "dimension": null,
+      "N": 12,
+      "edges": 24,
+      "metadata": {
+        "degree": 4,
+        "method": "circulant+swaps",
+        "swaps": 480,
+        "target_swaps": 480,
+        "rr_repeat": 1
+      }
+    },
+    {
+      "name": "random_regular_d4",
+      "dimension": null,
+      "N": 12,
+      "edges": 24,
+      "metadata": {
+        "degree": 4,
+        "method": "circulant+swaps",
+        "swaps": 480,
+        "target_swaps": 480,
+        "rr_repeat": 2
+      }
+    },
+    {
+      "name": "random_regular_d4",
+      "dimension": null,
+      "N": 12,
+      "edges": 24,
+      "metadata": {
+        "degree": 4,
+        "method": "circulant+swaps",
+        "swaps": 480,
+        "target_swaps": 480,
+        "rr_repeat": 3
+      }
+    },
+    {
+      "name": "random_regular_d4",
+      "dimension": null,
+      "N": 12,
+      "edges": 24,
+      "metadata": {
+        "degree": 4,
+        "method": "circulant+swaps",
+        "swaps": 480,
+        "target_swaps": 480,
+        "rr_repeat": 4
+      }
+    },
+    {
+      "name": "random_regular_d4",
+      "dimension": null,
+      "N": 12,
+      "edges": 24,
+      "metadata": {
+        "degree": 4,
+        "method": "circulant+swaps",
+        "swaps": 480,
+        "target_swaps": 480,
+        "rr_repeat": 5
+      }
+    },
+    {
+      "name": "random_regular_d4",
+      "dimension": null,
+      "N": 12,
+      "edges": 24,
+      "metadata": {
+        "degree": 4,
+        "method": "circulant+swaps",
+        "swaps": 480,
+        "target_swaps": 480,
+        "rr_repeat": 6
+      }
+    },
+    {
+      "name": "random_regular_d4",
+      "dimension": null,
+      "N": 12,
+      "edges": 24,
+      "metadata": {
+        "degree": 4,
+        "method": "circulant+swaps",
+        "swaps": 480,
+        "target_swaps": 480,
+        "rr_repeat": 7
+      }
+    },
+    {
+      "name": "random_regular_d4",
+      "dimension": null,
+      "N": 12,
+      "edges": 24,
+      "metadata": {
+        "degree": 4,
+        "method": "circulant+swaps",
+        "swaps": 480,
+        "target_swaps": 480,
+        "rr_repeat": 8
+      }
+    },
+    {
+      "name": "random_regular_d4",
+      "dimension": null,
+      "N": 12,
+      "edges": 24,
+      "metadata": {
+        "degree": 4,
+        "method": "circulant+swaps",
+        "swaps": 480,
+        "target_swaps": 480,
+        "rr_repeat": 9
+      }
+    },
+    {
+      "name": "random_regular_d4",
+      "dimension": null,
+      "N": 12,
+      "edges": 24,
+      "metadata": {
+        "degree": 4,
+        "method": "circulant+swaps",
+        "swaps": 480,
+        "target_swaps": 480,
+        "rr_repeat": 10
+      }
+    },
+    {
+      "name": "random_regular_d4",
+      "dimension": null,
+      "N": 12,
+      "edges": 24,
+      "metadata": {
+        "degree": 4,
+        "method": "circulant+swaps",
+        "swaps": 480,
+        "target_swaps": 480,
+        "rr_repeat": 11
+      }
+    },
+    {
+      "name": "random_regular_d4",
+      "dimension": null,
+      "N": 12,
+      "edges": 24,
+      "metadata": {
+        "degree": 4,
+        "method": "circulant+swaps",
+        "swaps": 480,
+        "target_swaps": 480,
+        "rr_repeat": 12
+      }
+    },
+    {
+      "name": "random_regular_d4",
+      "dimension": null,
+      "N": 12,
+      "edges": 24,
+      "metadata": {
+        "degree": 4,
+        "method": "circulant+swaps",
+        "swaps": 480,
+        "target_swaps": 480,
+        "rr_repeat": 13
+      }
+    },
+    {
+      "name": "random_regular_d4",
+      "dimension": null,
+      "N": 12,
+      "edges": 24,
+      "metadata": {
+        "degree": 4,
+        "method": "circulant+swaps",
+        "swaps": 480,
+        "target_swaps": 480,
+        "rr_repeat": 14
+      }
+    },
+    {
+      "name": "random_regular_d4",
+      "dimension": null,
+      "N": 12,
+      "edges": 24,
+      "metadata": {
+        "degree": 4,
+        "method": "circulant+swaps",
+        "swaps": 480,
+        "target_swaps": 480,
+        "rr_repeat": 15
+      }
+    },
+    {
+      "name": "random_regular_d4",
+      "dimension": null,
+      "N": 12,
+      "edges": 24,
+      "metadata": {
+        "degree": 4,
+        "method": "circulant+swaps",
+        "swaps": 480,
+        "target_swaps": 480,
+        "rr_repeat": 16
+      }
+    },
+    {
+      "name": "random_regular_d4",
+      "dimension": null,
+      "N": 12,
+      "edges": 24,
+      "metadata": {
+        "degree": 4,
+        "method": "circulant+swaps",
+        "swaps": 480,
+        "target_swaps": 480,
+        "rr_repeat": 17
+      }
+    },
+    {
+      "name": "random_regular_d4",
+      "dimension": null,
+      "N": 12,
+      "edges": 24,
+      "metadata": {
+        "degree": 4,
+        "method": "circulant+swaps",
+        "swaps": 480,
+        "target_swaps": 480,
+        "rr_repeat": 18
+      }
+    },
+    {
+      "name": "random_regular_d4",
+      "dimension": null,
+      "N": 12,
+      "edges": 24,
+      "metadata": {
+        "degree": 4,
+        "method": "circulant+swaps",
+        "swaps": 480,
+        "target_swaps": 480,
+        "rr_repeat": 19
+      }
+    },
+    {
+      "name": "random_regular_d4",
+      "dimension": null,
+      "N": 12,
+      "edges": 24,
+      "metadata": {
+        "degree": 4,
+        "method": "circulant+swaps",
+        "swaps": 480,
+        "target_swaps": 480,
+        "rr_repeat": 20
+      }
+    },
+    {
+      "name": "random_regular_d4",
+      "dimension": null,
+      "N": 12,
+      "edges": 24,
+      "metadata": {
+        "degree": 4,
+        "method": "circulant+swaps",
+        "swaps": 480,
+        "target_swaps": 480,
+        "rr_repeat": 21
+      }
+    },
+    {
+      "name": "random_regular_d4",
+      "dimension": null,
+      "N": 12,
+      "edges": 24,
+      "metadata": {
+        "degree": 4,
+        "method": "circulant+swaps",
+        "swaps": 480,
+        "target_swaps": 480,
+        "rr_repeat": 22
+      }
+    },
+    {
+      "name": "random_regular_d4",
+      "dimension": null,
+      "N": 12,
+      "edges": 24,
+      "metadata": {
+        "degree": 4,
+        "method": "circulant+swaps",
+        "swaps": 480,
+        "target_swaps": 480,
+        "rr_repeat": 23
+      }
+    },
+    {
+      "name": "random_regular_d4",
+      "dimension": null,
+      "N": 12,
+      "edges": 24,
+      "metadata": {
+        "degree": 4,
+        "method": "circulant+swaps",
+        "swaps": 480,
+        "target_swaps": 480,
+        "rr_repeat": 24
+      }
+    },
+    {
+      "name": "random_regular_d6",
+      "dimension": null,
+      "N": 12,
+      "edges": 36,
+      "metadata": {
+        "degree": 6,
+        "method": "circulant+swaps",
+        "swaps": 195,
+        "target_swaps": 720,
+        "rr_repeat": 0
+      }
+    },
+    {
+      "name": "random_regular_d6",
+      "dimension": null,
+      "N": 12,
+      "edges": 36,
+      "metadata": {
+        "degree": 6,
+        "method": "circulant+swaps",
+        "swaps": 176,
+        "target_swaps": 720,
+        "rr_repeat": 1
+      }
+    },
+    {
+      "name": "random_regular_d6",
+      "dimension": null,
+      "N": 12,
+      "edges": 36,
+      "metadata": {
+        "degree": 6,
+        "method": "circulant+swaps",
+        "swaps": 251,
+        "target_swaps": 720,
+        "rr_repeat": 2
+      }
+    },
+    {
+      "name": "random_regular_d6",
+      "dimension": null,
+      "N": 12,
+      "edges": 36,
+      "metadata": {
+        "degree": 6,
+        "method": "circulant+swaps",
+        "swaps": 184,
+        "target_swaps": 720,
+        "rr_repeat": 3
+      }
+    },
+    {
+      "name": "random_regular_d6",
+      "dimension": null,
+      "N": 12,
+      "edges": 36,
+      "metadata": {
+        "degree": 6,
+        "method": "circulant+swaps",
+        "swaps": 150,
+        "target_swaps": 720,
+        "rr_repeat": 4
+      }
+    },
+    {
+      "name": "random_regular_d6",
+      "dimension": null,
+      "N": 12,
+      "edges": 36,
+      "metadata": {
+        "degree": 6,
+        "method": "circulant+swaps",
+        "swaps": 86,
+        "target_swaps": 720,
+        "rr_repeat": 5
+      }
+    },
+    {
+      "name": "random_regular_d6",
+      "dimension": null,
+      "N": 12,
+      "edges": 36,
+      "metadata": {
+        "degree": 6,
+        "method": "circulant+swaps",
+        "swaps": 122,
+        "target_swaps": 720,
+        "rr_repeat": 6
+      }
+    },
+    {
+      "name": "random_regular_d6",
+      "dimension": null,
+      "N": 12,
+      "edges": 36,
+      "metadata": {
+        "degree": 6,
+        "method": "circulant+swaps",
+        "swaps": 180,
+        "target_swaps": 720,
+        "rr_repeat": 7
+      }
+    },
+    {
+      "name": "random_regular_d6",
+      "dimension": null,
+      "N": 12,
+      "edges": 36,
+      "metadata": {
+        "degree": 6,
+        "method": "circulant+swaps",
+        "swaps": 165,
+        "target_swaps": 720,
+        "rr_repeat": 8
+      }
+    },
+    {
+      "name": "random_regular_d6",
+      "dimension": null,
+      "N": 12,
+      "edges": 36,
+      "metadata": {
+        "degree": 6,
+        "method": "circulant+swaps",
+        "swaps": 179,
+        "target_swaps": 720,
+        "rr_repeat": 9
+      }
+    },
+    {
+      "name": "random_regular_d6",
+      "dimension": null,
+      "N": 12,
+      "edges": 36,
+      "metadata": {
+        "degree": 6,
+        "method": "circulant+swaps",
+        "swaps": 158,
+        "target_swaps": 720,
+        "rr_repeat": 10
+      }
+    },
+    {
+      "name": "random_regular_d6",
+      "dimension": null,
+      "N": 12,
+      "edges": 36,
+      "metadata": {
+        "degree": 6,
+        "method": "circulant+swaps",
+        "swaps": 126,
+        "target_swaps": 720,
+        "rr_repeat": 11
+      }
+    },
+    {
+      "name": "random_regular_d6",
+      "dimension": null,
+      "N": 12,
+      "edges": 36,
+      "metadata": {
+        "degree": 6,
+        "method": "circulant+swaps",
+        "swaps": 156,
+        "target_swaps": 720,
+        "rr_repeat": 12
+      }
+    },
+    {
+      "name": "random_regular_d6",
+      "dimension": null,
+      "N": 12,
+      "edges": 36,
+      "metadata": {
+        "degree": 6,
+        "method": "circulant+swaps",
+        "swaps": 173,
+        "target_swaps": 720,
+        "rr_repeat": 13
+      }
+    },
+    {
+      "name": "random_regular_d6",
+      "dimension": null,
+      "N": 12,
+      "edges": 36,
+      "metadata": {
+        "degree": 6,
+        "method": "circulant+swaps",
+        "swaps": 162,
+        "target_swaps": 720,
+        "rr_repeat": 14
+      }
+    },
+    {
+      "name": "random_regular_d6",
+      "dimension": null,
+      "N": 12,
+      "edges": 36,
+      "metadata": {
+        "degree": 6,
+        "method": "circulant+swaps",
+        "swaps": 86,
+        "target_swaps": 720,
+        "rr_repeat": 15
+      }
+    },
+    {
+      "name": "random_regular_d6",
+      "dimension": null,
+      "N": 12,
+      "edges": 36,
+      "metadata": {
+        "degree": 6,
+        "method": "circulant+swaps",
+        "swaps": 183,
+        "target_swaps": 720,
+        "rr_repeat": 16
+      }
+    },
+    {
+      "name": "random_regular_d6",
+      "dimension": null,
+      "N": 12,
+      "edges": 36,
+      "metadata": {
+        "degree": 6,
+        "method": "circulant+swaps",
+        "swaps": 175,
+        "target_swaps": 720,
+        "rr_repeat": 17
+      }
+    },
+    {
+      "name": "random_regular_d6",
+      "dimension": null,
+      "N": 12,
+      "edges": 36,
+      "metadata": {
+        "degree": 6,
+        "method": "circulant+swaps",
+        "swaps": 173,
+        "target_swaps": 720,
+        "rr_repeat": 18
+      }
+    },
+    {
+      "name": "random_regular_d6",
+      "dimension": null,
+      "N": 12,
+      "edges": 36,
+      "metadata": {
+        "degree": 6,
+        "method": "circulant+swaps",
+        "swaps": 168,
+        "target_swaps": 720,
+        "rr_repeat": 19
+      }
+    },
+    {
+      "name": "random_regular_d6",
+      "dimension": null,
+      "N": 12,
+      "edges": 36,
+      "metadata": {
+        "degree": 6,
+        "method": "circulant+swaps",
+        "swaps": 163,
+        "target_swaps": 720,
+        "rr_repeat": 20
+      }
+    },
+    {
+      "name": "random_regular_d6",
+      "dimension": null,
+      "N": 12,
+      "edges": 36,
+      "metadata": {
+        "degree": 6,
+        "method": "circulant+swaps",
+        "swaps": 249,
+        "target_swaps": 720,
+        "rr_repeat": 21
+      }
+    },
+    {
+      "name": "random_regular_d6",
+      "dimension": null,
+      "N": 12,
+      "edges": 36,
+      "metadata": {
+        "degree": 6,
+        "method": "circulant+swaps",
+        "swaps": 118,
+        "target_swaps": 720,
+        "rr_repeat": 22
+      }
+    },
+    {
+      "name": "random_regular_d6",
+      "dimension": null,
+      "N": 12,
+      "edges": 36,
+      "metadata": {
+        "degree": 6,
+        "method": "circulant+swaps",
+        "swaps": 168,
+        "target_swaps": 720,
+        "rr_repeat": 23
+      }
+    },
+    {
+      "name": "random_regular_d6",
+      "dimension": null,
+      "N": 12,
+      "edges": 36,
+      "metadata": {
+        "degree": 6,
+        "method": "circulant+swaps",
+        "swaps": 92,
+        "target_swaps": 720,
+        "rr_repeat": 24
+      }
+    }
+  ]
+}

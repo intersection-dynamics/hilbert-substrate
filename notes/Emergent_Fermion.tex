@@ -1,31 +1,105 @@
 \section*{Note: Emergent Fermionic Statistics and Accessibility Barriers in the Hilbert Substrate}
 
-\subsection*{Summary of Findings}
+\subsection*{Overview}
 
-In this work we investigated the emergence of matter-like and spacetime-like structure in the \emph{Hilbert Substrate Framework} (HSF) using small-$N$ numerical experiments on XX-type spin-chain substrates. The central question was whether fermionic statistics and spatial locality arise as independent or sequential features of the substrate dynamics.
+This note summarizes a series of numerical experiments conducted within the
+\emph{Hilbert Substrate Framework} (HSF), aimed at probing the emergence of
+matter-like (fermionic) and spacetime-like (locality, geometry) structure
+from purely Hilbert-space dynamics. All results reported here are derived
+from explicit simulations and archived datasets.
 
-Our simulations establish three empirical findings:
+\subsection*{Simulation Infrastructure}
+
+All experiments discussed in this note were generated using self-contained
+Python simulation scripts, requiring only standard numerical libraries
+(\texttt{numpy}) and no external quantum toolkits.
+
+The primary scripts used are:
+
+\begin{itemize}
+    \item \texttt{hsf\_single\_script\_sim\_suite.py}  
+    Initial end-to-end implementation including exact Pauli-basis diagnostics
+    (computationally expensive; used for validation at small $N$).
+
+    \item \texttt{hsf\_single\_script\_sim\_suite\_v2\_streaming\_fast.py}  
+    Optimized and streaming version used for the main results reported here.
+    This script:
+    \begin{itemize}
+        \item constructs XX spin-chain Hamiltonians at fixed $N$,
+        \item applies local or global Hilbert-space scrambling,
+        \item attempts recovery via local two-qubit FLOW updates only,
+        \item computes locality diagnostics using a local-subspace projection proxy,
+        \item optionally performs fermionic audits,
+        \item writes all results incrementally to disk.
+    \end{itemize}
+\end{itemize}
+
+All runs were executed at $N=8$ qubits (Hilbert space dimension $2^8=256$),
+with ring boundary conditions unless otherwise noted.
+
+\subsection*{Datasets}
+
+The following datasets were produced and analyzed:
+
+\begin{itemize}
+    \item \texttt{runs.jsonl}  
+    Line-delimited JSON file containing per-run records, including:
+    \begin{itemize}
+        \item scramble type (\texttt{local} or \texttt{global}),
+        \item FLOW parameters and diagnostics,
+        \item locality proxy metrics before and after recovery,
+        \item optional fermionic audit results.
+    \end{itemize}
+
+    \item \texttt{summary.json}  
+    Aggregated statistics computed from \texttt{runs.jsonl}, including medians,
+    means, and recovery rates.
+
+    \item \texttt{baseline.json}  
+    Reference diagnostics for the unscrambled XX Hamiltonian.
+
+    \item \texttt{REPORT.md}  
+    Human-readable summary automatically generated at the end of each suite run.
+\end{itemize}
+
+Each dataset is reproducible from the corresponding script invocation and is
+fully determined by the recorded random seeds.
+
+\subsection*{Empirical Findings}
+
+Analysis of the above datasets establishes the following results:
 
 \begin{enumerate}
     \item \textbf{Emergent fermionic statistics.}  
-    Across multiple seeds and scrambling regimes, the accessible operator algebra admits a fermionic effective description. Jordan--Wigner--type mode operators satisfy anticommutation relations to numerical tolerance, sector energies exhibit additive behavior consistent with noninteracting fermions, and exclusion-like ``Pauli pressure'' diagnostics appear as curvature in the accessible landscape. These signatures arise without assuming geometry \emph{a priori}.
+    In XX-type substrates, the accessible operator algebra admits a fermionic
+    effective description. Across seeds and scrambling regimes, Jordan--Wigner
+    mode operators satisfy anticommutation relations to numerical tolerance,
+    sector energies exhibit approximately additive behavior consistent with an effective free-fermion description within the accessible algebraic sector,
+    and exclusion-like ``Pauli pressure'' proxies appear in the operator
+    landscape. These signatures are observed without assuming spatial geometry.
 
     \item \textbf{Accessibility-limited locality.}  
-    Spatial locality is not a basis-invariant property of the substrate. When the Hamiltonian is scrambled by products of local (single-site or low-depth) unitaries, locality-biased recovery procedures reliably restore nearest-neighbor structure. In contrast, when the Hamiltonian is scrambled by generic global unitaries, locality is not recoverable using local generators alone. This behavior is robust across diagnostics and implementations.
+    Locality recovery succeeds after \texttt{local} scrambling but fails after
+    \texttt{global} scrambling. This distinction is visible directly in the
+    \texttt{runs.jsonl} records as a reduction (or lack thereof) in locality
+    leakage under FLOW updates. Averaged summaries reflect a mixed phase only
+    because local and global regimes were intentionally combined.
 
-    \item \textbf{Persistence of matter without geometry.}  
-    Crucially, fermionic diagnostics remain intact even in regimes where spatial locality is dynamically inaccessible. Global scrambling destroys the path back to a spatially local basis, yet exchange statistics and sector structure persist. This demonstrates that matter-like structure can precede, and does not require, emergent spacetime locality.
+    \item \textbf{Matter persists without geometry.}  
+    Fermionic diagnostics remain intact in \texttt{global} scramble runs where
+    locality recovery fails completely. Thus, exchange statistics emerge as a
+    more primitive and robust feature of the substrate than spatial locality.
 \end{enumerate}
 
 \subsection*{Interpretation}
 
-These results support an ordering of emergence in which
+These results support an ordered emergence sequence:
 \[
 \text{Hilbert substrate}
 \;\rightarrow\;
 \text{subsystems}
 \;\rightarrow\;
-\text{exchange statistics (matter)}
+\text{fermionic exchange statistics}
 \;\rightarrow\;
 \text{accessibility constraints}
 \;\rightarrow\;
@@ -34,12 +108,26 @@ These results support an ordering of emergence in which
 \text{geometry}.
 \]
 
-In this picture, spatial locality occupies a restricted accessibility basin in Hilbert space rather than representing a generic or recoverable feature under arbitrary basis changes. Global scrambling constitutes a transition across an accessibility barrier, beyond which locality cannot be restored using local operations alone. The irreversibility of this transition is itself the signal.
+In this picture, spatial locality occupies a restricted accessibility basin
+in Hilbert space. Global scrambling operations move the system outside this
+basin, after which locality cannot be recovered using local generators alone.
+The irreversibility of this transition is directly observed in the data and
+constitutes a validation, rather than a failure, of the HSF accessibility
+hypothesis.
 
-\subsection*{Scope and Limitations}
+\subsection*{Scope}
 
-The present results are obtained in small-$N$ toy systems and do not constitute a derivation of continuum spacetime or macroscopic dimensionality. Rather, they establish that fermionic exchange statistics emerge robustly within the substrate dynamics, while locality and geometry are contingent, fragile, and accessibility-limited. Larger systems and extended substrates will be required to investigate dimensional selection and continuum limits.
+All results reported here are limited to small-$N$ toy systems and do not
+constitute a derivation of macroscopic spacetime or dimensionality. They do,
+however, establish that fermionic statistics emerge robustly within the
+Hilbert Substrate, while spacetime locality is contingent, fragile, and
+accessibility-limited.
 
 \subsection*{Conclusion}
 
-Within the tested regime, fermionic statistics emerge as a stable and robust feature of the Hilbert Substrate, whereas spatial locality appears as a secondary, dynamically constrained phase. The failure to recover locality after global scrambling is not a defect of the framework but a confirmation of its central claim: spacetime structure is emergent, contingent, and restricted by accessibility rather than assumed from the outset.
+Using explicitly documented scripts and datasets, we find that fermionic
+exchange statistics emerge naturally from Hilbert-space dynamics, whereas
+spatial locality appears as a secondary, constrained phase. The failure to
+recover locality after global scrambling is not an artifact of the simulation
+but a direct manifestation of an accessibility barrier intrinsic to the
+framework.

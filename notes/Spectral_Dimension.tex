@@ -1,0 +1,83 @@
+\appendix
+\section{Spectral Dimension Analysis and Its Limits}
+\label{app:spectral_dimension}
+
+In this appendix we investigate whether the observed dynamical preference for three spatial dimensions in the Hilbert Substrate Framework can be attributed to classical spectral or diffusion-based geometry. In particular, we test whether three-dimensional interaction graphs are spectrally distinguished from non-geometric graphs at the system sizes relevant to our dynamical simulations.
+
+\subsection{Method}
+
+Given a graph $G$ with $N$ vertices, we define the (combinatorial) graph Laplacian
+\begin{equation}
+L = D - A,
+\end{equation}
+where $A$ is the adjacency matrix and $D$ is the degree matrix. The spectral dimension is estimated via the heat-kernel return probability
+\begin{equation}
+P(t) = \frac{1}{N} \mathrm{Tr}\left(e^{-t L}\right) = \frac{1}{N} \sum_{k=1}^N e^{-t \lambda_k},
+\end{equation}
+where $\{\lambda_k\}$ are the eigenvalues of $L$.
+
+The spectral dimension is defined by the logarithmic derivative
+\begin{equation}
+D_s(t) = -2 \frac{d \log P(t)}{d \log t}.
+\end{equation}
+In practice, we estimate $D_s(t)$ via finite differences on a logarithmically spaced grid of diffusion times $t$. In addition, we perform linear fits of $\log P(t)$ versus $\log t$ over multiple intermediate-time windows and report the corresponding fitted values
+\begin{equation}
+D_s^{\mathrm{fit}} = -2 \times (\text{slope}).
+\end{equation}
+
+To assess robustness, we examine:
+\begin{itemize}
+\item the stability of $D_s^{\mathrm{fit}}$ across fitting windows,
+\item the coefficient of determination ($R^2$) of the fits,
+\item and the presence or absence of plateaus in the local-slope curve $D_s(t)$.
+\end{itemize}
+
+\subsection{Graphs Studied}
+
+We analyzed the following graph families:
+\begin{enumerate}
+\item Three-dimensional cubic lattices $L \times L \times L$ with periodic boundary conditions, for
+\[
+L = 2, 3, 4, 5, 7 \quad (N = 8, 27, 64, 125, 343),
+\]
+as well as anisotropic ``tube'' geometries (e.g.\ $2 \times 2 \times L$) to probe effective dimensionality.
+\item Random regular graphs with degree $d=4$ and $d=6$, serving as non-geometric, high-expansion controls.
+\end{enumerate}
+
+All spectral calculations are purely graph-theoretic and do not involve Hilbert-space dynamics, scrambling, or recovery flows.
+
+\subsection{Results}
+
+Across all system sizes studied, including the largest cubic lattice ($7 \times 7 \times 7$, $N=343$), we find:
+\begin{itemize}
+\item No statistically significant separation between the fitted spectral dimension of three-dimensional lattices and that of random regular graphs.
+\item Typical fitted values cluster in the range $D_s^{\mathrm{fit}} \approx 1.4$--$1.8$ for both geometric and non-geometric graphs.
+\item The local-slope curves $D_s(t)$ exhibit no extended plateau near $D_s = 3$, even for fully isotropic cubic lattices.
+\end{itemize}
+
+Anisotropic lattices (e.g.\ $2 \times 2 \times L$) consistently exhibit lower effective spectral dimension ($D_s \approx 1$--$1.3$), confirming that the estimator correctly detects effective dimensionality when diffusion is geometrically constrained. However, increasing $N$ without volumetric isotropy does not lead to higher spectral dimension.
+
+Crucially, even when volumetric isotropy is present (e.g.\ $7 \times 7 \times 7$), the spectral dimension remains indistinguishable from that of non-geometric random regular graphs at accessible scales.
+
+\subsection{Interpretation}
+
+These results demonstrate that classical diffusion and spectral geometry do \emph{not} provide a mechanism for selecting three spatial dimensions at the system sizes relevant to our dynamical simulations. In particular:
+\begin{itemize}
+\item Spectral dimension does not reliably reflect topological or geometric dimensionality until very large length scales are reached.
+\item Non-geometric graphs with strong expansion properties can exhibit spectral behavior comparable to, or exceeding, that of geometric lattices.
+\end{itemize}
+
+Therefore, the observed preference for three dimensions in the Hilbert Substrate Framework cannot be attributed to spectral geometry, diffusion efficiency, or Laplacian-based dimensional measures.
+
+\subsection{Implications for Dimensional Selection}
+
+The absence of spectral discrimination is a \emph{negative result} with strong interpretive value. It implies that the emergence of three spatial dimensions observed in our main simulations arises \emph{prior} to, and independently of, classical geometric diffusion. Specifically, three-dimensionality is selected through:
+\begin{itemize}
+\item dynamical stability of exchange statistics,
+\item robustness of fermionic phase structure,
+\item and recoverability of locality under unitary evolution with a no-refolding constraint.
+\end{itemize}
+
+Classical geometry, and only later diffusion-based notions of dimensionality, emerge as secondary consequences of this dynamical selection.
+
+In summary, spectral dimension fails to explain the observed three-dimensional preference, thereby ruling out a simpler geometric explanation and reinforcing the conclusion that dimensionality in the Hilbert Substrate Framework is fundamentally dynamical in origin.

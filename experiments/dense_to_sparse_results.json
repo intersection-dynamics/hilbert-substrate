@@ -1,0 +1,121 @@
+{
+  "metadata": {
+    "n_qubits": 9,
+    "n_total_pairs": 36,
+    "targets": [
+      "1d",
+      "2d"
+    ],
+    "scramble_depth": 3,
+    "seeds": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "recovery_sweeps": 15,
+    "trials_per_edge": 25,
+    "timestamp": "2026-01-12 10:41:11"
+  },
+  "jw_anticommutation": {
+    "max_cc_violation": 0.0,
+    "max_ccdag_violation": 0.0
+  },
+  "recovery_results": {
+    "1d": {
+      "target_geometry": "1d",
+      "n_qubits": 9,
+      "scramble_depth": 3,
+      "n_target_edges": 9,
+      "n_total_pairs": 36,
+      "edge_fraction": 0.25,
+      "mean_initial_score": 0.25,
+      "mean_scrambled_score": 0.39304427777072315,
+      "std_scrambled_score": 0.00805256851710796,
+      "mean_recovered_score": 0.42637136617293353,
+      "std_recovered_score": 0.004835611523614039,
+      "recovery_gain": 0.03332708840221038,
+      "normalized_recovery": 1.7054854646917341,
+      "per_seed": [
+        {
+          "seed": 1,
+          "scrambled": 0.39396962976784883,
+          "recovered": 0.42315020837731376,
+          "gain": 0.029180578609464936
+        },
+        {
+          "seed": 2,
+          "scrambled": 0.39104479290153965,
+          "recovered": 0.4330935796573189,
+          "gain": 0.04204878675577922
+        },
+        {
+          "seed": 3,
+          "scrambled": 0.3825555240483614,
+          "recovered": 0.41960192424420156,
+          "gain": 0.03704640019584016
+        },
+        {
+          "seed": 4,
+          "scrambled": 0.4072667208519293,
+          "recovered": 0.430262234283842,
+          "gain": 0.02299551343191275
+        },
+        {
+          "seed": 5,
+          "scrambled": 0.3903847212839367,
+          "recovered": 0.42574888430199165,
+          "gain": 0.03536416301805495
+        }
+      ]
+    },
+    "2d": {
+      "target_geometry": "2d",
+      "n_qubits": 9,
+      "scramble_depth": 3,
+      "n_target_edges": 18,
+      "n_total_pairs": 36,
+      "edge_fraction": 0.5,
+      "mean_initial_score": 0.5,
+      "mean_scrambled_score": 0.5987394346363185,
+      "std_scrambled_score": 0.004611264074629859,
+      "mean_recovered_score": 0.620103711071221,
+      "std_recovered_score": 0.003307944847243256,
+      "recovery_gain": 0.021364276434902463,
+      "normalized_recovery": 1.240207422142442,
+      "per_seed": [
+        {
+          "seed": 1,
+          "scrambled": 0.598898224847957,
+          "recovered": 0.6148372906306353,
+          "gain": 0.01593906578267834
+        },
+        {
+          "seed": 2,
+          "scrambled": 0.5949614639652416,
+          "recovered": 0.6240519185747798,
+          "gain": 0.029090454609538186
+        },
+        {
+          "seed": 3,
+          "scrambled": 0.5945998818583405,
+          "recovered": 0.6218140490840488,
+          "gain": 0.027214167225708352
+        },
+        {
+          "seed": 4,
+          "scrambled": 0.6073509063458224,
+          "recovered": 0.6178598653834021,
+          "gain": 0.010508959037579646
+        },
+        {
+          "seed": 5,
+          "scrambled": 0.5978866961642311,
+          "recovered": 0.6219554316832389,
+          "gain": 0.02406873551900779
+        }
+      ]
+    }
+  }
+}
