@@ -1,0 +1,606 @@
+{
+  "meta": {
+    "N": 24,
+    "dim": 16777216,
+    "topology": "ring",
+    "n_edges": 24,
+    "seed": 0,
+    "tmax": 3.0,
+    "nt": 9,
+    "bandwidth_capacity": 1.5,
+    "speed_threshold": 0.02,
+    "recover_threshold": 0.03,
+    "lightcone_models": [
+      "ballistic",
+      "diffusive"
+    ]
+  },
+  "blockings": [
+    {
+      "block_size": 1,
+      "n_blocks": 24,
+      "block_edges": 24,
+      "bandwidth_capacity": 1.5,
+      "bandwidth_efficiency": 1.0,
+      "bandwidth_penalty": 0.0,
+      "frac_remote_recover_late_RAW": 0.8,
+      "remote_recover_mean_late_RAW": 0.07081590845903724,
+      "frac_remote_recover_late_EFF": 0.8,
+      "remote_recover_mean_late_EFF": 0.07081590845903724,
+      "frac_blocks_reached": 0.43478260869565216,
+      "v_eff": 8.0,
+      "instant_reach_blocks": 0,
+      "hard_penalty": 0.0,
+      "soft_penalty": 0.0,
+      "score": 2.08938211598058,
+      "lightcone": {
+        "n_fit": 10,
+        "ballistic": {
+          "a": 0.10514018691588811,
+          "b": 0.2067757009345794,
+          "v": 4.836158192090396,
+          "r2": 0.5163922266726003
+        },
+        "diffusive": {
+          "a": 0.3820274852757451,
+          "c": 0.028756915937890423,
+          "r2": 0.5230005593501337
+        },
+        "verdict": "diffusive",
+        "data": {
+          "d": [
+            1.0,
+            2.0,
+            3.0,
+            4.0,
+            5.0,
+            6.0,
+            6.0,
+            3.0,
+            2.0,
+            1.0
+          ],
+          "t_cross": [
+            0.375,
+            0.375,
+            0.375,
+            0.75,
+            0.75,
+            1.125,
+            1.875,
+            1.5,
+            0.375,
+            0.375
+          ]
+        }
+      },
+      "t_cross_by_block": [
+        0.0,
+        0.375,
+        0.375,
+        0.375,
+        0.75,
+        0.75,
+        1.125,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1.875,
+        null,
+        null,
+        1.5,
+        0.375,
+        0.375
+      ],
+      "dist_from_source": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        11,
+        10,
+        9,
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "block_size": 2,
+      "n_blocks": 12,
+      "block_edges": 12,
+      "bandwidth_capacity": 1.5,
+      "bandwidth_efficiency": 0.75,
+      "bandwidth_penalty": 0.3333333333333333,
+      "frac_remote_recover_late_RAW": 1.0,
+      "remote_recover_mean_late_RAW": 0.04679160277842906,
+      "frac_remote_recover_late_EFF": 0.8,
+      "remote_recover_mean_late_EFF": 0.03509370208382179,
+      "frac_blocks_reached": 0.6363636363636364,
+      "v_eff": 2.6666666666666665,
+      "instant_reach_blocks": 0,
+      "hard_penalty": 0.0,
+      "soft_penalty": 0.3333333333333333,
+      "score": 1.7238001417643265,
+      "lightcone": {
+        "n_fit": 7,
+        "ballistic": {
+          "a": -0.31730769230769285,
+          "b": 0.5841346153846154,
+          "v": 1.7119341563786008,
+          "r2": 0.9277432126696833
+        },
+        "diffusive": {
+          "a": 0.2442996742671006,
+          "c": 0.12306596091205216,
+          "r2": 0.9724623970109216
+        },
+        "verdict": "diffusive",
+        "data": {
+          "d": [
+            1.0,
+            2.0,
+            3.0,
+            4.0,
+            3.0,
+            2.0,
+            1.0
+          ],
+          "t_cross": [
+            0.375,
+            0.75,
+            1.125,
+            2.25,
+            1.5,
+            0.75,
+            0.375
+          ]
+        }
+      },
+      "t_cross_by_block": [
+        0.0,
+        0.375,
+        0.75,
+        1.125,
+        null,
+        null,
+        null,
+        null,
+        2.25,
+        1.5,
+        0.75,
+        0.375
+      ],
+      "dist_from_source": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "block_size": 3,
+      "n_blocks": 8,
+      "block_edges": 8,
+      "bandwidth_capacity": 1.5,
+      "bandwidth_efficiency": 0.5,
+      "bandwidth_penalty": 1.0,
+      "frac_remote_recover_late_RAW": 1.0,
+      "remote_recover_mean_late_RAW": 0.0366856338556667,
+      "frac_remote_recover_late_EFF": 0.0,
+      "remote_recover_mean_late_EFF": 0.01834281692783335,
+      "frac_blocks_reached": 0.7142857142857143,
+      "v_eff": 2.6666666666666665,
+      "instant_reach_blocks": 0,
+      "hard_penalty": 0.0,
+      "soft_penalty": 1.0,
+      "score": -0.5696909054841742,
+      "lightcone": {
+        "n_fit": 5,
+        "ballistic": {
+          "a": -0.5892857142857147,
+          "b": 0.9107142857142859,
+          "v": 1.0980392156862742,
+          "r2": 0.9829931972789115
+        },
+        "diffusive": {
+          "a": 0.15771028037383192,
+          "c": 0.23481308411214946,
+          "r2": 0.9988874054294615
+        },
+        "verdict": "diffusive",
+        "data": {
+          "d": [
+            1.0,
+            2.0,
+            3.0,
+            2.0,
+            1.0
+          ],
+          "t_cross": [
+            0.375,
+            1.125,
+            2.25,
+            1.125,
+            0.375
+          ]
+        }
+      },
+      "t_cross_by_block": [
+        0.0,
+        0.375,
+        1.125,
+        null,
+        null,
+        2.25,
+        1.125,
+        0.375
+      ],
+      "dist_from_source": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "block_size": 4,
+      "n_blocks": 6,
+      "block_edges": 6,
+      "bandwidth_capacity": 1.5,
+      "bandwidth_efficiency": 0.375,
+      "bandwidth_penalty": 1.6666666666666667,
+      "frac_remote_recover_late_RAW": 1.0,
+      "remote_recover_mean_late_RAW": 0.03920678174209578,
+      "frac_remote_recover_late_EFF": 0.0,
+      "remote_recover_mean_late_EFF": 0.014702543153285919,
+      "frac_blocks_reached": 0.6,
+      "v_eff": 2.6666666666666665,
+      "instant_reach_blocks": 0,
+      "hard_penalty": 0.0,
+      "soft_penalty": 1.6666666666666667,
+      "score": -1.307962204614912,
+      "lightcone": {
+        "n_fit": 3,
+        "ballistic": {
+          "a": -1.1093968438547502e-16,
+          "b": 0.5625000000000002,
+          "v": 1.777777777777777,
+          "r2": 0.75
+        },
+        "diffusive": {
+          "a": 0.37499999999999994,
+          "c": 0.18750000000000014,
+          "r2": 0.75
+        },
+        "verdict": "ballistic",
+        "data": {
+          "d": [
+            1.0,
+            2.0,
+            1.0
+          ],
+          "t_cross": [
+            0.75,
+            1.125,
+            0.375
+          ]
+        }
+      },
+      "t_cross_by_block": [
+        0.0,
+        0.75,
+        null,
+        null,
+        1.125,
+        0.375
+      ],
+      "dist_from_source": [
+        0,
+        1,
+        2,
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "block_size": 6,
+      "n_blocks": 4,
+      "block_edges": 4,
+      "bandwidth_capacity": 1.5,
+      "bandwidth_efficiency": 0.25,
+      "bandwidth_penalty": 3.0,
+      "frac_remote_recover_late_RAW": 0.2,
+      "remote_recover_mean_late_RAW": 0.024100189860854493,
+      "frac_remote_recover_late_EFF": 0.0,
+      "remote_recover_mean_late_EFF": 0.006025047465213623,
+      "frac_blocks_reached": 1.0,
+      "v_eff": 2.6666666666666665,
+      "instant_reach_blocks": 0,
+      "hard_penalty": 0.0,
+      "soft_penalty": 3.0,
+      "score": -2.475907098041385,
+      "lightcone": {
+        "n_fit": 3,
+        "ballistic": {
+          "a": -0.3750000000000002,
+          "b": 1.1250000000000004,
+          "v": 0.8888888888888885,
+          "r2": 0.75
+        },
+        "diffusive": {
+          "a": 0.3749999999999998,
+          "c": 0.3750000000000001,
+          "r2": 0.75
+        },
+        "verdict": "ballistic",
+        "data": {
+          "d": [
+            1.0,
+            2.0,
+            1.0
+          ],
+          "t_cross": [
+            1.125,
+            1.875,
+            0.375
+          ]
+        }
+      },
+      "t_cross_by_block": [
+        0.0,
+        1.125,
+        1.875,
+        0.375
+      ],
+      "dist_from_source": [
+        0,
+        1,
+        2,
+        1
+      ]
+    },
+    {
+      "block_size": 8,
+      "n_blocks": 3,
+      "block_edges": 3,
+      "bandwidth_capacity": 1.5,
+      "bandwidth_efficiency": 0.1875,
+      "bandwidth_penalty": 4.333333333333333,
+      "frac_remote_recover_late_RAW": 0.0,
+      "remote_recover_mean_late_RAW": 0.0,
+      "frac_remote_recover_late_EFF": 0.0,
+      "remote_recover_mean_late_EFF": 0.0,
+      "frac_blocks_reached": 1.0,
+      "v_eff": 2.6666666666666665,
+      "instant_reach_blocks": 0,
+      "hard_penalty": 2.0,
+      "soft_penalty": 4.333333333333333,
+      "score": -5.833333333333333,
+      "lightcone": {
+        "n_fit": 2,
+        "ballistic": null,
+        "diffusive": null,
+        "verdict": "insufficient_data"
+      },
+      "t_cross_by_block": [
+        0.0,
+        1.5,
+        0.375
+      ],
+      "dist_from_source": [
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "block_size": 12,
+      "n_blocks": 2,
+      "block_edges": 1,
+      "bandwidth_capacity": 1.5,
+      "bandwidth_efficiency": 0.125,
+      "bandwidth_penalty": 7.0,
+      "frac_remote_recover_late_RAW": 0.0,
+      "remote_recover_mean_late_RAW": 0.0,
+      "frac_remote_recover_late_EFF": 0.0,
+      "remote_recover_mean_late_EFF": 0.0,
+      "frac_blocks_reached": 1.0,
+      "v_eff": 2.6666666666666665,
+      "instant_reach_blocks": 0,
+      "hard_penalty": 2.0,
+      "soft_penalty": 7.0,
+      "score": -8.5,
+      "lightcone": {
+        "n_fit": 1,
+        "ballistic": null,
+        "diffusive": null,
+        "verdict": "insufficient_data"
+      },
+      "t_cross_by_block": [
+        0.0,
+        0.375
+      ],
+      "dist_from_source": [
+        0,
+        1
+      ]
+    },
+    {
+      "block_size": 24,
+      "n_blocks": 1,
+      "block_edges": 0,
+      "bandwidth_capacity": 1.5,
+      "bandwidth_efficiency": 0.0625,
+      "bandwidth_penalty": 15.0,
+      "frac_remote_recover_late_RAW": 0.0,
+      "remote_recover_mean_late_RAW": 0.0,
+      "frac_remote_recover_late_EFF": 0.0,
+      "remote_recover_mean_late_EFF": 0.0,
+      "frac_blocks_reached": 0.0,
+      "v_eff": 0.0,
+      "instant_reach_blocks": 0,
+      "hard_penalty": 2.0,
+      "soft_penalty": 15.0,
+      "score": -17.0,
+      "lightcone": {
+        "n_fit": 0,
+        "ballistic": null,
+        "diffusive": null,
+        "verdict": "insufficient_data"
+      },
+      "t_cross_by_block": [
+        null
+      ],
+      "dist_from_source": [
+        0
+      ]
+    }
+  ],
+  "winner": {
+    "block_size": 1,
+    "n_blocks": 24,
+    "block_edges": 24,
+    "bandwidth_capacity": 1.5,
+    "bandwidth_efficiency": 1.0,
+    "bandwidth_penalty": 0.0,
+    "frac_remote_recover_late_RAW": 0.8,
+    "remote_recover_mean_late_RAW": 0.07081590845903724,
+    "frac_remote_recover_late_EFF": 0.8,
+    "remote_recover_mean_late_EFF": 0.07081590845903724,
+    "frac_blocks_reached": 0.43478260869565216,
+    "v_eff": 8.0,
+    "instant_reach_blocks": 0,
+    "hard_penalty": 0.0,
+    "soft_penalty": 0.0,
+    "score": 2.08938211598058,
+    "lightcone": {
+      "n_fit": 10,
+      "ballistic": {
+        "a": 0.10514018691588811,
+        "b": 0.2067757009345794,
+        "v": 4.836158192090396,
+        "r2": 0.5163922266726003
+      },
+      "diffusive": {
+        "a": 0.3820274852757451,
+        "c": 0.028756915937890423,
+        "r2": 0.5230005593501337
+      },
+      "verdict": "diffusive",
+      "data": {
+        "d": [
+          1.0,
+          2.0,
+          3.0,
+          4.0,
+          5.0,
+          6.0,
+          6.0,
+          3.0,
+          2.0,
+          1.0
+        ],
+        "t_cross": [
+          0.375,
+          0.375,
+          0.375,
+          0.75,
+          0.75,
+          1.125,
+          1.875,
+          1.5,
+          0.375,
+          0.375
+        ]
+      }
+    },
+    "t_cross_by_block": [
+      0.0,
+      0.375,
+      0.375,
+      0.375,
+      0.75,
+      0.75,
+      1.125,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      1.875,
+      null,
+      null,
+      1.5,
+      0.375,
+      0.375
+    ],
+    "dist_from_source": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      11,
+      10,
+      9,
+      8,
+      7,
+      6,
+      5,
+      4,
+      3,
+      2,
+      1
+    ]
+  }
+}

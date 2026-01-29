@@ -1,0 +1,113 @@
+{
+  "meta": {
+    "N": 10,
+    "steps": 200,
+    "dt": 0.05,
+    "Delta": 0.0,
+    "pairs_per_step": 40,
+    "eta": 0.2,
+    "decay": 0.01,
+    "J_init_scale": 1.0,
+    "J_clip": 2.5,
+    "influence_eps": 0.08,
+    "budget": 3.5,
+    "budget_iters": 6,
+    "control": "frozen",
+    "seed": 8,
+    "wd_eps": 1e-06,
+    "wd_bins": 6,
+    "probe_mode": "masked_uniform",
+    "k_steps": 3,
+    "mask_thr": 0.05,
+    "uniform_strength": 1.0,
+    "history_every": 0,
+    "save_J": false
+  },
+  "final": {
+    "structure": {
+      "thr": 0.5,
+      "edges_ge_thr": 12,
+      "deg_min": 1,
+      "deg_max": 4,
+      "deg_mean": 2.4,
+      "deg_list": [
+        4,
+        2,
+        2,
+        2,
+        2,
+        1,
+        3,
+        3,
+        3,
+        2
+      ],
+      "gini_absJ": 0.3853369632935722,
+      "absJ_mean": 0.3888888888887777,
+      "absJ_std": 0.2777842654441135,
+      "rowL1_min": 3.499999999999,
+      "rowL1_max": 3.499999999999,
+      "rowL1_mean": 3.4999999999989995,
+      "rowL1_std": 4.440892098500626e-16
+    },
+    "dist_cmp": {
+      "thr": 0.5,
+      "n": 40,
+      "n_finite": 40,
+      "corr_dist_influence": 0.02477813422197537,
+      "mean_influence_by_dist": {
+        "1": 0.000985084728359658,
+        "2": 0.0003910477633881993,
+        "3": 0.0005883469292020517,
+        "4": 0.0010324092134838055
+      }
+    },
+    "wdist_cmp": {
+      "eps": 1e-06,
+      "bins": 6,
+      "n": 40,
+      "n_finite": 40,
+      "corr_wdist_influence": -0.16826150547540358,
+      "slope_influence_vs_wdist": -0.00011476400767926804,
+      "intercept_influence_vs_wdist": 0.0010404939336595346,
+      "mean_influence_by_wdist_bin": [
+        {
+          "d_lo": 0.9351951272754433,
+          "d_hi": 1.7747783672892234,
+          "mean_influence": 0.0006235489064455546,
+          "n": 7
+        },
+        {
+          "d_lo": 1.7747783672892234,
+          "d_hi": 2.360141009359243,
+          "mean_influence": 0.0012291847214776074,
+          "n": 7
+        },
+        {
+          "d_lo": 2.551391147947646,
+          "d_hi": 2.9539265357432734,
+          "mean_influence": 0.0004897637521933373,
+          "n": 7
+        },
+        {
+          "d_lo": 2.9539265357432734,
+          "d_hi": 3.1227934613883868,
+          "mean_influence": 0.0007821089122508772,
+          "n": 7
+        },
+        {
+          "d_lo": 3.2877856890574524,
+          "d_hi": 3.6609859380333334,
+          "mean_influence": 0.0005840676153291273,
+          "n": 6
+        },
+        {
+          "d_lo": 3.6609859380333334,
+          "d_hi": 4.226223086367424,
+          "mean_influence": 0.00061735200620454,
+          "n": 6
+        }
+      ]
+    }
+  }
+}

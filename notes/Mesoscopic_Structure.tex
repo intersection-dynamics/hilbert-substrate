@@ -1,0 +1,96 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsmath,amssymb}
+\usepackage{physics}
+\usepackage{hyperref}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+\title{Mesoscopic Structure and Emergent Locality in a Constrained Hilbert-Space Substrate}
+\author{ }
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We investigate the emergence of effective locality in a Hilbert-space substrate subject to a set of information-theoretic constraints. Numerical experiments indicate that functional locality does not arise at the smallest subsystem scales, but instead emerges robustly at intermediate, mesoscopic scales. We introduce the concept of the \emph{mesoscape}: a regime of subsystem sizes where signaling constraints, recoverability, and bandwidth limitations jointly become operative. Rather than constituting a microscopic ontology, the mesoscape serves as a diagnostic map constraining admissible microscopic dynamics.
+\end{abstract}
+
+\section{Motivation}
+
+Much foundational work in quantum mechanics attempts to explain how classical structure---including locality, records, and causal ordering---arises from underlying Hilbert-space dynamics. The Hilbert Substrate Framework (HSF) explores this question using operational and information-theoretic constraints rather than ontological postulates.
+
+The present note refines the scope of this investigation. We do not attempt to explain the ultimate origin of structure from an entirely unstructured substrate. Instead, we characterize \emph{when and how effective locality emerges} under specific constraints, and identify the scale at which locality becomes operational rather than merely formal.
+
+\section{Constraints}
+
+The simulations discussed here impose four information-theoretic constraints:
+
+\begin{enumerate}
+    \item \textbf{No-signaling}: influence between subsystems propagates at finite speed.
+    \item \textbf{No-forgetting}: information about prior states remains recoverable in principle.
+    \item \textbf{No-refolding}: once relational structure exists, it cannot be erased by arbitrary refactorization.
+    \item \textbf{Finite bandwidth}: subsystems possess limited capacity for information transmission and processing.
+\end{enumerate}
+
+These constraints do not prescribe a specific microscopic Hamiltonian. Rather, they restrict the space of viable dynamics and factorization schemes.
+
+\section{Subsystem Scale and Locality}
+
+A central finding of the numerical experiments is that subsystem size plays a critical role in the emergence of effective locality.
+
+At the smallest scale (subsystem size $=1$), locality is only marginally satisfied. Signaling constraints are weak, recoverability is fragile, and dynamics are dominated by overwash. While such subsystems are formally local, they do not support stable, functional locality.
+
+As subsystem size increases, a transition occurs. For subsystem sizes on the order of $4$--$5$ degrees of freedom, multiple constraints become simultaneously active:
+\begin{itemize}
+    \item finite bandwidth limits prevent global pooling of information,
+    \item recoverability stabilizes persistent records,
+    \item signaling exhibits finite effective light-cones,
+    \item refolding penalties lock in relational structure.
+\end{itemize}
+
+It is at this intermediate scale that locality becomes robust, operational, and dynamically stable.
+
+\section{The Mesoscape}
+
+We refer to this intermediate regime as the \emph{mesoscape}.
+
+The mesoscape is defined as the smallest scale at which locality is not merely definitional, but functional. It is characterized by:
+\begin{itemize}
+    \item stable propagation of localized excitations,
+    \item persistence of distinguishable records,
+    \item resistance to overwash under generic dynamics.
+\end{itemize}
+
+Importantly, the mesoscape is not identified with microscopic structure. Instead, it represents a mesoscopic compatibility regime: the scale at which constraints jointly select viable forms of locality.
+
+\section{Mesoscopic Diagnostics of Microscopic Dynamics}
+
+Because the smallest subsystem scales do not exhibit robust locality, direct inference of microscopic structure is ill-posed. Instead, the mesoscape provides an indirect diagnostic.
+
+Given observed mesoscopic behavior, one may ask:
+\begin{quote}
+\emph{What classes of microscopic dynamics are compatible with the existence and stability of a mesoscape?}
+\end{quote}
+
+This reframes the problem as an inverse one. Rather than deriving macroscopic structure from microphysics, we use mesoscopic constraints to rule out microscopic dynamics that would fail to support functional locality.
+
+This perspective parallels effective field theory and renormalization-group reasoning, where intermediate-scale behavior constrains admissible ultraviolet completions without uniquely specifying them.
+
+\section{Scope and Limitations}
+
+The results presented here demonstrate that:
+\begin{itemize}
+    \item effective locality can emerge and persist under specific constraints,
+    \item such emergence occurs in restricted dynamical regimes,
+    \item locality is neither universal nor inevitable across all histories.
+\end{itemize}
+
+The framework does not claim to explain why structure exists at all. Rather, it clarifies which forms of structure are viable, stable, and selectable once they appear.
+
+\section{Conclusion}
+
+A Hilbert-space substrate subject to no-signaling, no-forgetting, no-refolding, and finite bandwidth constraints exhibits a mesoscopic regime in which effective locality emerges. This mesoscape provides a useful map for understanding how operational locality arises and for constraining underlying microscopic dynamics, without invoking a fundamental spacetime ontology or an origin-from-nothing narrative.
+
+\end{document}

@@ -1,0 +1,111 @@
+{
+  "meta": {
+    "N": 10,
+    "steps": 200,
+    "dt": 0.05,
+    "Delta": 0.0,
+    "pairs_per_step": 40,
+    "eta": 0.2,
+    "decay": 0.01,
+    "J_init_scale": 1.0,
+    "J_clip": 2.5,
+    "influence_eps": 0.08,
+    "budget": 3.5,
+    "budget_iters": 6,
+    "control": "learn",
+    "seed": 0,
+    "wd_eps": 1e-06,
+    "wd_bins": 6,
+    "probe_mode": "masked_uniform",
+    "k_steps": 3,
+    "mask_thr": 0.05,
+    "uniform_strength": 1.0,
+    "history_every": 0,
+    "save_J": false
+  },
+  "final": {
+    "structure": {
+      "thr": 0.5,
+      "edges_ge_thr": 5,
+      "deg_min": 0,
+      "deg_max": 2,
+      "deg_mean": 1.0,
+      "deg_list": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        0,
+        2,
+        0,
+        1
+      ],
+      "gini_absJ": 0.1026397790537923,
+      "absJ_mean": 0.3888885839777748,
+      "absJ_std": 0.07207741416340165,
+      "rowL1_min": 3.4943349986431813,
+      "rowL1_max": 3.5046717691890414,
+      "rowL1_mean": 3.499997255799973,
+      "rowL1_std": 0.003253594966502137
+    },
+    "dist_cmp": {
+      "thr": 0.5,
+      "n": 40,
+      "n_finite": 7,
+      "corr_dist_influence": 0.012831010982413295,
+      "mean_influence_by_dist": {
+        "1": 0.0014269806789638736,
+        "2": 0.0014406326427705415
+      }
+    },
+    "wdist_cmp": {
+      "eps": 1e-06,
+      "bins": 6,
+      "n": 40,
+      "n_finite": 40,
+      "corr_wdist_influence": -0.36920593783871336,
+      "slope_influence_vs_wdist": -0.0005522434667807879,
+      "intercept_influence_vs_wdist": 0.002372201777538198,
+      "mean_influence_by_wdist_bin": [
+        {
+          "d_lo": 1.7623061547955037,
+          "d_hi": 2.152773182721993,
+          "mean_influence": 0.0014094057318142822,
+          "n": 7
+        },
+        {
+          "d_lo": 2.152773182721993,
+          "d_hi": 2.2078805281243477,
+          "mean_influence": 0.0010569846671302765,
+          "n": 7
+        },
+        {
+          "d_lo": 2.2078805281243477,
+          "d_hi": 2.5656152050469694,
+          "mean_influence": 0.00104404481113916,
+          "n": 7
+        },
+        {
+          "d_lo": 2.5656152050469694,
+          "d_hi": 2.711549538088667,
+          "mean_influence": 0.0006969516193449223,
+          "n": 7
+        },
+        {
+          "d_lo": 2.737758540851723,
+          "d_hi": 2.8216714073415963,
+          "mean_influence": 0.0010879912462113533,
+          "n": 6
+        },
+        {
+          "d_lo": 3.0338262939923366,
+          "d_hi": 3.674769061493021,
+          "mean_influence": 0.0006463299852282157,
+          "n": 6
+        }
+      ]
+    }
+  }
+}

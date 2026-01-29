@@ -1,27 +1,26 @@
 #!/usr/bin/env python3
 """
-Geometry Robustness Sweep (Accessibility-Respecting Protocol)
+Geometry Robustness Sweep (Accessibility-Respecting Protocol) — seed-parallel
 
-Goal:
-  Measure robustness of candidate geometries G under accessibility-respecting perturbations.
+Adds:
+  --jobs K      Run seeds in parallel across K processes (Windows-safe).
+  --blas-threads T   Force BLAS threading inside each worker (default 1).
 
-Protocol (Paper-II compliant):
-  1) Build local XX Hamiltonian on SOURCE geometry G_src.
-  2) Apply LOCAL scramble on SOURCE edges for D steps (reachable scrambling).
-  3) For each TARGET geometry G_tgt, run local recovery constrained to G_tgt edges.
-  4) Measure "leak" (non-k-locality) and recovery improvement.
-  5) Sweep D to find a critical depth D*(G_tgt) where recovery fails.
+Protocol:
+  For each seed:
+    - Build local XX Hamiltonian on SOURCE geometry
+    - Apply LOCAL scramble on SOURCE edges for depth D (reachable)
+    - For each TARGET geometry, run local recovery constrained to target edges
+    - Measure k-local "leak" (MC estimate) and leak reduction
+  Aggregate across seeds.
 
-Key outputs:
-  - Robustness curve: mean leak_reduction vs D for each target.
-  - D*(target): largest D where recovery still meets a success criterion.
+Outputs:
+  geometry_robustness_curves.csv
+  geometry_robustness_summary.json
+  geometry_robustness_details.json
 
-Important:
-  - Dense matrices -> keep N small (<= 10 recommended, 8 is fine).
-  - Leak is estimated by Monte Carlo sampling of Pauli strings.
-  - Default kmax=1 so the metric is sensitive (2-body looks "nonlocal" w.r.t. k=1).
-
-This script does NOT claim geometry selection. It quantifies basin robustness.
+Note:
+  Dense operator sims -> keep N small (<=10 recommended).
 """
 
 from __future__ import annotations
@@ -59,13 +58,6 @@ def kron_n(ops: List[np.ndarray]) -> np.ndarray:
 
 
 def sample_pauli_strings(N: int, m: int, rng: np.random.Generator) -> Tuple[np.ndarray, np.ndarray]:
-    """
-    Sample m Pauli strings uniformly from {I,X,Y,Z}^N.
-
-    Returns:
-      labels: (m, N) int8 in {0,1,2,3} for I,X,Y,Z
-      weights: (m,) int32 = number of non-identity factors (k-body size)
-    """
     labels = rng.integers(low=0, high=4, size=(m, N), dtype=np.int8)
     weights = np.sum(labels != 0, axis=1).astype(np.int32)
     return labels, weights
@@ -77,14 +69,6 @@ def pauli_labels_to_matrix(labels_row: np.ndarray) -> np.ndarray:
 
 
 def estimate_klocal_leak(H: np.ndarray, pauli_samples: Tuple[np.ndarray, np.ndarray], k_max: int) -> float:
-    """
-    Monte Carlo estimate of leakage fraction into terms with body-size > k_max.
-
-    For sampled Pauli strings P:
-      a_P = Tr(P H) / 2^N
-      weight contribution ~ |a_P|^2
-    We estimate fraction of sampled weight with k>k_max.
-    """
     labels, weights = pauli_samples
     N = labels.shape[1]
     dim = 2 ** N
@@ -223,10 +207,6 @@ def build_edges(name: str, N: int, rng: np.random.Generator) -> List[Tuple[int, 
 # -----------------------------
 
 def embed_two_qubit_op(N: int, i: int, j: int, op2: np.ndarray) -> np.ndarray:
-    """
-    Embed a 4x4 operator on qubits (i,j) into N qubits using Pauli expansion.
-    This is slow but robust for small N.
-    """
     if i == j:
         raise ValueError("i == j")
     if i > j:
@@ -275,10 +255,6 @@ def build_xx_hamiltonian(N: int, edges: List[Tuple[int, int]], J: float = 1.0) -
 
 
 def apply_two_qubit_conjugation(H: np.ndarray, N: int, i: int, j: int, U2: np.ndarray) -> np.ndarray:
-    """
-    Conjugate H by an embedded 2-qubit unitary on qubits (i,j): H' = U H U†
-    using correct tensor permutation on 2N axes.
-    """
     if i == j:
         raise ValueError("i == j")
     if i > j:
@@ -293,7 +269,7 @@ def apply_two_qubit_conjugation(H: np.ndarray, N: int, i: int, j: int, U2: np.nd
 
     ket_order = [i, j] + rest
     bra_order = [i + N, j + N] + [q + N for q in rest]
-    perm = ket_order + bra_order  # length 2N
+    perm = ket_order + bra_order
 
     Hperm = np.transpose(Ht, axes=perm)
     Hperm = Hperm.reshape(4, 2 ** (N - 2), 4, 2 ** (N - 2))
@@ -342,10 +318,6 @@ def annealed_recovery(
     pauli_samples: Tuple[np.ndarray, np.ndarray],
     k_max: int,
 ) -> RecoveryResult:
-    """
-    Annealed local-unitary recovery constrained to target edges.
-    Objective: minimize estimated leak fraction (k > k_max).
-    """
     H = H_start.copy()
     leak0 = estimate_klocal_leak(H, pauli_samples, k_max=k_max)
     best = leak0
@@ -383,23 +355,7 @@ def annealed_recovery(
 
 
 # -----------------------------
-# D* extraction
-# -----------------------------
-
-def compute_D_star(depths: List[int], values: List[float], min_mean_improvement: float) -> Optional[int]:
-    """
-    Define D* as the largest depth D for which the mean improvement >= threshold.
-    Returns None if never succeeds.
-    """
-    D_star = None
-    for D, v in zip(depths, values):
-        if v >= min_mean_improvement:
-            D_star = D
-    return D_star
-
-
-# -----------------------------
-# Main
+# Helpers
 # -----------------------------
 
 def parse_list(s: str) -> List[str]:
@@ -407,7 +363,7 @@ def parse_list(s: str) -> List[str]:
 
 
 def parse_int_list(s: str) -> List[int]:
-    out = []
+    out: List[int] = []
     for token in s.split(","):
         token = token.strip()
         if not token:
@@ -423,22 +379,104 @@ def parse_int_list(s: str) -> List[int]:
     return out
 
 
-def main() -> int:
-    ap = argparse.ArgumentParser(description="Geometry robustness sweep (accessibility-respecting).")
+def compute_D_star(depths: List[int], values: List[float], min_mean_improvement: float) -> Optional[int]:
+    D_star = None
+    for D, v in zip(depths, values):
+        if v >= min_mean_improvement:
+            D_star = D
+    return D_star
 
+
+# -----------------------------
+# Parallel worker
+# -----------------------------
+
+def _set_blas_threads(n: int) -> None:
+    os.environ["OMP_NUM_THREADS"] = str(n)
+    os.environ["MKL_NUM_THREADS"] = str(n)
+    os.environ["OPENBLAS_NUM_THREADS"] = str(n)
+    os.environ["VECLIB_MAXIMUM_THREADS"] = str(n)
+    os.environ["NUMEXPR_NUM_THREADS"] = str(n)
+
+
+def run_one_seed(args_dict: dict, seed: int) -> Tuple[int, List[dict]]:
+    """
+    Compute all (depth, target) runs for a single seed.
+    Returns (seed, details_rows).
+    """
+    _set_blas_threads(int(args_dict["blas_threads"]))
+
+    N = int(args_dict["N"])
+    source = args_dict["source_topology"]
+    targets = list(args_dict["targets"])
+    depths = list(args_dict["depths"])
+    recovery_steps = int(args_dict["recovery_steps"])
+    temp0 = float(args_dict["temp0"])
+    temp_decay = float(args_dict["temp_decay"])
+    mc_samples = int(args_dict["mc_samples"])
+    kmax = int(args_dict["kmax"])
+
+    rng = np.random.default_rng(seed)
+
+    src_edges = build_edges(source, N, rng)
+    H0 = build_xx_hamiltonian(N, src_edges, J=1.0)
+
+    pauli_samples = sample_pauli_strings(N, mc_samples, rng)
+
+    # Important: build target edges per seed for rr graphs deterministically
+    tgt_edges_map = {t: build_edges(t, N, rng) for t in targets}
+
+    details: List[dict] = []
+    for D in depths:
+        Hscr = local_scramble_on_edges(H0, N, src_edges, rng, steps=int(D))
+
+        for tname in targets:
+            rr = annealed_recovery(
+                H_start=Hscr,
+                N=N,
+                edges=tgt_edges_map[tname],
+                rng=rng,
+                steps=recovery_steps,
+                temp0=temp0,
+                temp_decay=temp_decay,
+                pauli_samples=pauli_samples,
+                k_max=kmax,
+            )
+            details.append({
+                "seed": int(seed),
+                "depth": int(D),
+                "source": source,
+                "target": tname,
+                "kmax": int(kmax),
+                "mc_samples": int(mc_samples),
+                "leak_initial": float(rr.leak_initial),
+                "leak_final": float(rr.leak_final),
+                "leak_reduction": float(rr.leak_reduction),
+                "accepted_moves": int(rr.accepted_moves),
+                "recovery_steps": int(rr.steps),
+            })
+    return seed, details
+
+
+# -----------------------------
+# Main
+# -----------------------------
+
+def main() -> int:
+    ap = argparse.ArgumentParser(description="Geometry robustness sweep (accessibility-respecting), seed-parallel.")
     ap.add_argument("--out", required=True, help="Output directory.")
     ap.add_argument("--N", type=int, default=8, help="Number of qubits (dense matrices).")
     ap.add_argument("--seeds", type=int, default=8, help="Number of RNG seeds to run.")
     ap.add_argument("--seed-start", type=int, default=0, help="Starting seed index.")
 
-    ap.add_argument("--source-topology", default="1d_ring",
-                    choices=["1d_ring", "1d_chain", "2d", "3d", "rr4", "rr6"],
-                    help="Source topology for initial local H and scramble move set.")
+    ap.add_argument("--jobs", type=int, default=1, help="Parallel worker processes (seeds in parallel).")
+    ap.add_argument("--blas-threads", type=int, default=1, help="BLAS threads per worker process.")
 
+    ap.add_argument("--source-topology", default="1d_ring",
+                    choices=["1d_ring", "1d_chain", "2d", "3d", "rr4", "rr6"])
     ap.add_argument("--targets", default="1d_ring,3d,rr4",
                     help="Comma-separated targets, e.g. 1d_ring,2d,3d,rr4,rr6")
-
-    ap.add_argument("--depths", default="0,5,10,20,40,80",
+    ap.add_argument("--depths", default="0,5,10,20,40,80,120",
                     help="Comma-separated depths. Supports ranges like 0-50.")
 
     ap.add_argument("--recovery-steps", type=int, default=600, help="Recovery steps per run.")
@@ -446,18 +484,16 @@ def main() -> int:
     ap.add_argument("--temp-decay", type=float, default=0.9995, help="Temperature decay per step.")
 
     ap.add_argument("--mc-samples", type=int, default=8192, help="Pauli MC samples for leak estimator.")
-    ap.add_argument("--kmax", type=int, default=1, help="Leak counts k-body support > kmax. Use 1 for sensitivity.")
+    ap.add_argument("--kmax", type=int, default=1, help="Leak counts k-body support > kmax.")
 
     ap.add_argument("--min-mean-improvement", type=float, default=1e-3,
                     help="Success threshold for D*: mean leak_reduction >= this value.")
-
-    ap.add_argument("--progress", action="store_true", help="Print progress.")
+    ap.add_argument("--progress", action="store_true", help="Print progress as results arrive.")
 
     args = ap.parse_args()
 
-    N = args.N
-    if N > 10:
-        raise SystemExit("N>10 will be very slow for dense matrices. Use N<=10 for this script.")
+    if args.N > 10:
+        raise SystemExit("N>10 will be very slow for dense matrices. Use N<=10.")
 
     targets = parse_list(args.targets)
     depths = sorted(set(parse_int_list(args.depths)))
@@ -466,88 +502,111 @@ def main() -> int:
 
     t0 = time.time()
 
-    # Per-depth per-target aggregates across seeds
-    curves: Dict[str, Dict[int, Dict[str, float]]] = {t: {} for t in targets}
+    # Prepare args payload for workers
+    args_dict = {
+        "N": int(args.N),
+        "source_topology": args.source_topology,
+        "targets": targets,
+        "depths": depths,
+        "recovery_steps": int(args.recovery_steps),
+        "temp0": float(args.temp0),
+        "temp_decay": float(args.temp_decay),
+        "mc_samples": int(args.mc_samples),
+        "kmax": int(args.kmax),
+        "blas_threads": int(args.blas_threads),
+    }
 
-    # Store per-run details (optional but useful)
-    details: List[dict] = []
+    seeds = list(range(args.seed_start, args.seed_start + args.seeds))
 
-    for sidx in range(args.seed_start, args.seed_start + args.seeds):
-        rng = np.random.default_rng(sidx)
+    # Run seeds (parallel if jobs>1)
+    all_details: List[dict] = []
 
-        src_edges = build_edges(args.source_topology, N, rng)
-        H0 = build_xx_hamiltonian(N, src_edges, J=1.0)
-
-        # Fix Pauli samples per seed so depth comparisons are fair within-seed
-        pauli_samples = sample_pauli_strings(N, args.mc_samples, rng)
-
-        # Pre-build target edges per seed (rr graphs depend on RNG)
-        tgt_edges_map = {t: build_edges(t, N, rng) for t in targets}
-
-        for D in depths:
-            Hscr = local_scramble_on_edges(H0, N, src_edges, rng, steps=D)
-
-            # Measure initial leak once per depth per seed (same for all targets)
-            leak0 = estimate_klocal_leak(Hscr, pauli_samples, k_max=args.kmax)
-
-            for tname in targets:
-                rr = annealed_recovery(
-                    H_start=Hscr,
-                    N=N,
-                    edges=tgt_edges_map[tname],
-                    rng=rng,
-                    steps=args.recovery_steps,
-                    temp0=args.temp0,
-                    temp_decay=args.temp_decay,
-                    pauli_samples=pauli_samples,
-                    k_max=args.kmax,
-                )
-
+    if args.jobs <= 1:
+        for s in seeds:
+            _, det = run_one_seed(args_dict, s)
+            all_details.extend(det)
+            if args.progress:
+                # print last few entries for heartbeat
+                tail = det[-len(targets):]
+                for row in tail:
+                    print(f"[seed {row['seed']:3d}] D={row['depth']:4d} target={row['target']:8s} "
+                          f"leak0={row['leak_initial']:.6f} leakF={row['leak_final']:.6f} leak_red={row['leak_reduction']:.6f}")
+    else:
+        import concurrent.futures as cf
+        with cf.ProcessPoolExecutor(max_workers=int(args.jobs)) as ex:
+            futs = [ex.submit(run_one_seed, args_dict, s) for s in seeds]
+            for fut in cf.as_completed(futs):
+                s, det = fut.result()
+                all_details.extend(det)
                 if args.progress:
-                    print(f"[seed {sidx:3d}] D={D:4d} target={tname:8s} "
-                          f"leak0={rr.leak_initial:.6f} leakF={rr.leak_final:.6f} leak_red={rr.leak_reduction:.6f}")
+                    # Summarize per-seed quickly
+                    # Print D=0 rows for that seed (first len(targets))
+                    det_sorted = sorted(det, key=lambda r: (r["depth"], r["target"]))
+                    for row in det_sorted[:len(targets)]:
+                        print(f"[seed {row['seed']:3d}] D={row['depth']:4d} target={row['target']:8s} "
+                              f"leak0={row['leak_initial']:.6f} leakF={row['leak_final']:.6f} leak_red={row['leak_reduction']:.6f}")
 
-                details.append({
-                    "seed": int(sidx),
-                    "depth": int(D),
-                    "source": args.source_topology,
-                    "target": tname,
-                    "kmax": int(args.kmax),
-                    "mc_samples": int(args.mc_samples),
-                    "leak_initial": float(rr.leak_initial),
-                    "leak_final": float(rr.leak_final),
-                    "leak_reduction": float(rr.leak_reduction),
-                    "accepted_moves": int(rr.accepted_moves),
-                    "recovery_steps": int(rr.steps),
-                })
+    # Aggregate curves
+    curves: Dict[str, Dict[int, Dict[str, float]]] = {t: {} for t in targets}
+    for row in all_details:
+        tname = row["target"]
+        D = int(row["depth"])
+        rr0 = float(row["leak_initial"])
+        rrF = float(row["leak_final"])
+        rrR = float(row["leak_reduction"])
+        acc = float(row["accepted_moves"]) / max(1, int(row["recovery_steps"]))
 
-                slot = curves[tname].setdefault(D, {
-                    "n": 0,
-                    "sum_leak0": 0.0,
-                    "sum_leakF": 0.0,
-                    "sum_leak_red": 0.0,
-                    "sum_accept": 0.0,
-                    "sum_accept2": 0.0,
-                    "sum_leak_red2": 0.0,
-                })
-                slot["n"] += 1
-                slot["sum_leak0"] += rr.leak_initial
-                slot["sum_leakF"] += rr.leak_final
-                slot["sum_leak_red"] += rr.leak_reduction
-                slot["sum_leak_red2"] += rr.leak_reduction ** 2
-                acc = rr.accepted_moves / max(1, rr.steps)
-                slot["sum_accept"] += acc
-                slot["sum_accept2"] += acc ** 2
+        slot = curves[tname].setdefault(D, {
+            "n": 0,
+            "sum_leak0": 0.0,
+            "sum_leakF": 0.0,
+            "sum_leak_red": 0.0,
+            "sum_leak_red2": 0.0,
+            "sum_accept": 0.0,
+            "sum_accept2": 0.0,
+        })
+        slot["n"] += 1
+        slot["sum_leak0"] += rr0
+        slot["sum_leakF"] += rrF
+        slot["sum_leak_red"] += rrR
+        slot["sum_leak_red2"] += rrR ** 2
+        slot["sum_accept"] += acc
+        slot["sum_accept2"] += acc ** 2
 
-    # Summarize curves and compute D*
+    # Write CSV
+    csv_path = os.path.join(args.out, "geometry_robustness_curves.csv")
+    with open(csv_path, "w", newline="", encoding="utf-8") as f:
+        w = csv.writer(f)
+        w.writerow([
+            "target", "depth", "n",
+            "mean_leak0", "mean_leakF", "mean_leak_reduction",
+            "std_leak_reduction", "mean_accept_rate", "std_accept_rate",
+        ])
+        for tname in targets:
+            for D in sorted(curves[tname].keys()):
+                slot = curves[tname][D]
+                n = slot["n"]
+                mean_leak0 = slot["sum_leak0"] / n
+                mean_leakF = slot["sum_leakF"] / n
+                mean_red = slot["sum_leak_red"] / n
+                var_red = max(0.0, slot["sum_leak_red2"] / n - mean_red ** 2)
+                std_red = math.sqrt(var_red)
+                mean_acc = slot["sum_accept"] / n
+                var_acc = max(0.0, slot["sum_accept2"] / n - mean_acc ** 2)
+                std_acc = math.sqrt(var_acc)
+                w.writerow([tname, D, n, mean_leak0, mean_leakF, mean_red, std_red, mean_acc, std_acc])
+
+    # Summary JSON
     summary = {
         "created_utc": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
-        "N": int(N),
+        "N": int(args.N),
         "source_topology": args.source_topology,
         "targets": targets,
         "depths": depths,
         "seeds": int(args.seeds),
         "seed_start": int(args.seed_start),
+        "jobs": int(args.jobs),
+        "blas_threads": int(args.blas_threads),
         "recovery": {
             "steps": int(args.recovery_steps),
             "temp0": float(args.temp0),
@@ -562,51 +621,27 @@ def main() -> int:
         "runtime_sec": None,
     }
 
-    # Write CSV (easy plotting)
-    csv_path = os.path.join(args.out, "geometry_robustness_curves.csv")
-    with open(csv_path, "w", newline="", encoding="utf-8") as f:
-        w = csv.writer(f)
-        w.writerow([
-            "target", "depth", "n",
-            "mean_leak0", "mean_leakF", "mean_leak_reduction",
-            "std_leak_reduction", "mean_accept_rate", "std_accept_rate",
-        ])
+    for tname in targets:
+        depths_sorted = sorted(curves[tname].keys())
+        mean_reds = []
+        curve_rows = []
+        for D in depths_sorted:
+            slot = curves[tname][D]
+            n = slot["n"]
+            mean_leak0 = slot["sum_leak0"] / n
+            mean_leakF = slot["sum_leakF"] / n
+            mean_red = slot["sum_leak_red"] / n
+            mean_reds.append(mean_red)
+            curve_rows.append({
+                "depth": int(D),
+                "n": int(n),
+                "mean_leak0": float(mean_leak0),
+                "mean_leakF": float(mean_leakF),
+                "mean_leak_reduction": float(mean_red),
+            })
+        D_star = compute_D_star(depths_sorted, mean_reds, args.min_mean_improvement)
+        summary["by_target"][tname] = {"curve": curve_rows, "D_star": D_star}
 
-        for tname in targets:
-            depths_sorted = sorted(curves[tname].keys())
-            means = []
-            for D in depths_sorted:
-                slot = curves[tname][D]
-                n = slot["n"]
-                mean_leak0 = slot["sum_leak0"] / n
-                mean_leakF = slot["sum_leakF"] / n
-                mean_red = slot["sum_leak_red"] / n
-                var_red = max(0.0, slot["sum_leak_red2"] / n - mean_red ** 2)
-                std_red = math.sqrt(var_red)
-
-                mean_acc = slot["sum_accept"] / n
-                var_acc = max(0.0, slot["sum_accept2"] / n - mean_acc ** 2)
-                std_acc = math.sqrt(var_acc)
-
-                w.writerow([tname, D, n, mean_leak0, mean_leakF, mean_red, std_red, mean_acc, std_acc])
-                means.append(mean_red)
-
-            D_star = compute_D_star(depths_sorted, means, args.min_mean_improvement)
-            summary["by_target"][tname] = {
-                "curve": [
-                    {
-                        "depth": int(D),
-                        "n": int(curves[tname][D]["n"]),
-                        "mean_leak0": float(curves[tname][D]["sum_leak0"] / curves[tname][D]["n"]),
-                        "mean_leakF": float(curves[tname][D]["sum_leakF"] / curves[tname][D]["n"]),
-                        "mean_leak_reduction": float(curves[tname][D]["sum_leak_red"] / curves[tname][D]["n"]),
-                    }
-                    for D in depths_sorted
-                ],
-                "D_star": D_star,
-            }
-
-    # Write JSON summary + full details
     summary["runtime_sec"] = float(time.time() - t0)
 
     json_summary_path = os.path.join(args.out, "geometry_robustness_summary.json")
@@ -615,7 +650,7 @@ def main() -> int:
 
     json_details_path = os.path.join(args.out, "geometry_robustness_details.json")
     with open(json_details_path, "w", encoding="utf-8") as f:
-        json.dump({"details": details}, f, indent=2)
+        json.dump({"details": all_details}, f, indent=2)
 
     if args.progress:
         print("\nWrote:")

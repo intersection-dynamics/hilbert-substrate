@@ -1,0 +1,113 @@
+{
+  "meta": {
+    "N": 10,
+    "steps": 200,
+    "dt": 0.05,
+    "Delta": 0.0,
+    "pairs_per_step": 40,
+    "eta": 0.2,
+    "decay": 0.01,
+    "J_init_scale": 1.0,
+    "J_clip": 2.5,
+    "influence_eps": 0.08,
+    "budget": 3.5,
+    "budget_iters": 6,
+    "control": "random",
+    "seed": 8,
+    "wd_eps": 1e-06,
+    "wd_bins": 6,
+    "probe_mode": "masked_uniform",
+    "k_steps": 3,
+    "mask_thr": 0.05,
+    "uniform_strength": 1.0,
+    "history_every": 0,
+    "save_J": false
+  },
+  "final": {
+    "structure": {
+      "thr": 0.5,
+      "edges_ge_thr": 15,
+      "deg_min": 2,
+      "deg_max": 4,
+      "deg_mean": 3.0,
+      "deg_list": [
+        2,
+        3,
+        4,
+        4,
+        2,
+        4,
+        2,
+        3,
+        3,
+        3
+      ],
+      "gini_absJ": 0.39447918523492775,
+      "absJ_mean": 0.3888876390540097,
+      "absJ_std": 0.27130134395901445,
+      "rowL1_min": 3.4862576553191382,
+      "rowL1_max": 3.511647350439524,
+      "rowL1_mean": 3.499988751486087,
+      "rowL1_std": 0.007555981827113657
+    },
+    "dist_cmp": {
+      "thr": 0.5,
+      "n": 40,
+      "n_finite": 40,
+      "corr_dist_influence": 0.24760190994809592,
+      "mean_influence_by_dist": {
+        "1": 0.0006059716925635752,
+        "2": 0.0005101668612939806,
+        "3": 0.0009589068089762046,
+        "4": 0.000938929319969264
+      }
+    },
+    "wdist_cmp": {
+      "eps": 1e-06,
+      "bins": 6,
+      "n": 40,
+      "n_finite": 40,
+      "corr_wdist_influence": 0.08124487602083762,
+      "slope_influence_vs_wdist": 6.278964611451561e-05,
+      "intercept_influence_vs_wdist": 0.0005269633899162644,
+      "mean_influence_by_wdist_bin": [
+        {
+          "d_lo": 1.2569498140473476,
+          "d_hi": 1.5927330750949442,
+          "mean_influence": 0.0005562156039332747,
+          "n": 7
+        },
+        {
+          "d_lo": 1.6246245764990939,
+          "d_hi": 2.1950393591146944,
+          "mean_influence": 0.0005497947258558645,
+          "n": 7
+        },
+        {
+          "d_lo": 2.2683296854965986,
+          "d_hi": 2.5989960969479835,
+          "mean_influence": 0.0007288395143260067,
+          "n": 7
+        },
+        {
+          "d_lo": 2.6198728456767895,
+          "d_hi": 2.805556154244386,
+          "mean_influence": 0.0009209994948145622,
+          "n": 7
+        },
+        {
+          "d_lo": 2.819970904977515,
+          "d_hi": 3.2612519784436778,
+          "mean_influence": 0.0005288695404517982,
+          "n": 6
+        },
+        {
+          "d_lo": 3.4613479974544785,
+          "d_hi": 4.177316846093724,
+          "mean_influence": 0.0008109761107706175,
+          "n": 6
+        }
+      ]
+    }
+  }
+}

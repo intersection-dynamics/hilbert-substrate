@@ -1,0 +1,113 @@
+{
+  "meta": {
+    "N": 10,
+    "steps": 200,
+    "dt": 0.05,
+    "Delta": 0.0,
+    "pairs_per_step": 40,
+    "eta": 0.2,
+    "decay": 0.01,
+    "J_init_scale": 1.0,
+    "J_clip": 2.5,
+    "influence_eps": 0.08,
+    "budget": 3.5,
+    "budget_iters": 6,
+    "control": "frozen",
+    "seed": 0,
+    "wd_eps": 1e-06,
+    "wd_bins": 6,
+    "probe_mode": "masked_uniform",
+    "k_steps": 3,
+    "mask_thr": 0.05,
+    "uniform_strength": 1.0,
+    "history_every": 0,
+    "save_J": false
+  },
+  "final": {
+    "structure": {
+      "thr": 0.5,
+      "edges_ge_thr": 13,
+      "deg_min": 1,
+      "deg_max": 4,
+      "deg_mean": 2.6,
+      "deg_list": [
+        2,
+        4,
+        2,
+        2,
+        3,
+        3,
+        1,
+        1,
+        4,
+        4
+      ],
+      "gini_absJ": 0.2781664395263006,
+      "absJ_mean": 0.3888888888887777,
+      "absJ_std": 0.1892142080575022,
+      "rowL1_min": 3.499999999999,
+      "rowL1_max": 3.499999999999001,
+      "rowL1_mean": 3.4999999999989995,
+      "rowL1_std": 6.879800455918813e-16
+    },
+    "dist_cmp": {
+      "thr": 0.5,
+      "n": 40,
+      "n_finite": 40,
+      "corr_dist_influence": -0.32524866340579217,
+      "mean_influence_by_dist": {
+        "1": 0.001320352462340848,
+        "2": 0.0008903384401388974,
+        "3": 0.0007447801576708797,
+        "4": 0.0005059617570284392
+      }
+    },
+    "wdist_cmp": {
+      "eps": 1e-06,
+      "bins": 6,
+      "n": 40,
+      "n_finite": 40,
+      "corr_wdist_influence": -0.30827515917949116,
+      "slope_influence_vs_wdist": -0.0002750723820711614,
+      "intercept_influence_vs_wdist": 0.0017139898278524975,
+      "mean_influence_by_wdist_bin": [
+        {
+          "d_lo": 1.3752833361200487,
+          "d_hi": 1.7049079295908045,
+          "mean_influence": 0.0014217586552298007,
+          "n": 7
+        },
+        {
+          "d_lo": 1.8996161022147748,
+          "d_hi": 2.40840522277178,
+          "mean_influence": 0.0011785630162403939,
+          "n": 7
+        },
+        {
+          "d_lo": 2.457593464036371,
+          "d_hi": 2.875873310754735,
+          "mean_influence": 0.0008076396792274319,
+          "n": 7
+        },
+        {
+          "d_lo": 2.875873310754735,
+          "d_hi": 3.297601997715549,
+          "mean_influence": 0.0005314319037047867,
+          "n": 7
+        },
+        {
+          "d_lo": 3.3064078343104404,
+          "d_hi": 3.331191800560271,
+          "mean_influence": 0.0008794818437119076,
+          "n": 6
+        },
+        {
+          "d_lo": 3.395858550162386,
+          "d_hi": 3.6468590850118034,
+          "mean_influence": 0.0010388869381284078,
+          "n": 6
+        }
+      ]
+    }
+  }
+}
