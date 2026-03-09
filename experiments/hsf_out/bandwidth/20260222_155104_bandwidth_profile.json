@@ -1,0 +1,50 @@
+{
+  "timestamp": "20260222_155104",
+  "meta": {
+    "script": "bandwidth_profile_poke_map.py",
+    "model": "two_leg_conjugate",
+    "d_site": 3,
+    "d_link": 9,
+    "dt": 0.1,
+    "eta": 0.1,
+    "seed": 0
+  },
+  "coupling": {
+    "model": "two_leg_conjugate",
+    "d_site": 3,
+    "d_link": 9,
+    "N": 3
+  },
+  "endpoint_observables": {
+    "type": "factor_left",
+    "N": 3,
+    "count": 8
+  },
+  "shapes": {
+    "R": [
+      8,
+      8
+    ]
+  },
+  "singular_values": [
+    0.005567173975870234,
+    0.004021632939902942,
+    0.003541759274712592,
+    0.003359002502096283,
+    0.0001632856776126778,
+    7.553759624802152e-05,
+    4.6413670019482975e-05,
+    1.2089713699082774e-06
+  ],
+  "singular_values_topk": [
+    0.005567173975870234,
+    0.004021632939902942,
+    0.003541759274712592,
+    0.003359002502096283,
+    0.0001632856776126778,
+    7.553759624802152e-05,
+    4.6413670019482975e-05,
+    1.2089713699082774e-06
+  ],
+  "note": "Higher singular values = more independent poke directions on A imprint strongly into link endpoint observables in one step."
+}

@@ -1,0 +1,74 @@
+{
+  "timestamp": "2026-02-26T22:21:08",
+  "seed": 0,
+  "locality": {
+    "n_sites": 16,
+    "k_nn": 4,
+    "weights": {
+      "finite_bandwidth": 1.0,
+      "no_signaling": 1.0,
+      "no_refolding": 1.0,
+      "no_forgetting": 1.0
+    },
+    "flow": {
+      "steps": 320,
+      "dt": 0.05,
+      "bandwidth_k": 6,
+      "memory_alpha": 0.08,
+      "refold_beta": 0.85,
+      "signal_mix": 0.18
+    },
+    "metrics_initial": {
+      "knn_reciprocity": 0.8124999999999873,
+      "edge_length_cv": 0.4606482856232654,
+      "lattice_score": 0.7168981000318488
+    },
+    "metrics_constrained": {
+      "knn_reciprocity": 0.7812499999999879,
+      "edge_length_cv": 1.8402866165993625,
+      "lattice_score": 0.5078124999999921
+    }
+  },
+  "factorization": {
+    "true_dims": [
+      4,
+      4
+    ],
+    "candidate_dims": [
+      [
+        2,
+        8
+      ],
+      [
+        4,
+        4
+      ],
+      [
+        8,
+        2
+      ]
+    ],
+    "inferred_dims": [
+      2,
+      8
+    ],
+    "schmidt_rank_keep": 3,
+    "objective_tail_fraction": 0.08609778303126343,
+    "kron_rank": 3,
+    "relative_kron_fit_error_rankR": 0.15924343396214366,
+    "top_singular_values": [
+      2.414698623282627,
+      1.9107361405151868,
+      1.6820788280512378,
+      0.5659616446757846
+    ],
+    "bandwidth_profile_line": "2.4147 1.91074 1.68208 0.565962"
+  },
+  "figures": {
+    "locality_A0_influence": "figures/locality_A0_influence.png",
+    "locality_A_constrained": "figures/locality_A_constrained.png",
+    "locality_embedding_initial": "figures/locality_embedding_initial.png",
+    "locality_embedding_constrained": "figures/locality_embedding_constrained.png",
+    "factorization_top_singular_values": "figures/factorization_top_singular_values.png"
+  }
+}

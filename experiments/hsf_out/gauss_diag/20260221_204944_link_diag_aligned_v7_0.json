@@ -1,0 +1,219 @@
+{
+  "meta": {
+    "script": "gauss_link_npz_diagnostic_v7_0.py",
+    "timestamp": "20260221_204944",
+    "npz": "echo_algebra_step1_qutrit_su3_LR_bases_20260219_144601.npz",
+    "mode": "aligned",
+    "seed": 0,
+    "params": {
+      "restarts": 8,
+      "outer": 6,
+      "maxiter": 200,
+      "eps_commute": 1e-06
+    },
+    "npz_keys": [
+      "basis_both_aligned",
+      "basis_left_aligned",
+      "basis_right_aligned",
+      "basis_both_mixed",
+      "basis_left_mixed",
+      "basis_right_mixed"
+    ],
+    "used_keys": {
+      "L": "basis_left_aligned",
+      "R": "basis_right_aligned",
+      "both": "basis_both_aligned"
+    }
+  },
+  "shapes": {
+    "n_gen": 8,
+    "d_link": 3
+  },
+  "orthonormality": {
+    "L_gram_stats": {
+      "diag_mean": 1.0,
+      "diag_min": 0.9999999999999999,
+      "diag_max": 1.0000000000000002,
+      "offdiag_maxabs": 1.1102230246251565e-16,
+      "offdiag_meanabs": 1.7076184216646695e-17
+    },
+    "R_gram_stats": {
+      "diag_mean": 1.0,
+      "diag_min": 1.0,
+      "diag_max": 1.0000000000000002,
+      "offdiag_maxabs": 9.71445146547012e-17,
+      "offdiag_meanabs": 1.41420620873578e-17
+    },
+    "L_hs_norms": [
+      1.0,
+      1.0,
+      0.9999999999999999,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "R_hs_norms": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  "su3_invariants": {
+    "L": {
+      "f_fro": 3.4641016151377553,
+      "f_maxabs": 0.5498170231221313
+    },
+    "R": {
+      "f_fro": 3.4641016151377553,
+      "f_maxabs": 0.6406233339840885
+    }
+  },
+  "closure_residual_corrected": {
+    "L": {
+      "max": 8.551755683865227e-16,
+      "median": 3.821721088360137e-16,
+      "mean": 3.7764295483858365e-16
+    },
+    "R": {
+      "max": 8.872699357538198e-16,
+      "median": 3.193636006112244e-16,
+      "mean": 3.173276218764557e-16
+    },
+    "note": "Projects (-i[T_a,T_b]) onto span{T_c} (Hermitian closure test)."
+  },
+  "cross_commutators": {
+    "raw": {
+      "stats": {
+        "max": 1.3480381738537746,
+        "median": 0.7820210017019149,
+        "mean": 0.8069330188926556,
+        "min": 0.08609098703871494
+      },
+      "energy_sum_sq": 48.0
+    },
+    "optimized": {
+      "stats": {
+        "max": 1.222213578955312,
+        "median": 0.8636781750218303,
+        "mean": 0.8456659998764606,
+        "min": 0.4453593876034367
+      },
+      "energy_sum_sq": 48.00000000000001,
+      "improvement_factor": 0.9999999999999999,
+      "history": [
+        {
+          "outer": 0,
+          "E": 48.000000000000014
+        },
+        {
+          "outer": 1,
+          "E": 48.00000000000001
+        },
+        {
+          "outer": 2,
+          "E": 48.00000000000001
+        }
+      ]
+    },
+    "note": "If E_opt ~ E_raw and both O(1), there is no SO(8) endpoint relabeling that yields commuting L/R on this link space."
+  },
+  "commuting_content": {
+    "raw": {
+      "eps": 1e-06,
+      "L_vs_R_eigs": [
+        5.999999999999995,
+        5.9999999999999964,
+        6.0,
+        6.000000000000002,
+        6.000000000000002,
+        6.000000000000002,
+        6.000000000000002,
+        6.000000000000002
+      ],
+      "R_vs_L_eigs": [
+        5.999999999999998,
+        6.0,
+        6.0,
+        6.0,
+        6.0,
+        6.000000000000001,
+        6.000000000000002,
+        6.000000000000004
+      ],
+      "L_commuting_dim_est": 0,
+      "R_commuting_dim_est": 0,
+      "L_min_eigs": [
+        5.999999999999995,
+        5.9999999999999964,
+        6.0
+      ],
+      "R_min_eigs": [
+        5.999999999999998,
+        6.0,
+        6.0
+      ]
+    },
+    "optimized": {
+      "eps": 1e-06,
+      "L_vs_R_eigs": [
+        5.99999999999999,
+        5.999999999999997,
+        5.999999999999998,
+        6.0,
+        6.0,
+        6.000000000000002,
+        6.0000000000000036,
+        6.00000000000001
+      ],
+      "R_vs_L_eigs": [
+        5.999999999999994,
+        5.999999999999998,
+        6.0,
+        6.000000000000002,
+        6.000000000000003,
+        6.0000000000000036,
+        6.000000000000005,
+        6.000000000000009
+      ],
+      "L_commuting_dim_est": 0,
+      "R_commuting_dim_est": 0,
+      "L_min_eigs": [
+        5.99999999999999,
+        5.999999999999997,
+        5.999999999999998
+      ],
+      "R_min_eigs": [
+        5.999999999999994,
+        5.999999999999998,
+        6.0
+      ]
+    },
+    "note": "Eigenvalues near 0 indicate directions that commute with the opposite endpoint set."
+  },
+  "basis_both": {
+    "d_link": 3,
+    "gram_stats": {
+      "diag_mean": 1.0,
+      "diag_min": 1.0,
+      "diag_max": 1.0000000000000004,
+      "offdiag_maxabs": 2.0816681711721685e-16,
+      "offdiag_meanabs": 2.0454151610296845e-17
+    },
+    "invariants": {
+      "f_fro": 3.4641016151377553,
+      "f_maxabs": 0.5860639815328823
+    },
+    "closure_residual_corrected": {
+      "max": 5.256183506331842e-16,
+      "median": 2.9649094310298983e-16,
+      "mean": 2.7833072906396516e-16
+    }
+  }
+}

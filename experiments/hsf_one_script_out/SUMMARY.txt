@@ -1,0 +1,41 @@
+HSF One-Script Core Program Summary
+======================================
+
+Timestamp: 2026-02-26T22:03:49
+Seed:      0
+
+A) Emergence of Spatial Locality
+------------------------------
+n_sites = 16
+Initial metrics:
+  kNN reciprocity = 0.8125
+  edge length CV  = 0.4606
+  lattice score   = 0.7169
+Constrained metrics:
+  kNN reciprocity = 0.7812
+  edge length CV  = 1.8746
+  lattice score   = 0.5078
+
+Key idea: the same constraint-shaped flow that enforces finite bandwidth + signaling-like decay
+pushes the influence/accessibility kernel toward compatibility with a low-dimensional, local embedding.
+
+B) Emergence of Factorization (Bidirectional Link Structure)
+----------------------------------------------------
+True dims:     4 x 4
+Inferred dims: 2 x 8
+Relative Kron fit error (rank-1): 0.790354
+Top operator-Schmidt singular values (bandwidth profile):
+  2.1774 1.87085 1.63009 1.31646
+
+Key idea: a bidirectional link structure manifests as an operator that is well-approximated
+by low-rank Kronecker structure in the correct factorization; we select the factorization
+that optimizes this diagnostic.
+
+Generated figures:
+  - locality_A0_influence: figures/locality_A0_influence.png
+  - locality_A_constrained: figures/locality_A_constrained.png
+  - locality_embedding_initial: figures/locality_embedding_initial.png
+  - locality_embedding_constrained: figures/locality_embedding_constrained.png
+  - factorization_top_singular_values: figures/factorization_top_singular_values.png
+
+Total runtime: 1.75s

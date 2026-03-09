@@ -1,0 +1,103 @@
+{
+  "tag": "20260219_135019",
+  "controls": {
+    "dS": 3,
+    "Delta": 6.0,
+    "g": 0.3,
+    "t": 0.1
+  },
+  "plaquettes": [
+    {
+      "name": "left_uniform_SU2",
+      "site_ids": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "bond_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "bond_dB": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "dim_bond": 16,
+      "Ueff_nonunit_fro": 0.003186832389705358,
+      "Heff_herm_err_fro": 0.0,
+      "loop_proxy": {
+        "loop_power": 4.072479743209346e-13,
+        "total_power": 0.7203027885788807,
+        "loop_fraction": 5.653844199665161e-13,
+        "top_terms": [],
+        "count_terms": 0
+      }
+    },
+    {
+      "name": "right_mixed_SU3_SU2",
+      "site_ids": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "bond_edges": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "bond_dB": [
+        3,
+        3,
+        3,
+        2
+      ],
+      "dim_bond": 54,
+      "Ueff_nonunit_fro": 0.007417963533795101,
+      "Heff_herm_err_fro": 0.0,
+      "loop_proxy": {
+        "loop_power": 4.091799542094766e-13,
+        "total_power": 1.9527428938367164,
+        "loop_fraction": 2.0954113083751989e-13,
+        "top_terms": [],
+        "count_terms": 0
+      }
+    }
+  ],
+  "interface_summary": {
+    "left_loop_fraction": 5.653844199665161e-13,
+    "right_loop_fraction": 2.0954113083751989e-13,
+    "right_over_left": 0.37061709420632705,
+    "interpretation": "If right_over_left << 1, the mixed plaquette suppresses all-bond (loop-like) terms relative to the uniform SU(2) plaquette. If comparable, loop structure survives the interface edge in this SW-projected evolution."
+  }
+}

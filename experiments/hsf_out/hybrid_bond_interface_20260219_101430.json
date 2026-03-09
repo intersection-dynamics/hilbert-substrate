@@ -1,0 +1,275 @@
+{
+  "tag": "20260219_101430",
+  "config": {
+    "dS": 3,
+    "eps": 0.0003,
+    "samples_per_edge": 12000,
+    "seed": 12345
+  },
+  "graph": {
+    "sites": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        5
+      ]
+    ],
+    "plaquettes": [
+      {
+        "plaquette": "left",
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            0,
+            3
+          ]
+        ],
+        "dB_list": [
+          2,
+          2,
+          2,
+          2
+        ],
+        "uniform_dB": true,
+        "loop_capacity_proxy": 81
+      },
+      {
+        "plaquette": "right",
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            1,
+            4
+          ]
+        ],
+        "dB_list": [
+          3,
+          3,
+          3,
+          2
+        ],
+        "uniform_dB": false,
+        "loop_capacity_proxy": 1536
+      }
+    ]
+  },
+  "edge_echo": [
+    {
+      "edge": [
+        0,
+        1
+      ],
+      "dB": 2,
+      "model": "edge_su2",
+      "expected_dim": 3,
+      "basis_dim": 3,
+      "sv_top5": [
+        64.01985253361295,
+        17.988842437892853,
+        17.82126396279195,
+        2.9734981621334085e-10
+      ],
+      "closure": {
+        "pairs": 3,
+        "rel_min": 1.0,
+        "rel_med": 1.0,
+        "rel_max": 1.0
+      }
+    },
+    {
+      "edge": [
+        1,
+        2
+      ],
+      "dB": 3,
+      "model": "edge_su3",
+      "expected_dim": 8,
+      "basis_dim": 8,
+      "sv_top5": [
+        69.77393977352523,
+        58.501570856743164,
+        21.113593468515788,
+        20.644373634613753,
+        17.44460600047667
+      ],
+      "closure": {
+        "pairs": 28,
+        "rel_min": 1.0,
+        "rel_med": 1.0,
+        "rel_max": 1.0
+      }
+    },
+    {
+      "edge": [
+        3,
+        4
+      ],
+      "dB": 2,
+      "model": "edge_su2",
+      "expected_dim": 3,
+      "basis_dim": 3,
+      "sv_top5": [
+        64.01985253361295,
+        17.988842437892853,
+        17.82126396279195,
+        2.9734981621334085e-10
+      ],
+      "closure": {
+        "pairs": 3,
+        "rel_min": 1.0,
+        "rel_med": 1.0,
+        "rel_max": 1.0
+      }
+    },
+    {
+      "edge": [
+        4,
+        5
+      ],
+      "dB": 3,
+      "model": "edge_su3",
+      "expected_dim": 8,
+      "basis_dim": 8,
+      "sv_top5": [
+        69.77393977352523,
+        58.501570856743164,
+        21.113593468515788,
+        20.644373634613753,
+        17.44460600047667
+      ],
+      "closure": {
+        "pairs": 28,
+        "rel_min": 1.0,
+        "rel_med": 1.0,
+        "rel_max": 1.0
+      }
+    },
+    {
+      "edge": [
+        0,
+        3
+      ],
+      "dB": 2,
+      "model": "edge_su2",
+      "expected_dim": 3,
+      "basis_dim": 3,
+      "sv_top5": [
+        64.01985253361295,
+        17.988842437892853,
+        17.82126396279195,
+        2.9734981621334085e-10
+      ],
+      "closure": {
+        "pairs": 3,
+        "rel_min": 1.0,
+        "rel_med": 1.0,
+        "rel_max": 1.0
+      }
+    },
+    {
+      "edge": [
+        1,
+        4
+      ],
+      "dB": 2,
+      "model": "edge_su2",
+      "expected_dim": 3,
+      "basis_dim": 3,
+      "sv_top5": [
+        64.01985253361295,
+        17.988842437892853,
+        17.82126396279195,
+        2.9734981621334085e-10
+      ],
+      "closure": {
+        "pairs": 3,
+        "rel_min": 1.0,
+        "rel_med": 1.0,
+        "rel_max": 1.0
+      }
+    },
+    {
+      "edge": [
+        2,
+        5
+      ],
+      "dB": 3,
+      "model": "edge_su3",
+      "expected_dim": 8,
+      "basis_dim": 8,
+      "sv_top5": [
+        69.77393977352523,
+        58.501570856743164,
+        21.113593468515788,
+        20.644373634613753,
+        17.44460600047667
+      ],
+      "closure": {
+        "pairs": 28,
+        "rel_min": 1.0,
+        "rel_med": 1.0,
+        "rel_max": 1.0
+      }
+    }
+  ],
+  "interface": {
+    "shared_edge": [
+      1,
+      4
+    ],
+    "comment": "Right plaquette is mixed because edge (1,4) is dB=2. This file is a first-pass sanity check that local echo algebras still look like su(2) on dB=2 edges and su(3) on dB=3 edges with qutrit sites."
+  }
+}

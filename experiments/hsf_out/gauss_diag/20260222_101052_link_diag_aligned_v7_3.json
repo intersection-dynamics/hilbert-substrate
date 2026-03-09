@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "script": "gauss_link_npz_diagnostic_v7_3_subalgebra.py",
+    "timestamp": "20260222_101052",
+    "npz": "echo_algebra_step1_link9_su3_LR_bases_20260221_223031.npz",
+    "mode": "aligned",
+    "params": {
+      "eps_commute": 1e-06,
+      "trials": 40,
+      "seed": 0,
+      "w_close": 1.0,
+      "w_f": 1.0
+    },
+    "npz_keys": [
+      "basis_both_aligned",
+      "basis_left_aligned",
+      "basis_right_aligned",
+      "basis_both_mixed",
+      "basis_left_mixed",
+      "basis_right_mixed",
+      "basis_both_aligned_full",
+      "basis_left_aligned_full",
+      "basis_right_aligned_full",
+      "basis_both_mixed_full",
+      "basis_left_mixed_full",
+      "basis_right_mixed_full"
+    ],
+    "used_keys": {
+      "L": "basis_left_aligned_full",
+      "R": "basis_right_aligned_full"
+    },
+    "used_full": true
+  },
+  "shapes": {
+    "k_full": 18,
+    "d_link": 9
+  },
+  "su3_target": {
+    "f_fro_target": 3.4641016151377544
+  },
+  "selected_subalgebra": {
+    "L": {
+      "idx": [
+        17,
+        8,
+        0,
+        16,
+        15,
+        9,
+        7,
+        10
+      ],
+      "score": 1.8128644777018335,
+      "closure_mean": 0.23344935116019622,
+      "f_fro": 1.8846864885961172
+    },
+    "R": {
+      "idx": [
+        16,
+        0,
+        9,
+        15,
+        17,
+        8,
+        7,
+        11
+      ],
+      "score": 1.7862732012472249,
+      "closure_mean": 0.1933500756427411,
+      "f_fro": 1.8711784895332706
+    }
+  },
+  "cross_on_selected_8sets": {
+    "cross_energy_sum_sq": 11.859488815304681,
+    "cross_comm_max": 0.6311848090537205,
+    "cross_comm_median": 0.4159151200731239,
+    "cross_comm_mean": 0.3896234177192903,
+    "cross_comm_min": 0.0015321975732767743
+  },
+  "commuting_content_on_selected_8sets": {
+    "eps": 1e-06,
+    "L_commuting_dim_est": 0,
+    "R_commuting_dim_est": 0,
+    "L_min_eigs": [
+      0.7398868412510292,
+      1.0139605074049447,
+      1.1821342489638198
+    ],
+    "R_min_eigs": [
+      0.4855991949840414,
+      0.8935509433533879,
+      1.2331938820892876
+    ]
+  },
+  "note": "This is v7.3 option-A: greedy discrete 8-subset search. If it finds L/R 8-sets with f_fro\u22483.464 and small closure residual, then you truly have su(3) subalgebras inside the k>8 span."
+}

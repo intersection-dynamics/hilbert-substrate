@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "script": "hsf_no_refolding_attachment_checker_v1.py",
+    "timestamp": "20260221_105825",
+    "d": 3,
+    "core_dim": 1,
+    "seed": 0,
+    "scramble": true,
+    "tol": 1e-10,
+    "source": "demo",
+    "note": "demo terms for attachment checker"
+  },
+  "dims": {
+    "dL": 3,
+    "dE": 9,
+    "dR": 3
+  },
+  "terms": [
+    {
+      "name": "demo_core_only",
+      "max_comm_left": 0.0,
+      "max_comm_right": 0.0,
+      "tol": 1e-10,
+      "attachment_preserving": true
+    },
+    {
+      "name": "demo_E_left_only",
+      "max_comm_left": 2.7585324995527927,
+      "max_comm_right": 2.797354655834649,
+      "tol": 1e-10,
+      "attachment_preserving": false
+    },
+    {
+      "name": "demo_E_mix",
+      "max_comm_left": 1.576706278361024,
+      "max_comm_right": 1.686935579188404,
+      "tol": 1e-10,
+      "attachment_preserving": false
+    }
+  ],
+  "summary": {
+    "n_terms": 3,
+    "n_attachment_preserving": 1,
+    "n_boundary_blending": 2
+  }
+}

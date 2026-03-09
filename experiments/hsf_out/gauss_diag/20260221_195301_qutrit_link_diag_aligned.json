@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "script": "gauss_link_qutrit_npz_diagnostic_v6_2.py",
+    "timestamp": "20260221_195301",
+    "npz": "echo_algebra_step1_qutrit_su3_LR_bases_20260219_144601.npz",
+    "mode": "aligned",
+    "seed": 0,
+    "restarts": 12,
+    "maxiter": 800,
+    "npz_keys": [
+      "basis_both_aligned",
+      "basis_left_aligned",
+      "basis_right_aligned",
+      "basis_both_mixed",
+      "basis_left_mixed",
+      "basis_right_mixed"
+    ],
+    "used_keys": {
+      "L": "basis_left_aligned",
+      "R": "basis_right_aligned",
+      "both": "basis_both_aligned"
+    }
+  },
+  "shapes": {
+    "L": [
+      3,
+      3
+    ],
+    "R": [
+      3,
+      3
+    ],
+    "n_gen": 8
+  },
+  "invariants": {
+    "L": {
+      "f_fro": 3.4641016151377553,
+      "f_maxabs": 0.5498170231221313
+    },
+    "R": {
+      "f_fro": 3.4641016151377553,
+      "f_maxabs": 0.6406233339840885
+    }
+  },
+  "diagnostics": {
+    "L_hs_norms": [
+      1.0,
+      1.0,
+      0.9999999999999999,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "R_hs_norms": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "L_gram_stats": {
+      "diag_mean": 1.0,
+      "diag_min": 0.9999999999999999,
+      "diag_max": 1.0000000000000002,
+      "offdiag_maxabs": 1.1102230246251565e-16,
+      "offdiag_meanabs": 1.7076184216646695e-17
+    },
+    "R_gram_stats": {
+      "diag_mean": 1.0,
+      "diag_min": 1.0,
+      "diag_max": 1.0000000000000002,
+      "offdiag_maxabs": 9.71445146547012e-17,
+      "offdiag_meanabs": 1.41420620873578e-17
+    },
+    "L_closure_residual": {
+      "max": 1.3636930634205933,
+      "median": 0.8465782928712365,
+      "mean": 0.781693254931213
+    },
+    "R_closure_residual": {
+      "max": 1.3791121294964794,
+      "median": 0.7540554459076921,
+      "mean": 0.768888170978921
+    }
+  },
+  "tests": {
+    "cross_commutators_[L^a,R^b]_HSnorm": {
+      "max": 1.3480381738537746,
+      "median": 0.7820210017019149,
+      "mean": 0.8069330188926556,
+      "min": 0.08609098703871494
+    },
+    "conjugate_rep_alignment_R_to_-R^T_vs_L": {
+      "align_obj": 11.308126846950858,
+      "success": true,
+      "nit": 76
+    }
+  },
+  "both_basis_analysis": {
+    "align_both_to_L": {
+      "align_obj": 11.560935666120747,
+      "success": true,
+      "nit": 32
+    },
+    "align_both_to_R": {
+      "align_obj": 11.14398641234489,
+      "success": true,
+      "nit": 50
+    }
+  },
+  "interpretation": {
+    "cross_commutators": "If max is O(1), L and R do not commute on the qutrit link -> cannot be genuine left/right gauge endpoint actions on the same C^3.",
+    "next": "If basis_both_* exists, compare it to L and R. If both is close to each, L/R are two slices of one local su(3) action (echo), not commuting endpoint actions (gauge)."
+  }
+}

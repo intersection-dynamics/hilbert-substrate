@@ -1,0 +1,100 @@
+{
+  "config": {
+    "outdir": "hsf_one_bow_out",
+    "seed": 0,
+    "N": 5,
+    "p": 4.0,
+    "steps": 1200,
+    "dt0": 0.03,
+    "dt_min": 1e-10,
+    "scramble_depth": 5,
+    "scipy": true,
+    "ipr_low": 0.15,
+    "ipr_high": 0.35,
+    "V_lo": 0.0,
+    "V_hi": 6.0,
+    "t_hop": 1.0
+  },
+  "spatial_locality": {
+    "N": 5,
+    "p": 4.0,
+    "scramble_depth": 5,
+    "Cp_spatial_target": 16.0,
+    "Cp_scrambled_start": 177.95168619764726,
+    "Cp_final": 34.04876345665608,
+    "Cp_harmonion_reference_diag": 6.009546816668048,
+    "final_weight_distribution": {
+      "1": 0.23117962537520786,
+      "2": 0.5053261052785841,
+      "3": 0.23975144008750124,
+      "4": 0.02310777449039503,
+      "5": 0.0006350547683116767
+    },
+    "start_weight_distribution": {
+      "1": 0.042147270163099736,
+      "2": 0.1800735731880995,
+      "3": 0.2916697383919654,
+      "4": 0.4130495215821048,
+      "5": 0.07305989667473042
+    },
+    "accepted_steps": 1200,
+    "final_iter": 1200,
+    "stopped_early": false,
+    "best_Cp": 34.04876345665608
+  },
+  "jordan_wigner": {
+    "N": 5,
+    "max_anticommutator_violation_JW": 0.0,
+    "max_anticommutator_violation_naive_no_strings": 5.656854249492381
+  },
+  "bound_states": {
+    "model": "1-excitation tight-binding ring + 2-site attractive well",
+    "tuning_status": "hit",
+    "ipr_target_band": [
+      0.15,
+      0.35
+    ],
+    "V": 1.5,
+    "metrics": {
+      "E": -2.9420398617103825,
+      "IPR": 0.33862367545940447,
+      "eig_index": 0,
+      "E_min": -2.9420398617103825,
+      "E_max": 1.5432721443978048
+    },
+    "prob_sites": [
+      0.40304735012764614,
+      0.40304735012764603,
+      0.0787551456333214,
+      0.0363950084780649,
+      0.07875514563332146
+    ]
+  },
+  "gauge_emergence": {
+    "endpoint_commutativity": {
+      "dB_2_single_qubit_link_max||[L,R]||F": 0.7071067811865476,
+      "dB_4_composite_link_max||[L,R]||F": 0.0
+    },
+    "gauge_invariant_hamiltonian_demo": {
+      "max_norm_comm_H_G": 0.0,
+      "comm_H_GL": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "comm_H_GR": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "gauss_singlet_dim_tol1e-9": 1,
+      "G2_min_eig": 2.6645352591003757e-15
+    }
+  },
+  "files": {
+    "cost_cp.png": "hsf_one_bow_out\\cost_cp.png",
+    "weight_profile.png": "hsf_one_bow_out\\weight_profile.png",
+    "dt_used.png": "hsf_one_bow_out\\dt_used.png",
+    "bound_state_sites.png": "hsf_one_bow_out\\bound_state_sites.png"
+  }
+}
