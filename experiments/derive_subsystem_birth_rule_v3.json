@@ -1,0 +1,5616 @@
+{
+  "config": {
+    "n_max": 8,
+    "n_init": 2,
+    "seed": 0,
+    "local_scale": 0.1,
+    "pair_scale": 0.16,
+    "spawn_pair_scale": 0.12,
+    "total_steps": 96,
+    "dt": 0.2,
+    "eval_every": 4,
+    "lookahead_windows": 2,
+    "settling_windows": 2,
+    "fission_fraction": 0.3,
+    "candidate_fraction": 0.45,
+    "birth_score_floor": 0.015,
+    "decay_mi_threshold": 0.05,
+    "decay_corr_threshold": 0.07,
+    "neighborhood_bonus_weight": 0.35,
+    "shell_bonus_weight": 0.4,
+    "persist_windows_required": 1,
+    "persist_entropy_threshold": 0.06,
+    "persist_mean_mi_threshold": 0.06,
+    "persist_triangle_threshold": 1,
+    "json_out": "derive_subsystem_birth_rule_v3.json"
+  },
+  "candidate_dataset": [
+    {
+      "pair": [
+        0,
+        1
+      ],
+      "mi": 0.13747475482904703,
+      "corr": 0.5729917428335414,
+      "sa": 0.06873737741452313,
+      "sb": 0.068737377414524,
+      "pair_entropy": 1.1102230246251564e-16,
+      "coord_gap": 2.0,
+      "common_nbr_count": 0,
+      "cmi_mean": 0.0,
+      "cmi_max": 0.0,
+      "daughter_count": 0,
+      "shell_triangle_count": 0,
+      "score": 0.07877189936510946,
+      "step": 4,
+      "outcome": "persistent"
+    },
+    {
+      "pair": [
+        0,
+        2
+      ],
+      "mi": 0.2951603001745973,
+      "corr": 0.4399066392289251,
+      "sa": 0.31664911063688417,
+      "sb": 0.3050492203201424,
+      "pair_entropy": 0.3265380307824292,
+      "coord_gap": 2.015234090440734,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.29516030017459727,
+      "cmi_max": 0.29516030017459727,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.2320711049594833,
+      "step": 8,
+      "outcome": "persistent"
+    },
+    {
+      "pair": [
+        1,
+        2
+      ],
+      "mi": 0.3149381404656877,
+      "corr": 0.3262687921231082,
+      "sa": 0.3265380307824295,
+      "sb": 0.3050492203201424,
+      "pair_entropy": 0.3166491106368843,
+      "coord_gap": 2.213487548443715,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.31493814046568747,
+      "cmi_max": 0.31493814046568747,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.18645979522839268,
+      "step": 8,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        1
+      ],
+      "mi": 0.3381379210991708,
+      "corr": 0.2939679504506091,
+      "sa": 0.31664911063688417,
+      "sb": 0.3265380307824295,
+      "pair_entropy": 0.30504922032014287,
+      "coord_gap": 0.1982534580029811,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.3381379210991707,
+      "cmi_max": 0.3381379210991707,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.18355821567040476,
+      "step": 8,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        2
+      ],
+      "mi": 0.5770384819737385,
+      "corr": 0.5492909084226072,
+      "sa": 0.5532503312524246,
+      "sb": 0.7274816203473289,
+      "pair_entropy": 0.703693469626015,
+      "coord_gap": 0.4294885309232189,
+      "common_nbr_count": 2,
+      "cmi_mean": 0.6439494751246979,
+      "cmi_max": 0.6439494751246979,
+      "daughter_count": 2,
+      "shell_triangle_count": 2,
+      "score": 0.9483464905716457,
+      "step": 12,
+      "outcome": "persistent"
+    },
+    {
+      "pair": [
+        2,
+        3
+      ],
+      "mi": 0.5073985391919309,
+      "corr": 0.2776389959258302,
+      "sa": 0.7274816203473289,
+      "sb": 0.47571385419362555,
+      "pair_entropy": 0.6957969353490236,
+      "coord_gap": 1.207223210025959,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.57430953234289,
+      "cmi_max": 0.57430953234289,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.3060545843697038,
+      "step": 12,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        1,
+        2
+      ],
+      "mi": 0.3036152263780293,
+      "corr": 0.40980145465336787,
+      "sa": 0.3395380752296772,
+      "sb": 0.7274816203473289,
+      "pair_entropy": 0.7634044691989769,
+      "coord_gap": 1.5881949451104396,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.3705262195289888,
+      "cmi_max": 0.3705262195289888,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.23532251337639434,
+      "step": 12,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        1
+      ],
+      "mi": 0.19699147113307802,
+      "corr": 0.39010344120946805,
+      "sa": 0.5532503312524246,
+      "sb": 0.3395380752296772,
+      "pair_entropy": 0.6957969353490239,
+      "coord_gap": 1.1587064141872208,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.2639024642840374,
+      "cmi_max": 0.2639024642840374,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.13403550405463585,
+      "step": 12,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        3
+      ],
+      "mi": 0.2655597162470734,
+      "corr": 0.23250096412717822,
+      "sa": 0.5532503312524246,
+      "sb": 0.47571385419362555,
+      "pair_entropy": 0.7634044691989769,
+      "coord_gap": 1.6367117409491778,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.3324707093980324,
+      "cmi_max": 0.3324707093980324,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.11353341767701786,
+      "step": 12,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        2
+      ],
+      "mi": 0.3083279561994834,
+      "corr": 0.36036506786998446,
+      "sa": 0.6289268126420542,
+      "sb": 0.8279900807158715,
+      "pair_entropy": 1.1485889371584423,
+      "coord_gap": 0.0034648118875932055,
+      "common_nbr_count": 3,
+      "cmi_mean": 0.42077298447708394,
+      "cmi_max": 0.45184334822073624,
+      "daughter_count": 3,
+      "shell_triangle_count": 3,
+      "score": 0.36624209989426326,
+      "step": 16,
+      "outcome": "persistent"
+    },
+    {
+      "pair": [
+        2,
+        3
+      ],
+      "mi": 0.47514207090386384,
+      "corr": 0.3425608963355774,
+      "sa": 0.8279900807158715,
+      "sb": 0.7790924527636476,
+      "pair_entropy": 1.1319404625756553,
+      "coord_gap": 1.8112906193388527,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.6186574629251169,
+      "cmi_max": 0.6186574629251169,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.3635760883873757,
+      "step": 16,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        1,
+        2
+      ],
+      "mi": 0.3390242552148537,
+      "corr": 0.35666509312479056,
+      "sa": 0.6170216526690355,
+      "sb": 0.8279900807158715,
+      "pair_entropy": 1.1059874781700534,
+      "coord_gap": 0.43686733070308903,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.47274947553209135,
+      "cmi_max": 0.47274947553209135,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.2457532900174333,
+      "step": 16,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        3
+      ],
+      "mi": 0.3654173607603233,
+      "corr": 0.31094422616791656,
+      "sa": 0.6289268126420542,
+      "sb": 0.7790924527636476,
+      "pair_entropy": 1.0426019046453785,
+      "coord_gap": 1.8147554312264458,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.5089327527815763,
+      "cmi_max": 0.5089327527815763,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.23660321703217455,
+      "step": 16,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        1
+      ],
+      "mi": 0.20112941585676758,
+      "corr": 0.42503989128490977,
+      "sa": 0.6289268126420542,
+      "sb": 0.6170216526690355,
+      "pair_entropy": 1.0448190494543221,
+      "coord_gap": 0.43340251881549585,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.33485463617400524,
+      "cmi_max": 0.33485463617400524,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.15747743947390816,
+      "step": 16,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        4
+      ],
+      "mi": 0.3372020696579201,
+      "corr": 0.23303134912818113,
+      "sa": 0.8279900807158715,
+      "sb": 0.5055825002192393,
+      "pair_entropy": 0.9963705112771908,
+      "coord_gap": 1.2377045466172782,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.3972965421522312,
+      "cmi_max": 0.3972965421522312,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.15152079899748766,
+      "step": 16,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        4
+      ],
+      "mi": 0.17807105172679305,
+      "corr": 0.37730051746488075,
+      "sa": 0.6289268126420542,
+      "sb": 0.5055825002192393,
+      "pair_entropy": 0.9564382611345005,
+      "coord_gap": 1.2342397347296852,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.23816552422110426,
+      "cmi_max": 0.23816552422110426,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.11479910923189705,
+      "step": 16,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        2
+      ],
+      "mi": 0.18138434553960803,
+      "corr": 0.3962883134888605,
+      "sa": 0.8081342641652801,
+      "sb": 0.8213078266727172,
+      "pair_entropy": 1.4480577452983892,
+      "coord_gap": 0.07258139535402851,
+      "common_nbr_count": 4,
+      "cmi_mean": 0.3871002770991922,
+      "cmi_max": 0.47829830982637644,
+      "daughter_count": 4,
+      "shell_triangle_count": 4,
+      "score": 0.2871517145952204,
+      "step": 20,
+      "outcome": "persistent"
+    },
+    {
+      "pair": [
+        2,
+        4
+      ],
+      "mi": 0.3684647029313788,
+      "corr": 0.23848760062247504,
+      "sa": 0.8213078266727172,
+      "sb": 0.7439989764368707,
+      "pair_entropy": 1.196842100178209,
+      "coord_gap": 0.46495665540777087,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.5675960065162158,
+      "cmi_max": 0.5675960065162158,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.1900968541996792,
+      "step": 20,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        3
+      ],
+      "mi": 0.20386085628433515,
+      "corr": 0.4103582504098865,
+      "sa": 0.8213078266727172,
+      "sb": 0.7478653815930916,
+      "pair_entropy": 1.3653123519814736,
+      "coord_gap": 0.5514244011661342,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.5007748205711033,
+      "cmi_max": 0.5007748205711033,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.17325733688664147,
+      "step": 20,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        3
+      ],
+      "mi": 0.2229379818514592,
+      "corr": 0.36799294486987677,
+      "sa": 0.8081342641652801,
+      "sb": 0.7478653815930916,
+      "pair_entropy": 1.3330616639069124,
+      "coord_gap": 0.6240057965201627,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.5198519461382276,
+      "cmi_max": 0.5198519461382276,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.17206951245874427,
+      "step": 20,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        1
+      ],
+      "mi": 0.2075243239228337,
+      "corr": 0.27030623734510756,
+      "sa": 0.8081342641652801,
+      "sb": 0.7303889907716865,
+      "pair_entropy": 1.330998931014133,
+      "coord_gap": 0.40933871115566123,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.4551491748461187,
+      "cmi_max": 0.4551491748461187,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.11264493756913878,
+      "step": 20,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        1,
+        2
+      ],
+      "mi": 0.19645472196903646,
+      "corr": 0.24552890759257556,
+      "sa": 0.7303889907716865,
+      "sb": 0.8213078266727172,
+      "pair_entropy": 1.3552420954753672,
+      "coord_gap": 0.3367573158016327,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.4440795728923215,
+      "cmi_max": 0.4440795728923215,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.09612477022054614,
+      "step": 20,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        5
+      ],
+      "mi": 0.19746723145414913,
+      "corr": 0.261558756033115,
+      "sa": 0.8081342641652801,
+      "sb": 0.3544522629134474,
+      "pair_entropy": 0.9651192956245783,
+      "coord_gap": 2.284130538280085,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.2766608388975953,
+      "cmi_max": 0.2766608388975953,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.09099529214296928,
+      "step": 20,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        4
+      ],
+      "mi": 0.21017053366320648,
+      "corr": 0.19704068279483997,
+      "sa": 0.8081342641652801,
+      "sb": 0.7439989764368707,
+      "pair_entropy": 1.3419627069389444,
+      "coord_gap": 0.5375380507617994,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.4093018372480435,
+      "cmi_max": 0.4093018372480435,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0805398534929118,
+      "step": 20,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        5
+      ],
+      "mi": 0.11477369144201299,
+      "corr": 0.26420119141060183,
+      "sa": 0.8213078266727172,
+      "sb": 0.3544522629134474,
+      "pair_entropy": 1.0609863981441516,
+      "coord_gap": 2.356711933634114,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.19396729888545883,
+      "cmi_max": 0.19396729888545883,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.04996301528871375,
+      "step": 20,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        2
+      ],
+      "mi": 0.15152724084099156,
+      "corr": 0.18158641857851432,
+      "sa": 0.8546455514053206,
+      "sb": 0.9604036562426383,
+      "pair_entropy": 1.6635219668069674,
+      "coord_gap": 0.0329735030680436,
+      "common_nbr_count": 5,
+      "cmi_mean": 0.322708435449509,
+      "cmi_max": 0.38236739569254286,
+      "daughter_count": 5,
+      "shell_triangle_count": 5,
+      "score": 0.12738146693834881,
+      "step": 24,
+      "outcome": "persistent"
+    },
+    {
+      "pair": [
+        2,
+        4
+      ],
+      "mi": 0.272016510753897,
+      "corr": 0.19125109176386954,
+      "sa": 0.9604036562426383,
+      "sb": 0.8255922524158117,
+      "pair_entropy": 1.513979397904553,
+      "coord_gap": 0.2301944336270399,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.4857527183751462,
+      "cmi_max": 0.4857527183751462,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.1066657050678346,
+      "step": 24,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        1
+      ],
+      "mi": 0.18020914652495357,
+      "corr": 0.22492657073809658,
+      "sa": 0.8546455514053206,
+      "sb": 0.8276928793214607,
+      "pair_entropy": 1.502129284201828,
+      "coord_gap": 0.206479865458935,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.4110493013765051,
+      "cmi_max": 0.4110493013765051,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.07892941178762099,
+      "step": 24,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        3
+      ],
+      "mi": 0.21612541205198132,
+      "corr": 0.17324180820135435,
+      "sa": 0.9604036562426383,
+      "sb": 0.8566276080779597,
+      "pair_entropy": 1.6009058522686166,
+      "coord_gap": 0.2688502478968229,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.4356728070543756,
+      "cmi_max": 0.4356728070543756,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.07418107168163977,
+      "step": 24,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        3
+      ],
+      "mi": 0.14000822497259513,
+      "corr": 0.21142446029870335,
+      "sa": 0.8546455514053206,
+      "sb": 0.8566276080779597,
+      "pair_entropy": 1.571264934510685,
+      "coord_gap": 0.30182375096486647,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.3595556199749894,
+      "cmi_max": 0.3595556199749894,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.055537310724556845,
+      "step": 24,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        4
+      ],
+      "mi": 0.12593906014889278,
+      "corr": 0.2016303565789539,
+      "sa": 0.8546455514053206,
+      "sb": 0.8255922524158117,
+      "pair_entropy": 1.5542987436722395,
+      "coord_gap": 0.26316793669508354,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.33967526777014223,
+      "cmi_max": 0.33967526777014223,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.04694561062036653,
+      "step": 24,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        5
+      ],
+      "mi": 0.13803307853366564,
+      "corr": 0.18250685775110911,
+      "sa": 0.9604036562426383,
+      "sb": 0.6587119552624301,
+      "pair_entropy": 1.4810825329714028,
+      "coord_gap": 2.3946339584523457,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.29251298623903743,
+      "cmi_max": 0.29251298623903743,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.04493413270872584,
+      "step": 24,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        5
+      ],
+      "mi": 0.1263458570684135,
+      "corr": 0.19448432195854862,
+      "sa": 0.8546455514053206,
+      "sb": 0.6587119552624301,
+      "pair_entropy": 1.3870116495993372,
+      "coord_gap": 2.3616604553843024,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.2808257647737853,
+      "cmi_max": 0.2808257647737853,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.043432491614807715,
+      "step": 24,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        1,
+        2
+      ],
+      "mi": 0.1161836513889436,
+      "corr": 0.15712199510406827,
+      "sa": 0.8276928793214607,
+      "sb": 0.9604036562426383,
+      "pair_entropy": 1.6719128841751556,
+      "coord_gap": 0.1735063623908914,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.3470238062404951,
+      "cmi_max": 0.3470238062404951,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.03393410223131782,
+      "step": 24,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        6
+      ],
+      "mi": 0.11077521612077645,
+      "corr": 0.18234038050395313,
+      "sa": 0.9604036562426383,
+      "sb": 0.33591162354078724,
+      "pair_entropy": 1.1855400636626492,
+      "coord_gap": 1.083381791265822,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.14807752398279694,
+      "cmi_max": 0.14807752398279694,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.032001900012116,
+      "step": 24,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        6
+      ],
+      "mi": 0.09239629365332158,
+      "corr": 0.20463153607091392,
+      "sa": 0.8546455514053206,
+      "sb": 0.33591162354078724,
+      "pair_entropy": 1.0981608812927863,
+      "coord_gap": 1.1163552943338655,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.1296986015153423,
+      "cmi_max": 0.1296986015153423,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.029476016590761947,
+      "step": 24,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        5
+      ],
+      "mi": 0.15595923228177444,
+      "corr": 0.1902228187163257,
+      "sa": 0.9040555400655936,
+      "sb": 0.8494101544791234,
+      "pair_entropy": 1.5975064622629427,
+      "coord_gap": 2.598503351907899,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.2847103172191683,
+      "cmi_max": 0.2847103172191683,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.05259663980949903,
+      "step": 28,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        3
+      ],
+      "mi": 0.1677867699350486,
+      "corr": 0.14091952669327842,
+      "sa": 0.9693706663149422,
+      "sb": 0.9544091434377405,
+      "pair_entropy": 1.7559930398176342,
+      "coord_gap": 0.24368957695703708,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.3338994820456458,
+      "cmi_max": 0.3338994820456458,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.043524228302027027,
+      "step": 28,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        2
+      ],
+      "mi": 0.04689702641340543,
+      "corr": 0.17426418321863787,
+      "sa": 0.9040555400655936,
+      "sb": 0.9693706663149422,
+      "pair_entropy": 1.8265291799671304,
+      "coord_gap": 0.02752778765966893,
+      "common_nbr_count": 6,
+      "cmi_mean": 0.17013237440355775,
+      "cmi_max": 0.22593523001538118,
+      "daughter_count": 6,
+      "shell_triangle_count": 6,
+      "score": 0.03997281361253965,
+      "step": 28,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        5
+      ],
+      "mi": 0.13780796327714961,
+      "corr": 0.15475023533045004,
+      "sa": 0.9693706663149422,
+      "sb": 0.8494101544791234,
+      "pair_entropy": 1.6809728575169158,
+      "coord_gap": 2.6260311395675675,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.26655904821454346,
+      "cmi_max": 0.26655904821454346,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.03727435700809622,
+      "step": 28,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        6
+      ],
+      "mi": 0.12645114977545413,
+      "corr": 0.1757552331241092,
+      "sa": 0.9040555400655936,
+      "sb": 0.6157115918951757,
+      "pair_entropy": 1.3933159821853152,
+      "coord_gap": 0.9562276979054317,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.20647875726539633,
+      "cmi_max": 0.20647875726539633,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.03700239318440233,
+      "step": 28,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        3
+      ],
+      "mi": 0.09855640552126976,
+      "corr": 0.1830239287689117,
+      "sa": 0.9040555400655936,
+      "sb": 0.9544091434377405,
+      "pair_entropy": 1.7599082779820643,
+      "coord_gap": 0.271217364616706,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.26466911763186696,
+      "cmi_max": 0.26466911763186696,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.03148101522345464,
+      "step": 28,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        6
+      ],
+      "mi": 0.08905480456900916,
+      "corr": 0.18013330506621217,
+      "sa": 0.9693706663149422,
+      "sb": 0.6157115918951757,
+      "pair_entropy": 1.4960274536411087,
+      "coord_gap": 0.9286999102457628,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.16908241205895136,
+      "cmi_max": 0.16908241205895136,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.02588067420494685,
+      "step": 28,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        7
+      ],
+      "mi": 0.08973983637741934,
+      "corr": 0.17813571311424425,
+      "sa": 0.9040555400655936,
+      "sb": 0.3847375271038997,
+      "pair_entropy": 1.199053230792074,
+      "coord_gap": 0.4431864505371115,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.13158318367005517,
+      "cmi_max": 0.13158318367005517,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.024963291108545168,
+      "step": 28,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        4
+      ],
+      "mi": 0.10709144624566846,
+      "corr": 0.13064759754726332,
+      "sa": 0.9693706663149422,
+      "sb": 0.8907023111839886,
+      "pair_entropy": 1.7529815312532624,
+      "coord_gap": 0.2089983220565736,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.286129649847644,
+      "cmi_max": 0.286129649847644,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.024832477372420232,
+      "step": 28,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        7
+      ],
+      "mi": 0.0776407598707225,
+      "corr": 0.16351941941167925,
+      "sa": 0.9693706663149422,
+      "sb": 0.3847375271038997,
+      "pair_entropy": 1.2764674335481194,
+      "coord_gap": 0.4156586628774426,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.11948410716335811,
+      "cmi_max": 0.11948410716335811,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.019613546639463214,
+      "step": 28,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        1
+      ],
+      "mi": 0.0635366144902283,
+      "corr": 0.17818309593661288,
+      "sa": 0.9040555400655936,
+      "sb": 0.8656572294658906,
+      "pair_entropy": 1.706176155041256,
+      "coord_gap": 0.18737256071180008,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.20717574699859664,
+      "cmi_max": 0.20717574699859664,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.018859933562041045,
+      "step": 28,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        1,
+        2
+      ],
+      "mi": 0.07838123980062983,
+      "corr": 0.12585747215782248,
+      "sa": 0.8656572294658906,
+      "sb": 0.9693706663149422,
+      "pair_entropy": 1.756646655980203,
+      "coord_gap": 0.15984477305213116,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.2220203723089984,
+      "cmi_max": 0.2220203723089984,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0166359905841466,
+      "step": 28,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        4
+      ],
+      "mi": 0.058560967180461665,
+      "corr": 0.15811844342508394,
+      "sa": 0.9040555400655936,
+      "sb": 0.8907023111839886,
+      "pair_entropy": 1.7361968840691204,
+      "coord_gap": 0.23652610971624252,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.23759917078243742,
+      "cmi_max": 0.23759917078243742,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0158142961434423,
+      "step": 28,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        7
+      ],
+      "mi": 0.09476389330342871,
+      "corr": 0.2137862027493329,
+      "sa": 0.9932628883977994,
+      "sb": 0.7259511691027858,
+      "pair_entropy": 1.6244501641971565,
+      "coord_gap": 0.4156586628774426,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.1683023386746192,
+      "cmi_max": 0.1683023386746192,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.03266306243029184,
+      "step": 32,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        7
+      ],
+      "mi": 0.10272366859685222,
+      "corr": 0.14537241677055748,
+      "sa": 0.9853762178795762,
+      "sb": 0.7259511691027858,
+      "pair_entropy": 1.6086037183855098,
+      "coord_gap": 0.4431864505371115,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.17626211396804248,
+      "cmi_max": 0.17626211396804248,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.024240173674214202,
+      "step": 32,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        4
+      ],
+      "mi": 0.06773072338932273,
+      "corr": 0.15511676338694386,
+      "sa": 0.9932628883977994,
+      "sb": 0.9468639188844163,
+      "pair_entropy": 1.872396083892893,
+      "coord_gap": 0.2089983220565736,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.18909485063758247,
+      "cmi_max": 0.18909485063758247,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.01724011002749196,
+      "step": 32,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        6
+      ],
+      "mi": 0.07720279978197042,
+      "corr": 0.13139394410883543,
+      "sa": 0.9932628883977994,
+      "sb": 0.8275529268797936,
+      "pair_entropy": 1.7436130154956226,
+      "coord_gap": 0.9286999102457628,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.16352586851589113,
+      "cmi_max": 0.16352586851589113,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.016287841310190707,
+      "step": 32,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        6
+      ],
+      "mi": 0.08265821257124228,
+      "corr": 0.09668993527805951,
+      "sa": 0.9853762178795762,
+      "sb": 0.8275529268797936,
+      "pair_entropy": 1.7302709321881276,
+      "coord_gap": 0.9562276979054317,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.1689812813051632,
+      "cmi_max": 0.1689812813051632,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.012892998216291206,
+      "step": 32,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        2
+      ],
+      "mi": 0.02701269870766909,
+      "corr": 0.09305720747321193,
+      "sa": 0.9853762178795762,
+      "sb": 0.9932628883977994,
+      "pair_entropy": 1.9516264075697065,
+      "coord_gap": 0.02752778765966893,
+      "common_nbr_count": 6,
+      "cmi_mean": 0.12938102592165981,
+      "cmi_max": 0.16100692438673825,
+      "daughter_count": 6,
+      "shell_triangle_count": 6,
+      "score": 0.011866831050092397,
+      "step": 32,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        3
+      ],
+      "mi": 0.0701614118256495,
+      "corr": 0.0856843649220438,
+      "sa": 0.9853762178795762,
+      "sb": 1.0053269641076987,
+      "pair_entropy": 1.9205417701616254,
+      "coord_gap": 0.271217364616706,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.20415563750471843,
+      "cmi_max": 0.20415563750471843,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.009989910821701609,
+      "step": 32,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        1
+      ],
+      "mi": 0.05161427909589489,
+      "corr": 0.11678164629293826,
+      "sa": 0.9853762178795762,
+      "sb": 0.964978988443765,
+      "pair_entropy": 1.8987409272274463,
+      "coord_gap": 0.18737256071180008,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.14704277097116591,
+      "cmi_max": 0.14704277097116591,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.009541203476483885,
+      "step": 32,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        5
+      ],
+      "mi": 0.05973198303164473,
+      "corr": 0.09334707861487047,
+      "sa": 0.9853762178795762,
+      "sb": 0.9270621244760269,
+      "pair_entropy": 1.8527063593239583,
+      "coord_gap": 2.598503351907899,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.1632935874078778,
+      "cmi_max": 0.1632935874078778,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00895109330893657,
+      "step": 32,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        3
+      ],
+      "mi": 0.06575659261897071,
+      "corr": 0.07188954219891108,
+      "sa": 0.9932628883977994,
+      "sb": 1.0053269641076987,
+      "pair_entropy": 1.9328332598865274,
+      "coord_gap": 0.24368957695703708,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.19975081829803987,
+      "cmi_max": 0.19975081829803987,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.007826636429234741,
+      "step": 32,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        1,
+        2
+      ],
+      "mi": 0.03871448947852629,
+      "corr": 0.11780530613861355,
+      "sa": 0.964978988443765,
+      "sb": 0.9932628883977994,
+      "pair_entropy": 1.919527387363038,
+      "coord_gap": 0.15984477305213116,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.13414298135379754,
+      "cmi_max": 0.13414298135379754,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0071381436697162785,
+      "step": 32,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        4
+      ],
+      "mi": 0.04602968078611669,
+      "corr": 0.08614887559312535,
+      "sa": 0.9853762178795762,
+      "sb": 0.9468639188844163,
+      "pair_entropy": 1.8862104559778758,
+      "coord_gap": 0.23652610971624252,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.16739380803437687,
+      "cmi_max": 0.16739380803437687,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0063882815483169335,
+      "step": 32,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        5
+      ],
+      "mi": 0.075452635393775,
+      "corr": 0.0461903170962442,
+      "sa": 0.9932628883977994,
+      "sb": 0.9270621244760269,
+      "pair_entropy": 1.8448723774800513,
+      "coord_gap": 2.6260311395675675,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.17901423977000785,
+      "cmi_max": 0.17901423977000785,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.005670527929019878,
+      "step": 32,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        2
+      ],
+      "mi": 0.030048493672241827,
+      "corr": 0.1291499448411486,
+      "sa": 1.006534854967769,
+      "sb": 1.0129039498554502,
+      "pair_entropy": 1.9893903111509774,
+      "coord_gap": 0.02752778765966893,
+      "common_nbr_count": 6,
+      "cmi_mean": 0.11496632205798944,
+      "cmi_max": 0.12003874417459048,
+      "daughter_count": 6,
+      "shell_triangle_count": 6,
+      "score": 0.018086517882940488,
+      "step": 36,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        7
+      ],
+      "mi": 0.05843057640551286,
+      "corr": 0.1407951986532743,
+      "sa": 1.0129039498554502,
+      "sb": 0.880196008809651,
+      "pair_entropy": 1.8346693822595883,
+      "coord_gap": 0.4156586628774426,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.14322722318910408,
+      "cmi_max": 0.14322722318910408,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.012978952990847888,
+      "step": 36,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        4
+      ],
+      "mi": 0.04743098103631005,
+      "corr": 0.12173668676976497,
+      "sa": 1.006534854967769,
+      "sb": 0.9853357166498327,
+      "pair_entropy": 1.9444395905812917,
+      "coord_gap": 0.23652610971624252,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.134080604507111,
+      "cmi_max": 0.134080604507111,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.009036631952915226,
+      "step": 36,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        4
+      ],
+      "mi": 0.05035573616788236,
+      "corr": 0.10969183346075942,
+      "sa": 1.0129039498554502,
+      "sb": 0.9853357166498327,
+      "pair_entropy": 1.9478839303374005,
+      "coord_gap": 0.2089983220565736,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.13700535963868266,
+      "cmi_max": 0.13700535963868266,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.008666921108131092,
+      "step": 36,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        6
+      ],
+      "mi": 0.03998460744373733,
+      "corr": 0.12166817263072796,
+      "sa": 1.0129039498554502,
+      "sb": 0.8869503126620382,
+      "pair_entropy": 1.859869655073751,
+      "coord_gap": 0.9286999102457628,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.11451342369488016,
+      "cmi_max": 0.11451342369488016,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.007482284406653336,
+      "step": 36,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        5
+      ],
+      "mi": 0.04980453729552803,
+      "corr": 0.09542302616511458,
+      "sa": 1.006534854967769,
+      "sb": 0.9749068657605977,
+      "pair_entropy": 1.9316371834328387,
+      "coord_gap": 2.598503351907899,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.1341715899320226,
+      "cmi_max": 0.1341715899320226,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0074384071404331375,
+      "step": 36,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        7
+      ],
+      "mi": 0.04822684900942864,
+      "corr": 0.08222158836930306,
+      "sa": 1.006534854967769,
+      "sb": 0.880196008809651,
+      "pair_entropy": 1.8385040147679914,
+      "coord_gap": 0.4431864505371115,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.13302349579301964,
+      "cmi_max": 0.13302349579301964,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.006200015170303446,
+      "step": 36,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        1
+      ],
+      "mi": 0.046658936052478506,
+      "corr": 0.08317852333835518,
+      "sa": 1.006534854967769,
+      "sb": 1.027920558658941,
+      "pair_entropy": 1.9877964775742316,
+      "coord_gap": 0.18737256071180008,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.13583351672258726,
+      "cmi_max": 0.13583351672258726,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.006083307977797116,
+      "step": 36,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        1,
+        2
+      ],
+      "mi": 0.033770507450582965,
+      "corr": 0.089851284076443,
+      "sa": 1.027920558658941,
+      "sb": 1.0129039498554502,
+      "pair_entropy": 2.0070540010638083,
+      "coord_gap": 0.15984477305213116,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.12294508812069171,
+      "cmi_max": 0.12294508812069171,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.004702182500183307,
+      "step": 36,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        5
+      ],
+      "mi": 0.044481126114795266,
+      "corr": 0.06644143884353416,
+      "sa": 1.0129039498554502,
+      "sb": 0.9749068657605977,
+      "pair_entropy": 1.9433296895012526,
+      "coord_gap": 2.6260311395675675,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.12884817875128984,
+      "cmi_max": 0.12884817875128984,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0046039375660733295,
+      "step": 36,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        3
+      ],
+      "mi": 0.03558423777911668,
+      "corr": 0.07651436635756134,
+      "sa": 1.006534854967769,
+      "sb": 1.012844459346697,
+      "pair_entropy": 1.9837950765353491,
+      "coord_gap": 0.271217364616706,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.12557448828146622,
+      "cmi_max": 0.12557448828146622,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.004229158686835603,
+      "step": 36,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        6
+      ],
+      "mi": 0.03191259707083405,
+      "corr": 0.07583031658720323,
+      "sa": 1.006534854967769,
+      "sb": 0.8869503126620382,
+      "pair_entropy": 1.8615725705589732,
+      "coord_gap": 0.9562276979054317,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.10644141332197732,
+      "cmi_max": 0.10644141332197732,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.003694983701976607,
+      "step": 36,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        3
+      ],
+      "mi": 0.027478071585939734,
+      "corr": 0.05088824466542566,
+      "sa": 1.0129039498554502,
+      "sb": 1.012844459346697,
+      "pair_entropy": 1.9982703376162072,
+      "coord_gap": 0.24368957695703708,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.11746832208828906,
+      "cmi_max": 0.11746832208828906,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.002156343918292642,
+      "step": 36,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        2
+      ],
+      "mi": 0.023103212285654706,
+      "corr": 0.074930694172097,
+      "sa": 1.043287065047276,
+      "sb": 1.0349932127754031,
+      "pair_entropy": 2.0551770655370243,
+      "coord_gap": 0.02752778765966893,
+      "common_nbr_count": 6,
+      "cmi_mean": 0.09172826844583375,
+      "cmi_max": 0.09539940257119417,
+      "daughter_count": 6,
+      "shell_triangle_count": 6,
+      "score": 0.007899924890886341,
+      "step": 40,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        7
+      ],
+      "mi": 0.0460077411575901,
+      "corr": 0.10014811463391564,
+      "sa": 1.043287065047276,
+      "sb": 0.970190824841225,
+      "pair_entropy": 1.967470148730911,
+      "coord_gap": 0.4431864505371115,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.11673154329327984,
+      "cmi_max": 0.11673154329327984,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.007100706449427576,
+      "step": 40,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        5
+      ],
+      "mi": 0.04000303393215976,
+      "corr": 0.09899626580870073,
+      "sa": 1.043287065047276,
+      "sb": 1.0086748160353871,
+      "pair_entropy": 2.0119588471505034,
+      "coord_gap": 2.598503351907899,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.1063201461890082,
+      "cmi_max": 0.1063201461890082,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.006046048839813246,
+      "step": 40,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        7
+      ],
+      "mi": 0.034492306542204476,
+      "corr": 0.08974575855671824,
+      "sa": 1.0349932127754031,
+      "sb": 0.970190824841225,
+      "pair_entropy": 1.9706917310744234,
+      "coord_gap": 0.4156586628774426,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.10521610867789377,
+      "cmi_max": 0.10521610867789377,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.004721309406341016,
+      "step": 40,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        5
+      ],
+      "mi": 0.03210655280703634,
+      "corr": 0.09129295475964702,
+      "sa": 1.0349932127754031,
+      "sb": 1.0086748160353871,
+      "pair_entropy": 2.011561476003754,
+      "coord_gap": 2.6260311395675675,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.09842366506388434,
+      "cmi_max": 0.09842366506388434,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.004443036796597305,
+      "step": 40,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        3
+      ],
+      "mi": 0.03393973201126954,
+      "corr": 0.08534762539940369,
+      "sa": 1.0349932127754031,
+      "sb": 1.0432499386859728,
+      "pair_entropy": 2.0443034194501064,
+      "coord_gap": 0.24368957695703708,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.10566056854629835,
+      "cmi_max": 0.10566056854629835,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.004419781086364102,
+      "step": 40,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        6
+      ],
+      "mi": 0.033905211087159826,
+      "corr": 0.07796711472495765,
+      "sa": 1.0349932127754031,
+      "sb": 0.9562959326152713,
+      "pair_entropy": 1.9573839343035146,
+      "coord_gap": 0.9286999102457628,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.09420268008589572,
+      "cmi_max": 0.09420268008589572,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.003991671341772127,
+      "step": 40,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        6
+      ],
+      "mi": 0.039668208492491086,
+      "corr": 0.05910552743934705,
+      "sa": 1.043287065047276,
+      "sb": 0.9562959326152713,
+      "pair_entropy": 1.9599147891700563,
+      "coord_gap": 0.9562276979054317,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.09996567749122764,
+      "cmi_max": 0.09996567749122764,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.003559007512606891,
+      "step": 40,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        4
+      ],
+      "mi": 0.029546444047331644,
+      "corr": 0.075970817563979,
+      "sa": 1.043287065047276,
+      "sb": 1.0107332854023325,
+      "pair_entropy": 2.0244739064022768,
+      "coord_gap": 0.23652610971624252,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.09994137079656218,
+      "cmi_max": 0.09994137079656218,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.003407223668529132,
+      "step": 40,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        3
+      ],
+      "mi": 0.029508983371854036,
+      "corr": 0.07120622293300859,
+      "sa": 1.043287065047276,
+      "sb": 1.0432499386859728,
+      "pair_entropy": 2.057028020361395,
+      "coord_gap": 0.271217364616706,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.10122981990688329,
+      "cmi_max": 0.10122981990688329,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0031932229853552153,
+      "step": 40,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        1
+      ],
+      "mi": 0.031005284844288106,
+      "corr": 0.06517703094407497,
+      "sa": 1.043287065047276,
+      "sb": 1.0424592747274113,
+      "pair_entropy": 2.0547410549303993,
+      "coord_gap": 0.18737256071180008,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.10330147512982801,
+      "cmi_max": 0.10330147512982801,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.003076830582524425,
+      "step": 40,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        4
+      ],
+      "mi": 0.029235370762228374,
+      "corr": 0.06785228626656448,
+      "sa": 1.0349932127754031,
+      "sb": 1.0107332854023325,
+      "pair_entropy": 2.0164911274155073,
+      "coord_gap": 0.2089983220565736,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.09963029751145935,
+      "cmi_max": 0.09963029751145935,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0030102244245124457,
+      "step": 40,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        1,
+        2
+      ],
+      "mi": 0.023856352087258337,
+      "corr": 0.08219850768892155,
+      "sa": 1.0424592747274113,
+      "sb": 1.0349932127754031,
+      "pair_entropy": 2.053596135415556,
+      "coord_gap": 0.15984477305213116,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.0961525423727978,
+      "cmi_max": 0.0961525423727978,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0029663203463061224,
+      "step": 40,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        6
+      ],
+      "mi": 0.03606816676512281,
+      "corr": 0.07906119890407029,
+      "sa": 1.042828829034364,
+      "sb": 1.0177002543579476,
+      "pair_entropy": 2.0244609166271887,
+      "coord_gap": 0.9286999102457628,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.09539251861690534,
+      "cmi_max": 0.09539251861690534,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0043105860752509165,
+      "step": 44,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        2
+      ],
+      "mi": 0.015580831816480067,
+      "corr": 0.05708295536823483,
+      "sa": 1.0592196506795633,
+      "sb": 1.042828829034364,
+      "pair_entropy": 2.086467647897447,
+      "coord_gap": 0.02752778765966893,
+      "common_nbr_count": 6,
+      "cmi_mean": 0.07526883592963918,
+      "cmi_max": 0.0787253709520197,
+      "daughter_count": 6,
+      "shell_triangle_count": 6,
+      "score": 0.003997518021886903,
+      "step": 44,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        7
+      ],
+      "mi": 0.023529924195657692,
+      "corr": 0.09161153021441973,
+      "sa": 1.042828829034364,
+      "sb": 1.0159647741259252,
+      "pair_entropy": 2.0352636789646317,
+      "coord_gap": 0.4156586628774426,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.08526930626265994,
+      "cmi_max": 0.08526930626265994,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.003228399506188619,
+      "step": 44,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        6
+      ],
+      "mi": 0.029197823832494585,
+      "corr": 0.07121544079333803,
+      "sa": 1.0592196506795633,
+      "sb": 1.0177002543579476,
+      "pair_entropy": 2.0477220812050163,
+      "coord_gap": 0.9562276979054317,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.088522175684278,
+      "cmi_max": 0.088522175684278,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0031234964598720475,
+      "step": 44,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        3
+      ],
+      "mi": 0.029477511445349158,
+      "corr": 0.06650612372755159,
+      "sa": 1.0592196506795633,
+      "sb": 1.0693775382878816,
+      "pair_entropy": 2.0991196775220957,
+      "coord_gap": 0.271217364616706,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.09262205058088879,
+      "cmi_max": 0.09262205058088879,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00295598005865789,
+      "step": 44,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        7
+      ],
+      "mi": 0.0234605538823498,
+      "corr": 0.07051099826201818,
+      "sa": 1.0592196506795633,
+      "sb": 1.0159647741259252,
+      "pair_entropy": 2.051723870923139,
+      "coord_gap": 0.4431864505371115,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.08519993594935293,
+      "cmi_max": 0.08519993594935293,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.002477330618392137,
+      "step": 44,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        3
+      ],
+      "mi": 0.023915269286911123,
+      "corr": 0.06756670840202414,
+      "sa": 1.042828829034364,
+      "sb": 1.0693775382878816,
+      "pair_entropy": 2.0882910980353344,
+      "coord_gap": 0.24368957695703708,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.0870598084224512,
+      "cmi_max": 0.0870598084224512,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0024240443592929775,
+      "step": 44,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        1
+      ],
+      "mi": 0.020574026563188408,
+      "corr": 0.0771565861390595,
+      "sa": 1.0592196506795633,
+      "sb": 1.0554160697199297,
+      "pair_entropy": 2.0940616938363044,
+      "coord_gap": 0.18737256071180008,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.07951446290461606,
+      "cmi_max": 0.07951446290461606,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00236482959336269,
+      "step": 44,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        5
+      ],
+      "mi": 0.025696000178891953,
+      "corr": 0.060859991834915736,
+      "sa": 1.042828829034364,
+      "sb": 1.0342078685165885,
+      "pair_entropy": 2.0513406973720607,
+      "coord_gap": 2.6260311395675675,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.08241532550324715,
+      "cmi_max": 0.08241532550324715,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.002335987074586201,
+      "step": 44,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        4
+      ],
+      "mi": 0.01987683883500102,
+      "corr": 0.063515003927728,
+      "sa": 1.0592196506795633,
+      "sb": 1.0339591550576355,
+      "pair_entropy": 2.0733019669021977,
+      "coord_gap": 0.23652610971624252,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.07813682879384665,
+      "cmi_max": 0.07813682879384665,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0018783504088718628,
+      "step": 44,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        4
+      ],
+      "mi": 0.02348543863390251,
+      "corr": 0.047314095841756436,
+      "sa": 1.042828829034364,
+      "sb": 1.0339591550576355,
+      "pair_entropy": 2.053302545458097,
+      "coord_gap": 0.2089983220565736,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.08174542859274858,
+      "cmi_max": 0.08174542859274858,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0016587975149766248,
+      "step": 44,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        5
+      ],
+      "mi": 0.02360672651608242,
+      "corr": 0.04598877643238037,
+      "sa": 1.0592196506795633,
+      "sb": 1.0342078685165885,
+      "pair_entropy": 2.0698207926800696,
+      "coord_gap": 2.598503351907899,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.08032605184043762,
+      "cmi_max": 0.08032605184043762,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0016185330025795025,
+      "step": 44,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        1,
+        2
+      ],
+      "mi": 0.011718191710285542,
+      "corr": 0.061523555879519354,
+      "sa": 1.0554160697199297,
+      "sb": 1.042828829034364,
+      "pair_entropy": 2.086526707044008,
+      "coord_gap": 0.15984477305213116,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.07065862805171319,
+      "cmi_max": 0.07065862805171319,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0010652023964833226,
+      "step": 44,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        6
+      ],
+      "mi": 0.02710571798471495,
+      "corr": 0.05841997905960185,
+      "sa": 1.061784287683206,
+      "sb": 1.0368490260408696,
+      "pair_entropy": 2.0715275957393606,
+      "coord_gap": 0.9286999102457628,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.07917139064710366,
+      "cmi_max": 0.07917139064710366,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0023582607473000253,
+      "step": 48,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        7
+      ],
+      "mi": 0.016889750634226708,
+      "corr": 0.08063570011319444,
+      "sa": 1.061784287683206,
+      "sb": 1.0367780333581422,
+      "pair_entropy": 2.0816725704071217,
+      "coord_gap": 0.4156586628774426,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.07370781079062638,
+      "cmi_max": 0.07370781079062638,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.002017975073478518,
+      "step": 48,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        3
+      ],
+      "mi": 0.01752238619827695,
+      "corr": 0.06352392365159344,
+      "sa": 1.0682392046792981,
+      "sb": 1.0777010988336335,
+      "pair_entropy": 2.1284179173146547,
+      "coord_gap": 0.271217364616706,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.08011502011280536,
+      "cmi_max": 0.08011502011280536,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.001659127092030639,
+      "step": 48,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        1
+      ],
+      "mi": 0.01710964630479994,
+      "corr": 0.06567661311323611,
+      "sa": 1.0682392046792981,
+      "sb": 1.0688815294177192,
+      "pair_entropy": 2.1200110877922174,
+      "coord_gap": 0.18737256071180008,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.06667198252179052,
+      "cmi_max": 0.06667198252179052,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.001654099973267771,
+      "step": 48,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        2
+      ],
+      "mi": 0.009489444243121703,
+      "corr": 0.03790735717236677,
+      "sa": 1.0682392046792981,
+      "sb": 1.061784287683206,
+      "pair_entropy": 2.1205340481193824,
+      "coord_gap": 0.02752778765966893,
+      "common_nbr_count": 6,
+      "cmi_mean": 0.06420231478981453,
+      "cmi_max": 0.07208207815764966,
+      "daughter_count": 6,
+      "shell_triangle_count": 6,
+      "score": 0.0016001649990074886,
+      "step": 48,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        7
+      ],
+      "mi": 0.015844977916845693,
+      "corr": 0.0604622134033075,
+      "sa": 1.0682392046792981,
+      "sb": 1.0367780333581422,
+      "pair_entropy": 2.089172260120595,
+      "coord_gap": 0.4431864505371115,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.07266303807324537,
+      "cmi_max": 0.07266303807324537,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0014181366545690831,
+      "step": 48,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        5
+      ],
+      "mi": 0.01828028786396496,
+      "corr": 0.04069392882028035,
+      "sa": 1.0682392046792981,
+      "sb": 1.0520101534303066,
+      "pair_entropy": 2.1019690702456395,
+      "coord_gap": 2.598503351907899,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.07326759471062294,
+      "cmi_max": 0.07326759471062294,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.001101792355351996,
+      "step": 48,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        3
+      ],
+      "mi": 0.016832919144693648,
+      "corr": 0.0426156571532395,
+      "sa": 1.061784287683206,
+      "sb": 1.0777010988336335,
+      "pair_entropy": 2.122652467372146,
+      "coord_gap": 0.24368957695703708,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.07942555305922161,
+      "cmi_max": 0.07942555305922161,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0010685636795040574,
+      "step": 48,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        4
+      ],
+      "mi": 0.021823495622052658,
+      "corr": 0.031536158113812905,
+      "sa": 1.061784287683206,
+      "sb": 1.0520321145877969,
+      "pair_entropy": 2.0919929066489504,
+      "coord_gap": 0.2089983220565736,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.07407470910524472,
+      "cmi_max": 0.07407470910524472,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0010201092299951158,
+      "step": 48,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        5
+      ],
+      "mi": 0.024019604267095485,
+      "corr": 0.028266549836985407,
+      "sa": 1.061784287683206,
+      "sb": 1.0520101534303066,
+      "pair_entropy": 2.089774836846417,
+      "coord_gap": 2.6260311395675675,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.07900691111375346,
+      "cmi_max": 0.07900691111375346,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0010109786012834512,
+      "step": 48,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        6
+      ],
+      "mi": 0.013424022690443405,
+      "corr": 0.048316308112330654,
+      "sa": 1.0682392046792981,
+      "sb": 1.0368490260408696,
+      "pair_entropy": 2.0916642080297243,
+      "coord_gap": 0.9562276979054317,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.06548969535283256,
+      "cmi_max": 0.06548969535283256,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0009536845784806358,
+      "step": 48,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        1,
+        2
+      ],
+      "mi": 0.01239906144303582,
+      "corr": 0.04199305553133325,
+      "sa": 1.0688815294177192,
+      "sb": 1.061784287683206,
+      "pair_entropy": 2.1182667556578894,
+      "coord_gap": 0.15984477305213116,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.06196139766002595,
+      "cmi_max": 0.06196139766002595,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0007630519476578247,
+      "step": 48,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        4
+      ],
+      "mi": 0.009285396771000709,
+      "corr": 0.032753781406642084,
+      "sa": 1.0682392046792981,
+      "sb": 1.0520321145877969,
+      "pair_entropy": 2.1109859224960945,
+      "coord_gap": 0.23652610971624252,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.06153661025419277,
+      "cmi_max": 0.06153661025419277,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0004455289974572496,
+      "step": 48,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        2
+      ],
+      "mi": 0.013262424667695338,
+      "corr": 0.050631520667033816,
+      "sa": 1.0765167525591948,
+      "sb": 1.0676484781634834,
+      "pair_entropy": 2.130902806054983,
+      "coord_gap": 0.02752778765966893,
+      "common_nbr_count": 6,
+      "cmi_mean": 0.06474096658790114,
+      "cmi_max": 0.06832258387197321,
+      "daughter_count": 6,
+      "shell_triangle_count": 6,
+      "score": 0.0029885749173927875,
+      "step": 52,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        3
+      ],
+      "mi": 0.01700598566372724,
+      "corr": 0.08282815023006346,
+      "sa": 1.0676484781634834,
+      "sb": 1.08437788729599,
+      "pair_entropy": 2.1350203797957463,
+      "coord_gap": 0.24368957695703708,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.07068841510930746,
+      "cmi_max": 0.07068841510930746,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0020812390273206717,
+      "step": 52,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        7
+      ],
+      "mi": 0.013002313487211925,
+      "corr": 0.0626227830273965,
+      "sa": 1.0676484781634834,
+      "sb": 1.0482224563120004,
+      "pair_entropy": 2.102868620988272,
+      "coord_gap": 0.4156586628774426,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.060456221222752404,
+      "cmi_max": 0.060456221222752404,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0011915844514385418,
+      "step": 52,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        5
+      ],
+      "mi": 0.017068703266196028,
+      "corr": 0.04723526826827765,
+      "sa": 1.0676484781634834,
+      "sb": 1.0629315052894859,
+      "pair_entropy": 2.1135112801867733,
+      "coord_gap": 2.6260311395675675,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.06496345927129044,
+      "cmi_max": 0.06496345927129044,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.001184897294024208,
+      "step": 52,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        7
+      ],
+      "mi": 0.012081267439937537,
+      "corr": 0.06638236244467524,
+      "sa": 1.0765167525591948,
+      "sb": 1.0482224563120004,
+      "pair_entropy": 2.1126579414312574,
+      "coord_gap": 0.4431864505371115,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.05953517517547846,
+      "cmi_max": 0.05953517517547846,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0011726264019656328,
+      "step": 52,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        5
+      ],
+      "mi": 0.019062334437700112,
+      "corr": 0.03823807203732689,
+      "sa": 1.0765167525591948,
+      "sb": 1.0629315052894859,
+      "pair_entropy": 2.1203859234109808,
+      "coord_gap": 2.598503351907899,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.06695709044279408,
+      "cmi_max": 0.06695709044279408,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0010732431172757748,
+      "step": 52,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        1,
+        2
+      ],
+      "mi": 0.01342693130957695,
+      "corr": 0.052803578909780546,
+      "sa": 1.0766698883125487,
+      "sb": 1.0676484781634834,
+      "pair_entropy": 2.130891435166455,
+      "coord_gap": 0.15984477305213116,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.0645455326459543,
+      "cmi_max": 0.0645455326459543,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0010415579888726743,
+      "step": 52,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        6
+      ],
+      "mi": 0.01579044751217129,
+      "corr": 0.03824389308500518,
+      "sa": 1.0765167525591948,
+      "sb": 1.0570607742752918,
+      "pair_entropy": 2.1177870793223152,
+      "coord_gap": 0.9562276979054317,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.0708506067164496,
+      "cmi_max": 0.0708506067164496,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0008924101625269198,
+      "step": 52,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        4
+      ],
+      "mi": 0.013671006312678813,
+      "corr": 0.04423386687867683,
+      "sa": 1.0676484781634834,
+      "sb": 1.063333257447102,
+      "pair_entropy": 2.1173107292979063,
+      "coord_gap": 0.2089983220565736,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.06733240410704333,
+      "cmi_max": 0.06733240410704333,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0008907055770471656,
+      "step": 52,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        6
+      ],
+      "mi": 0.013553748633869489,
+      "corr": 0.040013343305604944,
+      "sa": 1.0676484781634834,
+      "sb": 1.0570607742752918,
+      "pair_entropy": 2.1111555038049055,
+      "coord_gap": 0.9286999102457628,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.06861390783814736,
+      "cmi_max": 0.06861390783814736,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0007997682808491094,
+      "step": 52,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        1
+      ],
+      "mi": 0.010484673379378862,
+      "corr": 0.048013116435506584,
+      "sa": 1.0765167525591948,
+      "sb": 1.0766698883125487,
+      "pair_entropy": 2.1427019674923646,
+      "coord_gap": 0.18737256071180008,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.061603274715755774,
+      "cmi_max": 0.061603274715755774,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0007374900032391471,
+      "step": 52,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        3
+      ],
+      "mi": 0.01233568295613674,
+      "corr": 0.03610099598332155,
+      "sa": 1.0765167525591948,
+      "sb": 1.08437788729599,
+      "pair_entropy": 2.148558956899048,
+      "coord_gap": 0.271217364616706,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.0660181124017174,
+      "cmi_max": 0.0660181124017174,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0006551278360124208,
+      "step": 52,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        4
+      ],
+      "mi": 0.010279602604541527,
+      "corr": 0.034670768294096835,
+      "sa": 1.0765167525591948,
+      "sb": 1.063333257447102,
+      "pair_entropy": 2.129570407401755,
+      "coord_gap": 0.23652610971624252,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.06394100039890604,
+      "cmi_max": 0.06394100039890604,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0005232827555629088,
+      "step": 52,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        2
+      ],
+      "mi": 0.009155787562519002,
+      "corr": 0.05346209831066952,
+      "sa": 1.0846964066319849,
+      "sb": 1.074657837772327,
+      "pair_entropy": 2.150198456841793,
+      "coord_gap": 0.02752778765966893,
+      "common_nbr_count": 6,
+      "cmi_mean": 0.05680392448689675,
+      "cmi_max": 0.06036317560682125,
+      "daughter_count": 6,
+      "shell_triangle_count": 6,
+      "score": 0.0021622823669562048,
+      "step": 56,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        7
+      ],
+      "mi": 0.01333825690839241,
+      "corr": 0.08061981139937707,
+      "sa": 1.074657837772327,
+      "sb": 1.0574016921505076,
+      "pair_entropy": 2.118721273014442,
+      "coord_gap": 0.4156586628774426,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.059203169438715175,
+      "cmi_max": 0.059203169438715175,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0015718069834431646,
+      "step": 56,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        5
+      ],
+      "mi": 0.015645178134433113,
+      "corr": 0.05696546206878647,
+      "sa": 1.074657837772327,
+      "sb": 1.0729744517513886,
+      "pair_entropy": 2.1319871113892828,
+      "coord_gap": 2.6260311395675675,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.06652784997441907,
+      "cmi_max": 0.06652784997441907,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0013117268967118487,
+      "step": 56,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        6
+      ],
+      "mi": 0.012267489005213683,
+      "corr": 0.047649113011056655,
+      "sa": 1.074657837772327,
+      "sb": 1.07422549652333,
+      "pair_entropy": 2.1366158452904433,
+      "coord_gap": 0.9286999102457628,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.05515664411024046,
+      "cmi_max": 0.05515664411024046,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0008511508210464275,
+      "step": 56,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        3
+      ],
+      "mi": 0.014015950472138439,
+      "corr": 0.041170237900768444,
+      "sa": 1.074657837772327,
+      "sb": 1.0870327424849302,
+      "pair_entropy": 2.147674629785119,
+      "coord_gap": 0.24368957695703708,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.06522333851644024,
+      "cmi_max": 0.06522333851644024,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0008482535584102039,
+      "step": 56,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        7
+      ],
+      "mi": 0.01139156285293641,
+      "corr": 0.04911316364074982,
+      "sa": 1.0846964066319849,
+      "sb": 1.0574016921505076,
+      "pair_entropy": 2.130706535929556,
+      "coord_gap": 0.4431864505371115,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.05725647538325829,
+      "cmi_max": 0.05725647538325829,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0008162828293382927,
+      "step": 56,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        6
+      ],
+      "mi": 0.012316956556431169,
+      "corr": 0.03900393970930947,
+      "sa": 1.0846964066319849,
+      "sb": 1.07422549652333,
+      "pair_entropy": 2.1466049465988837,
+      "coord_gap": 0.9562276979054317,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.0552061116614575,
+      "cmi_max": 0.0552061116614575,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0006995653177842971,
+      "step": 56,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        1,
+        2
+      ],
+      "mi": 0.010186469992875313,
+      "corr": 0.04490734860118928,
+      "sa": 1.0855987235527715,
+      "sb": 1.074657837772327,
+      "pair_entropy": 2.1500700913322235,
+      "coord_gap": 0.15984477305213116,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.05844637002124786,
+      "cmi_max": 0.05844637002124786,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.000668173225299887,
+      "step": 56,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        4
+      ],
+      "mi": 0.010974096313932424,
+      "corr": 0.034647238916610014,
+      "sa": 1.0846964066319849,
+      "sb": 1.0744048226839995,
+      "pair_entropy": 2.148127133002052,
+      "coord_gap": 0.23652610971624252,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.05775889031218773,
+      "cmi_max": 0.05775889031218773,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0005550130169020282,
+      "step": 56,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        5
+      ],
+      "mi": 0.011503513284822908,
+      "corr": 0.03290476701173068,
+      "sa": 1.0846964066319849,
+      "sb": 1.0729744517513886,
+      "pair_entropy": 2.146167345098551,
+      "coord_gap": 2.598503351907899,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.06238618512480931,
+      "cmi_max": 0.06238618512480931,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0005549461202231504,
+      "step": 56,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        4
+      ],
+      "mi": 0.010622876530258285,
+      "corr": 0.03049082848811143,
+      "sa": 1.074657837772327,
+      "sb": 1.0744048226839995,
+      "pair_entropy": 2.1384397839260685,
+      "coord_gap": 0.2089983220565736,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.05740767052851359,
+      "cmi_max": 0.05740767052851359,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00047264264239838195,
+      "step": 56,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        1
+      ],
+      "mi": 0.010693558547865134,
+      "corr": 0.02537142106513362,
+      "sa": 1.0846964066319849,
+      "sb": 1.0855987235527715,
+      "pair_entropy": 2.1596015716368915,
+      "coord_gap": 0.18737256071180008,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.05895345857623768,
+      "cmi_max": 0.05895345857623768,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0003964815696205328,
+      "step": 56,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        3
+      ],
+      "mi": 0.007957241600529574,
+      "corr": 0.025418588130880472,
+      "sa": 1.0846964066319849,
+      "sb": 1.0870327424849302,
+      "pair_entropy": 2.1637719075163857,
+      "coord_gap": 0.271217364616706,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.05916462964483138,
+      "cmi_max": 0.05916462964483138,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0002956354599476891,
+      "step": 56,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        2
+      ],
+      "mi": 0.010476631046098195,
+      "corr": 0.04347252679346728,
+      "sa": 1.0899120041890589,
+      "sb": 1.0863301936557752,
+      "pair_entropy": 2.165765566798736,
+      "coord_gap": 0.02752778765966893,
+      "common_nbr_count": 6,
+      "cmi_mean": 0.057099863944077324,
+      "cmi_max": 0.061204974025213854,
+      "daughter_count": 6,
+      "shell_triangle_count": 6,
+      "score": 0.002012467299314015,
+      "step": 60,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        3
+      ],
+      "mi": 0.014567869425100799,
+      "corr": 0.049075938842749765,
+      "sa": 1.0863301936557752,
+      "sb": 1.0893193281000733,
+      "pair_entropy": 2.1610816523307474,
+      "coord_gap": 0.24368957695703708,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.06324632570630762,
+      "cmi_max": 0.06324632570630762,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0010490051822894596,
+      "step": 60,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        7
+      ],
+      "mi": 0.013508729638981087,
+      "corr": 0.04489598474689799,
+      "sa": 1.0899120041890589,
+      "sb": 1.067714407877987,
+      "pair_entropy": 2.1441176824280648,
+      "coord_gap": 0.4431864505371115,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.06250824990648773,
+      "cmi_max": 0.06250824990648773,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0008892695239729391,
+      "step": 60,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        6
+      ],
+      "mi": 0.01001799828669414,
+      "corr": 0.04688059195564603,
+      "sa": 1.0863301936557752,
+      "sb": 1.0806768092645174,
+      "pair_entropy": 2.156989004633598,
+      "coord_gap": 0.9286999102457628,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.055287541433553855,
+      "cmi_max": 0.055287541433553855,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0006839493438803532,
+      "step": 60,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        5
+      ],
+      "mi": 0.013557296336880409,
+      "corr": 0.029272264703438446,
+      "sa": 1.0863301936557752,
+      "sb": 1.075316767584503,
+      "pair_entropy": 2.148089664903398,
+      "coord_gap": 2.6260311395675675,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.054531055650708815,
+      "cmi_max": 0.054531055650708815,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0005775211229574956,
+      "step": 60,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        7
+      ],
+      "mi": 0.009683362961753428,
+      "corr": 0.03907468763178846,
+      "sa": 1.0863301936557752,
+      "sb": 1.067714407877987,
+      "pair_entropy": 2.1443612385720088,
+      "coord_gap": 0.4156586628774426,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.05868288322925963,
+      "cmi_max": 0.05868288322925963,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0005527983061089988,
+      "step": 60,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        1,
+        2
+      ],
+      "mi": 0.009140799577736392,
+      "corr": 0.04080597153941036,
+      "sa": 1.0894132535143217,
+      "sb": 1.0863301936557752,
+      "pair_entropy": 2.1666026475923608,
+      "coord_gap": 0.15984477305213116,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.05986914255685205,
+      "cmi_max": 0.05986914255685205,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0005455558831917931,
+      "step": 60,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        1
+      ],
+      "mi": 0.009924522128931024,
+      "corr": 0.03509728900329784,
+      "sa": 1.0899120041890589,
+      "sb": 1.0894132535143217,
+      "pair_entropy": 2.16940073557445,
+      "coord_gap": 0.18737256071180008,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.06065286510804713,
+      "cmi_max": 0.06065286510804713,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0005098419096003931,
+      "step": 60,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        5
+      ],
+      "mi": 0.009933011106266765,
+      "corr": 0.028118653151162163,
+      "sa": 1.0899120041890589,
+      "sb": 1.075316767584503,
+      "pair_entropy": 2.155295760667295,
+      "coord_gap": 2.598503351907899,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.05090677042009428,
+      "cmi_max": 0.05090677042009428,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00040505939724094395,
+      "step": 60,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        4
+      ],
+      "mi": 0.010823845652910169,
+      "corr": 0.025530146201994584,
+      "sa": 1.0863301936557752,
+      "sb": 1.0789626195723518,
+      "pair_entropy": 2.154468967575217,
+      "coord_gap": 0.2089983220565736,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.05591362105226727,
+      "cmi_max": 0.05591362105226727,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00040266359916531485,
+      "step": 60,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        4
+      ],
+      "mi": 0.0074197693676247845,
+      "corr": 0.03170544089547023,
+      "sa": 1.0899120041890589,
+      "sb": 1.0789626195723518,
+      "pair_entropy": 2.161454854393786,
+      "coord_gap": 0.23652610971624252,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.052509544766981886,
+      "cmi_max": 0.052509544766981886,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0003416876896747512,
+      "step": 60,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        6
+      ],
+      "mi": 0.006768280962417439,
+      "corr": 0.033566004808755705,
+      "sa": 1.0899120041890589,
+      "sb": 1.0806768092645174,
+      "pair_entropy": 2.1638205324911586,
+      "coord_gap": 0.9562276979054317,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.05203782410927715,
+      "cmi_max": 0.05203782410927715,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.000329828721929707,
+      "step": 60,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        3
+      ],
+      "mi": 0.00660417379294076,
+      "corr": 0.03213339371222325,
+      "sa": 1.0899120041890589,
+      "sb": 1.0893193281000733,
+      "pair_entropy": 2.172627158496191,
+      "coord_gap": 0.271217364616706,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.055282630074147576,
+      "cmi_max": 0.055282630074147576,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0003090458846875825,
+      "step": 60,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        2
+      ],
+      "mi": 0.009374700499835686,
+      "corr": 0.041524552202440265,
+      "sa": 1.090731414190452,
+      "sb": 1.0879377824717837,
+      "pair_entropy": 2.1692944961624003,
+      "coord_gap": 0.02752778765966893,
+      "common_nbr_count": 6,
+      "cmi_mean": 0.05401012001362626,
+      "cmi_max": 0.056140096288763264,
+      "daughter_count": 6,
+      "shell_triangle_count": 6,
+      "score": 0.0017150762074393778,
+      "step": 64,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        5
+      ],
+      "mi": 0.011777998317254568,
+      "corr": 0.04133487975936661,
+      "sa": 1.0879377824717837,
+      "sb": 1.0843557075127812,
+      "pair_entropy": 2.16051549166731,
+      "coord_gap": 2.6260311395675675,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.05681933899329339,
+      "cmi_max": 0.05681933899329339,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0007100157864505208,
+      "step": 64,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        7
+      ],
+      "mi": 0.00841180863046409,
+      "corr": 0.05671388796886441,
+      "sa": 1.090731414190452,
+      "sb": 1.0746658734790693,
+      "pair_entropy": 2.1569854790390575,
+      "coord_gap": 0.4431864505371115,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.04990232930610894,
+      "cmi_max": 0.04990232930610894,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0006912048717820477,
+      "step": 64,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        3
+      ],
+      "mi": 0.012437986182199268,
+      "corr": 0.034779620004550094,
+      "sa": 1.0879377824717837,
+      "sb": 1.0936040148406758,
+      "pair_entropy": 2.1691038111302605,
+      "coord_gap": 0.24368957695703708,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.0592033819711264,
+      "cmi_max": 0.0592033819711264,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0006323148011611816,
+      "step": 64,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        3
+      ],
+      "mi": 0.00963980096808914,
+      "corr": 0.04491634669450654,
+      "sa": 1.090731414190452,
+      "sb": 1.0936040148406758,
+      "pair_entropy": 2.1746956280630387,
+      "coord_gap": 0.271217364616706,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.05640519675701672,
+      "cmi_max": 0.05640519675701672,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0006312219722845859,
+      "step": 64,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        1,
+        2
+      ],
+      "mi": 0.009989452020281231,
+      "corr": 0.03337035212175058,
+      "sa": 1.0928693047714577,
+      "sb": 1.0879377824717837,
+      "pair_entropy": 2.1708176352229605,
+      "coord_gap": 0.15984477305213116,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.05582890505481686,
+      "cmi_max": 0.05582890505481686,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00048570781173635553,
+      "step": 64,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        7
+      ],
+      "mi": 0.007207207131151527,
+      "corr": 0.03907404995419813,
+      "sa": 1.0879377824717837,
+      "sb": 1.0746658734790693,
+      "pair_entropy": 2.1553964488197015,
+      "coord_gap": 0.4156586628774426,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.048697727806796376,
+      "cmi_max": 0.048697727806796376,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00040755370392538874,
+      "step": 64,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        1
+      ],
+      "mi": 0.007139096076742568,
+      "corr": 0.03696896979365431,
+      "sa": 1.090731414190452,
+      "sb": 1.0928693047714577,
+      "pair_entropy": 2.176461622885167,
+      "coord_gap": 0.18737256071180008,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.052978549111278195,
+      "cmi_max": 0.052978549111278195,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.000383512201278921,
+      "step": 64,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        5
+      ],
+      "mi": 0.008081225845060658,
+      "corr": 0.028959302975006724,
+      "sa": 1.090731414190452,
+      "sb": 1.0843557075127812,
+      "pair_entropy": 2.1670058958581726,
+      "coord_gap": 2.598503351907899,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.05312256652109948,
+      "cmi_max": 0.05312256652109948,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0003401130955300716,
+      "step": 64,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        6
+      ],
+      "mi": 0.008042775642183475,
+      "corr": 0.027887019591996125,
+      "sa": 1.090731414190452,
+      "sb": 1.0873390568397412,
+      "pair_entropy": 2.17002769538801,
+      "coord_gap": 0.9562276979054317,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.053040734951983914,
+      "cmi_max": 0.053040734951983914,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0003259359865942361,
+      "step": 64,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        6
+      ],
+      "mi": 0.006767947907664329,
+      "corr": 0.02692838223237588,
+      "sa": 1.0879377824717837,
+      "sb": 1.0873390568397412,
+      "pair_entropy": 2.1685088914038606,
+      "coord_gap": 0.9286999102457628,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.05176590721746477,
+      "cmi_max": 0.05176590721746477,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00026452422220432843,
+      "step": 64,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        4
+      ],
+      "mi": 0.0068117984491649075,
+      "corr": 0.01695295331292083,
+      "sa": 1.090731414190452,
+      "sb": 1.0826512716356396,
+      "pair_entropy": 2.1665708873769267,
+      "coord_gap": 0.23652610971624252,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.050489646046963266,
+      "cmi_max": 0.050489646046963266,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00016740869771070645,
+      "step": 64,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        4
+      ],
+      "mi": 0.008183876366487208,
+      "corr": 0.01301928357543377,
+      "sa": 1.0879377824717837,
+      "sb": 1.0826512716356396,
+      "pair_entropy": 2.162405177740936,
+      "coord_gap": 0.2089983220565736,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.05186172396428512,
+      "cmi_max": 0.05186172396428512,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00015466209360100186,
+      "step": 64,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        2
+      ],
+      "mi": 0.01044882612330511,
+      "corr": 0.046401507890986404,
+      "sa": 1.0925111867598822,
+      "sb": 1.0904961874933747,
+      "pair_entropy": 2.1725585481299516,
+      "coord_gap": 0.02752778765966893,
+      "common_nbr_count": 6,
+      "cmi_mean": 0.05304362035235921,
+      "cmi_max": 0.057041861935878124,
+      "daughter_count": 6,
+      "shell_triangle_count": 6,
+      "score": 0.00213413672455827,
+      "step": 68,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        7
+      ],
+      "mi": 0.008498461167957494,
+      "corr": 0.04805443593196163,
+      "sa": 1.0904961874933747,
+      "sb": 1.0772821140083702,
+      "pair_entropy": 2.159279840333787,
+      "coord_gap": 0.4156586628774426,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.05073647273344628,
+      "cmi_max": 0.05073647273344628,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0005921703686451972,
+      "step": 68,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        7
+      ],
+      "mi": 0.006877754696243521,
+      "corr": 0.04988980169142435,
+      "sa": 1.0925111867598822,
+      "sb": 1.0772821140083702,
+      "pair_entropy": 2.162915546072009,
+      "coord_gap": 0.4431864505371115,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.04911576626173231,
+      "cmi_max": 0.04911576626173231,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0004967764044980361,
+      "step": 68,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        4
+      ],
+      "mi": 0.008104305745908036,
+      "corr": 0.036416960108893656,
+      "sa": 1.0925111867598822,
+      "sb": 1.0863557153931565,
+      "pair_entropy": 2.1707625964071307,
+      "coord_gap": 0.23652610971624252,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.04843908856537915,
+      "cmi_max": 0.04843908856537915,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0004270136893820262,
+      "step": 68,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        5
+      ],
+      "mi": 0.008462878363960424,
+      "corr": 0.03304518763661952,
+      "sa": 1.0904961874933747,
+      "sb": 1.0862418846439044,
+      "pair_entropy": 2.1682751937733187,
+      "coord_gap": 2.6260311395675675,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.05065365148712653,
+      "cmi_max": 0.05065365148712653,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0004054758395459969,
+      "step": 68,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        5
+      ],
+      "mi": 0.00705253495117697,
+      "corr": 0.036607819502261926,
+      "sa": 1.0925111867598822,
+      "sb": 1.0862418846439044,
+      "pair_entropy": 2.1717005364526094,
+      "coord_gap": 2.598503351907899,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.04924330807434396,
+      "cmi_max": 0.04924330807434396,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00037383021714599895,
+      "step": 68,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        6
+      ],
+      "mi": 0.007780784076315772,
+      "corr": 0.030886331318722385,
+      "sa": 1.0904961874933747,
+      "sb": 1.0898398108785656,
+      "pair_entropy": 2.1725552142956244,
+      "coord_gap": 0.9286999102457628,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.05437381988888923,
+      "cmi_max": 0.05437381988888923,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00034967403860184407,
+      "step": 68,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        6
+      ],
+      "mi": 0.007654485603159955,
+      "corr": 0.030053717835520733,
+      "sa": 1.0925111867598822,
+      "sb": 1.0898398108785656,
+      "pair_entropy": 2.174696512035288,
+      "coord_gap": 0.9562276979054317,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.05424752141573386,
+      "cmi_max": 0.05424752141573386,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0003346847239324836,
+      "step": 68,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        4
+      ],
+      "mi": 0.007792718129338905,
+      "corr": 0.029312838299791883,
+      "sa": 1.0904961874933747,
+      "sb": 1.0863557153931565,
+      "pair_entropy": 2.169059184757192,
+      "coord_gap": 0.2089983220565736,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.048127500948809576,
+      "cmi_max": 0.048127500948809576,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0003304000029732462,
+      "step": 68,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        1
+      ],
+      "mi": 0.007967958726661006,
+      "corr": 0.024715875390540765,
+      "sa": 1.0925111867598822,
+      "sb": 1.0940353093859696,
+      "pair_entropy": 2.178578537419191,
+      "coord_gap": 0.18737256071180008,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.05084731244590923,
+      "cmi_max": 0.05084731244590923,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0002855891981277478,
+      "step": 68,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        3
+      ],
+      "mi": 0.006539847529550169,
+      "corr": 0.027075615315164944,
+      "sa": 1.0904961874933747,
+      "sb": 1.0951877090659463,
+      "pair_entropy": 2.179144049029771,
+      "coord_gap": 0.24368957695703708,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.04787265586392664,
+      "cmi_max": 0.04787265586392664,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0002560551719600056,
+      "step": 68,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        1,
+        2
+      ],
+      "mi": 0.006879430838826028,
+      "corr": 0.0243334934793505,
+      "sa": 1.0940353093859696,
+      "sb": 1.0904961874933747,
+      "pair_entropy": 2.1776520660405185,
+      "coord_gap": 0.15984477305213116,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.049758784558074254,
+      "cmi_max": 0.049758784558074254,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00024250772447239892,
+      "step": 68,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        3
+      ],
+      "mi": 0.00872029893819981,
+      "corr": 0.015341247298843156,
+      "sa": 1.0925111867598822,
+      "sb": 1.0951877090659463,
+      "pair_entropy": 2.178978596887629,
+      "coord_gap": 0.271217364616706,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.050053107272575836,
+      "cmi_max": 0.050053107272575836,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00019385740489979224,
+      "step": 68,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        2
+      ],
+      "mi": 0.006852620039134116,
+      "corr": 0.03532739466545465,
+      "sa": 1.0946462582530612,
+      "sb": 1.0917897184497447,
+      "pair_entropy": 2.179583356663672,
+      "coord_gap": 0.02752778765966893,
+      "common_nbr_count": 6,
+      "cmi_mean": 0.04857854531088912,
+      "cmi_max": 0.05033832353181911,
+      "daughter_count": 6,
+      "shell_triangle_count": 6,
+      "score": 0.0010610736051553128,
+      "step": 72,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        1
+      ],
+      "mi": 0.009705144448181713,
+      "corr": 0.04597743302848782,
+      "sa": 1.0946462582530612,
+      "sb": 1.0932180215886402,
+      "pair_entropy": 2.1781591353935195,
+      "coord_gap": 0.18737256071180008,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.05217679645625939,
+      "cmi_max": 0.05217679645625939,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0006479097727088728,
+      "step": 72,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        5
+      ],
+      "mi": 0.009491563272188142,
+      "corr": 0.040861277822031056,
+      "sa": 1.0917897184497447,
+      "sb": 1.0895478442182043,
+      "pair_entropy": 2.1718459993957606,
+      "coord_gap": 2.6260311395675675,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.04906784722553281,
+      "cmi_max": 0.04906784722553281,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.000561477495427464,
+      "step": 72,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        7
+      ],
+      "mi": 0.007944853691845388,
+      "corr": 0.04260257179310321,
+      "sa": 1.0917897184497447,
+      "sb": 1.0812633100778966,
+      "pair_entropy": 2.1651081748357957,
+      "coord_gap": 0.4156586628774426,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.05070737881278875,
+      "cmi_max": 0.05070737881278875,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0004907751782499485,
+      "step": 72,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        4
+      ],
+      "mi": 0.007521233351866385,
+      "corr": 0.03514661950921544,
+      "sa": 1.0917897184497447,
+      "sb": 1.0897008544603728,
+      "pair_entropy": 2.1739693395582513,
+      "coord_gap": 0.2089983220565736,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.05005139927507152,
+      "cmi_max": 0.05005139927507152,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00038305599833817367,
+      "step": 72,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        3
+      ],
+      "mi": 0.007724949586955798,
+      "corr": 0.030411402587278705,
+      "sa": 1.0917897184497447,
+      "sb": 1.0957091306008568,
+      "pair_entropy": 2.1797738994636457,
+      "coord_gap": 0.24368957695703708,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.05121065307964079,
+      "cmi_max": 0.05121065307964079,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0003408010657222155,
+      "step": 72,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        1,
+        2
+      ],
+      "mi": 0.006201907396141237,
+      "corr": 0.03776755600427788,
+      "sa": 1.0932180215886402,
+      "sb": 1.0917897184497447,
+      "pair_entropy": 2.1788058326422437,
+      "coord_gap": 0.15984477305213116,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.04867355940421847,
+      "cmi_max": 0.04867355940421847,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00033897179541562635,
+      "step": 72,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        4
+      ],
+      "mi": 0.007397064570116463,
+      "corr": 0.030302435919571685,
+      "sa": 1.0946462582530612,
+      "sb": 1.0897008544603728,
+      "pair_entropy": 2.1769500481433175,
+      "coord_gap": 0.23652610971624252,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.04992723049332204,
+      "cmi_max": 0.04992723049332204,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00032476950038144405,
+      "step": 72,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        3
+      ],
+      "mi": 0.007925591804898602,
+      "corr": 0.028009682485811822,
+      "sa": 1.0946462582530612,
+      "sb": 1.0957091306008568,
+      "pair_entropy": 2.1824297970490196,
+      "coord_gap": 0.271217364616706,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.05141129529758359,
+      "cmi_max": 0.05141129529758359,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0003221006575406513,
+      "step": 72,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        7
+      ],
+      "mi": 0.0075855281570693656,
+      "corr": 0.026075134735064023,
+      "sa": 1.0946462582530612,
+      "sb": 1.0812633100778966,
+      "pair_entropy": 2.1683240401738884,
+      "coord_gap": 0.4431864505371115,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.05034805327801273,
+      "cmi_max": 0.05034805327801273,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00028669802896695183,
+      "step": 72,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        5
+      ],
+      "mi": 0.007526013213780658,
+      "corr": 0.024698054257950266,
+      "sa": 1.0946462582530612,
+      "sb": 1.0895478442182043,
+      "pair_entropy": 2.176668089257485,
+      "coord_gap": 2.598503351907899,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.04710229716712533,
+      "cmi_max": 0.04710229716712533,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0002685937579954771,
+      "step": 72,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        6
+      ],
+      "mi": 0.007206088268985944,
+      "corr": 0.02100740040584771,
+      "sa": 1.0946462582530612,
+      "sb": 1.0911494890046218,
+      "pair_entropy": 2.178589658988697,
+      "coord_gap": 0.9562276979054317,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.046735309401261915,
+      "cmi_max": 0.046735309401261915,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00021866931862248978,
+      "step": 72,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        6
+      ],
+      "mi": 0.0066119093101568716,
+      "corr": 0.021072872326775825,
+      "sa": 1.0917897184497447,
+      "sb": 1.0911494890046218,
+      "pair_entropy": 2.17632729814421,
+      "coord_gap": 0.9286999102457628,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.046141130442431955,
+      "cmi_max": 0.046141130442431955,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00020114997722047432,
+      "step": 72,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        2
+      ],
+      "mi": 0.007157956344522098,
+      "corr": 0.045487048257294785,
+      "sa": 1.093871599027057,
+      "sb": 1.0938899255661876,
+      "pair_entropy": 2.1806035682487224,
+      "coord_gap": 0.02752778765966893,
+      "common_nbr_count": 6,
+      "cmi_mean": 0.0491836318111567,
+      "cmi_max": 0.053628978729667764,
+      "daughter_count": 6,
+      "shell_triangle_count": 6,
+      "score": 0.0014279223433674524,
+      "step": 76,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        3
+      ],
+      "mi": 0.009025813603859678,
+      "corr": 0.04898054119122808,
+      "sa": 1.0938899255661876,
+      "sb": 1.0971709479208844,
+      "pair_entropy": 2.1820350598832126,
+      "coord_gap": 0.24368957695703708,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.05119490084591627,
+      "cmi_max": 0.05119490084591627,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0006413162903920923,
+      "step": 76,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        7
+      ],
+      "mi": 0.007934661080758687,
+      "corr": 0.04599352671389717,
+      "sa": 1.093871599027057,
+      "sb": 1.083811345877324,
+      "pair_entropy": 2.1697482838236226,
+      "coord_gap": 0.4431864505371115,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.04646539113873649,
+      "cmi_max": 0.04646539113873649,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0005270223695324955,
+      "step": 76,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        6
+      ],
+      "mi": 0.007008982264925301,
+      "corr": 0.034422983446113095,
+      "sa": 1.0938899255661876,
+      "sb": 1.0944551885318021,
+      "pair_entropy": 2.1813361318330644,
+      "coord_gap": 0.9286999102457628,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.050596897757341,
+      "cmi_max": 0.050596897757341,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00034979908534150836,
+      "step": 76,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        1
+      ],
+      "mi": 0.008245567242133323,
+      "corr": 0.028113254212566646,
+      "sa": 1.093871599027057,
+      "sb": 1.0930432755253354,
+      "pair_entropy": 2.178669307310259,
+      "coord_gap": 0.18737256071180008,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.050711900730900705,
+      "cmi_max": 0.050711900730900705,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0003361200310895283,
+      "step": 76,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        5
+      ],
+      "mi": 0.006741268798216904,
+      "corr": 0.02968284878774664,
+      "sa": 1.0938899255661876,
+      "sb": 1.090536759386342,
+      "pair_entropy": 2.1776854161543127,
+      "coord_gap": 2.6260311395675675,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.04567023293165917,
+      "cmi_max": 0.04567023293165917,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0002887493767900007,
+      "step": 76,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        1,
+        2
+      ],
+      "mi": 0.006148706587906894,
+      "corr": 0.02679277126373221,
+      "sa": 1.0930432755253354,
+      "sb": 1.0938899255661876,
+      "pair_entropy": 2.180784494503616,
+      "coord_gap": 0.15984477305213116,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.048615040076674276,
+      "cmi_max": 0.048615040076674276,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00023839468826797512,
+      "step": 76,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        5
+      ],
+      "mi": 0.005122054297167722,
+      "corr": 0.0309249871278959,
+      "sa": 1.093871599027057,
+      "sb": 1.090536759386342,
+      "pair_entropy": 2.179286304116231,
+      "coord_gap": 2.598503351907899,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.04405101843061088,
+      "cmi_max": 0.04405101843061088,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00022822042681644678,
+      "step": 76,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        3
+      ],
+      "mi": 0.006935147421347487,
+      "corr": 0.02135061533444133,
+      "sa": 1.093871599027057,
+      "sb": 1.0971709479208844,
+      "pair_entropy": 2.184107399526594,
+      "coord_gap": 0.271217364616706,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.04910423466340408,
+      "cmi_max": 0.04910423466340408,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0002143699071833086,
+      "step": 76,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        4
+      ],
+      "mi": 0.006320314784983516,
+      "corr": 0.023150194186185986,
+      "sa": 1.0938899255661876,
+      "sb": 1.092547917184858,
+      "pair_entropy": 2.180117527966062,
+      "coord_gap": 0.2089983220565736,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.05279133717012874,
+      "cmi_max": 0.05279133717012874,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00021257624748276176,
+      "step": 76,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        4
+      ],
+      "mi": 0.006495306113555976,
+      "corr": 0.020507346418479355,
+      "sa": 1.093871599027057,
+      "sb": 1.092547917184858,
+      "pair_entropy": 2.179924210098359,
+      "coord_gap": 0.23652610971624252,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.05296632849870164,
+      "cmi_max": 0.05296632849870164,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00019355422747551702,
+      "step": 76,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        7
+      ],
+      "mi": 0.005070050858384523,
+      "corr": 0.025253872527291762,
+      "sa": 1.0938899255661876,
+      "sb": 1.083811345877324,
+      "pair_entropy": 2.172631220585127,
+      "coord_gap": 0.4156586628774426,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.043600780916362325,
+      "cmi_max": 0.043600780916362325,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00018439697047842787,
+      "step": 76,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        6
+      ],
+      "mi": 0.0076280674934312565,
+      "corr": 0.016460192893010577,
+      "sa": 1.093871599027057,
+      "sb": 1.0944551885318021,
+      "pair_entropy": 2.1806987200654278,
+      "coord_gap": 0.9562276979054317,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.05121598298584784,
+      "cmi_max": 0.05121598298584784,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00018214635680918233,
+      "step": 76,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        2
+      ],
+      "mi": 0.005986742178777593,
+      "corr": 0.02711041585792767,
+      "sa": 1.0951019326859848,
+      "sb": 1.0936474521390265,
+      "pair_entropy": 2.182762642646234,
+      "coord_gap": 0.02752778765966893,
+      "common_nbr_count": 6,
+      "cmi_mean": 0.047835159255823045,
+      "cmi_max": 0.051217601899566034,
+      "daughter_count": 6,
+      "shell_triangle_count": 6,
+      "score": 0.0007108794886225912,
+      "step": 80,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        5
+      ],
+      "mi": 0.00917033771110054,
+      "corr": 0.0349698720808541,
+      "sa": 1.0936474521390265,
+      "sb": 1.0908643083472165,
+      "pair_entropy": 2.1753414227751424,
+      "coord_gap": 2.6260311395675675,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.05121714975884517,
+      "cmi_max": 0.05121714975884517,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0004652119874783035,
+      "step": 80,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        7
+      ],
+      "mi": 0.00693184523476198,
+      "corr": 0.03119254566094671,
+      "sa": 1.0936474521390265,
+      "sb": 1.0859141477668786,
+      "pair_entropy": 2.172629754671143,
+      "coord_gap": 0.4156586628774426,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.0453923691995457,
+      "cmi_max": 0.0453923691995457,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0003119306781103376,
+      "step": 80,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        6
+      ],
+      "mi": 0.0070467868706316494,
+      "corr": 0.02618304038229634,
+      "sa": 1.0951019326859848,
+      "sb": 1.0949430135529652,
+      "pair_entropy": 2.182998159368318,
+      "coord_gap": 0.9562276979054317,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.04773579697692121,
+      "cmi_max": 0.04773579697692121,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0002667731278006852,
+      "step": 80,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        4
+      ],
+      "mi": 0.006395507677792622,
+      "corr": 0.028678112593907113,
+      "sa": 1.0951019326859848,
+      "sb": 1.0941790251156247,
+      "pair_entropy": 2.182885450123817,
+      "coord_gap": 0.23652610971624252,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.04703349066764728,
+      "cmi_max": 0.04703349066764728,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0002650118231881316,
+      "step": 80,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        7
+      ],
+      "mi": 0.006516742211540194,
+      "corr": 0.026272739193115457,
+      "sa": 1.0951019326859848,
+      "sb": 1.0859141477668786,
+      "pair_entropy": 2.1744993382413234,
+      "coord_gap": 0.4431864505371115,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.04497726617632436,
+      "cmi_max": 0.04497726617632436,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0002469004178622741,
+      "step": 80,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        5
+      ],
+      "mi": 0.0065288006065489235,
+      "corr": 0.026117417131718335,
+      "sa": 1.0951019326859848,
+      "sb": 1.0908643083472165,
+      "pair_entropy": 2.179437440426652,
+      "coord_gap": 2.598503351907899,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.048575612654293554,
+      "cmi_max": 0.048575612654293554,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00024674165298024645,
+      "step": 80,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        6
+      ],
+      "mi": 0.005282270714025206,
+      "corr": 0.03164592946038884,
+      "sa": 1.0936474521390265,
+      "sb": 1.0949430135529652,
+      "pair_entropy": 2.1833081949779665,
+      "coord_gap": 0.9286999102457628,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.04597128082031521,
+      "cmi_max": 0.04597128082031521,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00024128890760363982,
+      "step": 80,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        3
+      ],
+      "mi": 0.006747301613449164,
+      "corr": 0.022747543838523905,
+      "sa": 1.0936474521390265,
+      "sb": 1.0969796320271428,
+      "pair_entropy": 2.18387978255272,
+      "coord_gap": 0.24368957695703708,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.0507726152462622,
+      "cmi_max": 0.0507726152462622,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00022256274396730686,
+      "step": 80,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        3
+      ],
+      "mi": 0.006502937450582724,
+      "corr": 0.021491078837987475,
+      "sa": 1.0951019326859848,
+      "sb": 1.0969796320271428,
+      "pair_entropy": 2.185578627262545,
+      "coord_gap": 0.271217364616706,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.05052825108339576,
+      "cmi_max": 0.05052825108339576,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00020260707954130474,
+      "step": 80,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        4
+      ],
+      "mi": 0.006290889526586518,
+      "corr": 0.02193799520573971,
+      "sa": 1.0936474521390265,
+      "sb": 1.0941790251156247,
+      "pair_entropy": 2.1815355877280647,
+      "coord_gap": 0.2089983220565736,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.04692887251644118,
+      "cmi_max": 0.04692887251644118,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00019939086589459645,
+      "step": 80,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        1
+      ],
+      "mi": 0.005049192289561688,
+      "corr": 0.027225591286724967,
+      "sa": 1.0951019326859848,
+      "sb": 1.0952235591667518,
+      "pair_entropy": 2.185276299563175,
+      "coord_gap": 0.18737256071180008,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.050280052010349685,
+      "cmi_max": 0.050280052010349685,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00019924316609006034,
+      "step": 80,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        1,
+        2
+      ],
+      "mi": 0.004856015443683859,
+      "corr": 0.025183874627739983,
+      "sa": 1.0952235591667518,
+      "sb": 1.0936474521390265,
+      "pair_entropy": 2.1840149958620945,
+      "coord_gap": 0.15984477305213116,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.050086875164472744,
+      "cmi_max": 0.050086875164472744,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0001772176301596835,
+      "step": 80,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        2
+      ],
+      "mi": 0.005257320273737598,
+      "corr": 0.02507678184674238,
+      "sa": 1.0953224832027169,
+      "sb": 1.0946828227611143,
+      "pair_entropy": 2.1847479856900938,
+      "coord_gap": 0.02752778765966893,
+      "common_nbr_count": 6,
+      "cmi_mean": 0.04552019856916245,
+      "cmi_max": 0.047898499805343775,
+      "daughter_count": 6,
+      "shell_triangle_count": 6,
+      "score": 0.0005761624435858498,
+      "step": 84,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        7
+      ],
+      "mi": 0.006697518345171627,
+      "corr": 0.04276138936215993,
+      "sa": 1.0946828227611143,
+      "sb": 1.0887046665906772,
+      "pair_entropy": 2.17668997100662,
+      "coord_gap": 0.4156586628774426,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.04698400465138208,
+      "cmi_max": 0.04698400465138208,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.000413794632048639,
+      "step": 84,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        5
+      ],
+      "mi": 0.006958237790952282,
+      "corr": 0.03997366877438845,
+      "sa": 1.0953224832027169,
+      "sb": 1.093072047666121,
+      "pair_entropy": 2.1814362930778857,
+      "coord_gap": 2.598503351907899,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.043641369516756345,
+      "cmi_max": 0.043641369516756345,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00040059326943132526,
+      "step": 84,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        7
+      ],
+      "mi": 0.006316163760324844,
+      "corr": 0.03660457103797722,
+      "sa": 1.0953224832027169,
+      "sb": 1.0887046665906772,
+      "pair_entropy": 2.1777109860330692,
+      "coord_gap": 0.4431864505371115,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.046602650066535745,
+      "cmi_max": 0.046602650066535745,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00033392552680009833,
+      "step": 84,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        1
+      ],
+      "mi": 0.005995414333460847,
+      "corr": 0.03509875397725461,
+      "sa": 1.0953224832027169,
+      "sb": 1.0963019233471345,
+      "pair_entropy": 2.1856289922163907,
+      "coord_gap": 0.18737256071180008,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.04854295454061042,
+      "cmi_max": 0.04854295454061042,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0003044922292688641,
+      "step": 84,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        5
+      ],
+      "mi": 0.007321508883444405,
+      "corr": 0.02712015627536228,
+      "sa": 1.0946828227611143,
+      "sb": 1.093072047666121,
+      "pair_entropy": 2.1804333615437907,
+      "coord_gap": 2.6260311395675675,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.04400464060924936,
+      "cmi_max": 0.04400464060924936,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00028607130485444794,
+      "step": 84,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        4
+      ],
+      "mi": 0.005234988979069932,
+      "corr": 0.027068005345445074,
+      "sa": 1.0946828227611143,
+      "sb": 1.0942428361450558,
+      "pair_entropy": 2.1836906699271,
+      "coord_gap": 0.2089983220565736,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.04467466293975342,
+      "cmi_max": 0.04467466293975342,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00020428297473399273,
+      "step": 84,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        6
+      ],
+      "mi": 0.006244019863160144,
+      "corr": 0.021848557107774023,
+      "sa": 1.0946828227611143,
+      "sb": 1.0958823994518936,
+      "pair_entropy": 2.1843212023498477,
+      "coord_gap": 0.9286999102457628,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.04888519939476632,
+      "cmi_max": 0.04888519939476632,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0001974667965294179,
+      "step": 84,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        3
+      ],
+      "mi": 0.005993339662201169,
+      "corr": 0.019530969186041986,
+      "sa": 1.0946828227611143,
+      "sb": 1.097364835530863,
+      "pair_entropy": 2.186054318629776,
+      "coord_gap": 0.24368957695703708,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.04597259770329787,
+      "cmi_max": 0.04597259770329787,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00016896318192599337,
+      "step": 84,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        3
+      ],
+      "mi": 0.005760585570567134,
+      "corr": 0.019556733164796728,
+      "sa": 1.0953224832027169,
+      "sb": 1.097364835530863,
+      "pair_entropy": 2.1869267331630127,
+      "coord_gap": 0.271217364616706,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.04573984361166428,
+      "cmi_max": 0.04573984361166428,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00016257946279150403,
+      "step": 84,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        6
+      ],
+      "mi": 0.003935169582628184,
+      "corr": 0.02382086911719828,
+      "sa": 1.0953224832027169,
+      "sb": 1.0958823994518936,
+      "pair_entropy": 2.1872697130719825,
+      "coord_gap": 0.9562276979054317,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.04657634911423436,
+      "cmi_max": 0.04657634911423436,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00013538515861768698,
+      "step": 84,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        4
+      ],
+      "mi": 0.004691844262594724,
+      "corr": 0.019781022832451128,
+      "sa": 1.0953224832027169,
+      "sb": 1.0942428361450558,
+      "pair_entropy": 2.184873475085178,
+      "coord_gap": 0.23652610971624252,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.04413151822327821,
+      "cmi_max": 0.04413151822327821,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00013372931631250897,
+      "step": 84,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        1,
+        2
+      ],
+      "mi": 0.004208405415554672,
+      "corr": 0.021844840023662222,
+      "sa": 1.0963019233471345,
+      "sb": 1.0946828227611143,
+      "pair_entropy": 2.186776340692694,
+      "coord_gap": 0.15984477305213116,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.04675594562270424,
+      "cmi_max": 0.04675594562270424,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0001327978250235667,
+      "step": 84,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        2
+      ],
+      "mi": 0.005961145552645153,
+      "corr": 0.02629606335288643,
+      "sa": 1.0960768062184796,
+      "sb": 1.0960911485532085,
+      "pair_entropy": 2.1862068092190428,
+      "coord_gap": 0.02752778765966893,
+      "common_nbr_count": 6,
+      "cmi_mean": 0.04597337252301211,
+      "cmi_max": 0.04818868298379053,
+      "daughter_count": 6,
+      "shell_triangle_count": 6,
+      "score": 0.0006853578224287434,
+      "step": 88,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        5
+      ],
+      "mi": 0.0078063128030909645,
+      "corr": 0.03274335927234692,
+      "sa": 1.0960911485532085,
+      "sb": 1.093912492564053,
+      "pair_entropy": 2.1821973283141705,
+      "coord_gap": 2.6260311395675675,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.04928411612813566,
+      "cmi_max": 0.04928411612813566,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0003701189897841843,
+      "step": 88,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        6
+      ],
+      "mi": 0.007614704908715186,
+      "corr": 0.02956301770368376,
+      "sa": 1.0960911485532085,
+      "sb": 1.0963458114155975,
+      "pair_entropy": 2.184822255060091,
+      "coord_gap": 0.9286999102457628,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.046832033485265434,
+      "cmi_max": 0.046832033485265434,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0003252055370962256,
+      "step": 88,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        7
+      ],
+      "mi": 0.007128299293062579,
+      "corr": 0.030024170425140717,
+      "sa": 1.0960768062184796,
+      "sb": 1.0912669891048326,
+      "pair_entropy": 2.1802154960302498,
+      "coord_gap": 0.4431864505371115,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.04594097070053671,
+      "cmi_max": 0.04594097070053671,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00030891799261929267,
+      "step": 88,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        1,
+        2
+      ],
+      "mi": 0.007401588225169675,
+      "corr": 0.026097465302102132,
+      "sa": 1.0956751874255222,
+      "sb": 1.0960911485532085,
+      "pair_entropy": 2.184364747753561,
+      "coord_gap": 0.15984477305213116,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.04962912565631461,
+      "cmi_max": 0.04962912565631461,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00027979387860451474,
+      "step": 88,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        3
+      ],
+      "mi": 0.006535791402238367,
+      "corr": 0.026986337917905164,
+      "sa": 1.0960911485532085,
+      "sb": 1.0974934981958158,
+      "pair_entropy": 2.187048855346786,
+      "coord_gap": 0.24368957695703708,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.04846441423837433,
+      "cmi_max": 0.04846441423837433,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00025519662003689744,
+      "step": 88,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        7
+      ],
+      "mi": 0.005329982355169793,
+      "corr": 0.03264663126182129,
+      "sa": 1.0960911485532085,
+      "sb": 1.0912669891048326,
+      "pair_entropy": 2.1820281553028713,
+      "coord_gap": 0.4156586628774426,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.044142653762643924,
+      "cmi_max": 0.044142653762643924,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00025072813425084105,
+      "step": 88,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        1
+      ],
+      "mi": 0.004405666391035901,
+      "corr": 0.031115451035101622,
+      "sa": 1.0960768062184796,
+      "sb": 1.0956751874255222,
+      "pair_entropy": 2.187346327252966,
+      "coord_gap": 0.18737256071180008,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.046633203822180835,
+      "cmi_max": 0.046633203822180835,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00019799822801698505,
+      "step": 88,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        3
+      ],
+      "mi": 0.004680464117876593,
+      "corr": 0.028484674870418027,
+      "sa": 1.0960768062184796,
+      "sb": 1.0974934981958158,
+      "pair_entropy": 2.1888898402964188,
+      "coord_gap": 0.271217364616706,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.046609086954013,
+      "cmi_max": 0.046609086954013,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00019255897890941073,
+      "step": 88,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        4
+      ],
+      "mi": 0.004173343765763171,
+      "corr": 0.02928483925001977,
+      "sa": 1.0960768062184796,
+      "sb": 1.0958431778416047,
+      "pair_entropy": 2.1877466402943213,
+      "coord_gap": 0.23652610971624252,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.04058274201161316,
+      "cmi_max": 0.04058274201161316,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00017550225843654564,
+      "step": 88,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        4
+      ],
+      "mi": 0.006343548002833543,
+      "corr": 0.01756440611767907,
+      "sa": 1.0960911485532085,
+      "sb": 1.0958431778416047,
+      "pair_entropy": 2.1855907783919797,
+      "coord_gap": 0.2089983220565736,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.04275294624868353,
+      "cmi_max": 0.04275294624868353,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00016033421608227484,
+      "step": 88,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        6
+      ],
+      "mi": 0.005699883940919914,
+      "corr": 0.01826181891394255,
+      "sa": 1.0960768062184796,
+      "sb": 1.0963458114155975,
+      "pair_entropy": 2.186722733693157,
+      "coord_gap": 0.9562276979054317,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.04491721251747016,
+      "cmi_max": 0.04491721251747016,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0001500966551892617,
+      "step": 88,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        5
+      ],
+      "mi": 0.0035698662297374284,
+      "corr": 0.02043362442444246,
+      "sa": 1.0960768062184796,
+      "sb": 1.093912492564053,
+      "pair_entropy": 2.1864194325527953,
+      "coord_gap": 2.598503351907899,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.04504766955478168,
+      "cmi_max": 0.04504766955478168,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00010519922410398674,
+      "step": 88,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        2
+      ],
+      "mi": 0.007131160202081155,
+      "corr": 0.027341680528090318,
+      "sa": 1.096179689738862,
+      "sb": 1.0968809925794623,
+      "pair_entropy": 2.1859295221162434,
+      "coord_gap": 0.02752778765966893,
+      "common_nbr_count": 6,
+      "cmi_mean": 0.047051526715910764,
+      "cmi_max": 0.050607432432675736,
+      "daughter_count": 6,
+      "shell_triangle_count": 6,
+      "score": 0.0008533549925816877,
+      "step": 92,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        7
+      ],
+      "mi": 0.00690621330238228,
+      "corr": 0.02941507566225799,
+      "sa": 1.096179689738862,
+      "sb": 1.0926093377902186,
+      "pair_entropy": 2.1818828142266984,
+      "coord_gap": 0.4431864505371115,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.05038248553297686,
+      "cmi_max": 0.05038248553297686,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00029446692109131385,
+      "step": 92,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        3
+      ],
+      "mi": 0.00561389130625134,
+      "corr": 0.034973912010234164,
+      "sa": 1.096179689738862,
+      "sb": 1.0977701057961058,
+      "pair_entropy": 2.1883359042287163,
+      "coord_gap": 0.271217364616706,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.04485346605042562,
+      "cmi_max": 0.04485346605042562,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0002831018366862549,
+      "step": 92,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        5
+      ],
+      "mi": 0.0054655270670087575,
+      "corr": 0.03307147825393629,
+      "sa": 1.096179689738862,
+      "sb": 1.0947282776920089,
+      "pair_entropy": 2.185442440363862,
+      "coord_gap": 2.598503351907899,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.04685028346588149,
+      "cmi_max": 0.04685028346588149,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0002611255204353096,
+      "step": 92,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        5
+      ],
+      "mi": 0.005444382543281723,
+      "corr": 0.031570659233220284,
+      "sa": 1.0968809925794623,
+      "sb": 1.0947282776920089,
+      "pair_entropy": 2.1861648877281894,
+      "coord_gap": 2.6260311395675675,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.04682913894215446,
+      "cmi_max": 0.04682913894215446,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0002483059764653354,
+      "step": 92,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        1,
+        2
+      ],
+      "mi": 0.005760671852018895,
+      "corr": 0.029195693818664326,
+      "sa": 1.096284726432463,
+      "sb": 1.0968809925794623,
+      "pair_entropy": 2.1874050471599062,
+      "coord_gap": 0.15984477305213116,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.04250185927854222,
+      "cmi_max": 0.04250185927854222,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0002419623880159563,
+      "step": 92,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        1
+      ],
+      "mi": 0.004856474091317953,
+      "corr": 0.0280170844820134,
+      "sa": 1.096179689738862,
+      "sb": 1.096284726432463,
+      "pair_entropy": 2.187607942080007,
+      "coord_gap": 0.18737256071180008,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.04159766151784128,
+      "cmi_max": 0.04159766151784128,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00019557939504123622,
+      "step": 92,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        7
+      ],
+      "mi": 0.004814368246406353,
+      "corr": 0.026888699735869468,
+      "sa": 1.0968809925794623,
+      "sb": 1.0926093377902186,
+      "pair_entropy": 2.1846759621232748,
+      "coord_gap": 0.4156586628774426,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.048290640477000935,
+      "cmi_max": 0.048290640477000935,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00018727072942786448,
+      "step": 92,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        3
+      ],
+      "mi": 0.004593151936707507,
+      "corr": 0.028123518946813524,
+      "sa": 1.0968809925794623,
+      "sb": 1.0977701057961058,
+      "pair_entropy": 2.1900579464388605,
+      "coord_gap": 0.24368957695703708,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.04383272668088134,
+      "cmi_max": 0.04383272668088134,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00018607604544385395,
+      "step": 92,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        4
+      ],
+      "mi": 0.0071503853829804065,
+      "corr": 0.01748863517922825,
+      "sa": 1.0968809925794623,
+      "sb": 1.0964231827811162,
+      "pair_entropy": 2.186153789977598,
+      "coord_gap": 0.2089983220565736,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.04737977318820086,
+      "cmi_max": 0.04737977318820086,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00018074597582048158,
+      "step": 92,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        6
+      ],
+      "mi": 0.005326130993371425,
+      "corr": 0.021860217822331822,
+      "sa": 1.096179689738862,
+      "sb": 1.0953343264025421,
+      "pair_entropy": 2.186187885148033,
+      "coord_gap": 0.9562276979054317,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.04377715147096728,
+      "cmi_max": 0.04377715147096728,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00016770777640554092,
+      "step": 92,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        4
+      ],
+      "mi": 0.006517275626324093,
+      "corr": 0.017790696627746228,
+      "sa": 1.096179689738862,
+      "sb": 1.0964231827811162,
+      "pair_entropy": 2.186085596893654,
+      "coord_gap": 0.23652610971624252,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.046746663431544544,
+      "cmi_max": 0.046746663431544544,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00016748646411119119,
+      "step": 92,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        6
+      ],
+      "mi": 0.0065399084001329655,
+      "corr": 0.015615670819738955,
+      "sa": 1.0968809925794623,
+      "sb": 1.0953343264025421,
+      "pair_entropy": 2.1856754105818714,
+      "coord_gap": 0.9286999102457628,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.04499092887772971,
+      "cmi_max": 0.04499092887772971,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00014727326594808193,
+      "step": 92,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        2
+      ],
+      "mi": 0.006273517313847954,
+      "corr": 0.038009386632420934,
+      "sa": 1.0969303379625672,
+      "sb": 1.0968372522970793,
+      "pair_entropy": 2.187494072945799,
+      "coord_gap": 0.02752778765966893,
+      "common_nbr_count": 6,
+      "cmi_mean": 0.04518845518860556,
+      "cmi_max": 0.05050356909247844,
+      "daughter_count": 6,
+      "shell_triangle_count": 6,
+      "score": 0.001041772401619217,
+      "step": 96,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        4
+      ],
+      "mi": 0.008613110447712735,
+      "corr": 0.039964943037714994,
+      "sa": 1.0968372522970793,
+      "sb": 1.096663179449639,
+      "pair_entropy": 2.184887321299006,
+      "coord_gap": 0.2089983220565736,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.048605743030595505,
+      "cmi_max": 0.048605743030595505,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0004981160470267845,
+      "step": 96,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        4
+      ],
+      "mi": 0.0076674384891761704,
+      "corr": 0.02616079382651793,
+      "sa": 1.0969303379625672,
+      "sb": 1.096663179449639,
+      "pair_entropy": 2.18592607892303,
+      "coord_gap": 0.23652610971624252,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.047660071072059385,
+      "cmi_max": 0.047660071072059385,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.000290001802553244,
+      "step": 96,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        7
+      ],
+      "mi": 0.007822685924828043,
+      "corr": 0.024747749123187546,
+      "sa": 1.0968372522970793,
+      "sb": 1.0932119926197863,
+      "pair_entropy": 2.1822265589920375,
+      "coord_gap": 0.4156586628774426,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.044075594396568274,
+      "cmi_max": 0.044075594396568274,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00027893475433109216,
+      "step": 96,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        3
+      ],
+      "mi": 0.005238170330455372,
+      "corr": 0.03193045732333478,
+      "sa": 1.0969303379625672,
+      "sb": 1.0968142456734604,
+      "pair_entropy": 2.1885064133055723,
+      "coord_gap": 0.271217364616706,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.03878751799879465,
+      "cmi_max": 0.03878751799879465,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00023976763748367896,
+      "step": 96,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        5
+      ],
+      "mi": 0.005304620136785676,
+      "corr": 0.030286579476846136,
+      "sa": 1.0969303379625672,
+      "sb": 1.0951293563748972,
+      "pair_entropy": 2.1867550742006787,
+      "coord_gap": 2.598503351907899,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.04953467191541616,
+      "cmi_max": 0.04953467191541616,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00023269143279222167,
+      "step": 96,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        6
+      ],
+      "mi": 0.00482787503663884,
+      "corr": 0.030447252669437784,
+      "sa": 1.0969303379625672,
+      "sb": 1.095941328180518,
+      "pair_entropy": 2.188043791106446,
+      "coord_gap": 0.9562276979054317,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.04508673757099757,
+      "cmi_max": 0.04508673757099757,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00021199985044373831,
+      "step": 96,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        7
+      ],
+      "mi": 0.004542542076645617,
+      "corr": 0.02776803576582504,
+      "sa": 1.0969303379625672,
+      "sb": 1.0932119926197863,
+      "pair_entropy": 2.1855997885057077,
+      "coord_gap": 0.4431864505371115,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.04079545054838629,
+      "cmi_max": 0.04079545054838629,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00018117096201297606,
+      "step": 96,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        5
+      ],
+      "mi": 0.003926005272711031,
+      "corr": 0.021657997237945877,
+      "sa": 1.0968372522970793,
+      "sb": 1.0951293563748972,
+      "pair_entropy": 2.1880406033992656,
+      "coord_gap": 2.6260311395675675,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.04815605705134063,
+      "cmi_max": 0.04815605705134063,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00012299124770060612,
+      "step": 96,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        0,
+        1
+      ],
+      "mi": 0.003913282683960517,
+      "corr": 0.021552207621525057,
+      "sa": 1.0969303379625672,
+      "sb": 1.0959834541131417,
+      "pair_entropy": 2.1890005093917484,
+      "coord_gap": 0.18737256071180008,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.04311910689655729,
+      "cmi_max": 0.04311910689655729,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00012140762689190901,
+      "step": 96,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        3
+      ],
+      "mi": 0.004271920887478409,
+      "corr": 0.019763660503492052,
+      "sa": 1.0968372522970793,
+      "sb": 1.0968142456734604,
+      "pair_entropy": 2.189379577083061,
+      "coord_gap": 0.24368957695703708,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.03782126855581769,
+      "cmi_max": 0.03782126855581769,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.0001209183575354258,
+      "step": 96,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        2,
+        6
+      ],
+      "mi": 0.004208475174836135,
+      "corr": 0.01719678876716672,
+      "sa": 1.0968372522970793,
+      "sb": 1.095941328180518,
+      "pair_entropy": 2.188570105302761,
+      "coord_gap": 0.9286999102457628,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.04446733770919353,
+      "cmi_max": 0.04446733770919353,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 0.00010431483518373191,
+      "step": 96,
+      "outcome": "no_birth"
+    },
+    {
+      "pair": [
+        1,
+        2
+      ],
+      "mi": 0.004411012052819352,
+      "corr": 0.015099250938534241,
+      "sa": 1.0959834541131417,
+      "sb": 1.0968372522970793,
+      "pair_entropy": 2.188409694357402,
+      "coord_gap": 0.15984477305213116,
+      "common_nbr_count": 1,
+      "cmi_mean": 0.04361683626541568,
+      "cmi_max": 0.04361683626541568,
+      "daughter_count": 1,
+      "shell_triangle_count": 1,
+      "score": 9.592102490187614e-05,
+      "step": 96,
+      "outcome": "no_birth"
+    }
+  ],
+  "birth_events": [
+    {
+      "parents": [
+        0,
+        1
+      ],
+      "new_node": 2,
+      "links_alive": 2,
+      "new_node_entropy": 0.10538159383975347,
+      "mean_birth_mi": 0.1053815938397533,
+      "common_support": 1,
+      "shell_triangles": 1,
+      "persistence_windows": 1,
+      "persistence_score": 0.9624999999999999,
+      "label": "persistent"
+    },
+    {
+      "parents": [
+        0,
+        2
+      ],
+      "new_node": 3,
+      "links_alive": 2,
+      "new_node_entropy": 0.16009810503268865,
+      "mean_birth_mi": 0.13064843593230363,
+      "common_support": 2,
+      "shell_triangles": 1,
+      "persistence_windows": 1,
+      "persistence_score": 1.0,
+      "label": "persistent"
+    },
+    {
+      "parents": [
+        0,
+        2
+      ],
+      "new_node": 4,
+      "links_alive": 2,
+      "new_node_entropy": 0.23971687831604124,
+      "mean_birth_mi": 0.15730770122731236,
+      "common_support": 3,
+      "shell_triangles": 1,
+      "persistence_windows": 1,
+      "persistence_score": 1.0,
+      "label": "persistent"
+    },
+    {
+      "parents": [
+        0,
+        2
+      ],
+      "new_node": 5,
+      "links_alive": 2,
+      "new_node_entropy": 0.12469054907769146,
+      "mean_birth_mi": 0.06207185351984734,
+      "common_support": 4,
+      "shell_triangles": 1,
+      "persistence_windows": 1,
+      "persistence_score": 1.0,
+      "label": "persistent"
+    },
+    {
+      "parents": [
+        0,
+        2
+      ],
+      "new_node": 6,
+      "links_alive": 2,
+      "new_node_entropy": 0.1465311156642585,
+      "mean_birth_mi": 0.06431924644781217,
+      "common_support": 5,
+      "shell_triangles": 1,
+      "persistence_windows": 1,
+      "persistence_score": 1.0,
+      "label": "persistent"
+    },
+    {
+      "parents": [
+        0,
+        2
+      ],
+      "new_node": 7,
+      "links_alive": 2,
+      "new_node_entropy": 0.17676054968227592,
+      "mean_birth_mi": 0.0648529179675078,
+      "common_support": 6,
+      "shell_triangles": 1,
+      "persistence_windows": 1,
+      "persistence_score": 1.0,
+      "label": "persistent"
+    }
+  ],
+  "derived_rule": {
+    "feature_names": [
+      "mi",
+      "corr",
+      "sa",
+      "sb",
+      "pair_entropy",
+      "coord_gap",
+      "common_nbr_count",
+      "cmi_mean",
+      "cmi_max",
+      "daughter_count",
+      "shell_triangle_count",
+      "score"
+    ],
+    "intercept": null,
+    "coefficients": {},
+    "n_labeled_births": 6,
+    "n_persistent": 6,
+    "n_remerge_prone": 0,
+    "note": "Insufficient class diversity to fit logistic rule robustly."
+  },
+  "summary": {
+    "n_evals": 24,
+    "n_candidates": 270,
+    "n_birth_events": 6,
+    "n_persistent_births": 6,
+    "n_remerge_prone_births": 0,
+    "active_nodes_final": 8,
+    "active_edges_final": 13
+  },
+  "active_nodes_final": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "active_edges_final": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      0,
+      5
+    ],
+    [
+      0,
+      6
+    ],
+    [
+      0,
+      7
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      2,
+      4
+    ],
+    [
+      2,
+      5
+    ],
+    [
+      2,
+      6
+    ],
+    [
+      2,
+      7
+    ]
+  ]
+}

@@ -1,0 +1,490 @@
+{
+  "config": {
+    "n_max": 9,
+    "n_init": 2,
+    "seed": 0,
+    "local_scale": 0.1,
+    "pair_scale": 0.16,
+    "spawn_pair_scale": 0.12,
+    "total_steps": 60,
+    "dt": 0.2,
+    "spawn_every": 4,
+    "snapshot_every": 4,
+    "spawn_mi_threshold": 0.25,
+    "spawn_corr_threshold": 0.5,
+    "max_spawns": 6,
+    "json_out": "metric_growth_spawning_v1.json"
+  },
+  "active_nodes_final": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "active_edges_final": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      5
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      2,
+      4
+    ],
+    [
+      2,
+      5
+    ]
+  ],
+  "spawn_events": [
+    {
+      "parents": [
+        0,
+        1
+      ],
+      "new_node": 2,
+      "trigger_mi": 0.3309447056325252,
+      "trigger_corr": 0.5389528765480572,
+      "spawn_links": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "step": 8
+    },
+    {
+      "parents": [
+        0,
+        2
+      ],
+      "new_node": 3,
+      "trigger_mi": 0.7060631574802969,
+      "trigger_corr": 0.5679776545093134,
+      "spawn_links": [
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "step": 20
+    },
+    {
+      "parents": [
+        0,
+        2
+      ],
+      "new_node": 4,
+      "trigger_mi": 0.661617300451458,
+      "trigger_corr": 0.5960133845234472,
+      "spawn_links": [
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "step": 24
+    },
+    {
+      "parents": [
+        1,
+        2
+      ],
+      "new_node": 5,
+      "trigger_mi": 0.44489262449502,
+      "trigger_corr": 0.519417892528425,
+      "spawn_links": [
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "step": 28
+    }
+  ],
+  "snapshots": [
+    {
+      "step": 4,
+      "n_active": 2,
+      "n_edges": 1,
+      "spawn_event": null,
+      "mean_edge_length": 2.0,
+      "total_edge_length": 2.0,
+      "metric_extent": 2.0,
+      "insertion_strain": 0.0,
+      "coords": {
+        "0": -1.0,
+        "1": 1.0
+      }
+    },
+    {
+      "step": 8,
+      "n_active": 3,
+      "n_edges": 3,
+      "spawn_event": {
+        "parents": [
+          0,
+          1
+        ],
+        "new_node": 2,
+        "trigger_mi": 0.3309447056325252,
+        "trigger_corr": 0.5389528765480572,
+        "spawn_links": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "step": 8
+      },
+      "mean_edge_length": 1.4756583656291433,
+      "total_edge_length": 4.42697509688743,
+      "metric_extent": 2.213487548443715,
+      "insertion_strain": 1.801746541997019,
+      "coords": {
+        "0": 0.6056602108125843,
+        "1": 0.8039136688155654,
+        "2": -1.4095738796281498
+      }
+    },
+    {
+      "step": 12,
+      "n_active": 3,
+      "n_edges": 3,
+      "spawn_event": null,
+      "mean_edge_length": 1.4756583656291433,
+      "total_edge_length": 4.42697509688743,
+      "metric_extent": 2.213487548443715,
+      "insertion_strain": 0.0,
+      "coords": {
+        "0": 0.6056602108125843,
+        "1": 0.8039136688155654,
+        "2": -1.4095738796281498
+      }
+    },
+    {
+      "step": 16,
+      "n_active": 3,
+      "n_edges": 3,
+      "spawn_event": null,
+      "mean_edge_length": 1.4756583656291433,
+      "total_edge_length": 4.42697509688743,
+      "metric_extent": 2.213487548443715,
+      "insertion_strain": 0.0,
+      "coords": {
+        "0": 0.6056602108125843,
+        "1": 0.8039136688155654,
+        "2": -1.4095738796281498
+      }
+    },
+    {
+      "step": 20,
+      "n_active": 4,
+      "n_edges": 5,
+      "spawn_event": {
+        "parents": [
+          0,
+          2
+        ],
+        "new_node": 3,
+        "trigger_mi": 0.7060631574802969,
+        "trigger_corr": 0.5679776545093134,
+        "spawn_links": [
+          [
+            0,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "step": 20
+      },
+      "mean_edge_length": 1.2040649682392033,
+      "total_edge_length": 6.020324841196016,
+      "metric_extent": 2.7954181551363986,
+      "insertion_strain": 2.1674117693104646,
+      "coords": {
+        "0": 0.22687346442129405,
+        "1": 1.3855798786085147,
+        "2": -0.2026150665019249,
+        "3": -1.4098382765278838
+      }
+    },
+    {
+      "step": 24,
+      "n_active": 5,
+      "n_edges": 7,
+      "spawn_event": {
+        "parents": [
+          0,
+          2
+        ],
+        "new_node": 4,
+        "trigger_mi": 0.661617300451458,
+        "trigger_corr": 0.5960133845234472,
+        "spawn_links": [
+          [
+            0,
+            4
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        "step": 24
+      },
+      "mean_edge_length": 0.9959607133312057,
+      "total_edge_length": 6.97172499331844,
+      "metric_extent": 3.048995165956131,
+      "insertion_strain": 1.7228870376996634,
+      "coords": {
+        "0": 0.030115597913771577,
+        "1": 0.4635181167292674,
+        "2": 0.02665078602617837,
+        "3": -1.7846398333126743,
+        "4": 1.2643553326434567
+      }
+    },
+    {
+      "step": 28,
+      "n_active": 6,
+      "n_edges": 9,
+      "spawn_event": {
+        "parents": [
+          1,
+          2
+        ],
+        "new_node": 5,
+        "trigger_mi": 0.44489262449502,
+        "trigger_corr": 0.519417892528425,
+        "spawn_links": [
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            5
+          ]
+        ],
+        "step": 28
+      },
+      "mean_edge_length": 0.880755654070448,
+      "total_edge_length": 7.926800886634032,
+      "metric_extent": 2.908445503646392,
+      "insertion_strain": 3.7379629006280184,
+      "coords": {
+        "0": -0.43363204945059364,
+        "1": 0.5545452753385063,
+        "2": -0.20253246863875593,
+        "3": -0.9739388622873998,
+        "4": -0.8789485363207488,
+        "5": 1.9345066413589922
+      }
+    },
+    {
+      "step": 32,
+      "n_active": 6,
+      "n_edges": 9,
+      "spawn_event": null,
+      "mean_edge_length": 0.880755654070448,
+      "total_edge_length": 7.926800886634032,
+      "metric_extent": 2.908445503646392,
+      "insertion_strain": 0.0,
+      "coords": {
+        "0": -0.43363204945059364,
+        "1": 0.5545452753385063,
+        "2": -0.20253246863875593,
+        "3": -0.9739388622873998,
+        "4": -0.8789485363207488,
+        "5": 1.9345066413589922
+      }
+    },
+    {
+      "step": 36,
+      "n_active": 6,
+      "n_edges": 9,
+      "spawn_event": null,
+      "mean_edge_length": 0.880755654070448,
+      "total_edge_length": 7.926800886634032,
+      "metric_extent": 2.908445503646392,
+      "insertion_strain": 0.0,
+      "coords": {
+        "0": -0.43363204945059364,
+        "1": 0.5545452753385063,
+        "2": -0.20253246863875593,
+        "3": -0.9739388622873998,
+        "4": -0.8789485363207488,
+        "5": 1.9345066413589922
+      }
+    },
+    {
+      "step": 40,
+      "n_active": 6,
+      "n_edges": 9,
+      "spawn_event": null,
+      "mean_edge_length": 0.880755654070448,
+      "total_edge_length": 7.926800886634032,
+      "metric_extent": 2.908445503646392,
+      "insertion_strain": 0.0,
+      "coords": {
+        "0": -0.43363204945059364,
+        "1": 0.5545452753385063,
+        "2": -0.20253246863875593,
+        "3": -0.9739388622873998,
+        "4": -0.8789485363207488,
+        "5": 1.9345066413589922
+      }
+    },
+    {
+      "step": 44,
+      "n_active": 6,
+      "n_edges": 9,
+      "spawn_event": null,
+      "mean_edge_length": 0.880755654070448,
+      "total_edge_length": 7.926800886634032,
+      "metric_extent": 2.908445503646392,
+      "insertion_strain": 0.0,
+      "coords": {
+        "0": -0.43363204945059364,
+        "1": 0.5545452753385063,
+        "2": -0.20253246863875593,
+        "3": -0.9739388622873998,
+        "4": -0.8789485363207488,
+        "5": 1.9345066413589922
+      }
+    },
+    {
+      "step": 48,
+      "n_active": 6,
+      "n_edges": 9,
+      "spawn_event": null,
+      "mean_edge_length": 0.880755654070448,
+      "total_edge_length": 7.926800886634032,
+      "metric_extent": 2.908445503646392,
+      "insertion_strain": 0.0,
+      "coords": {
+        "0": -0.43363204945059364,
+        "1": 0.5545452753385063,
+        "2": -0.20253246863875593,
+        "3": -0.9739388622873998,
+        "4": -0.8789485363207488,
+        "5": 1.9345066413589922
+      }
+    },
+    {
+      "step": 52,
+      "n_active": 6,
+      "n_edges": 9,
+      "spawn_event": null,
+      "mean_edge_length": 0.880755654070448,
+      "total_edge_length": 7.926800886634032,
+      "metric_extent": 2.908445503646392,
+      "insertion_strain": 0.0,
+      "coords": {
+        "0": -0.43363204945059364,
+        "1": 0.5545452753385063,
+        "2": -0.20253246863875593,
+        "3": -0.9739388622873998,
+        "4": -0.8789485363207488,
+        "5": 1.9345066413589922
+      }
+    },
+    {
+      "step": 56,
+      "n_active": 6,
+      "n_edges": 9,
+      "spawn_event": null,
+      "mean_edge_length": 0.880755654070448,
+      "total_edge_length": 7.926800886634032,
+      "metric_extent": 2.908445503646392,
+      "insertion_strain": 0.0,
+      "coords": {
+        "0": -0.43363204945059364,
+        "1": 0.5545452753385063,
+        "2": -0.20253246863875593,
+        "3": -0.9739388622873998,
+        "4": -0.8789485363207488,
+        "5": 1.9345066413589922
+      }
+    },
+    {
+      "step": 60,
+      "n_active": 6,
+      "n_edges": 9,
+      "spawn_event": null,
+      "mean_edge_length": 0.880755654070448,
+      "total_edge_length": 7.926800886634032,
+      "metric_extent": 2.908445503646392,
+      "insertion_strain": 0.0,
+      "coords": {
+        "0": -0.43363204945059364,
+        "1": 0.5545452753385063,
+        "2": -0.20253246863875593,
+        "3": -0.9739388622873998,
+        "4": -0.8789485363207488,
+        "5": 1.9345066413589922
+      }
+    }
+  ],
+  "summary": {
+    "n_active_final": 6,
+    "n_edges_final": 9,
+    "n_spawn_events": 4,
+    "mean_metric_extent": 2.710725699949413,
+    "max_metric_extent": 3.048995165956131,
+    "mean_total_edge_length": 6.640945540325534,
+    "mean_spawn_insertion_strain": 2.3575020624087912,
+    "max_spawn_insertion_strain": 3.7379629006280184,
+    "extent_growth": 0.9084455036463921,
+    "total_edge_length_growth": 5.926800886634032
+  }
+}

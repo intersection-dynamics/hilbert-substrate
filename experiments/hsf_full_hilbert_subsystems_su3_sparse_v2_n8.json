@@ -1,0 +1,205 @@
+{
+  "config": {
+    "n": 8,
+    "graph_type": "chain",
+    "seed": 0,
+    "local_scale": 0.12,
+    "pair_scale": 0.18,
+    "time": 1.2
+  },
+  "edges": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      6,
+      7
+    ]
+  ],
+  "edge_strengths": {
+    "0-1": 0.15101224312592487,
+    "1-2": 0.20476726242571575,
+    "2-3": 0.13673022393142273,
+    "3-4": 0.2436642879129357,
+    "4-5": 0.1605758642272553,
+    "5-6": 0.12319132025811305,
+    "6-7": 0.19859157382171813
+  },
+  "summary": {
+    "n_edges": 7,
+    "n_pairs": 7,
+    "n_chains": 6,
+    "n_triangles": 0,
+    "mean_single_subsystem_entropy": 0.4079745184013547,
+    "mean_pair_mutual_information": 0.39156128058034817,
+    "mean_chain_cmi": 0.07919211655254536,
+    "mean_triangle_pair_mi": 0.0,
+    "mean_triangle_frustration": 0.0,
+    "top_pairs": [
+      {
+        "edge": [
+          1,
+          2
+        ],
+        "mutual_information": 0.7654052487632929,
+        "su3_pair_correlator_strength": 0.2057450405801864,
+        "entropy_i": 0.5266049827497142,
+        "entropy_j": 0.6258376021194915
+      },
+      {
+        "edge": [
+          6,
+          7
+        ],
+        "mutual_information": 0.7448102389747795,
+        "su3_pair_correlator_strength": 0.4786847292880597,
+        "entropy_i": 0.49357082183923195,
+        "entropy_j": 0.4209073482462843
+      },
+      {
+        "edge": [
+          3,
+          4
+        ],
+        "mutual_information": 0.4750961569354236,
+        "su3_pair_correlator_strength": 0.5265817314269267,
+        "entropy_i": 0.4878756954987538,
+        "entropy_j": 0.37183434195148124
+      },
+      {
+        "edge": [
+          2,
+          3
+        ],
+        "mutual_information": 0.30325376945369786,
+        "su3_pair_correlator_strength": 0.22777173228060293,
+        "entropy_i": 0.6258376021194915,
+        "entropy_j": 0.4878756954987538
+      },
+      {
+        "edge": [
+          5,
+          6
+        ],
+        "mutual_information": 0.21130287912428258,
+        "su3_pair_correlator_strength": 0.20749960805178014,
+        "entropy_i": 0.23287466345464874,
+        "entropy_j": 0.49357082183923195
+      },
+      {
+        "edge": [
+          0,
+          1
+        ],
+        "mutual_information": 0.13681949613340116,
+        "su3_pair_correlator_strength": 0.4699564153691885,
+        "entropy_i": 0.10429069135123185,
+        "entropy_j": 0.5266049827497142
+      },
+      {
+        "edge": [
+          4,
+          5
+        ],
+        "mutual_information": 0.10424117467756022,
+        "su3_pair_correlator_strength": 0.4090658133356777,
+        "entropy_i": 0.37183434195148124,
+        "entropy_j": 0.23287466345464874
+      }
+    ],
+    "top_chains": [
+      {
+        "chain": [
+          1,
+          2,
+          3
+        ],
+        "conditional_mutual_information": 0.13477265525473076,
+        "has_direct_ac_edge": false,
+        "three_body_entropy": 0.436886606896238
+      },
+      {
+        "chain": [
+          2,
+          3,
+          4
+        ],
+        "conditional_mutual_information": 0.11330289085432199,
+        "has_direct_ac_edge": false,
+        "three_body_entropy": 0.5938948223262833
+      },
+      {
+        "chain": [
+          5,
+          6,
+          7
+        ],
+        "conditional_mutual_information": 0.09039034767103017,
+        "has_direct_ac_edge": false,
+        "three_body_entropy": 0.10084936777007268
+      },
+      {
+        "chain": [
+          0,
+          1,
+          2
+        ],
+        "conditional_mutual_information": 0.059589102259163196,
+        "has_direct_ac_edge": false,
+        "three_body_entropy": 0.2949194290645803
+      },
+      {
+        "chain": [
+          3,
+          4,
+          5
+        ],
+        "conditional_mutual_information": 0.04885048808097209,
+        "has_direct_ac_edge": false,
+        "three_body_entropy": 0.46439688121092787
+      },
+      {
+        "chain": [
+          4,
+          5,
+          6
+        ],
+        "conditional_mutual_information": 0.02824721519505402,
+        "has_direct_ac_edge": false,
+        "three_body_entropy": 0.754488558248465
+      }
+    ],
+    "top_triangles": [],
+    "single_subsystem_entropies": [
+      0.10429069135123185,
+      0.5266049827497142,
+      0.6258376021194915,
+      0.4878756954987538,
+      0.37183434195148124,
+      0.23287466345464874,
+      0.49357082183923195,
+      0.4209073482462843
+    ]
+  }
+}

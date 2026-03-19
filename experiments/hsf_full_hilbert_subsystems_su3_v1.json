@@ -1,0 +1,213 @@
+{
+  "config": {
+    "n": 6,
+    "graph_type": "triangle_tail",
+    "seed": 0,
+    "local_scale": 0.12,
+    "pair_scale": 0.18,
+    "time": 1.2
+  },
+  "edges": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      5
+    ]
+  ],
+  "edge_strengths": {
+    "0-1": 0.12009820947586342,
+    "0-2": 0.2279007572620893,
+    "1-2": 0.22134215627837042,
+    "2-3": 0.1424691997909851,
+    "3-4": 0.23421372923674139,
+    "4-5": 0.11643379701194799
+  },
+  "summary": {
+    "n_edges": 6,
+    "n_pairs": 6,
+    "n_chains": 7,
+    "n_triangles": 1,
+    "mean_single_subsystem_entropy": 0.4495849542131343,
+    "mean_pair_mutual_information": 0.3854227524662572,
+    "mean_chain_cmi": 0.2683410382309809,
+    "mean_triangle_pair_mi": 0.5059540595370332,
+    "mean_triangle_frustration": 0.329612697763499,
+    "top_pairs": [
+      {
+        "edge": [
+          0,
+          2
+        ],
+        "mutual_information": 0.6405094864237644,
+        "su3_pair_correlator_strength": 0.44070390356904876,
+        "entropy_i": 0.5188906702140604,
+        "entropy_j": 0.7888375359723448
+      },
+      {
+        "edge": [
+          1,
+          2
+        ],
+        "mutual_information": 0.5811537191735667,
+        "su3_pair_correlator_strength": 0.25739086980513004,
+        "entropy_i": 0.5164678144282706,
+        "entropy_j": 0.7888375359723448
+      },
+      {
+        "edge": [
+          3,
+          4
+        ],
+        "mutual_information": 0.48855353542165136,
+        "su3_pair_correlator_strength": 0.5354698361547251,
+        "entropy_i": 0.4858342487043261,
+        "entropy_j": 0.34077017057801395
+      },
+      {
+        "edge": [
+          0,
+          1
+        ],
+        "mutual_information": 0.2961989730137684,
+        "su3_pair_correlator_strength": 0.38610290049482593,
+        "entropy_i": 0.5188906702140604,
+        "entropy_j": 0.5164678144282706
+      },
+      {
+        "edge": [
+          2,
+          3
+        ],
+        "mutual_information": 0.24400500867029895,
+        "su3_pair_correlator_strength": 0.1808518449569271,
+        "entropy_i": 0.7888375359723448,
+        "entropy_j": 0.4858342487043261
+      },
+      {
+        "edge": [
+          4,
+          5
+        ],
+        "mutual_information": 0.06211579209449347,
+        "su3_pair_correlator_strength": 0.5011877478744446,
+        "entropy_i": 0.34077017057801395,
+        "entropy_j": 0.04670928538179006
+      }
+    ],
+    "top_chains": [
+      {
+        "chain": [
+          0,
+          1,
+          2
+        ],
+        "conditional_mutual_information": 0.6484482960844863,
+        "has_direct_ac_edge": true,
+        "three_body_entropy": 0.29839503234285447
+      },
+      {
+        "chain": [
+          1,
+          0,
+          2
+        ],
+        "conditional_mutual_information": 0.5890925288342888,
+        "has_direct_ac_edge": true,
+        "three_body_entropy": 0.29839503234285447
+      },
+      {
+        "chain": [
+          0,
+          2,
+          1
+        ],
+        "conditional_mutual_information": 0.3041377826744902,
+        "has_direct_ac_edge": true,
+        "three_body_entropy": 0.29839503234285447
+      },
+      {
+        "chain": [
+          1,
+          2,
+          3
+        ],
+        "conditional_mutual_information": 0.13205902308719863,
+        "has_direct_ac_edge": false,
+        "three_body_entropy": 0.833921848173877
+      },
+      {
+        "chain": [
+          2,
+          3,
+          4
+        ],
+        "conditional_mutual_information": 0.0988468457106143,
+        "has_direct_ac_edge": false,
+        "three_body_entropy": 0.7840365654521203
+      },
+      {
+        "chain": [
+          0,
+          2,
+          3
+        ],
+        "conditional_mutual_information": 0.08155344642065565,
+        "has_direct_ac_edge": false,
+        "three_body_entropy": 0.8274945133760123
+      },
+      {
+        "chain": [
+          3,
+          4,
+          5
+        ],
+        "conditional_mutual_information": 0.024249344805132245,
+        "has_direct_ac_edge": false,
+        "three_body_entropy": 0.2983950323428531
+      }
+    ],
+    "top_triangles": [
+      {
+        "triangle": [
+          0,
+          1,
+          2
+        ],
+        "mi_ab": 0.2961989730137684,
+        "mi_bc": 0.5811537191735667,
+        "mi_ca": 0.6405094864237644,
+        "pair_mi_mean": 0.5059540595370332,
+        "pair_mi_std": 0.15028567023783213,
+        "three_body_entropy": 0.29839503234285447,
+        "triangle_frustration_proxy": 0.329612697763499
+      }
+    ],
+    "single_subsystem_entropies": [
+      0.5188906702140604,
+      0.5164678144282706,
+      0.7888375359723448,
+      0.4858342487043261,
+      0.34077017057801395,
+      0.04670928538179006
+    ]
+  }
+}
