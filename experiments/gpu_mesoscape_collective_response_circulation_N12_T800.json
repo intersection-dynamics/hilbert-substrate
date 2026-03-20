@@ -1,0 +1,674 @@
+{
+  "config": {
+    "device": "gpu",
+    "n_max": 12,
+    "n_init": 2,
+    "seed": 0,
+    "local_scale": 0.1,
+    "pair_scale": 0.16,
+    "spawn_pair_scale": 0.12,
+    "total_steps": 800,
+    "dt": 0.2,
+    "eval_every": 12,
+    "lookahead_windows": 3,
+    "settling_windows": 2,
+    "candidate_fraction": 0.45,
+    "fission_fraction": 0.3,
+    "birth_score_floor": 0.015,
+    "decay_mi_threshold": 0.05,
+    "decay_corr_threshold": 0.07,
+    "neighborhood_bonus_weight": 0.18,
+    "shell_bonus_weight": 0.2,
+    "mi_survival_floor": 0.076,
+    "corr_survival_floor": 0.086,
+    "persist_windows_required": 2,
+    "persist_entropy_threshold": 0.06,
+    "persist_mean_mi_threshold": 0.07,
+    "persist_triangle_threshold": 1,
+    "target_step": null,
+    "generator_index": 0,
+    "epsilon": 0.1,
+    "probe_steps": 24,
+    "poke_mode": "circulation",
+    "json_out": "gpu_mesoscape_collective_response_circulation_N12_T800.json"
+  },
+  "backend": "cupy",
+  "target_epoch": {
+    "core_pair": [
+      8,
+      10
+    ],
+    "start_step": 252,
+    "end_step": 792,
+    "n_snapshots": 46,
+    "snapshot_start_idx": 20,
+    "snapshot_end_idx": 65
+  },
+  "target_snapshot": {
+    "step": 516,
+    "dominant_core": {
+      "core_pair": [
+        8,
+        10
+      ],
+      "core_score": 0.0002958310337226694,
+      "pair_mi": 0.004867916738436229,
+      "pair_corr": 0.030385794336501147,
+      "daughter_count": 1,
+      "shell_nodes": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "shell_size": 6,
+      "shell_edges": [
+        [
+          6,
+          8
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          8,
+          10
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          10,
+          11
+        ]
+      ],
+      "shell_triangle_count": 1,
+      "shell_triangles": [
+        [
+          8,
+          9,
+          10
+        ]
+      ]
+    },
+    "active_nodes": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "active_edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        0,
+        6
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        1,
+        7
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        6,
+        8
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        7,
+        9
+      ],
+      [
+        8,
+        9
+      ],
+      [
+        8,
+        10
+      ],
+      [
+        9,
+        10
+      ],
+      [
+        9,
+        11
+      ],
+      [
+        10,
+        11
+      ]
+    ]
+  },
+  "partition": {
+    "organizer_nodes": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "organizer_edges": [
+      [
+        6,
+        7
+      ],
+      [
+        6,
+        8
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        7,
+        9
+      ],
+      [
+        8,
+        9
+      ],
+      [
+        8,
+        10
+      ],
+      [
+        9,
+        10
+      ],
+      [
+        9,
+        11
+      ],
+      [
+        10,
+        11
+      ]
+    ],
+    "coords": {
+      "6": 1.326810696184453,
+      "7": 0.7820889868096251,
+      "8": 0.4662223927058482,
+      "9": -0.20649527113314237,
+      "10": -0.6538842802110937,
+      "11": -1.7147425243556909
+    },
+    "ordered_nodes": [
+      11,
+      10,
+      9,
+      8,
+      7,
+      6
+    ],
+    "core_nodes": [
+      8,
+      10
+    ],
+    "shell_nodes": [
+      6,
+      7,
+      9,
+      11
+    ],
+    "left_nodes": [
+      11,
+      10,
+      9
+    ],
+    "right_nodes": [
+      8,
+      7,
+      6
+    ]
+  },
+  "poke_mode": "circulation",
+  "response_summary": {
+    "max_org_trace_distance": 0.1086713756360049,
+    "mean_org_trace_distance": 0.10713748378935394,
+    "argmax_org_trace_distance_step": 24,
+    "max_core_trace_distance": 0.00771201744769133,
+    "mean_core_trace_distance": 0.005967074499447246,
+    "max_abs_core_shell_mi_shift": 0.0001926910301719431,
+    "argmax_abs_core_shell_mi_shift_step": 24
+  },
+  "response_curves": [
+    {
+      "probe_step": 0,
+      "org_trace_distance": 0.10547565167014326,
+      "org_fidelity": 0.9844170474151144,
+      "core_trace_distance": 0.007682922418648625,
+      "core_fidelity": 0.9999126274544473,
+      "entropy_org_control": 6.048583840940598,
+      "entropy_org_poked": 6.048583840940597,
+      "entropy_org_shift": -8.881784197001252e-16,
+      "entropy_core_shift": 4.440892098500626e-16,
+      "entropy_shell_shift": 8.881784197001252e-16,
+      "core_shell_mi_control": 0.5124797696417343,
+      "core_shell_mi_poked": 0.512479769641736,
+      "core_shell_mi_shift": 1.7763568394002505e-15
+    },
+    {
+      "probe_step": 1,
+      "org_trace_distance": 0.10545683712121953,
+      "org_fidelity": 0.9844263682229065,
+      "core_trace_distance": 0.007649089479972883,
+      "core_fidelity": 0.9999135145983268,
+      "entropy_org_control": 6.0485776038666454,
+      "entropy_org_poked": 6.048618960064964,
+      "entropy_org_shift": 4.135619831835413e-05,
+      "entropy_core_shift": -1.8290271706078443e-06,
+      "entropy_shell_shift": 7.049820458515654e-05,
+      "core_shell_mi_control": 0.5124232197413772,
+      "core_shell_mi_poked": 0.5124505327204734,
+      "core_shell_mi_shift": 2.7312979096194567e-05
+    },
+    {
+      "probe_step": 2,
+      "org_trace_distance": 0.10550830244694999,
+      "org_fidelity": 0.9844196181387023,
+      "core_trace_distance": 0.007674080303020249,
+      "core_fidelity": 0.9999129011037071,
+      "entropy_org_control": 6.048538819839174,
+      "entropy_org_poked": 6.048620178613288,
+      "entropy_org_shift": 8.135877411419301e-05,
+      "entropy_core_shift": 1.323185507828839e-07,
+      "entropy_shell_shift": 0.00012924543621828377,
+      "core_shell_mi_control": 0.5124075117709568,
+      "core_shell_mi_poked": 0.5124555307516117,
+      "core_shell_mi_shift": 4.8018980654873644e-05
+    },
+    {
+      "probe_step": 3,
+      "org_trace_distance": 0.10561944915011488,
+      "org_fidelity": 0.9843974487746263,
+      "core_trace_distance": 0.00771201744769133,
+      "core_fidelity": 0.9999120237051197,
+      "entropy_org_control": 6.048469615957234,
+      "entropy_org_poked": 6.0485820609480765,
+      "entropy_org_shift": 0.00011244499084206439,
+      "entropy_core_shift": 1.2048227802097244e-06,
+      "entropy_shell_shift": 0.00016679892106630234,
+      "core_shell_mi_control": 0.5124372964520347,
+      "core_shell_mi_poked": 0.5124928552050392,
+      "core_shell_mi_shift": 5.555875300444768e-05
+    },
+    {
+      "probe_step": 4,
+      "org_trace_distance": 0.10577925530875013,
+      "org_fidelity": 0.9843616505960957,
+      "core_trace_distance": 0.007688299626833618,
+      "core_fidelity": 0.9999127302151007,
+      "entropy_org_control": 6.0483925601842845,
+      "entropy_org_poked": 6.048524796440887,
+      "entropy_org_shift": 0.0001322362566025248,
+      "entropy_core_shift": 4.866909919520879e-07,
+      "entropy_shell_shift": 0.00018456603901295665,
+      "core_shell_mi_control": 0.5124918703670387,
+      "core_shell_mi_poked": 0.5125446868404406,
+      "core_shell_mi_shift": 5.2816473401939845e-05
+    },
+    {
+      "probe_step": 5,
+      "org_trace_distance": 0.10597784460321419,
+      "org_fidelity": 0.9843147687708048,
+      "core_trace_distance": 0.007544005904081482,
+      "core_fidelity": 0.9999163407297066,
+      "entropy_org_control": 6.048334115304902,
+      "entropy_org_poked": 6.048479296784244,
+      "entropy_org_shift": 0.00014518147934161618,
+      "entropy_core_shift": 2.1215175127764496e-07,
+      "entropy_shell_shift": 0.00018963110948000406,
+      "core_shell_mi_control": 0.5125453634655042,
+      "core_shell_mi_poked": 0.5125900252473938,
+      "core_shell_mi_shift": 4.466178188966552e-05
+    },
+    {
+      "probe_step": 6,
+      "org_trace_distance": 0.10619282312364815,
+      "org_fidelity": 0.9842606035997103,
+      "core_trace_distance": 0.007268975462677338,
+      "core_fidelity": 0.9999228367812968,
+      "entropy_org_control": 6.048310723486663,
+      "entropy_org_poked": 6.048467851727736,
+      "entropy_org_shift": 0.0001571282410726127,
+      "entropy_core_shift": 3.5732509768848786e-06,
+      "entropy_shell_shift": 0.00018813884485524568,
+      "core_shell_mi_control": 0.5125840865966662,
+      "core_shell_mi_poked": 0.5126186704514257,
+      "core_shell_mi_shift": 3.458385475951786e-05
+    },
+    {
+      "probe_step": 7,
+      "org_trace_distance": 0.10640794417438963,
+      "org_fidelity": 0.9842036264437125,
+      "core_trace_distance": 0.006900904295414635,
+      "core_fidelity": 0.9999308588907588,
+      "entropy_org_control": 6.048328076466411,
+      "entropy_org_poked": 6.048499943929872,
+      "entropy_org_shift": 0.00017186746346098403,
+      "entropy_core_shift": 1.260548886161672e-05,
+      "entropy_shell_shift": 0.00018358155317343972,
+      "core_shell_mi_control": 0.5126021784140002,
+      "core_shell_mi_poked": 0.5126264979925743,
+      "core_shell_mi_shift": 2.431957857407241e-05
+    },
+    {
+      "probe_step": 8,
+      "org_trace_distance": 0.1066070320959755,
+      "org_fidelity": 0.9841476689592942,
+      "core_trace_distance": 0.0065180785243772275,
+      "core_fidelity": 0.9999385401015086,
+      "entropy_org_control": 6.048379138695512,
+      "entropy_org_poked": 6.048570375448801,
+      "entropy_org_shift": 0.00019123675328902578,
+      "entropy_core_shift": 2.7420716396164835e-05,
+      "entropy_shell_shift": 0.00017931797004866468,
+      "core_shell_mi_control": 0.512596762033386,
+      "core_shell_mi_poked": 0.5126122639665418,
+      "core_shell_mi_shift": 1.5501933155803727e-05
+    },
+    {
+      "probe_step": 9,
+      "org_trace_distance": 0.1067833730603853,
+      "org_fidelity": 0.9840950057482112,
+      "core_trace_distance": 0.006191589264743458,
+      "core_fidelity": 0.9999445875520987,
+      "entropy_org_control": 6.048444956596215,
+      "entropy_org_poked": 6.048658312880406,
+      "entropy_org_shift": 0.00021335628419105745,
+      "entropy_core_shift": 4.683308062292113e-05,
+      "entropy_shell_shift": 0.00017972552695777466,
+      "core_shell_mi_control": 0.5125719036665863,
+      "core_shell_mi_poked": 0.5125851059899755,
+      "core_shell_mi_shift": 1.3202323389194248e-05
+    },
+    {
+      "probe_step": 10,
+      "org_trace_distance": 0.10694153178563859,
+      "org_fidelity": 0.9840459750044218,
+      "core_trace_distance": 0.005949009735566474,
+      "core_fidelity": 0.9999488214876083,
+      "entropy_org_control": 6.048495955316757,
+      "entropy_org_poked": 6.04873117454052,
+      "entropy_org_shift": 0.00023521922376268378,
+      "entropy_core_shift": 6.938131484846011e-05,
+      "entropy_shell_shift": 0.00018825625964158377,
+      "core_shell_mi_control": 0.5125489837388049,
+      "core_shell_mi_poked": 0.5125714020895318,
+      "core_shell_mi_shift": 2.2418350726916003e-05
+    },
+    {
+      "probe_step": 11,
+      "org_trace_distance": 0.10709048265246898,
+      "org_fidelity": 0.9839989212141311,
+      "core_trace_distance": 0.0057710984177703345,
+      "core_fidelity": 0.9999518867262438,
+      "entropy_org_control": 6.048499122188277,
+      "entropy_org_poked": 6.048754744992528,
+      "entropy_org_shift": 0.0002556228042509545,
+      "entropy_core_shift": 9.363935734940654e-05,
+      "entropy_shell_shift": 0.00020550858018708595,
+      "core_shell_mi_control": 0.5125631815567209,
+      "core_shell_mi_poked": 0.5126067066900069,
+      "core_shell_mi_shift": 4.3525133285982065e-05
+    },
+    {
+      "probe_step": 12,
+      "org_trace_distance": 0.10723825342349755,
+      "org_fidelity": 0.9839520240502642,
+      "core_trace_distance": 0.005622535645493833,
+      "core_fidelity": 0.9999545264161179,
+      "entropy_org_control": 6.048433239690153,
+      "entropy_org_poked": 6.048709629626218,
+      "entropy_org_shift": 0.0002763899360651578,
+      "entropy_core_shift": 0.00011753808199488347,
+      "entropy_shell_shift": 0.00022872071669777227,
+      "core_shell_mi_control": 0.5126420208572808,
+      "core_shell_mi_poked": 0.5127118897199079,
+      "core_shell_mi_shift": 6.986886262705383e-05
+    },
+    {
+      "probe_step": 13,
+      "org_trace_distance": 0.1073877901524366,
+      "org_fidelity": 0.9839036871430704,
+      "core_trace_distance": 0.005485966312623164,
+      "core_fidelity": 0.999957044112941,
+      "entropy_org_control": 6.048298881582734,
+      "entropy_org_poked": 6.048598269244452,
+      "entropy_org_shift": 0.000299387661717887,
+      "entropy_core_shift": 0.00013766140094961798,
+      "entropy_shell_shift": 0.000252058795165766,
+      "core_shell_mi_control": 0.5127873000238194,
+      "core_shell_mi_poked": 0.5128776325582161,
+      "core_shell_mi_shift": 9.033253439660882e-05
+    },
+    {
+      "probe_step": 14,
+      "org_trace_distance": 0.10754191842874372,
+      "org_fidelity": 0.9838522888539177,
+      "core_trace_distance": 0.0053683351913556,
+      "core_fidelity": 0.9999593029725528,
+      "entropy_org_control": 6.048119016832658,
+      "entropy_org_poked": 6.048442239307407,
+      "entropy_org_shift": 0.0003232224747495849,
+      "entropy_core_shift": 0.00014981358237031728,
+      "entropy_shell_shift": 0.00026833375014856387,
+      "core_shell_mi_control": 0.5129706641021397,
+      "core_shell_mi_poked": 0.5130655889599094,
+      "core_shell_mi_shift": 9.492485776974036e-05
+    },
+    {
+      "probe_step": 15,
+      "org_trace_distance": 0.10769301771413926,
+      "org_fidelity": 0.983797080787296,
+      "core_trace_distance": 0.005277839930384969,
+      "core_fidelity": 0.9999611043496437,
+      "entropy_org_control": 6.047933953089233,
+      "entropy_org_poked": 6.048279947437057,
+      "entropy_org_shift": 0.00034599434782389693,
+      "entropy_core_shift": 0.0001509641130317263,
+      "entropy_shell_shift": 0.00027179940980115447,
+      "core_shell_mi_control": 0.5131431399942112,
+      "core_shell_mi_poked": 0.5132199091692202,
+      "core_shell_mi_shift": 7.676917500898384e-05
+    },
+    {
+      "probe_step": 16,
+      "org_trace_distance": 0.10783861358028968,
+      "org_fidelity": 0.9837389217653113,
+      "core_trace_distance": 0.005203027233720426,
+      "core_fidelity": 0.9999625014244611,
+      "entropy_org_control": 6.047793789562023,
+      "entropy_org_poked": 6.048156531561267,
+      "entropy_org_shift": 0.0003627419992433545,
+      "entropy_core_shift": 0.00014145611564009286,
+      "entropy_shell_shift": 0.0002605485703641719,
+      "core_shell_mi_control": 0.5132525991596673,
+      "core_shell_mi_poked": 0.5132918618464277,
+      "core_shell_mi_shift": 3.926268676046618e-05
+    },
+    {
+      "probe_step": 17,
+      "org_trace_distance": 0.10798015722923147,
+      "org_fidelity": 0.9836791958354449,
+      "core_trace_distance": 0.005120698215923466,
+      "core_fidelity": 0.9999637974497118,
+      "entropy_org_control": 6.047736120581276,
+      "entropy_org_poked": 6.048105840258226,
+      "entropy_org_shift": 0.00036971967695009766,
+      "entropy_core_shift": 0.00012613985393006288,
+      "entropy_shell_shift": 0.00023835112118320012,
+      "core_shell_mi_control": 0.5132708668724453,
+      "core_shell_mi_poked": 0.5132656381706076,
+      "core_shell_mi_shift": -5.228701837722838e-06
+    },
+    {
+      "probe_step": 18,
+      "org_trace_distance": 0.10811459378678218,
+      "org_fidelity": 0.9836203247954148,
+      "core_trace_distance": 0.0050153108134261375,
+      "core_fidelity": 0.9999653380896373,
+      "entropy_org_control": 6.047767008446118,
+      "entropy_org_poked": 6.048138690262984,
+      "entropy_org_shift": 0.00037168181686642043,
+      "entropy_core_shift": 0.0001131693151199542,
+      "entropy_shell_shift": 0.00021420506042524323,
+      "core_shell_mi_control": 0.5132072422838254,
+      "core_shell_mi_poked": 0.5131629348425042,
+      "core_shell_mi_shift": -4.4307441321222996e-05
+    },
+    {
+      "probe_step": 19,
+      "org_trace_distance": 0.10823783235540117,
+      "org_fidelity": 0.9835642681116716,
+      "core_trace_distance": 0.004885928345231366,
+      "core_fidelity": 0.9999672999877383,
+      "entropy_org_control": 6.0478595417739465,
+      "entropy_org_poked": 6.048238823131621,
+      "entropy_org_shift": 0.00037928135767462123,
+      "entropy_core_shift": 0.00011011999381338455,
+      "entropy_shell_shift": 0.00019714817947047436,
+      "core_shell_mi_control": 0.513099217562698,
+      "core_shell_mi_poked": 0.5130272043783073,
+      "core_shell_mi_shift": -7.201318439076232e-05
+    },
+    {
+      "probe_step": 20,
+      "org_trace_distance": 0.10834455282805545,
+      "org_fidelity": 0.9835113078672499,
+      "core_trace_distance": 0.004743208199603432,
+      "core_fidelity": 0.9999695789983963,
+      "entropy_org_control": 6.047964973206095,
+      "entropy_org_poked": 6.048367499742827,
+      "entropy_org_shift": 0.00040252653673267247,
+      "entropy_core_shift": 0.00011967280526548052,
+      "entropy_shell_shift": 0.00019044736019058206,
+      "core_shell_mi_control": 0.5129951425483723,
+      "core_shell_mi_poked": 0.5129027361770966,
+      "core_shell_mi_shift": -9.240637127572171e-05
+    },
+    {
+      "probe_step": 21,
+      "org_trace_distance": 0.10843782980921156,
+      "org_fidelity": 0.9834602469725422,
+      "core_trace_distance": 0.004605961134515459,
+      "core_fidelity": 0.9999718299125273,
+      "entropy_org_control": 6.048039214188458,
+      "entropy_org_poked": 6.048482424293897,
+      "entropy_org_shift": 0.000443210105438574,
+      "entropy_core_shift": 0.00013852134335667898,
+      "entropy_shell_shift": 0.00019227938271715317,
+      "core_shell_mi_control": 0.5129302037548378,
+      "core_shell_mi_poked": 0.512817794375473,
+      "core_shell_mi_shift": -0.00011240937936474182
+    },
+    {
+      "probe_step": 22,
+      "org_trace_distance": 0.10851849920384012,
+      "org_fidelity": 0.9834100882456044,
+      "core_trace_distance": 0.0044951400502609255,
+      "core_fidelity": 0.9999736565198383,
+      "entropy_org_control": 6.0480658087763395,
+      "entropy_org_poked": 6.048560884647682,
+      "entropy_org_shift": 0.0004950758713428982,
+      "entropy_core_shift": 0.0001603284681772621,
+      "entropy_shell_shift": 0.00020077248439509532,
+      "core_shell_mi_control": 0.5129083025469896,
+      "core_shell_mi_poked": 0.5127743276282191,
+      "core_shell_mi_shift": -0.0001339749187705408
+    },
+    {
+      "probe_step": 23,
+      "org_trace_distance": 0.10859213339331712,
+      "org_fidelity": 0.9833605491873955,
+      "core_trace_distance": 0.004422394463568995,
+      "core_fidelity": 0.9999748358153894,
+      "entropy_org_control": 6.048054901114842,
+      "entropy_org_poked": 6.048608620926622,
+      "entropy_org_shift": 0.0005537198117799846,
+      "entropy_core_shift": 0.0001795819135756993,
+      "entropy_shell_shift": 0.00021539641752621463,
+      "core_shell_mi_control": 0.5129076130945709,
+      "core_shell_mi_poked": 0.5127488716138933,
+      "core_shell_mi_shift": -0.0001587414806776266
+    },
+    {
+      "probe_step": 24,
+      "org_trace_distance": 0.1086713756360049,
+      "org_fidelity": 0.9833109878408454,
+      "core_trace_distance": 0.00438044606927571,
+      "core_fidelity": 0.9999754220221736,
+      "entropy_org_control": 6.048032048492754,
+      "entropy_org_poked": 6.048652908427721,
+      "entropy_org_shift": 0.0006208599349672994,
+      "entropy_core_shift": 0.00019328652327477158,
+      "entropy_shell_shift": 0.0002348823815214729,
+      "core_shell_mi_control": 0.5129003533216565,
+      "core_shell_mi_poked": 0.5127076622914846,
+      "core_shell_mi_shift": -0.0001926910301719431
+    }
+  ]
+}

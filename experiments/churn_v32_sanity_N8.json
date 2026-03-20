@@ -1,0 +1,633 @@
+{
+  "config": {
+    "n_max": 8,
+    "n_init": 2,
+    "seed": 0,
+    "local_scale": 0.1,
+    "total_steps": 80,
+    "dt": 0.03,
+    "eval_every": 10,
+    "settling_windows": 2,
+    "lookahead_windows": 3,
+    "candidate_fraction": 0.4,
+    "birth_score_floor": 0.02,
+    "max_birth_candidates": 4,
+    "max_births_per_eval": 2,
+    "birth_exclusion_radius": 0.75,
+    "bootstrap_mi_floor": 0.02,
+    "bootstrap_corr_floor": 0.02,
+    "bootstrap_birth_score_floor": 0.002,
+    "max_live_reabsorbs": 1,
+    "live_reabsorb_every": 2,
+    "reabs_fidelity_floor": 0.995,
+    "reabs_basis0_floor": 0.4,
+    "min_active_edges_floor": 4,
+    "min_shell_size_floor": 3,
+    "shell_edge_protection": 2.0,
+    "edge_bandwidth_prune_thresh": 0.25,
+    "edge_commitment_prune_thresh": 0.14,
+    "direct_pair_echo": 0.02,
+    "node_link_backreaction": 0.1,
+    "link_dt": 0.04,
+    "link_pair_scale": 0.08,
+    "link_endpoint_coupling": 0.18,
+    "link_mix": 0.02,
+    "link_init_beta": 1.2,
+    "link_sv_thresh": 0.03,
+    "link_strength_base": 0.2,
+    "link_strength_bw_weight": 0.15,
+    "link_strength_purity_weight": 0.2,
+    "birth_structural_bias": 0.2,
+    "birth_edge_restore_bonus": 0.3,
+    "progress_every": 1,
+    "device": "cpu",
+    "json_out": "churn_v32_sanity_N8.json"
+  },
+  "summary": {
+    "n_birth_events": 0,
+    "n_extinction_events": 0,
+    "n_edge_prunes": 0,
+    "final_active": 2,
+    "final_dormant": 6,
+    "final_edge_count": 1,
+    "active_count_trace": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "edge_count_trace": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "mean_shell_size": 2.0
+  },
+  "birth_events": [],
+  "birth_classifications": [],
+  "edge_prunes": [],
+  "extinction_events": [],
+  "snapshots": [
+    {
+      "step": 10,
+      "active_nodes": [
+        0,
+        1
+      ],
+      "dormant_nodes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "active_edge_count": 1,
+      "births_this_window": 0,
+      "birth_candidates_this_window": 1,
+      "extinctions_this_window": 0,
+      "mean_link_rank": 1.0,
+      "mean_link_score": 0.4365108790641955,
+      "dominant_core": {
+        "core_pair": [
+          0,
+          1
+        ],
+        "core_score": 3.647508994683502e-10,
+        "pair_mi": 2.3178351682399658e-10,
+        "pair_corr": 1.0491137145739362,
+        "pair_bandwidth": 0.4365108790641955,
+        "pair_bandwidth_rank": 1,
+        "daughter_count": 0,
+        "shell_nodes": [
+          0,
+          1
+        ],
+        "shell_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "shell_size": 2,
+        "shell_triangle_count": 0,
+        "shell_triangles": []
+      },
+      "metric": {
+        "coords": {
+          "0": -1.0,
+          "1": 1.0
+        },
+        "metric_extent": 2.0,
+        "total_edge_length": 2.0,
+        "mean_edge_length": 2.0
+      },
+      "graph_stats": {
+        "mean_degree": 1.0,
+        "triangle_count": 0,
+        "degree_map": {
+          "0": 1,
+          "1": 1
+        }
+      }
+    },
+    {
+      "step": 20,
+      "active_nodes": [
+        0,
+        1
+      ],
+      "dormant_nodes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "active_edge_count": 1,
+      "births_this_window": 0,
+      "birth_candidates_this_window": 1,
+      "extinctions_this_window": 0,
+      "mean_link_rank": 1.0,
+      "mean_link_score": 0.3566778893782628,
+      "dominant_core": {
+        "core_pair": [
+          0,
+          1
+        ],
+        "core_score": 1.6899719071636725e-08,
+        "pair_mi": 1.0891240946576278e-08,
+        "pair_corr": 1.034453230477178,
+        "pair_bandwidth": 0.3566778893782628,
+        "pair_bandwidth_rank": 1,
+        "daughter_count": 0,
+        "shell_nodes": [
+          0,
+          1
+        ],
+        "shell_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "shell_size": 2,
+        "shell_triangle_count": 0,
+        "shell_triangles": []
+      },
+      "metric": {
+        "coords": {
+          "0": -1.0,
+          "1": 1.0
+        },
+        "metric_extent": 2.0,
+        "total_edge_length": 2.0,
+        "mean_edge_length": 2.0
+      },
+      "graph_stats": {
+        "mean_degree": 1.0,
+        "triangle_count": 0,
+        "degree_map": {
+          "0": 1,
+          "1": 1
+        }
+      }
+    },
+    {
+      "step": 30,
+      "active_nodes": [
+        0,
+        1
+      ],
+      "dormant_nodes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "active_edge_count": 1,
+      "births_this_window": 0,
+      "birth_candidates_this_window": 1,
+      "extinctions_this_window": 0,
+      "mean_link_rank": 1.0,
+      "mean_link_score": 0.2914946211434882,
+      "dominant_core": {
+        "core_pair": [
+          0,
+          1
+        ],
+        "core_score": 1.4820348823793552e-07,
+        "pair_mi": 9.774267856009776e-08,
+        "pair_corr": 1.010841189820757,
+        "pair_bandwidth": 0.2914946211434882,
+        "pair_bandwidth_rank": 1,
+        "daughter_count": 0,
+        "shell_nodes": [
+          0,
+          1
+        ],
+        "shell_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "shell_size": 2,
+        "shell_triangle_count": 0,
+        "shell_triangles": []
+      },
+      "metric": {
+        "coords": {
+          "0": -1.0,
+          "1": 1.0
+        },
+        "metric_extent": 2.0,
+        "total_edge_length": 2.0,
+        "mean_edge_length": 2.0
+      },
+      "graph_stats": {
+        "mean_degree": 1.0,
+        "triangle_count": 0,
+        "degree_map": {
+          "0": 1,
+          "1": 1
+        }
+      }
+    },
+    {
+      "step": 40,
+      "active_nodes": [
+        0,
+        1
+      ],
+      "dormant_nodes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "active_edge_count": 1,
+      "births_this_window": 0,
+      "birth_candidates_this_window": 1,
+      "extinctions_this_window": 0,
+      "mean_link_rank": 1.0,
+      "mean_link_score": 0.2383565234953719,
+      "dominant_core": {
+        "core_pair": [
+          0,
+          1
+        ],
+        "core_score": 6.59425970152128e-07,
+        "pair_mi": 4.4884215087434844e-07,
+        "pair_corr": 0.9794474796504152,
+        "pair_bandwidth": 0.2383565234953719,
+        "pair_bandwidth_rank": 1,
+        "daughter_count": 0,
+        "shell_nodes": [
+          0,
+          1
+        ],
+        "shell_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "shell_size": 2,
+        "shell_triangle_count": 0,
+        "shell_triangles": []
+      },
+      "metric": {
+        "coords": {
+          "0": -1.0,
+          "1": 1.0
+        },
+        "metric_extent": 2.0,
+        "total_edge_length": 2.0,
+        "mean_edge_length": 2.0
+      },
+      "graph_stats": {
+        "mean_degree": 1.0,
+        "triangle_count": 0,
+        "degree_map": {
+          "0": 1,
+          "1": 1
+        }
+      }
+    },
+    {
+      "step": 50,
+      "active_nodes": [
+        0,
+        1
+      ],
+      "dormant_nodes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "active_edge_count": 1,
+      "births_this_window": 0,
+      "birth_candidates_this_window": 1,
+      "extinctions_this_window": 0,
+      "mean_link_rank": 1.0,
+      "mean_link_score": 0.19518634972921023,
+      "dominant_core": {
+        "core_pair": [
+          0,
+          1
+        ],
+        "core_score": 2.0244651480645728e-06,
+        "pair_mi": 1.4329250982688814e-06,
+        "pair_corr": 0.9418799584664646,
+        "pair_bandwidth": 0.19518634972921023,
+        "pair_bandwidth_rank": 1,
+        "daughter_count": 0,
+        "shell_nodes": [
+          0,
+          1
+        ],
+        "shell_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "shell_size": 2,
+        "shell_triangle_count": 0,
+        "shell_triangles": []
+      },
+      "metric": {
+        "coords": {
+          "0": -1.0,
+          "1": 1.0
+        },
+        "metric_extent": 2.0,
+        "total_edge_length": 2.0,
+        "mean_edge_length": 2.0
+      },
+      "graph_stats": {
+        "mean_degree": 1.0,
+        "triangle_count": 0,
+        "degree_map": {
+          "0": 1,
+          "1": 1
+        }
+      }
+    },
+    {
+      "step": 60,
+      "active_nodes": [
+        0,
+        1
+      ],
+      "dormant_nodes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "active_edge_count": 1,
+      "births_this_window": 0,
+      "birth_candidates_this_window": 1,
+      "extinctions_this_window": 0,
+      "mean_link_rank": 1.0,
+      "mean_link_score": 0.16031680014246708,
+      "dominant_core": {
+        "core_pair": [
+          0,
+          1
+        ],
+        "core_score": 4.916573211305983e-06,
+        "pair_mi": 3.641291947076625e-06,
+        "pair_corr": 0.9001517927820838,
+        "pair_bandwidth": 0.16031680014246708,
+        "pair_bandwidth_rank": 1,
+        "daughter_count": 0,
+        "shell_nodes": [
+          0,
+          1
+        ],
+        "shell_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "shell_size": 2,
+        "shell_triangle_count": 0,
+        "shell_triangles": []
+      },
+      "metric": {
+        "coords": {
+          "0": -1.0,
+          "1": 1.0
+        },
+        "metric_extent": 2.0,
+        "total_edge_length": 2.0,
+        "mean_edge_length": 2.0
+      },
+      "graph_stats": {
+        "mean_degree": 1.0,
+        "triangle_count": 0,
+        "degree_map": {
+          "0": 1,
+          "1": 1
+        }
+      }
+    },
+    {
+      "step": 70,
+      "active_nodes": [
+        0,
+        1
+      ],
+      "dormant_nodes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "active_edge_count": 1,
+      "births_this_window": 0,
+      "birth_candidates_this_window": 1,
+      "extinctions_this_window": 0,
+      "mean_link_rank": 1.0,
+      "mean_link_score": 0.13236816880475424,
+      "dominant_core": {
+        "core_pair": [
+          0,
+          1
+        ],
+        "core_score": 1.0165411592989836e-05,
+        "pair_mi": 7.911350693444546e-06,
+        "pair_corr": 0.8566098665817823,
+        "pair_bandwidth": 0.13236816880475424,
+        "pair_bandwidth_rank": 1,
+        "daughter_count": 0,
+        "shell_nodes": [
+          0,
+          1
+        ],
+        "shell_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "shell_size": 2,
+        "shell_triangle_count": 0,
+        "shell_triangles": []
+      },
+      "metric": {
+        "coords": {
+          "0": -1.0,
+          "1": 1.0
+        },
+        "metric_extent": 2.0,
+        "total_edge_length": 2.0,
+        "mean_edge_length": 2.0
+      },
+      "graph_stats": {
+        "mean_degree": 1.0,
+        "triangle_count": 0,
+        "degree_map": {
+          "0": 1,
+          "1": 1
+        }
+      }
+    },
+    {
+      "step": 80,
+      "active_nodes": [
+        0,
+        1
+      ],
+      "dormant_nodes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "active_edge_count": 1,
+      "births_this_window": 0,
+      "birth_candidates_this_window": 1,
+      "extinctions_this_window": 0,
+      "mean_link_rank": 1.0,
+      "mean_link_score": 0.11013822584338748,
+      "dominant_core": {
+        "core_pair": [
+          0,
+          1
+        ],
+        "core_score": 1.871451820678059e-05,
+        "pair_mi": 1.5330808575169165e-05,
+        "pair_corr": 0.8138087048712233,
+        "pair_bandwidth": 0.11013822584338748,
+        "pair_bandwidth_rank": 1,
+        "daughter_count": 0,
+        "shell_nodes": [
+          0,
+          1
+        ],
+        "shell_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "shell_size": 2,
+        "shell_triangle_count": 0,
+        "shell_triangles": []
+      },
+      "metric": {
+        "coords": {
+          "0": -1.0,
+          "1": 1.0
+        },
+        "metric_extent": 2.0,
+        "total_edge_length": 2.0,
+        "mean_edge_length": 2.0
+      },
+      "graph_stats": {
+        "mean_degree": 1.0,
+        "triangle_count": 0,
+        "degree_map": {
+          "0": 1,
+          "1": 1
+        }
+      }
+    }
+  ]
+}

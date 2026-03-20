@@ -1,0 +1,1574 @@
+{
+  "config": {
+    "n_max": 8,
+    "n_init": 2,
+    "seed": 0,
+    "local_scale": 0.1,
+    "pair_scale": 0.16,
+    "spawn_pair_scale": 0.12,
+    "total_steps": 80,
+    "dt": 0.2,
+    "eval_every": 10,
+    "lookahead_windows": 4,
+    "settling_windows": 2,
+    "candidate_fraction": 0.45,
+    "fission_fraction": 0.3,
+    "birth_score_floor": 0.015,
+    "decay_mi_threshold": 0.05,
+    "decay_corr_threshold": 0.07,
+    "neighborhood_bonus_weight": 0.18,
+    "shell_bonus_weight": 0.2,
+    "mi_survival_floor": 0.076,
+    "corr_survival_floor": 0.086,
+    "persist_windows_required": 2,
+    "persist_entropy_threshold": 0.06,
+    "persist_mean_mi_threshold": 0.07,
+    "persist_triangle_threshold": 1,
+    "probe_every": 2,
+    "branch_windows": 4,
+    "max_birth_candidates": 4,
+    "max_reabsorb_candidates": 3,
+    "cooldown_evals": 2,
+    "device": "gpu",
+    "progress_every": 1,
+    "json_out": "sanity_lowN_constraint_pressure.json"
+  },
+  "birth_events": [
+    {
+      "parents": [
+        0,
+        1
+      ],
+      "new_node": 2,
+      "windows_with_two_links": 4,
+      "mean_new_node_entropy": 0.36745251099683196,
+      "mean_birth_mi": 0.36745251099683196,
+      "mean_common_support": 1.0,
+      "mean_shell_triangles": 1.0,
+      "latest_corr_i": 0.3124518150412848,
+      "latest_corr_j": 0.4788156613301669,
+      "label": "persistent"
+    },
+    {
+      "parents": [
+        1,
+        2
+      ],
+      "new_node": 3,
+      "windows_with_two_links": 4,
+      "mean_new_node_entropy": 0.25940012226810966,
+      "mean_birth_mi": 0.17922211298014923,
+      "mean_common_support": 2.0,
+      "mean_shell_triangles": 1.0,
+      "latest_corr_i": 0.11313480997622882,
+      "latest_corr_j": 0.205053195546344,
+      "label": "persistent"
+    },
+    {
+      "parents": [
+        0,
+        2
+      ],
+      "new_node": 4,
+      "windows_with_two_links": 4,
+      "mean_new_node_entropy": 0.28937962154330554,
+      "mean_birth_mi": 0.1630993069607784,
+      "mean_common_support": 2.0,
+      "mean_shell_triangles": 1.0,
+      "latest_corr_i": 0.15827741742668427,
+      "latest_corr_j": 0.1570981447354423,
+      "label": "persistent"
+    },
+    {
+      "parents": [
+        2,
+        3
+      ],
+      "new_node": 5,
+      "windows_with_two_links": 4,
+      "mean_new_node_entropy": 0.277289894587182,
+      "mean_birth_mi": 0.1353492136357814,
+      "mean_common_support": 2.0,
+      "mean_shell_triangles": 1.0,
+      "latest_corr_i": 0.13288216540409656,
+      "latest_corr_j": 0.14269652776941283,
+      "label": "persistent"
+    },
+    {
+      "parents": [
+        0,
+        4
+      ],
+      "new_node": 6,
+      "windows_with_two_links": 4,
+      "mean_new_node_entropy": 0.1635393813151,
+      "mean_birth_mi": 0.06928780997146144,
+      "mean_common_support": 2.0,
+      "mean_shell_triangles": 1.0,
+      "latest_corr_i": 0.08050770479175319,
+      "latest_corr_j": 0.17630636974088232,
+      "label": "remerge_prone"
+    },
+    {
+      "parents": [
+        4,
+        6
+      ],
+      "new_node": 7,
+      "windows_with_two_links": 4,
+      "mean_new_node_entropy": 0.25809862169579967,
+      "mean_birth_mi": 0.15112129012161463,
+      "mean_common_support": 2.0,
+      "mean_shell_triangles": 1.0,
+      "latest_corr_i": 0.113865549775635,
+      "latest_corr_j": 0.4559036549167297,
+      "label": "persistent"
+    }
+  ],
+  "snapshots": [
+    {
+      "step": 10,
+      "active_nodes": [
+        0,
+        1,
+        2
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "dominant_core": {
+        "core_pair": [
+          0,
+          1
+        ],
+        "core_score": 0.5073262137691851,
+        "pair_mi": 0.584050193428318,
+        "pair_corr": 0.4343173065239731,
+        "daughter_count": 1,
+        "shell_nodes": [
+          0,
+          1,
+          2
+        ],
+        "shell_edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "shell_size": 3,
+        "shell_triangle_count": 1,
+        "shell_triangles": [
+          [
+            0,
+            1,
+            2
+          ]
+        ]
+      },
+      "metric": {
+        "coords": {
+          "0": 0.7265354068411269,
+          "1": 0.6874985536293328,
+          "2": -1.4140339604704597
+        },
+        "metric_extent": 2.1405693673115866,
+        "total_edge_length": 4.281138734623173,
+        "mean_edge_length": 1.427046244874391
+      },
+      "births_this_window": 1,
+      "persistent_this_window": 1,
+      "remerge_this_window": 0
+    },
+    {
+      "step": 20,
+      "active_nodes": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "dominant_core": {
+        "core_pair": [
+          1,
+          2
+        ],
+        "core_score": 1.1828710788037096,
+        "pair_mi": 0.8936436095003171,
+        "pair_corr": 0.44121656039335966,
+        "daughter_count": 2,
+        "shell_nodes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "shell_edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "shell_size": 4,
+        "shell_triangle_count": 2,
+        "shell_triangles": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            3
+          ]
+        ]
+      },
+      "metric": {
+        "coords": {
+          "0": 1.1600550271142906,
+          "1": 0.3835802355928899,
+          "2": 0.03927226033315475,
+          "3": -1.5829075230403353
+        },
+        "metric_extent": 2.742962550154626,
+        "total_edge_length": 5.830233075568987,
+        "mean_edge_length": 1.1660466151137974
+      },
+      "births_this_window": 1,
+      "persistent_this_window": 1,
+      "remerge_this_window": 0
+    },
+    {
+      "step": 30,
+      "active_nodes": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "dominant_core": {
+        "core_pair": [
+          0,
+          2
+        ],
+        "core_score": 0.7068077734242321,
+        "pair_mi": 0.5732524353376773,
+        "pair_corr": 0.4109927435417309,
+        "daughter_count": 2,
+        "shell_nodes": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "shell_edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        "shell_size": 5,
+        "shell_triangle_count": 2,
+        "shell_triangles": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            2,
+            4
+          ]
+        ]
+      },
+      "metric": {
+        "coords": {
+          "0": -0.44624176001625204,
+          "1": 0.33439656423894987,
+          "2": -0.043799511935943766,
+          "3": 1.6067134871093123,
+          "4": -1.4510687793960664
+        },
+        "metric_extent": 3.0577822665053787,
+        "total_edge_length": 6.896202857265959,
+        "mean_edge_length": 0.9851718367522799
+      },
+      "births_this_window": 1,
+      "persistent_this_window": 1,
+      "remerge_this_window": 0
+    },
+    {
+      "step": 40,
+      "active_nodes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ]
+      ],
+      "dominant_core": {
+        "core_pair": [
+          1,
+          2
+        ],
+        "core_score": 0.28442094250015665,
+        "pair_mi": 0.36233187893316243,
+        "pair_corr": 0.2616578511185159,
+        "daughter_count": 2,
+        "shell_nodes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "shell_edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ]
+        ],
+        "shell_size": 6,
+        "shell_triangle_count": 2,
+        "shell_triangles": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            3
+          ]
+        ]
+      },
+      "metric": {
+        "coords": {
+          "0": 0.814805260210784,
+          "1": 0.2306628431229846,
+          "2": 0.014698980834165947,
+          "3": -0.9998030854997111,
+          "4": 1.432904270295151,
+          "5": -1.4932682689633745
+        },
+        "metric_extent": 2.9261725392585256,
+        "total_edge_length": 7.882917286516365,
+        "mean_edge_length": 0.8758796985018183
+      },
+      "births_this_window": 1,
+      "persistent_this_window": 1,
+      "remerge_this_window": 0
+    },
+    {
+      "step": 50,
+      "active_nodes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "dominant_core": {
+        "core_pair": [
+          3,
+          5
+        ],
+        "core_score": 0.1813367832678184,
+        "pair_mi": 0.3534851596417623,
+        "pair_corr": 0.2564984389324763,
+        "daughter_count": 1,
+        "shell_nodes": [
+          1,
+          2,
+          3,
+          5
+        ],
+        "shell_edges": [
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "shell_size": 4,
+        "shell_triangle_count": 1,
+        "shell_triangles": [
+          [
+            2,
+            3,
+            5
+          ]
+        ]
+      },
+      "metric": {
+        "coords": {
+          "0": -0.37199265591282343,
+          "1": 0.2651999119115692,
+          "2": 0.3452446225751677,
+          "3": 1.0529081706513297,
+          "4": -0.8106969472175939,
+          "5": 1.30736560225063,
+          "6": -1.7880287042582792
+        },
+        "metric_extent": 3.095394306508909,
+        "total_edge_length": 8.13443844155034,
+        "mean_edge_length": 0.7394944037773037
+      },
+      "births_this_window": 1,
+      "persistent_this_window": 0,
+      "remerge_this_window": 1
+    },
+    {
+      "step": 60,
+      "active_nodes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "dominant_core": {
+        "core_pair": [
+          4,
+          6
+        ],
+        "core_score": 0.10733975870646784,
+        "pair_mi": 0.23537546355715744,
+        "pair_corr": 0.15201210452479466,
+        "daughter_count": 2,
+        "shell_nodes": [
+          0,
+          2,
+          4,
+          6,
+          7
+        ],
+        "shell_edges": [
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "shell_size": 5,
+        "shell_triangle_count": 2,
+        "shell_triangles": [
+          [
+            0,
+            4,
+            6
+          ],
+          [
+            4,
+            6,
+            7
+          ]
+        ]
+      },
+      "metric": {
+        "coords": {
+          "0": -0.008681186463416408,
+          "1": -0.5543190192661813,
+          "2": -0.5330417377785349,
+          "3": -1.1104196017980827,
+          "4": 0.6186367161398405,
+          "5": -1.270796057834852,
+          "6": 1.2148352926727517,
+          "7": 1.643785594328475
+        },
+        "metric_extent": 2.914581652163327,
+        "total_edge_length": 8.175695480285135,
+        "mean_edge_length": 0.6288996523296257
+      },
+      "births_this_window": 1,
+      "persistent_this_window": 1,
+      "remerge_this_window": 0
+    },
+    {
+      "step": 70,
+      "active_nodes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "dominant_core": {
+        "core_pair": [
+          6,
+          7
+        ],
+        "core_score": 0.20502538305691095,
+        "pair_mi": 0.4336612085435141,
+        "pair_corr": 0.23638888954986903,
+        "daughter_count": 1,
+        "shell_nodes": [
+          0,
+          4,
+          6,
+          7
+        ],
+        "shell_edges": [
+          [
+            0,
+            6
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "shell_size": 4,
+        "shell_triangle_count": 1,
+        "shell_triangles": [
+          [
+            4,
+            6,
+            7
+          ]
+        ]
+      },
+      "metric": {
+        "coords": {
+          "0": -0.008681186463416408,
+          "1": -0.5543190192661813,
+          "2": -0.5330417377785349,
+          "3": -1.1104196017980827,
+          "4": 0.6186367161398405,
+          "5": -1.270796057834852,
+          "6": 1.2148352926727517,
+          "7": 1.643785594328475
+        },
+        "metric_extent": 2.914581652163327,
+        "total_edge_length": 8.175695480285135,
+        "mean_edge_length": 0.6288996523296257
+      },
+      "births_this_window": 0,
+      "persistent_this_window": 0,
+      "remerge_this_window": 0
+    },
+    {
+      "step": 80,
+      "active_nodes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "dominant_core": {
+        "core_pair": [
+          6,
+          7
+        ],
+        "core_score": 0.14507202549819176,
+        "pair_mi": 0.32161260210124465,
+        "pair_corr": 0.22553846545559592,
+        "daughter_count": 1,
+        "shell_nodes": [
+          0,
+          4,
+          6,
+          7
+        ],
+        "shell_edges": [
+          [
+            0,
+            6
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "shell_size": 4,
+        "shell_triangle_count": 1,
+        "shell_triangles": [
+          [
+            4,
+            6,
+            7
+          ]
+        ]
+      },
+      "metric": {
+        "coords": {
+          "0": -0.008681186463416408,
+          "1": -0.5543190192661813,
+          "2": -0.5330417377785349,
+          "3": -1.1104196017980827,
+          "4": 0.6186367161398405,
+          "5": -1.270796057834852,
+          "6": 1.2148352926727517,
+          "7": 1.643785594328475
+        },
+        "metric_extent": 2.914581652163327,
+        "total_edge_length": 8.175695480285135,
+        "mean_edge_length": 0.6288996523296257
+      },
+      "births_this_window": 0,
+      "persistent_this_window": 0,
+      "remerge_this_window": 0
+    }
+  ],
+  "pressure_events": [
+    {
+      "event_type": "birth_probe",
+      "step": 20,
+      "pair": [
+        1,
+        2
+      ],
+      "candidate_new_node": 4,
+      "seed_score": 1.0948055860030785,
+      "parent_mi": 0.8917169440754709,
+      "parent_corr": 0.4583429740513813,
+      "suppressed": {
+        "bandwidth_pressure": 1.625,
+        "no_refolding_pressure": 1.75,
+        "no_signaling_pressure": 0.7718176313535903,
+        "no_forgetting_pressure": 0.5208492992343651
+      },
+      "allowed": {
+        "bandwidth_pressure": 1.7,
+        "no_refolding_pressure": 2.0,
+        "no_signaling_pressure": 0.7035338709791472,
+        "no_forgetting_pressure": 0.39043798796270146
+      },
+      "delta_allowed_minus_suppressed": {
+        "bandwidth_pressure": 0.07499999999999996,
+        "no_refolding_pressure": 0.25,
+        "no_signaling_pressure": -0.06828376037444306,
+        "no_forgetting_pressure": -0.1304113112716636
+      },
+      "organizer_fidelity_between_branches": 0.911286727831162
+    },
+    {
+      "event_type": "birth_probe",
+      "step": 20,
+      "pair": [
+        0,
+        2
+      ],
+      "candidate_new_node": 5,
+      "seed_score": 0.8655743304104283,
+      "parent_mi": 0.7528475295311539,
+      "parent_corr": 0.46322281839436397,
+      "suppressed": {
+        "bandwidth_pressure": 1.625,
+        "no_refolding_pressure": 1.75,
+        "no_signaling_pressure": 0.7718176313535903,
+        "no_forgetting_pressure": 0.5208492992343651
+      },
+      "allowed": {
+        "bandwidth_pressure": 1.7,
+        "no_refolding_pressure": 1.8,
+        "no_signaling_pressure": 0.7853235559491001,
+        "no_forgetting_pressure": 0.4271143286881998
+      },
+      "delta_allowed_minus_suppressed": {
+        "bandwidth_pressure": 0.07499999999999996,
+        "no_refolding_pressure": 0.050000000000000044,
+        "no_signaling_pressure": 0.01350592459550981,
+        "no_forgetting_pressure": -0.09373497054616525
+      },
+      "organizer_fidelity_between_branches": 0.9526618768715679
+    },
+    {
+      "event_type": "birth_probe",
+      "step": 20,
+      "pair": [
+        0,
+        1
+      ],
+      "candidate_new_node": 6,
+      "seed_score": 0.715667944234204,
+      "parent_mi": 0.7277862425528789,
+      "parent_corr": 0.4019337344460669,
+      "suppressed": {
+        "bandwidth_pressure": 1.625,
+        "no_refolding_pressure": 1.75,
+        "no_signaling_pressure": 0.7718176313535903,
+        "no_forgetting_pressure": 0.5208492992343651
+      },
+      "allowed": {
+        "bandwidth_pressure": 1.7,
+        "no_refolding_pressure": 1.8,
+        "no_signaling_pressure": 0.86134687622069,
+        "no_forgetting_pressure": 0.43077337237907926
+      },
+      "delta_allowed_minus_suppressed": {
+        "bandwidth_pressure": 0.07499999999999996,
+        "no_refolding_pressure": 0.050000000000000044,
+        "no_signaling_pressure": 0.08952924486709968,
+        "no_forgetting_pressure": -0.09007592685528581
+      },
+      "organizer_fidelity_between_branches": 0.9445272972109878
+    },
+    {
+      "event_type": "reabsorb_probe",
+      "step": 20,
+      "candidate_node": 0,
+      "role": "shell",
+      "kept": {
+        "bandwidth_pressure": 1.625,
+        "no_refolding_pressure": 1.75,
+        "no_signaling_pressure": 0.7718176313535903,
+        "no_forgetting_pressure": 0.5208492992343651
+      },
+      "demoted": {
+        "bandwidth_pressure": 1.5,
+        "no_refolding_pressure": 1.3333333333333333,
+        "no_signaling_pressure": 0.9418599357970092,
+        "no_forgetting_pressure": 0.4702791852654287
+      },
+      "delta_demoted_minus_kept": {
+        "bandwidth_pressure": -0.125,
+        "no_refolding_pressure": -0.41666666666666674,
+        "no_signaling_pressure": 0.17004230444341895,
+        "no_forgetting_pressure": -0.05057011396893635
+      },
+      "organizer_fidelity_between_branches": 0.8891810851845012,
+      "basis0_return_after_demotion_branch": 0.17112061991069388
+    },
+    {
+      "event_type": "birth_probe",
+      "step": 40,
+      "pair": [
+        2,
+        3
+      ],
+      "candidate_new_node": 6,
+      "seed_score": 0.2496591885733831,
+      "parent_mi": 0.34998555037278467,
+      "parent_corr": 0.276229674975035,
+      "suppressed": {
+        "bandwidth_pressure": 1.75,
+        "no_refolding_pressure": 1.8333333333333333,
+        "no_signaling_pressure": 0.8261241245429733,
+        "no_forgetting_pressure": 0.20060885221160477
+      },
+      "allowed": {
+        "bandwidth_pressure": 1.7857142857142858,
+        "no_refolding_pressure": 1.8571428571428572,
+        "no_signaling_pressure": 0.9104076635561682,
+        "no_forgetting_pressure": 0.17643063401353987
+      },
+      "delta_allowed_minus_suppressed": {
+        "bandwidth_pressure": 0.03571428571428581,
+        "no_refolding_pressure": 0.023809523809523947,
+        "no_signaling_pressure": 0.08428353901319485,
+        "no_forgetting_pressure": -0.0241782181980649
+      },
+      "organizer_fidelity_between_branches": 0.9354155634407595
+    },
+    {
+      "event_type": "birth_probe",
+      "step": 40,
+      "pair": [
+        1,
+        2
+      ],
+      "candidate_new_node": 7,
+      "seed_score": 0.23607523357265792,
+      "parent_mi": 0.3702615777926819,
+      "parent_corr": 0.17589939508628175,
+      "suppressed": {
+        "bandwidth_pressure": 1.75,
+        "no_refolding_pressure": 1.8333333333333333,
+        "no_signaling_pressure": 0.8261241245429733,
+        "no_forgetting_pressure": 0.20060885221160477
+      },
+      "allowed": {
+        "bandwidth_pressure": 1.7857142857142858,
+        "no_refolding_pressure": 2.0,
+        "no_signaling_pressure": 0.796888624853203,
+        "no_forgetting_pressure": 0.16510681805808497
+      },
+      "delta_allowed_minus_suppressed": {
+        "bandwidth_pressure": 0.03571428571428581,
+        "no_refolding_pressure": 0.16666666666666674,
+        "no_signaling_pressure": -0.02923549968977035,
+        "no_forgetting_pressure": -0.035502034153519796
+      },
+      "organizer_fidelity_between_branches": 0.932144955168239
+    },
+    {
+      "event_type": "reabsorb_probe",
+      "step": 40,
+      "candidate_node": 3,
+      "role": "shell",
+      "kept": {
+        "bandwidth_pressure": 1.75,
+        "no_refolding_pressure": 1.8333333333333333,
+        "no_signaling_pressure": 0.8261241245429733,
+        "no_forgetting_pressure": 0.20060885221160477
+      },
+      "demoted": {
+        "bandwidth_pressure": 1.6,
+        "no_refolding_pressure": 1.4,
+        "no_signaling_pressure": 0.7120666776374234,
+        "no_forgetting_pressure": 0.22085969172022177
+      },
+      "delta_demoted_minus_kept": {
+        "bandwidth_pressure": -0.1499999999999999,
+        "no_refolding_pressure": -0.43333333333333335,
+        "no_signaling_pressure": -0.11405744690554998,
+        "no_forgetting_pressure": 0.020250839508617002
+      },
+      "organizer_fidelity_between_branches": 0.913780962167001,
+      "basis0_return_after_demotion_branch": 0.35874338828778857
+    },
+    {
+      "event_type": "reabsorb_probe",
+      "step": 40,
+      "candidate_node": 0,
+      "role": "shell",
+      "kept": {
+        "bandwidth_pressure": 1.75,
+        "no_refolding_pressure": 1.8333333333333333,
+        "no_signaling_pressure": 0.8261241245429733,
+        "no_forgetting_pressure": 0.20060885221160477
+      },
+      "demoted": {
+        "bandwidth_pressure": 1.6,
+        "no_refolding_pressure": 1.4,
+        "no_signaling_pressure": 0.7194570919254989,
+        "no_forgetting_pressure": 0.2015155235526353
+      },
+      "delta_demoted_minus_kept": {
+        "bandwidth_pressure": -0.1499999999999999,
+        "no_refolding_pressure": -0.43333333333333335,
+        "no_signaling_pressure": -0.10666703261747446,
+        "no_forgetting_pressure": 0.0009066713410305349
+      },
+      "organizer_fidelity_between_branches": 0.8476728454388017,
+      "basis0_return_after_demotion_branch": 0.3207272401858117
+    },
+    {
+      "event_type": "reabsorb_probe",
+      "step": 60,
+      "candidate_node": 2,
+      "role": "shell",
+      "kept": {
+        "bandwidth_pressure": 3.625,
+        "no_refolding_pressure": 3.5,
+        "no_signaling_pressure": 0.6694039147451314,
+        "no_forgetting_pressure": 0.17197881144985944
+      },
+      "demoted": {
+        "bandwidth_pressure": 2.75,
+        "no_refolding_pressure": 2.25,
+        "no_signaling_pressure": 0.2219328356572814,
+        "no_forgetting_pressure": 0.18353426676947532
+      },
+      "delta_demoted_minus_kept": {
+        "bandwidth_pressure": -0.875,
+        "no_refolding_pressure": -1.25,
+        "no_signaling_pressure": -0.44747107908785,
+        "no_forgetting_pressure": 0.011555455319615882
+      },
+      "organizer_fidelity_between_branches": 0.9876299398108404,
+      "basis0_return_after_demotion_branch": 0.44453710091770915
+    },
+    {
+      "event_type": "reabsorb_probe",
+      "step": 60,
+      "candidate_node": 3,
+      "role": "outside",
+      "kept": {
+        "bandwidth_pressure": 3.625,
+        "no_refolding_pressure": 3.5,
+        "no_signaling_pressure": 0.6694039147451314,
+        "no_forgetting_pressure": 0.17197881144985944
+      },
+      "demoted": {
+        "bandwidth_pressure": 3.0,
+        "no_refolding_pressure": 2.75,
+        "no_signaling_pressure": 0.5224626254273902,
+        "no_forgetting_pressure": 0.1715237420062674
+      },
+      "delta_demoted_minus_kept": {
+        "bandwidth_pressure": -0.625,
+        "no_refolding_pressure": -0.75,
+        "no_signaling_pressure": -0.1469412893177412,
+        "no_forgetting_pressure": -0.0004550694435920266
+      },
+      "organizer_fidelity_between_branches": 0.9995222189898616,
+      "basis0_return_after_demotion_branch": 0.40694836606354495
+    },
+    {
+      "event_type": "reabsorb_probe",
+      "step": 60,
+      "candidate_node": 5,
+      "role": "outside",
+      "kept": {
+        "bandwidth_pressure": 3.625,
+        "no_refolding_pressure": 3.5,
+        "no_signaling_pressure": 0.6694039147451314,
+        "no_forgetting_pressure": 0.17197881144985944
+      },
+      "demoted": {
+        "bandwidth_pressure": 3.125,
+        "no_refolding_pressure": 3.0,
+        "no_signaling_pressure": 0.7302684959963583,
+        "no_forgetting_pressure": 0.17173609434099568
+      },
+      "delta_demoted_minus_kept": {
+        "bandwidth_pressure": -0.5,
+        "no_refolding_pressure": -0.5,
+        "no_signaling_pressure": 0.06086458125122696,
+        "no_forgetting_pressure": -0.00024271710886375475
+      },
+      "organizer_fidelity_between_branches": 0.9998032780963351,
+      "basis0_return_after_demotion_branch": 0.396397220233963
+    },
+    {
+      "event_type": "reabsorb_probe",
+      "step": 80,
+      "candidate_node": 5,
+      "role": "outside",
+      "kept": {
+        "bandwidth_pressure": 3.625,
+        "no_refolding_pressure": 3.5,
+        "no_signaling_pressure": 0.6694039147451314,
+        "no_forgetting_pressure": 0.09950916316923075
+      },
+      "demoted": {
+        "bandwidth_pressure": 3.125,
+        "no_refolding_pressure": 3.0,
+        "no_signaling_pressure": 0.7302684959963583,
+        "no_forgetting_pressure": 0.09944012671893321
+      },
+      "delta_demoted_minus_kept": {
+        "bandwidth_pressure": -0.5,
+        "no_refolding_pressure": -0.5,
+        "no_signaling_pressure": 0.06086458125122696,
+        "no_forgetting_pressure": -6.90364502975438e-05
+      },
+      "organizer_fidelity_between_branches": 0.9995285586595191,
+      "basis0_return_after_demotion_branch": 0.44249392689240846
+    },
+    {
+      "event_type": "reabsorb_probe",
+      "step": 80,
+      "candidate_node": 2,
+      "role": "outside",
+      "kept": {
+        "bandwidth_pressure": 3.625,
+        "no_refolding_pressure": 3.5,
+        "no_signaling_pressure": 0.6694039147451314,
+        "no_forgetting_pressure": 0.09950916316923075
+      },
+      "demoted": {
+        "bandwidth_pressure": 2.75,
+        "no_refolding_pressure": 2.25,
+        "no_signaling_pressure": 0.2219328356572814,
+        "no_forgetting_pressure": 0.10472294128001963
+      },
+      "delta_demoted_minus_kept": {
+        "bandwidth_pressure": -0.875,
+        "no_refolding_pressure": -1.25,
+        "no_signaling_pressure": -0.44747107908785,
+        "no_forgetting_pressure": 0.00521377811078888
+      },
+      "organizer_fidelity_between_branches": 0.9763064445641834,
+      "basis0_return_after_demotion_branch": 0.40077020982409606
+    },
+    {
+      "event_type": "reabsorb_probe",
+      "step": 80,
+      "candidate_node": 1,
+      "role": "outside",
+      "kept": {
+        "bandwidth_pressure": 3.625,
+        "no_refolding_pressure": 3.5,
+        "no_signaling_pressure": 0.6694039147451314,
+        "no_forgetting_pressure": 0.09950916316923075
+      },
+      "demoted": {
+        "bandwidth_pressure": 3.0,
+        "no_refolding_pressure": 2.75,
+        "no_signaling_pressure": 0.40382529415311413,
+        "no_forgetting_pressure": 0.09989690964630221
+      },
+      "delta_demoted_minus_kept": {
+        "bandwidth_pressure": -0.625,
+        "no_refolding_pressure": -0.75,
+        "no_signaling_pressure": -0.26557862059201726,
+        "no_forgetting_pressure": 0.00038774647707146004
+      },
+      "organizer_fidelity_between_branches": 0.9660717875768587,
+      "basis0_return_after_demotion_branch": 0.34287077725806286
+    }
+  ],
+  "summary": {
+    "backend": "cupy",
+    "n_evals": 8,
+    "n_birth_events": 6,
+    "n_persistent_births": 5,
+    "n_remerge_prone_births": 1,
+    "active_nodes_final": 8,
+    "active_edges_final": 13,
+    "n_pressure_events": 14,
+    "n_birth_probe_events": 5,
+    "n_reabsorb_probe_events": 9,
+    "birth_probe_delta_summary": {
+      "bandwidth_pressure": {
+        "mean": 0.059285714285714296,
+        "median": 0.07499999999999996,
+        "q10": 0.03571428571428581,
+        "q90": 0.07499999999999996
+      },
+      "no_refolding_pressure": {
+        "mean": 0.10809523809523816,
+        "median": 0.050000000000000044,
+        "q10": 0.034285714285714385,
+        "q90": 0.2166666666666667
+      },
+      "no_signaling_pressure": {
+        "mean": 0.017959889682318188,
+        "median": 0.01350592459550981,
+        "q10": -0.05266445610057398,
+        "q90": 0.08743096252553775
+      },
+      "no_forgetting_pressure": {
+        "mean": -0.07478049220493987,
+        "median": -0.09007592685528581,
+        "q10": -0.11574077498146426,
+        "q90": -0.028707744580246858
+      }
+    },
+    "reabsorb_probe_delta_summary": {
+      "bandwidth_pressure": {
+        "mean": -0.49166666666666664,
+        "median": -0.5,
+        "q10": -0.875,
+        "q90": -0.14499999999999993
+      },
+      "no_refolding_pressure": {
+        "mean": -0.6981481481481482,
+        "median": -0.5,
+        "q10": -1.25,
+        "q90": -0.43000000000000005
+      },
+      "no_signaling_pressure": {
+        "mean": -0.13737945340695668,
+        "median": -0.11405744690554998,
+        "q10": -0.44747107908785,
+        "q90": 0.08270012588966538
+      },
+      "no_forgetting_pressure": {
+        "mean": -0.0014469384682851015,
+        "median": 0.00038774647707146004,
+        "q10": -0.010478078348660888,
+        "q90": 0.013294532157416107
+      }
+    }
+  },
+  "active_nodes_final": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "active_edges_final": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      0,
+      6
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      2,
+      4
+    ],
+    [
+      2,
+      5
+    ],
+    [
+      3,
+      5
+    ],
+    [
+      4,
+      6
+    ],
+    [
+      4,
+      7
+    ],
+    [
+      6,
+      7
+    ]
+  ]
+}

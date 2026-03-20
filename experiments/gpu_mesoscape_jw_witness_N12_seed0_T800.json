@@ -1,0 +1,8737 @@
+{
+  "input_json": "gpu_mesoscape_metric_analysis_N12_seed0_T800.json",
+  "analysis": {
+    "input_summary": {
+      "backend": "cupy",
+      "n_evals": 66,
+      "n_candidates": 1276,
+      "n_birth_events": 10,
+      "n_persistent_births": 7,
+      "n_remerge_prone_births": 3,
+      "active_nodes_final": 12,
+      "active_edges_final": 21,
+      "metric_extent_final": 2.8456120747551354,
+      "metric_extent_growth": 0.7050427074435488,
+      "total_edge_length_growth": 4.542464851911568,
+      "dominant_pair_counts": {
+        "[1, 2]": 3,
+        "[0, 2]": 1,
+        "[0, 1]": 1,
+        "[6, 7]": 2,
+        "[7, 9]": 1,
+        "[8, 10]": 47,
+        "[10, 11]": 8,
+        "[7, 8]": 3
+      },
+      "core_switch_count": 9,
+      "longest_lived_core": [
+        8,
+        10
+      ],
+      "longest_core_lifetime": 46,
+      "mean_core_lifetime": 6.6,
+      "metastable_epochs": [
+        {
+          "core_pair": [
+            1,
+            2
+          ],
+          "start_step": 12,
+          "end_step": 12,
+          "n_snapshots": 1
+        },
+        {
+          "core_pair": [
+            0,
+            2
+          ],
+          "start_step": 24,
+          "end_step": 24,
+          "n_snapshots": 1
+        },
+        {
+          "core_pair": [
+            1,
+            2
+          ],
+          "start_step": 36,
+          "end_step": 48,
+          "n_snapshots": 2
+        },
+        {
+          "core_pair": [
+            0,
+            1
+          ],
+          "start_step": 60,
+          "end_step": 60,
+          "n_snapshots": 1
+        },
+        {
+          "core_pair": [
+            6,
+            7
+          ],
+          "start_step": 72,
+          "end_step": 84,
+          "n_snapshots": 2
+        },
+        {
+          "core_pair": [
+            7,
+            9
+          ],
+          "start_step": 96,
+          "end_step": 96,
+          "n_snapshots": 1
+        },
+        {
+          "core_pair": [
+            8,
+            10
+          ],
+          "start_step": 108,
+          "end_step": 108,
+          "n_snapshots": 1
+        },
+        {
+          "core_pair": [
+            10,
+            11
+          ],
+          "start_step": 120,
+          "end_step": 204,
+          "n_snapshots": 8
+        },
+        {
+          "core_pair": [
+            7,
+            8
+          ],
+          "start_step": 216,
+          "end_step": 240,
+          "n_snapshots": 3
+        },
+        {
+          "core_pair": [
+            8,
+            10
+          ],
+          "start_step": 252,
+          "end_step": 792,
+          "n_snapshots": 46
+        }
+      ]
+    },
+    "jw_witness_rows": [
+      {
+        "step": 12,
+        "core_pair": [
+          1,
+          2
+        ],
+        "shell_nodes": [
+          0,
+          1,
+          2
+        ],
+        "shell_edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          0,
+          1
+        ],
+        "ordered_backbone_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "path_node_count": 2.0,
+        "path_edge_count": 1.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.3333333333333333,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 1.0,
+        "triangle_penalty": 0.3333333333333333,
+        "line_likeness": 0.2222222222222222,
+        "jw_string_score": 0.09523809523809523,
+        "births_this_window": 1.0,
+        "persistent_this_window": 1.0,
+        "persistent_birth_rate": 1.0,
+        "birth_path_nucleation_proxy": 2.0,
+        "path_overlap_count": 0.0,
+        "path_jaccard": 0.0,
+        "core_on_prev_path": 0.0
+      },
+      {
+        "step": 24,
+        "core_pair": [
+          0,
+          2
+        ],
+        "shell_nodes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "shell_edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          3,
+          2,
+          0
+        ],
+        "ordered_backbone_edges": [
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        "path_node_count": 3.0,
+        "path_edge_count": 2.0,
+        "path_coverage": 0.75,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.25,
+        "line_likeness": 0.375,
+        "jw_string_score": 0.21428571428571427,
+        "births_this_window": 1.0,
+        "persistent_this_window": 1.0,
+        "persistent_birth_rate": 1.0,
+        "birth_path_nucleation_proxy": 3.0,
+        "path_overlap_count": 1.0,
+        "path_jaccard": 0.25,
+        "core_on_prev_path": 0.5
+      },
+      {
+        "step": 36,
+        "core_pair": [
+          1,
+          2
+        ],
+        "shell_nodes": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "shell_edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          4,
+          2,
+          1,
+          0
+        ],
+        "ordered_backbone_edges": [
+          [
+            2,
+            4
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.8,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 0.5,
+        "internal_degree2_score": 0.5,
+        "branch_penalty": 0.3333333333333333,
+        "triangle_penalty": 0.3333333333333333,
+        "line_likeness": 0.1,
+        "jw_string_score": 0.06000000000000001,
+        "births_this_window": 1.0,
+        "persistent_this_window": 1.0,
+        "persistent_birth_rate": 1.0,
+        "birth_path_nucleation_proxy": 4.0,
+        "path_overlap_count": 2.0,
+        "path_jaccard": 0.4,
+        "core_on_prev_path": 0.5
+      },
+      {
+        "step": 48,
+        "core_pair": [
+          1,
+          2
+        ],
+        "shell_nodes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "shell_edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          4,
+          2,
+          1,
+          0
+        ],
+        "ordered_backbone_edges": [
+          [
+            2,
+            4
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.42857142857142855,
+        "endpoint_score": 0.5,
+        "internal_degree2_score": 0.5,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.2857142857142857,
+        "line_likeness": 0.07142857142857142,
+        "jw_string_score": 0.04,
+        "births_this_window": 1.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 60,
+        "core_pair": [
+          0,
+          1
+        ],
+        "shell_nodes": [
+          0,
+          1,
+          2,
+          3,
+          5,
+          6
+        ],
+        "shell_edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            6
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          3,
+          1,
+          0,
+          5
+        ],
+        "ordered_backbone_edges": [
+          [
+            1,
+            3
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            5
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.42857142857142855,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.6666666666666666,
+        "triangle_penalty": 0.2857142857142857,
+        "line_likeness": 0.2857142857142857,
+        "jw_string_score": 0.14634146341463417,
+        "births_this_window": 1.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 2.0,
+        "path_jaccard": 0.3333333333333333,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 72,
+        "core_pair": [
+          6,
+          7
+        ],
+        "shell_nodes": [
+          0,
+          1,
+          6,
+          7
+        ],
+        "shell_edges": [
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          0,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            0,
+            6
+          ]
+        ],
+        "path_node_count": 2.0,
+        "path_edge_count": 1.0,
+        "path_coverage": 0.5,
+        "path_edge_concentration": 0.25,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 1.0,
+        "triangle_penalty": 0.25,
+        "line_likeness": 0.125,
+        "jw_string_score": 0.05555555555555555,
+        "births_this_window": 1.0,
+        "persistent_this_window": 1.0,
+        "persistent_birth_rate": 1.0,
+        "birth_path_nucleation_proxy": 2.0,
+        "path_overlap_count": 1.0,
+        "path_jaccard": 0.2,
+        "core_on_prev_path": 0.0
+      },
+      {
+        "step": 84,
+        "core_pair": [
+          6,
+          7
+        ],
+        "shell_nodes": [
+          0,
+          1,
+          6,
+          7,
+          8
+        ],
+        "shell_edges": [
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          0,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            0,
+            6
+          ]
+        ],
+        "path_node_count": 2.0,
+        "path_edge_count": 1.0,
+        "path_coverage": 0.4,
+        "path_edge_concentration": 0.16666666666666666,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 1.5,
+        "triangle_penalty": 0.3333333333333333,
+        "line_likeness": 0.06666666666666667,
+        "jw_string_score": 0.023529411764705882,
+        "births_this_window": 1.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 2.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 0.5
+      },
+      {
+        "step": 96,
+        "core_pair": [
+          7,
+          9
+        ],
+        "shell_nodes": [
+          1,
+          6,
+          7,
+          8,
+          9
+        ],
+        "shell_edges": [
+          [
+            1,
+            7
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            8,
+            9
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          1,
+          7
+        ],
+        "ordered_backbone_edges": [
+          [
+            1,
+            7
+          ]
+        ],
+        "path_node_count": 2.0,
+        "path_edge_count": 1.0,
+        "path_coverage": 0.4,
+        "path_edge_concentration": 0.2,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 1.5,
+        "triangle_penalty": 0.2,
+        "line_likeness": 0.08000000000000002,
+        "jw_string_score": 0.029629629629629634,
+        "births_this_window": 1.0,
+        "persistent_this_window": 1.0,
+        "persistent_birth_rate": 1.0,
+        "birth_path_nucleation_proxy": 2.0,
+        "path_overlap_count": 0.0,
+        "path_jaccard": 0.0,
+        "core_on_prev_path": 0.0
+      },
+      {
+        "step": 108,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          6,
+          8
+        ],
+        "ordered_backbone_edges": [
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 2.0,
+        "path_edge_count": 1.0,
+        "path_coverage": 0.4,
+        "path_edge_concentration": 0.2,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 1.5,
+        "triangle_penalty": 0.2,
+        "line_likeness": 0.08000000000000002,
+        "jw_string_score": 0.029629629629629634,
+        "births_this_window": 1.0,
+        "persistent_this_window": 1.0,
+        "persistent_birth_rate": 1.0,
+        "birth_path_nucleation_proxy": 2.0,
+        "path_overlap_count": 0.0,
+        "path_jaccard": 0.0,
+        "core_on_prev_path": 0.0
+      },
+      {
+        "step": 120,
+        "core_pair": [
+          10,
+          11
+        ],
+        "shell_nodes": [
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            9,
+            11
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          8,
+          10
+        ],
+        "ordered_backbone_edges": [
+          [
+            8,
+            10
+          ]
+        ],
+        "path_node_count": 2.0,
+        "path_edge_count": 1.0,
+        "path_coverage": 0.5,
+        "path_edge_concentration": 0.25,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 1.0,
+        "triangle_penalty": 0.25,
+        "line_likeness": 0.125,
+        "jw_string_score": 0.05555555555555555,
+        "births_this_window": 1.0,
+        "persistent_this_window": 1.0,
+        "persistent_birth_rate": 1.0,
+        "birth_path_nucleation_proxy": 2.0,
+        "path_overlap_count": 1.0,
+        "path_jaccard": 0.3333333333333333,
+        "core_on_prev_path": 0.0
+      },
+      {
+        "step": 132,
+        "core_pair": [
+          10,
+          11
+        ],
+        "shell_nodes": [
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            9,
+            11
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          8,
+          10
+        ],
+        "ordered_backbone_edges": [
+          [
+            8,
+            10
+          ]
+        ],
+        "path_node_count": 2.0,
+        "path_edge_count": 1.0,
+        "path_coverage": 0.5,
+        "path_edge_concentration": 0.25,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 1.0,
+        "triangle_penalty": 0.25,
+        "line_likeness": 0.125,
+        "jw_string_score": 0.05555555555555555,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 2.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 0.5
+      },
+      {
+        "step": 144,
+        "core_pair": [
+          10,
+          11
+        ],
+        "shell_nodes": [
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            9,
+            11
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          8,
+          10
+        ],
+        "ordered_backbone_edges": [
+          [
+            8,
+            10
+          ]
+        ],
+        "path_node_count": 2.0,
+        "path_edge_count": 1.0,
+        "path_coverage": 0.5,
+        "path_edge_concentration": 0.25,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 1.0,
+        "triangle_penalty": 0.25,
+        "line_likeness": 0.125,
+        "jw_string_score": 0.05555555555555555,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 2.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 0.5
+      },
+      {
+        "step": 156,
+        "core_pair": [
+          10,
+          11
+        ],
+        "shell_nodes": [
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            9,
+            11
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          8,
+          10
+        ],
+        "ordered_backbone_edges": [
+          [
+            8,
+            10
+          ]
+        ],
+        "path_node_count": 2.0,
+        "path_edge_count": 1.0,
+        "path_coverage": 0.5,
+        "path_edge_concentration": 0.25,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 1.0,
+        "triangle_penalty": 0.25,
+        "line_likeness": 0.125,
+        "jw_string_score": 0.05555555555555555,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 2.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 0.5
+      },
+      {
+        "step": 168,
+        "core_pair": [
+          10,
+          11
+        ],
+        "shell_nodes": [
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            9,
+            11
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          8,
+          10
+        ],
+        "ordered_backbone_edges": [
+          [
+            8,
+            10
+          ]
+        ],
+        "path_node_count": 2.0,
+        "path_edge_count": 1.0,
+        "path_coverage": 0.5,
+        "path_edge_concentration": 0.25,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 1.0,
+        "triangle_penalty": 0.25,
+        "line_likeness": 0.125,
+        "jw_string_score": 0.05555555555555555,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 2.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 0.5
+      },
+      {
+        "step": 180,
+        "core_pair": [
+          10,
+          11
+        ],
+        "shell_nodes": [
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            9,
+            11
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          8,
+          10
+        ],
+        "ordered_backbone_edges": [
+          [
+            8,
+            10
+          ]
+        ],
+        "path_node_count": 2.0,
+        "path_edge_count": 1.0,
+        "path_coverage": 0.5,
+        "path_edge_concentration": 0.25,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 1.0,
+        "triangle_penalty": 0.25,
+        "line_likeness": 0.125,
+        "jw_string_score": 0.05555555555555555,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 2.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 0.5
+      },
+      {
+        "step": 192,
+        "core_pair": [
+          10,
+          11
+        ],
+        "shell_nodes": [
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            9,
+            11
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          8,
+          10
+        ],
+        "ordered_backbone_edges": [
+          [
+            8,
+            10
+          ]
+        ],
+        "path_node_count": 2.0,
+        "path_edge_count": 1.0,
+        "path_coverage": 0.5,
+        "path_edge_concentration": 0.25,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 1.0,
+        "triangle_penalty": 0.25,
+        "line_likeness": 0.125,
+        "jw_string_score": 0.05555555555555555,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 2.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 0.5
+      },
+      {
+        "step": 204,
+        "core_pair": [
+          10,
+          11
+        ],
+        "shell_nodes": [
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            9,
+            11
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          8,
+          10
+        ],
+        "ordered_backbone_edges": [
+          [
+            8,
+            10
+          ]
+        ],
+        "path_node_count": 2.0,
+        "path_edge_count": 1.0,
+        "path_coverage": 0.5,
+        "path_edge_concentration": 0.25,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 1.0,
+        "triangle_penalty": 0.25,
+        "line_likeness": 0.125,
+        "jw_string_score": 0.05555555555555555,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 2.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 0.5
+      },
+      {
+        "step": 216,
+        "core_pair": [
+          7,
+          8
+        ],
+        "shell_nodes": [
+          1,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "shell_edges": [
+          [
+            1,
+            7
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          10,
+          8,
+          7,
+          1
+        ],
+        "ordered_backbone_edges": [
+          [
+            8,
+            10
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            1,
+            7
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.42857142857142855,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.6666666666666666,
+        "triangle_penalty": 0.2857142857142857,
+        "line_likeness": 0.2857142857142857,
+        "jw_string_score": 0.14634146341463417,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 2.0,
+        "path_jaccard": 0.5,
+        "core_on_prev_path": 0.5
+      },
+      {
+        "step": 228,
+        "core_pair": [
+          7,
+          8
+        ],
+        "shell_nodes": [
+          1,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "shell_edges": [
+          [
+            1,
+            7
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          10,
+          8,
+          7,
+          1
+        ],
+        "ordered_backbone_edges": [
+          [
+            8,
+            10
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            1,
+            7
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.42857142857142855,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.6666666666666666,
+        "triangle_penalty": 0.2857142857142857,
+        "line_likeness": 0.2857142857142857,
+        "jw_string_score": 0.14634146341463417,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 240,
+        "core_pair": [
+          7,
+          8
+        ],
+        "shell_nodes": [
+          1,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "shell_edges": [
+          [
+            1,
+            7
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          10,
+          8,
+          7,
+          1
+        ],
+        "ordered_backbone_edges": [
+          [
+            8,
+            10
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            1,
+            7
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.42857142857142855,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.6666666666666666,
+        "triangle_penalty": 0.2857142857142857,
+        "line_likeness": 0.2857142857142857,
+        "jw_string_score": 0.14634146341463417,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 252,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 2.0,
+        "path_jaccard": 0.3333333333333333,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 264,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 276,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 288,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 300,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 312,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 324,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 336,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 348,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 360,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 372,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 384,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 396,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 408,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 420,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 432,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 444,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 456,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 468,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 480,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 492,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 504,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 516,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 528,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 540,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 552,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 564,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 576,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 588,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 600,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 612,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 624,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 636,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 648,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 660,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 672,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 684,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 696,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 708,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 720,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 732,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 744,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 756,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 768,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 780,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 792,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      }
+    ],
+    "jw_witness_summary": {
+      "jw_string_score": {
+        "mean": 0.1632981565788835,
+        "std": 0.06227555998465456,
+        "min": 0.023529411764705882,
+        "max": 0.21428571428571427,
+        "mean_abs_step_change": 0.010753191332818306
+      },
+      "line_likeness": {
+        "mean": 0.2817652717652718,
+        "std": 0.0921766101314088,
+        "min": 0.06666666666666667,
+        "max": 0.375,
+        "mean_abs_step_change": 0.017789987789987787
+      },
+      "path_coverage": {
+        "mean": 0.63510101010101,
+        "std": 0.07998993980720429,
+        "min": 0.4,
+        "max": 0.8,
+        "mean_abs_step_change": 0.012307692307692308
+      },
+      "path_edge_concentration": {
+        "mean": 0.44383116883116885,
+        "std": 0.10288808363054268,
+        "min": 0.16666666666666666,
+        "max": 0.5,
+        "mean_abs_step_change": 0.012820512820512822
+      },
+      "branch_penalty": {
+        "mean": 0.6287878787878788,
+        "std": 0.26239548912858446,
+        "min": 0.3333333333333333,
+        "max": 1.5,
+        "mean_abs_step_change": 0.043589743589743594
+      },
+      "triangle_penalty": {
+        "mean": 0.1968975468975469,
+        "std": 0.050082337374552775,
+        "min": 0.16666666666666666,
+        "max": 0.3333333333333333,
+        "mean_abs_step_change": 0.010329670329670327
+      },
+      "path_jaccard": {
+        "mean": 0.8976923076923077,
+        "std": 0.26210647218514316,
+        "min": 0.0,
+        "max": 1.0,
+        "mean_abs_step_change": 0.10442708333333334
+      },
+      "core_on_prev_path": {
+        "mean": 0.8538461538461538,
+        "std": 0.2872023800399149,
+        "min": 0.0,
+        "max": 1.0,
+        "mean_abs_step_change": 0.0546875
+      }
+    },
+    "best_jw_epoch": {
+      "core_pair": [
+        8,
+        10
+      ],
+      "start_step": 252,
+      "end_step": 792,
+      "n_snapshots": 46,
+      "jw_string_score_sum": 9.2
+    },
+    "best_jw_epoch_summary": {
+      "jw_string_score": {
+        "mean": 0.19999999999999998,
+        "std": 0.0,
+        "min": 0.19999999999999998,
+        "max": 0.19999999999999998,
+        "mean_abs_step_change": 0.0
+      },
+      "line_likeness": {
+        "mean": 0.3333333333333333,
+        "std": 0.0,
+        "min": 0.3333333333333333,
+        "max": 0.3333333333333333,
+        "mean_abs_step_change": 0.0
+      },
+      "path_coverage": {
+        "mean": 0.6666666666666666,
+        "std": 0.0,
+        "min": 0.6666666666666666,
+        "max": 0.6666666666666666,
+        "mean_abs_step_change": 0.0
+      },
+      "path_edge_concentration": {
+        "mean": 0.5,
+        "std": 0.0,
+        "min": 0.5,
+        "max": 0.5,
+        "mean_abs_step_change": 0.0
+      },
+      "path_jaccard": {
+        "mean": 1.0,
+        "std": 0.0,
+        "min": 1.0,
+        "max": 1.0,
+        "mean_abs_step_change": 0.0
+      },
+      "core_on_prev_path": {
+        "mean": 1.0,
+        "std": 0.0,
+        "min": 1.0,
+        "max": 1.0,
+        "mean_abs_step_change": 0.0
+      }
+    },
+    "best_jw_epoch_rows": [
+      {
+        "step": 252,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 2.0,
+        "path_jaccard": 0.3333333333333333,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 264,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 276,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 288,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 300,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 312,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 324,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 336,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 348,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 360,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 372,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 384,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 396,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 408,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 420,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 432,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 444,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 456,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 468,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 480,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 492,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 504,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 516,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 528,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 540,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 552,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 564,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 576,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 588,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 600,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 612,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 624,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 636,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 648,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 660,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 672,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 684,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 696,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 708,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 720,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 732,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 744,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 756,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 768,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 780,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      },
+      {
+        "step": 792,
+        "core_pair": [
+          8,
+          10
+        ],
+        "shell_nodes": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "shell_edges": [
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            10,
+            11
+          ]
+        ],
+        "ordered_backbone_nodes": [
+          11,
+          10,
+          8,
+          6
+        ],
+        "ordered_backbone_edges": [
+          [
+            10,
+            11
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            6,
+            8
+          ]
+        ],
+        "path_node_count": 4.0,
+        "path_edge_count": 3.0,
+        "path_coverage": 0.6666666666666666,
+        "path_edge_concentration": 0.5,
+        "endpoint_score": 1.0,
+        "internal_degree2_score": 1.0,
+        "branch_penalty": 0.5,
+        "triangle_penalty": 0.16666666666666666,
+        "line_likeness": 0.3333333333333333,
+        "jw_string_score": 0.19999999999999998,
+        "births_this_window": 0.0,
+        "persistent_this_window": 0.0,
+        "persistent_birth_rate": 0.0,
+        "birth_path_nucleation_proxy": 0.0,
+        "path_overlap_count": 4.0,
+        "path_jaccard": 1.0,
+        "core_on_prev_path": 1.0
+      }
+    ]
+  }
+}

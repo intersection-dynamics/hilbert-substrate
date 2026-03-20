@@ -1,0 +1,599 @@
+{
+  "config": {
+    "device": "gpu",
+    "n_max": 12,
+    "n_init": 2,
+    "seed": 0,
+    "local_scale": 0.1,
+    "pair_scale": 0.16,
+    "spawn_pair_scale": 0.12,
+    "total_steps": 800,
+    "dt": 0.2,
+    "eval_every": 12,
+    "lookahead_windows": 3,
+    "settling_windows": 2,
+    "candidate_fraction": 0.45,
+    "fission_fraction": 0.3,
+    "birth_score_floor": 0.015,
+    "decay_mi_threshold": 0.05,
+    "decay_corr_threshold": 0.07,
+    "neighborhood_bonus_weight": 0.18,
+    "shell_bonus_weight": 0.2,
+    "mi_survival_floor": 0.076,
+    "corr_survival_floor": 0.086,
+    "persist_windows_required": 2,
+    "persist_entropy_threshold": 0.06,
+    "persist_mean_mi_threshold": 0.07,
+    "persist_triangle_threshold": 1,
+    "target_step": null,
+    "generator_index": 0,
+    "epsilon": 0.1,
+    "probe_steps": 24,
+    "no_outside_control": false,
+    "json_out": "gpu_mesoscape_organizer_response_witness_N12_T800.json"
+  },
+  "backend": "cupy",
+  "target_epoch": {
+    "core_pair": [
+      8,
+      10
+    ],
+    "start_step": 252,
+    "end_step": 792,
+    "n_snapshots": 46,
+    "snapshot_start_idx": 20,
+    "snapshot_end_idx": 65
+  },
+  "target_snapshot": {
+    "step": 516,
+    "dominant_core": {
+      "core_pair": [
+        8,
+        10
+      ],
+      "core_score": 0.0002958310337226694,
+      "pair_mi": 0.004867916738436229,
+      "pair_corr": 0.030385794336501147,
+      "daughter_count": 1,
+      "shell_nodes": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "shell_size": 6,
+      "shell_edges": [
+        [
+          6,
+          8
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          8,
+          10
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          10,
+          11
+        ]
+      ],
+      "shell_triangle_count": 1,
+      "shell_triangles": [
+        [
+          8,
+          9,
+          10
+        ]
+      ],
+      "core_mean_pair_mi": 0.003166918499079611,
+      "core_mean_pair_corr": 0.021069387549146713
+    },
+    "active_nodes": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "active_edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        0,
+        6
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        1,
+        7
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        6,
+        8
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        7,
+        9
+      ],
+      [
+        8,
+        9
+      ],
+      [
+        8,
+        10
+      ],
+      [
+        9,
+        10
+      ],
+      [
+        9,
+        11
+      ],
+      [
+        10,
+        11
+      ]
+    ]
+  },
+  "partition": {
+    "organizer_nodes": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "organizer_edges": [
+      [
+        6,
+        7
+      ],
+      [
+        6,
+        8
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        7,
+        9
+      ],
+      [
+        8,
+        9
+      ],
+      [
+        8,
+        10
+      ],
+      [
+        9,
+        10
+      ],
+      [
+        9,
+        11
+      ],
+      [
+        10,
+        11
+      ]
+    ],
+    "coords": {
+      "6": 1.326810696184453,
+      "7": 0.7820889868096251,
+      "8": 0.4662223927058482,
+      "9": -0.20649527113314237,
+      "10": -0.6538842802110937,
+      "11": -1.7147425243556909
+    },
+    "ordered_nodes": [
+      11,
+      10,
+      9,
+      8,
+      7,
+      6
+    ],
+    "left_nodes": [
+      11,
+      10,
+      9
+    ],
+    "right_nodes": [
+      8,
+      7,
+      6
+    ],
+    "left_poke_node": 11,
+    "right_probe_nodes": [
+      8,
+      7,
+      6
+    ]
+  },
+  "outside_control_node": 1,
+  "response_summary": {
+    "max_right_trace_distance_leftpoke": 0.0010468634281465732,
+    "mean_right_trace_distance_leftpoke": 0.0005043543844918609,
+    "max_abs_right_entropy_shift_leftpoke": 1.976597056296825e-05,
+    "argmax_trace_distance_step_leftpoke": 24,
+    "max_right_trace_distance_outsidepoke": 0.0016277918333676,
+    "mean_right_trace_distance_outsidepoke": 0.0012286585662897086,
+    "max_abs_right_entropy_shift_outsidepoke": 4.7186957768730053e-05,
+    "argmax_trace_distance_step_outsidepoke": 24,
+    "response_advantage_ratio": 0.6431187373250841
+  },
+  "response_curves": [
+    {
+      "probe_step": 0,
+      "right_trace_distance_leftpoke": 1.5113467992473377e-16,
+      "right_fidelity_leftpoke": 1.0000000000000013,
+      "right_entropy_control": 3.2816532736233253,
+      "right_entropy_leftpoke": 3.2816532736233253,
+      "right_entropy_shift_leftpoke": 0.0,
+      "right_trace_distance_outsidepoke": 1.5951889091212506e-16,
+      "right_fidelity_outsidepoke": 0.9999999999999998,
+      "right_entropy_outsidepoke": 3.2816532736233253,
+      "right_entropy_shift_outsidepoke": 0.0
+    },
+    {
+      "probe_step": 1,
+      "right_trace_distance_leftpoke": 6.807673212678879e-06,
+      "right_fidelity_leftpoke": 0.9999999999374563,
+      "right_entropy_control": 3.281652402900282,
+      "right_entropy_leftpoke": 3.281652305573217,
+      "right_entropy_shift_leftpoke": -9.732706462983742e-08,
+      "right_trace_distance_outsidepoke": 0.00023642721871809964,
+      "right_fidelity_outsidepoke": 0.9999999145864278,
+      "right_entropy_outsidepoke": 3.281669548010553,
+      "right_entropy_shift_outsidepoke": 1.7145110271066244e-05
+    },
+    {
+      "probe_step": 2,
+      "right_trace_distance_leftpoke": 2.6300666055033256e-05,
+      "right_fidelity_leftpoke": 0.9999999990823396,
+      "right_entropy_control": 3.281663458852446,
+      "right_entropy_leftpoke": 3.281663256296144,
+      "right_entropy_shift_leftpoke": -2.0255630195364915e-07,
+      "right_trace_distance_outsidepoke": 0.00045543991796030377,
+      "right_fidelity_outsidepoke": 0.999999685567129,
+      "right_entropy_outsidepoke": 3.281695581229444,
+      "right_entropy_shift_outsidepoke": 3.212237699834475e-05
+    },
+    {
+      "probe_step": 3,
+      "right_trace_distance_leftpoke": 5.7028797900639376e-05,
+      "right_fidelity_leftpoke": 0.9999999956647787,
+      "right_entropy_control": 3.2816891557763257,
+      "right_entropy_leftpoke": 3.2816889618504494,
+      "right_entropy_shift_leftpoke": -1.9392587624622593e-07,
+      "right_trace_distance_outsidepoke": 0.0006490292089050907,
+      "right_fidelity_outsidepoke": 0.9999993713411413,
+      "right_entropy_outsidepoke": 3.2817316531462266,
+      "right_entropy_shift_outsidepoke": 4.24973699009179e-05
+    },
+    {
+      "probe_step": 4,
+      "right_trace_distance_leftpoke": 9.648082383510795e-05,
+      "right_fidelity_leftpoke": 0.9999999873843544,
+      "right_entropy_control": 3.2817219939620337,
+      "right_entropy_leftpoke": 3.281721920811364,
+      "right_entropy_shift_leftpoke": -7.315066952173765e-08,
+      "right_trace_distance_outsidepoke": 0.0008133631250862966,
+      "right_fidelity_outsidepoke": 0.9999990302735695,
+      "right_entropy_outsidepoke": 3.2817691809198024,
+      "right_entropy_shift_outsidepoke": 4.7186957768730053e-05
+    },
+    {
+      "probe_step": 5,
+      "right_trace_distance_leftpoke": 0.00014179923094832797,
+      "right_fidelity_leftpoke": 0.9999999721615875,
+      "right_entropy_control": 3.28175164460784,
+      "right_entropy_leftpoke": 3.281751570764693,
+      "right_entropy_shift_leftpoke": -7.384314670844105e-08,
+      "right_trace_distance_outsidepoke": 0.0009491486196324439,
+      "right_fidelity_outsidepoke": 0.9999987008269967,
+      "right_entropy_outsidepoke": 3.281798211451017,
+      "right_entropy_shift_outsidepoke": 4.656684317705384e-05
+    },
+    {
+      "probe_step": 6,
+      "right_trace_distance_leftpoke": 0.0001902907925113276,
+      "right_fidelity_leftpoke": 0.9999999488336948,
+      "right_entropy_control": 3.281773745598318,
+      "right_entropy_leftpoke": 3.2817732175939076,
+      "right_entropy_shift_leftpoke": -5.280044104161163e-07,
+      "right_trace_distance_outsidepoke": 0.0010589119851465328,
+      "right_fidelity_outsidepoke": 0.9999983991672027,
+      "right_entropy_outsidepoke": 3.2818159416169337,
+      "right_entropy_shift_outsidepoke": 4.2196018615658915e-05
+    },
+    {
+      "probe_step": 7,
+      "right_trace_distance_leftpoke": 0.00024014293315781861,
+      "right_fidelity_leftpoke": 0.9999999172752662,
+      "right_entropy_control": 3.281791236190752,
+      "right_entropy_leftpoke": 3.281789632096056,
+      "right_entropy_shift_leftpoke": -1.6040946961837221e-06,
+      "right_trace_distance_outsidepoke": 0.0011498198580792358,
+      "right_fidelity_outsidepoke": 0.9999981290634106,
+      "right_entropy_outsidepoke": 3.28182725064072,
+      "right_entropy_shift_outsidepoke": 3.601444996803593e-05
+    },
+    {
+      "probe_step": 8,
+      "right_trace_distance_leftpoke": 0.00029252229607969654,
+      "right_fidelity_leftpoke": 0.9999998776192189,
+      "right_entropy_control": 3.2818082359369463,
+      "right_entropy_leftpoke": 3.281805084654013,
+      "right_entropy_shift_leftpoke": -3.151282933266941e-06,
+      "right_trace_distance_outsidepoke": 0.0012299087394736434,
+      "right_fidelity_outsidepoke": 0.9999978907119376,
+      "right_entropy_outsidepoke": 3.2818377321876326,
+      "right_entropy_shift_outsidepoke": 2.949625068637829e-05
+    },
+    {
+      "probe_step": 9,
+      "right_trace_distance_leftpoke": 0.0003466022618553496,
+      "right_fidelity_leftpoke": 0.9999998294599294,
+      "right_entropy_control": 3.281823780630255,
+      "right_entropy_leftpoke": 3.2818190563618157,
+      "right_entropy_shift_leftpoke": -4.724268439115775e-06,
+      "right_trace_distance_outsidepoke": 0.0012991436853404762,
+      "right_fidelity_outsidepoke": 0.9999976802283475,
+      "right_entropy_outsidepoke": 3.2818473656369997,
+      "right_entropy_shift_outsidepoke": 2.358500674493058e-05
+    },
+    {
+      "probe_step": 10,
+      "right_trace_distance_leftpoke": 0.00040436167488254286,
+      "right_fidelity_leftpoke": 0.9999997720536881,
+      "right_entropy_control": 3.2818315414301855,
+      "right_entropy_leftpoke": 3.28182575020283,
+      "right_entropy_shift_leftpoke": -5.791227355445017e-06,
+      "right_trace_distance_outsidepoke": 0.001359087815808991,
+      "right_fidelity_outsidepoke": 0.9999974873551505,
+      "right_entropy_outsidepoke": 3.2818506751822922,
+      "right_entropy_shift_outsidepoke": 1.9133752106714752e-05
+    },
+    {
+      "probe_step": 11,
+      "right_trace_distance_leftpoke": 0.0004620217292091773,
+      "right_fidelity_leftpoke": 0.9999997051457479,
+      "right_entropy_control": 3.2818258282954673,
+      "right_entropy_leftpoke": 3.2818197429011557,
+      "right_entropy_shift_leftpoke": -6.085394311572401e-06,
+      "right_trace_distance_outsidepoke": 0.0014108010878852984,
+      "right_fidelity_outsidepoke": 0.9999973035352531,
+      "right_entropy_outsidepoke": 3.2818426891163353,
+      "right_entropy_shift_outsidepoke": 1.686082086793661e-05
+    },
+    {
+      "probe_step": 12,
+      "right_trace_distance_leftpoke": 0.0005154042783026244,
+      "right_fidelity_leftpoke": 0.9999996301912097,
+      "right_entropy_control": 3.2818088332883257,
+      "right_entropy_leftpoke": 3.2818029935249498,
+      "right_entropy_shift_leftpoke": -5.839763375981022e-06,
+      "right_trace_distance_outsidepoke": 0.0014511230008705334,
+      "right_fidelity_outsidepoke": 0.9999971340396994,
+      "right_entropy_outsidepoke": 3.281825640790855,
+      "right_entropy_shift_outsidepoke": 1.680750252930352e-05
+    },
+    {
+      "probe_step": 13,
+      "right_trace_distance_leftpoke": 0.0005670505784279228,
+      "right_fidelity_leftpoke": 0.9999995511189248,
+      "right_entropy_control": 3.2817920381302317,
+      "right_entropy_leftpoke": 3.2817864365246177,
+      "right_entropy_shift_leftpoke": -5.601605614025118e-06,
+      "right_trace_distance_outsidepoke": 0.0014785902378956605,
+      "right_fidelity_outsidepoke": 0.9999969969719867,
+      "right_entropy_outsidepoke": 3.281810244828283,
+      "right_entropy_shift_outsidepoke": 1.820669805141506e-05
+    },
+    {
+      "probe_step": 14,
+      "right_trace_distance_leftpoke": 0.0006194803262347608,
+      "right_fidelity_leftpoke": 0.9999994729236488,
+      "right_entropy_control": 3.2817890355946626,
+      "right_entropy_leftpoke": 3.2817832847513713,
+      "right_entropy_shift_leftpoke": -5.750843291352226e-06,
+      "right_trace_distance_outsidepoke": 0.0014963875466682927,
+      "right_fidelity_outsidepoke": 0.9999969075311245,
+      "right_entropy_outsidepoke": 3.2818090958110653,
+      "right_entropy_shift_outsidepoke": 2.006021640266198e-05
+    },
+    {
+      "probe_step": 15,
+      "right_trace_distance_leftpoke": 0.0006694072943157038,
+      "right_fidelity_leftpoke": 0.9999993977291307,
+      "right_entropy_control": 3.281805243032657,
+      "right_entropy_leftpoke": 3.2817990832492643,
+      "right_entropy_shift_leftpoke": -6.159783392689633e-06,
+      "right_trace_distance_outsidepoke": 0.0015075587937538506,
+      "right_fidelity_outsidepoke": 0.9999968601440374,
+      "right_entropy_outsidepoke": 3.281826897979336,
+      "right_entropy_shift_outsidepoke": 2.1654946678939524e-05
+    },
+    {
+      "probe_step": 16,
+      "right_trace_distance_leftpoke": 0.0007170901146782885,
+      "right_fidelity_leftpoke": 0.9999993213997255,
+      "right_entropy_control": 3.2818340315804138,
+      "right_entropy_leftpoke": 3.281827865695225,
+      "right_entropy_shift_leftpoke": -6.1658851886470245e-06,
+      "right_trace_distance_outsidepoke": 0.0015185319916829843,
+      "right_fidelity_outsidepoke": 0.9999968262492893,
+      "right_entropy_outsidepoke": 3.281856468163318,
+      "right_entropy_shift_outsidepoke": 2.243658290446149e-05
+    },
+    {
+      "probe_step": 17,
+      "right_trace_distance_leftpoke": 0.0007599704172811255,
+      "right_fidelity_leftpoke": 0.9999992361966294,
+      "right_entropy_control": 3.281863220621434,
+      "right_entropy_leftpoke": 3.281858377785864,
+      "right_entropy_shift_leftpoke": -4.8428355698959535e-06,
+      "right_trace_distance_outsidepoke": 0.0015355121390659503,
+      "right_fidelity_outsidepoke": 0.9999967785613117,
+      "right_entropy_outsidepoke": 3.2818848873202966,
+      "right_entropy_shift_outsidepoke": 2.166669886261019e-05
+    },
+    {
+      "probe_step": 18,
+      "right_trace_distance_leftpoke": 0.0008030930027412942,
+      "right_fidelity_leftpoke": 0.9999991378963495,
+      "right_entropy_control": 3.28188538584075,
+      "right_entropy_leftpoke": 3.2818837826070624,
+      "right_entropy_shift_leftpoke": -1.6032336875859698e-06,
+      "right_trace_distance_outsidepoke": 0.0015531363106460368,
+      "right_fidelity_outsidepoke": 0.9999967190321755,
+      "right_entropy_outsidepoke": 3.281903951335514,
+      "right_entropy_shift_outsidepoke": 1.8565494764199997e-05
+    },
+    {
+      "probe_step": 19,
+      "right_trace_distance_leftpoke": 0.0008491251879655438,
+      "right_fidelity_leftpoke": 0.9999990289779755,
+      "right_entropy_control": 3.281902083349365,
+      "right_entropy_leftpoke": 3.281905275980672,
+      "right_entropy_shift_leftpoke": 3.1926313073249446e-06,
+      "right_trace_distance_outsidepoke": 0.0015676129530636455,
+      "right_fidelity_outsidepoke": 0.9999966705800852,
+      "right_entropy_outsidepoke": 3.281915066918061,
+      "right_entropy_shift_outsidepoke": 1.298356869616768e-05
+    },
+    {
+      "probe_step": 20,
+      "right_trace_distance_leftpoke": 0.0008925417618583901,
+      "right_fidelity_leftpoke": 0.9999989159011256,
+      "right_entropy_control": 3.2819190736209705,
+      "right_entropy_leftpoke": 3.281927376823125,
+      "right_entropy_shift_leftpoke": 8.303202154724687e-06,
+      "right_trace_distance_outsidepoke": 0.0015766898779048348,
+      "right_fidelity_outsidepoke": 0.9999966392255486,
+      "right_entropy_outsidepoke": 3.2819249868555893,
+      "right_entropy_shift_outsidepoke": 5.913234618848406e-06
+    },
+    {
+      "probe_step": 21,
+      "right_trace_distance_leftpoke": 0.0009286771996830539,
+      "right_fidelity_leftpoke": 0.9999988038662988,
+      "right_entropy_control": 3.281938035933033,
+      "right_entropy_leftpoke": 3.2819505519497945,
+      "right_entropy_shift_leftpoke": 1.2516016761665583e-05,
+      "right_trace_distance_outsidepoke": 0.0015825080750371907,
+      "right_fidelity_outsidepoke": 0.9999966009017659,
+      "right_entropy_outsidepoke": 3.281937204460085,
+      "right_entropy_shift_outsidepoke": -8.314729478264837e-07
+    },
+    {
+      "probe_step": 22,
+      "right_trace_distance_leftpoke": 0.0009675919582370719,
+      "right_fidelity_leftpoke": 0.9999986915017604,
+      "right_entropy_control": 3.2819530211519305,
+      "right_entropy_leftpoke": 3.2819685586923217,
+      "right_entropy_shift_leftpoke": 1.5537540391186155e-05,
+      "right_trace_distance_outsidepoke": 0.0015965917351647072,
+      "right_fidelity_outsidepoke": 0.999996531774394,
+      "right_entropy_outsidepoke": 3.281947393641161,
+      "right_entropy_shift_outsidepoke": -5.627510769379285e-06
+    },
+    {
+      "probe_step": 23,
+      "right_trace_distance_leftpoke": 0.0010082051847763191,
+      "right_fidelity_leftpoke": 0.9999985718733476,
+      "right_entropy_control": 3.281955400783068,
+      "right_entropy_leftpoke": 3.2819732432840016,
+      "right_entropy_shift_leftpoke": 1.7842500933618055e-05,
+      "right_trace_distance_outsidepoke": 0.001613348400084855,
+      "right_fidelity_outsidepoke": 0.9999964370603125,
+      "right_entropy_outsidepoke": 3.2819474928677845,
+      "right_entropy_shift_outsidepoke": -7.90791528348933e-06
+    },
+    {
+      "probe_step": 24,
+      "right_trace_distance_leftpoke": 0.0010468634281465732,
+      "right_fidelity_leftpoke": 0.9999984412882422,
+      "right_entropy_control": 3.2819425069075217,
+      "right_entropy_leftpoke": 3.2819622728780846,
+      "right_entropy_shift_leftpoke": 1.976597056296825e-05,
+      "right_trace_distance_outsidepoke": 0.0016277918333676,
+      "right_fidelity_outsidepoke": 0.9999963406354204,
+      "right_entropy_outsidepoke": 3.2819343114572206,
+      "right_entropy_shift_outsidepoke": -8.195450301062834e-06
+    }
+  ]
+}

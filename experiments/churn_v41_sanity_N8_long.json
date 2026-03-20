@@ -1,0 +1,2358 @@
+{
+  "config": {
+    "n_max": 8,
+    "n_init": 2,
+    "seed": 0,
+    "local_scale": 0.1,
+    "total_steps": 140,
+    "dt": 0.03,
+    "eval_every": 10,
+    "settling_windows": 2,
+    "lookahead_windows": 3,
+    "candidate_fraction": 0.4,
+    "birth_score_floor": 0.02,
+    "max_birth_candidates": 4,
+    "max_births_per_eval": 2,
+    "birth_exclusion_radius": 0.75,
+    "bootstrap_mi_floor": 0.02,
+    "bootstrap_corr_floor": 0.02,
+    "bootstrap_birth_score_floor": 0.002,
+    "max_live_reabsorbs": 1,
+    "live_reabsorb_every": 2,
+    "reabs_fidelity_floor": 0.995,
+    "reabs_basis0_floor": 0.4,
+    "min_active_edges_floor": 4,
+    "min_shell_size_floor": 3,
+    "shell_edge_protection": 2.0,
+    "edge_bandwidth_prune_thresh": 0.25,
+    "edge_commitment_prune_thresh": 0.14,
+    "direct_pair_echo": 0.02,
+    "node_link_backreaction": 0.1,
+    "link_dt": 0.04,
+    "link_pair_scale": 0.08,
+    "link_endpoint_coupling": 0.18,
+    "link_mix": 0.02,
+    "link_init_beta": 1.2,
+    "link_sv_thresh": 0.03,
+    "link_strength_base": 0.2,
+    "link_strength_bw_weight": 0.15,
+    "link_strength_purity_weight": 0.2,
+    "birth_structural_bias": 0.2,
+    "birth_edge_restore_bonus": 0.3,
+    "progress_every": 1,
+    "device": "cpu",
+    "json_out": "churn_v41_sanity_N8_long.json"
+  },
+  "summary": {
+    "n_birth_events": 10,
+    "n_extinction_events": 5,
+    "n_edge_prunes": 17,
+    "final_active": 7,
+    "final_dormant": 1,
+    "final_edge_count": 4,
+    "active_count_trace": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      7,
+      8,
+      7,
+      8,
+      7,
+      8,
+      7,
+      8,
+      7
+    ],
+    "edge_count_trace": [
+      3,
+      5,
+      7,
+      9,
+      10,
+      10,
+      10,
+      8,
+      8,
+      6,
+      6,
+      4,
+      6,
+      4
+    ],
+    "mean_shell_size": 5.071428571428571
+  },
+  "birth_events": [
+    {
+      "parents": [
+        0,
+        1
+      ],
+      "new_node": 2,
+      "score": 3.533124492791529e-10,
+      "step": 10
+    },
+    {
+      "parents": [
+        1,
+        2
+      ],
+      "new_node": 3,
+      "score": 5.533550341863796e-08,
+      "step": 20
+    },
+    {
+      "parents": [
+        1,
+        2
+      ],
+      "new_node": 4,
+      "score": 1.3557996918446643e-06,
+      "step": 30
+    },
+    {
+      "parents": [
+        1,
+        2
+      ],
+      "new_node": 5,
+      "score": 8.728259211057597e-06,
+      "step": 40
+    },
+    {
+      "parents": [
+        1,
+        2
+      ],
+      "new_node": 6,
+      "score": 2.674324113134086e-05,
+      "step": 50
+    },
+    {
+      "parents": [
+        1,
+        4
+      ],
+      "new_node": 7,
+      "score": 1.9203885966458657e-05,
+      "step": 60
+    },
+    {
+      "parents": [
+        1,
+        4
+      ],
+      "new_node": 0,
+      "score": 6.229228172837611e-05,
+      "step": 70
+    },
+    {
+      "parents": [
+        1,
+        7
+      ],
+      "new_node": 3,
+      "score": 0.00011232163873337577,
+      "step": 90
+    },
+    {
+      "parents": [
+        0,
+        4
+      ],
+      "new_node": 6,
+      "score": 0.00020565621680963933,
+      "step": 110
+    },
+    {
+      "parents": [
+        0,
+        6
+      ],
+      "new_node": 2,
+      "score": 0.0002541842008484287,
+      "step": 130
+    }
+  ],
+  "birth_classifications": [
+    {
+      "parents": [
+        0,
+        1
+      ],
+      "new_node": 2,
+      "mean_birth_mi": 2.750146346749606e-10,
+      "mean_new_node_entropy": 2.750145945964591e-10,
+      "mean_common_support": 1.0,
+      "mean_shell_triangles": 1.0,
+      "mean_link_rank": 1.0,
+      "label": "remerge_prone",
+      "step": 10
+    },
+    {
+      "parents": [
+        1,
+        2
+      ],
+      "new_node": 3,
+      "mean_birth_mi": 1.4685765145854539e-09,
+      "mean_new_node_entropy": 1.4899946692435037e-09,
+      "mean_common_support": 2.0,
+      "mean_shell_triangles": 1.0,
+      "mean_link_rank": 1.0,
+      "label": "remerge_prone",
+      "step": 20
+    },
+    {
+      "parents": [
+        1,
+        2
+      ],
+      "new_node": 4,
+      "mean_birth_mi": 7.631337394263028e-09,
+      "mean_new_node_entropy": 7.847387078913308e-09,
+      "mean_common_support": 3.0,
+      "mean_shell_triangles": 1.0,
+      "mean_link_rank": 1.0,
+      "label": "remerge_prone",
+      "step": 30
+    },
+    {
+      "parents": [
+        1,
+        2
+      ],
+      "new_node": 5,
+      "mean_birth_mi": 2.2527599084618224e-08,
+      "mean_new_node_entropy": 2.3423789630184887e-08,
+      "mean_common_support": 4.0,
+      "mean_shell_triangles": 1.0,
+      "mean_link_rank": 1.0,
+      "label": "remerge_prone",
+      "step": 40
+    },
+    {
+      "parents": [
+        1,
+        2
+      ],
+      "new_node": 6,
+      "mean_birth_mi": 4.853820344071346e-08,
+      "mean_new_node_entropy": 5.119816764140234e-08,
+      "mean_common_support": 4.0,
+      "mean_shell_triangles": 1.0,
+      "mean_link_rank": 1.0,
+      "label": "remerge_prone",
+      "step": 50
+    },
+    {
+      "parents": [
+        1,
+        4
+      ],
+      "new_node": 7,
+      "mean_birth_mi": 9.289073003303079e-08,
+      "mean_new_node_entropy": 9.621467724241657e-08,
+      "mean_common_support": 1.0,
+      "mean_shell_triangles": 1.0,
+      "mean_link_rank": 1.0,
+      "label": "remerge_prone",
+      "step": 60
+    },
+    {
+      "parents": [
+        1,
+        4
+      ],
+      "new_node": 0,
+      "mean_birth_mi": 1.3626063775072006e-06,
+      "mean_new_node_entropy": 1.2802518218771418e-05,
+      "mean_common_support": 2.0,
+      "mean_shell_triangles": 1.0,
+      "mean_link_rank": 1.0,
+      "label": "remerge_prone",
+      "step": 70
+    },
+    {
+      "parents": [
+        1,
+        7
+      ],
+      "new_node": 3,
+      "mean_birth_mi": 4.339503820734108e-06,
+      "mean_new_node_entropy": 5.814317758503282e-06,
+      "mean_common_support": 1.0,
+      "mean_shell_triangles": 1.0,
+      "mean_link_rank": 1.3333333333333333,
+      "label": "remerge_prone",
+      "step": 90
+    },
+    {
+      "parents": [
+        0,
+        4
+      ],
+      "new_node": 6,
+      "mean_birth_mi": 3.0564522957697947e-06,
+      "mean_new_node_entropy": 6.119256287945647e-05,
+      "mean_common_support": 1.0,
+      "mean_shell_triangles": 1.0,
+      "mean_link_rank": 2.5,
+      "label": "remerge_prone",
+      "step": 110
+    },
+    {
+      "parents": [
+        0,
+        6
+      ],
+      "new_node": 2,
+      "mean_birth_mi": 2.3016212946972204e-05,
+      "mean_new_node_entropy": 3.6087234586808856e-05,
+      "mean_common_support": 1.0,
+      "mean_shell_triangles": 1.0,
+      "mean_link_rank": 2.5,
+      "label": "remerge_prone",
+      "step": 130
+    }
+  ],
+  "edge_prunes": [
+    {
+      "edge": [
+        0,
+        1
+      ],
+      "bandwidth_score": 0.19518764706381495,
+      "purity": 0.1376023854280209,
+      "step": 50
+    },
+    {
+      "edge": [
+        0,
+        2
+      ],
+      "bandwidth_score": 0.20174175468668426,
+      "purity": 0.13869620551308112,
+      "step": 60
+    },
+    {
+      "edge": [
+        1,
+        2
+      ],
+      "bandwidth_score": 0.2018701930169072,
+      "purity": 0.13870028369096818,
+      "step": 60
+    },
+    {
+      "edge": [
+        1,
+        3
+      ],
+      "bandwidth_score": 0.20667352726516625,
+      "purity": 0.13872281688296265,
+      "step": 70
+    },
+    {
+      "edge": [
+        2,
+        3
+      ],
+      "bandwidth_score": 0.20010065633160737,
+      "purity": 0.13869130294233287,
+      "step": 70
+    },
+    {
+      "edge": [
+        1,
+        4
+      ],
+      "bandwidth_score": 0.21698703105248193,
+      "purity": 0.13876471377029695,
+      "step": 80
+    },
+    {
+      "edge": [
+        2,
+        4
+      ],
+      "bandwidth_score": 0.20316064300631745,
+      "purity": 0.13870245373152085,
+      "step": 80
+    },
+    {
+      "edge": [
+        1,
+        5
+      ],
+      "bandwidth_score": 0.22382383570871867,
+      "purity": 0.13883328207057674,
+      "step": 90
+    },
+    {
+      "edge": [
+        2,
+        5
+      ],
+      "bandwidth_score": 0.20866609480969658,
+      "purity": 0.13873096325182663,
+      "step": 90
+    },
+    {
+      "edge": [
+        1,
+        6
+      ],
+      "bandwidth_score": 0.23667248734059718,
+      "purity": 0.1388972264434838,
+      "step": 100
+    },
+    {
+      "edge": [
+        2,
+        6
+      ],
+      "bandwidth_score": 0.2131036635032883,
+      "purity": 0.13875593270893116,
+      "step": 100
+    },
+    {
+      "edge": [
+        1,
+        7
+      ],
+      "bandwidth_score": 0.24657248732829623,
+      "purity": 0.13898863012236404,
+      "step": 110
+    },
+    {
+      "edge": [
+        4,
+        7
+      ],
+      "bandwidth_score": 0.20545482552001065,
+      "purity": 0.1387109190471579,
+      "step": 110
+    },
+    {
+      "edge": [
+        0,
+        1
+      ],
+      "bandwidth_score": 0.2621581233408371,
+      "purity": 0.13897837103522323,
+      "step": 120
+    },
+    {
+      "edge": [
+        0,
+        4
+      ],
+      "bandwidth_score": 0.2798905473270121,
+      "purity": 0.1390544377442101,
+      "step": 120
+    },
+    {
+      "edge": [
+        1,
+        3
+      ],
+      "bandwidth_score": 0.2588041788523176,
+      "purity": 0.13908299188950182,
+      "step": 140
+    },
+    {
+      "edge": [
+        3,
+        7
+      ],
+      "bandwidth_score": 0.2533339480662068,
+      "purity": 0.13892303618769558,
+      "step": 140
+    }
+  ],
+  "extinction_events": [
+    {
+      "node": 0,
+      "basis0_return": 0.9483459855870394,
+      "organizer_fidelity": 1.000000310046198,
+      "kind": "committed_reabsorption",
+      "step": 60
+    },
+    {
+      "node": 3,
+      "basis0_return": 0.9702553410739722,
+      "organizer_fidelity": 1.000000490682228,
+      "kind": "committed_reabsorption",
+      "step": 80
+    },
+    {
+      "node": 6,
+      "basis0_return": 0.959780029474562,
+      "organizer_fidelity": 1.0000004521625612,
+      "kind": "committed_reabsorption",
+      "step": 100
+    },
+    {
+      "node": 2,
+      "basis0_return": 0.88105609290745,
+      "organizer_fidelity": 1.0000000291796225,
+      "kind": "committed_reabsorption",
+      "step": 120
+    },
+    {
+      "node": 3,
+      "basis0_return": 0.9753760082883769,
+      "organizer_fidelity": 1.0000002596694975,
+      "kind": "committed_reabsorption",
+      "step": 140
+    }
+  ],
+  "snapshots": [
+    {
+      "step": 10,
+      "active_nodes": [
+        0,
+        1,
+        2
+      ],
+      "dormant_nodes": [
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "active_edge_count": 3,
+      "births_this_window": 1,
+      "birth_candidates_this_window": 1,
+      "extinctions_this_window": 0,
+      "mean_link_rank": 1.0,
+      "mean_link_score": 0.5091677756265283,
+      "dominant_core": {
+        "core_pair": [
+          0,
+          1
+        ],
+        "core_score": 7.295017989367004e-10,
+        "pair_mi": 2.3178351682399658e-10,
+        "pair_corr": 1.0491137145739362,
+        "pair_bandwidth": 0.4365108790641955,
+        "pair_bandwidth_rank": 1,
+        "daughter_count": 1,
+        "shell_nodes": [
+          0,
+          1,
+          2
+        ],
+        "shell_edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "shell_size": 3,
+        "shell_triangle_count": 1,
+        "shell_triangles": [
+          [
+            0,
+            1,
+            2
+          ]
+        ]
+      },
+      "metric": {
+        "coords": {
+          "0": 1.2249526005420575,
+          "1": -1.22453703648839,
+          "2": -0.00041556405366739507
+        },
+        "metric_extent": 2.4494896370304478,
+        "total_edge_length": 4.8989792740608955,
+        "mean_edge_length": 1.632993091353632
+      },
+      "graph_stats": {
+        "mean_degree": 2.0,
+        "triangle_count": 1,
+        "degree_map": {
+          "0": 2,
+          "1": 2,
+          "2": 2
+        }
+      }
+    },
+    {
+      "step": 20,
+      "active_nodes": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "dormant_nodes": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "active_edge_count": 5,
+      "births_this_window": 1,
+      "birth_candidates_this_window": 3,
+      "extinctions_this_window": 0,
+      "mean_link_rank": 1.0,
+      "mean_link_score": 0.4681078943516129,
+      "dominant_core": {
+        "core_pair": [
+          1,
+          2
+        ],
+        "core_score": 1.2542500858971427e-07,
+        "pair_mi": 2.6779894663337675e-08,
+        "pair_corr": 1.040789162221962,
+        "pair_bandwidth": 0.445929391307125,
+        "pair_bandwidth_rank": 1,
+        "daughter_count": 2,
+        "shell_nodes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "shell_edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "shell_size": 4,
+        "shell_triangle_count": 2,
+        "shell_triangles": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            3
+          ]
+        ]
+      },
+      "metric": {
+        "coords": {
+          "0": -1.4960275159286367,
+          "1": 0.11670038773022957,
+          "2": 0.05839063271533135,
+          "3": 1.3209364954830758
+        },
+        "metric_extent": 2.8169640114117125,
+        "total_edge_length": 5.692237777838323,
+        "mean_edge_length": 1.1384475555676645
+      },
+      "graph_stats": {
+        "mean_degree": 2.5,
+        "triangle_count": 2,
+        "degree_map": {
+          "0": 2,
+          "1": 3,
+          "2": 3,
+          "3": 2
+        }
+      }
+    },
+    {
+      "step": 30,
+      "active_nodes": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "dormant_nodes": [
+        5,
+        6,
+        7
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "active_edge_count": 7,
+      "births_this_window": 1,
+      "birth_candidates_this_window": 5,
+      "extinctions_this_window": 0,
+      "mean_link_rank": 1.0,
+      "mean_link_score": 0.42982464233489104,
+      "dominant_core": {
+        "core_pair": [
+          1,
+          2
+        ],
+        "core_score": 2.3180497915558505e-06,
+        "pair_mi": 3.7800498511733344e-07,
+        "pair_corr": 1.0220543303312626,
+        "pair_bandwidth": 0.36473458693574123,
+        "pair_bandwidth_rank": 1,
+        "daughter_count": 3,
+        "shell_nodes": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "shell_edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        "shell_size": 5,
+        "shell_triangle_count": 3,
+        "shell_triangles": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            2,
+            4
+          ]
+        ]
+      },
+      "metric": {
+        "coords": {
+          "0": 1.829459088933126,
+          "1": -0.0893687881577159,
+          "2": -0.053373460209011764,
+          "3": -1.1748226606194452,
+          "4": -0.511894179946953
+        },
+        "metric_extent": 3.004281749552571,
+        "total_edge_length": 6.925604938581024,
+        "mean_edge_length": 0.9893721340830035
+      },
+      "graph_stats": {
+        "mean_degree": 2.8,
+        "triangle_count": 3,
+        "degree_map": {
+          "0": 2,
+          "1": 4,
+          "2": 4,
+          "3": 2,
+          "4": 2
+        }
+      }
+    },
+    {
+      "step": 40,
+      "active_nodes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "dormant_nodes": [
+        6,
+        7
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "active_edge_count": 9,
+      "births_this_window": 1,
+      "birth_candidates_this_window": 7,
+      "extinctions_this_window": 0,
+      "mean_link_rank": 1.0,
+      "mean_link_score": 0.39580619980740966,
+      "dominant_core": {
+        "core_pair": [
+          1,
+          2
+        ],
+        "core_score": 1.5683711313844532e-05,
+        "pair_mi": 2.1005364840239035e-06,
+        "pair_corr": 0.995536866137483,
+        "pair_bandwidth": 0.29857042122145394,
+        "pair_bandwidth_rank": 1,
+        "daughter_count": 4,
+        "shell_nodes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "shell_edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ]
+        ],
+        "shell_size": 6,
+        "shell_triangle_count": 4,
+        "shell_triangles": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            2,
+            4
+          ],
+          [
+            1,
+            2,
+            5
+          ]
+        ]
+      },
+      "metric": {
+        "coords": {
+          "0": 2.0809744691584893,
+          "1": -0.07126847156024763,
+          "2": -0.04710061932790638,
+          "3": -1.1432315164678417,
+          "4": -0.5086377580403095,
+          "5": -0.3107361037621843
+        },
+        "metric_extent": 3.224205985626331,
+        "total_edge_length": 7.874589365313683,
+        "mean_edge_length": 0.8749543739237425
+      },
+      "graph_stats": {
+        "mean_degree": 3.0,
+        "triangle_count": 4,
+        "degree_map": {
+          "0": 2,
+          "1": 5,
+          "2": 5,
+          "3": 2,
+          "4": 2,
+          "5": 2
+        }
+      }
+    },
+    {
+      "step": 50,
+      "active_nodes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "dormant_nodes": [
+        7
+      ],
+      "active_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ]
+      ],
+      "active_edge_count": 10,
+      "births_this_window": 1,
+      "birth_candidates_this_window": 8,
+      "extinctions_this_window": 0,
+      "mean_link_rank": 1.0,
+      "mean_link_score": 0.3832396007581589,
+      "dominant_core": {
+        "core_pair": [
+          1,
+          2
+        ],
+        "core_score": 5.371517033513633e-05,
+        "pair_mi": 7.443537630791448e-06,
+        "pair_corr": 0.9621799561709203,
+        "pair_bandwidth": 0.24490265486228951,
+        "pair_bandwidth_rank": 1,
+        "daughter_count": 4,
+        "shell_nodes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "shell_edges": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ]
+        ],
+        "shell_size": 7,
+        "shell_triangle_count": 4,
+        "shell_triangles": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            1,
+            2,
+            4
+          ],
+          [
+            1,
+            2,
+            5
+          ],
+          [
+            1,
+            2,
+            6
+          ]
+        ]
+      },
+      "metric": {
+        "coords": {
+          "0": 2.4215267787745725,
+          "1": -0.4826647032994787,
+          "2": -0.04378668986296261,
+          "3": -0.5129893856731479,
+          "4": -0.4875037891929114,
+          "5": -0.460871412344667,
+          "6": -0.43371079840140486
+        },
+        "metric_extent": 2.9345161644477202,
+        "total_edge_length": 4.730031072354319,
+        "mean_edge_length": 0.47300310723543193
+      },
+      "graph_stats": {
+        "mean_degree": 2.857142857142857,
+        "triangle_count": 4,
+        "degree_map": {
+          "0": 1,
+          "1": 5,
+          "2": 6,
+          "3": 2,
+          "4": 2,
+          "5": 2,
+          "6": 2
+        }
+      }
+    },
+    {
+      "step": 60,
+      "active_nodes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "dormant_nodes": [
+        0
+      ],
+      "active_edges": [
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "active_edge_count": 10,
+      "births_this_window": 1,
+      "birth_candidates_this_window": 8,
+      "extinctions_this_window": 1,
+      "mean_link_rank": 1.0,
+      "mean_link_score": 0.3860332663796885,
+      "dominant_core": {
+        "core_pair": [
+          1,
+          4
+        ],
+        "core_score": 2.835266157758e-05,
+        "pair_mi": 1.0002222651536856e-05,
+        "pair_corr": 0.9448787056419429,
+        "pair_bandwidth": 0.3084823556898908,
+        "pair_bandwidth_rank": 1,
+        "daughter_count": 1,
+        "shell_nodes": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "shell_edges": [
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            4,
+            7
+          ]
+        ],
+        "shell_size": 7,
+        "shell_triangle_count": 1,
+        "shell_triangles": [
+          [
+            1,
+            4,
+            7
+          ]
+        ]
+      },
+      "metric": {
+        "coords": {
+          "1": 0.1928372769308741,
+          "2": -0.5779443689146393,
+          "3": -1.116822309080059,
+          "4": 1.1023859378576135,
+          "5": -0.7567823320911925,
+          "6": -0.6311722697925145,
+          "7": 1.787498065089918
+        },
+        "metric_extent": 2.904320374169977,
+        "total_edge_length": 8.723884429066576,
+        "mean_edge_length": 0.8723884429066577
+      },
+      "graph_stats": {
+        "mean_degree": 2.857142857142857,
+        "triangle_count": 1,
+        "degree_map": {
+          "1": 5,
+          "2": 4,
+          "3": 2,
+          "4": 3,
+          "5": 2,
+          "6": 2,
+          "7": 2
+        }
+      }
+    },
+    {
+      "step": 70,
+      "active_nodes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "dormant_nodes": [],
+      "active_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "active_edge_count": 10,
+      "births_this_window": 1,
+      "birth_candidates_this_window": 8,
+      "extinctions_this_window": 0,
+      "mean_link_rank": 1.0,
+      "mean_link_score": 0.390674785726316,
+      "dominant_core": {
+        "core_pair": [
+          1,
+          4
+        ],
+        "core_score": 0.00010814624589417131,
+        "pair_mi": 2.6529492277119956e-05,
+        "pair_corr": 0.9058785911376136,
+        "pair_bandwidth": 0.25771788565247644,
+        "pair_bandwidth_rank": 1,
+        "daughter_count": 2,
+        "shell_nodes": [
+          0,
+          1,
+          2,
+          4,
+          5,
+          6,
+          7
+        ],
+        "shell_edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            4,
+            7
+          ]
+        ],
+        "shell_size": 7,
+        "shell_triangle_count": 2,
+        "shell_triangles": [
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            1,
+            4,
+            7
+          ]
+        ]
+      },
+      "metric": {
+        "coords": {
+          "0": 0.3779644730092272,
+          "1": 0.3779644730092276,
+          "2": 0.37796447300922714,
+          "3": -2.6457513110645907,
+          "4": 0.377964473009227,
+          "5": 0.37796447300922775,
+          "6": 0.37796447300922753,
+          "7": 0.37796447300922664
+        },
+        "metric_extent": 3.0237157840738185,
+        "total_edge_length": 3.885780586188048e-15,
+        "mean_edge_length": 3.885780586188048e-16
+      },
+      "graph_stats": {
+        "mean_degree": 2.5,
+        "triangle_count": 2,
+        "degree_map": {
+          "0": 2,
+          "1": 5,
+          "2": 3,
+          "3": 0,
+          "4": 4,
+          "5": 2,
+          "6": 2,
+          "7": 2
+        }
+      }
+    },
+    {
+      "step": 80,
+      "active_nodes": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7
+      ],
+      "dormant_nodes": [
+        3
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "active_edge_count": 8,
+      "births_this_window": 0,
+      "birth_candidates_this_window": 8,
+      "extinctions_this_window": 1,
+      "mean_link_rank": 1.0,
+      "mean_link_score": 0.35485383523763087,
+      "dominant_core": {
+        "core_pair": [
+          1,
+          5
+        ],
+        "core_score": 8.481299722665396e-05,
+        "pair_mi": 6.714304002811551e-05,
+        "pair_corr": 0.8421125723146615,
+        "pair_bandwidth": 0.2648078758130751,
+        "pair_bandwidth_rank": 1,
+        "daughter_count": 0,
+        "shell_nodes": [
+          0,
+          1,
+          2,
+          5,
+          6,
+          7
+        ],
+        "shell_edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            2,
+            5
+          ]
+        ],
+        "shell_size": 6,
+        "shell_triangle_count": 0,
+        "shell_triangles": []
+      },
+      "metric": {
+        "coords": {
+          "0": 0.924691675368,
+          "1": 0.06155947657028955,
+          "2": -1.3553486324852553,
+          "4": 1.2923171488502954,
+          "5": -0.9438587339290004,
+          "6": -0.9232274430882971,
+          "7": 0.9438665087139682
+        },
+        "metric_extent": 2.647665781335551,
+        "total_edge_length": 5.295331562671101,
+        "mean_edge_length": 0.6619164453338877
+      },
+      "graph_stats": {
+        "mean_degree": 2.2857142857142856,
+        "triangle_count": 0,
+        "degree_map": {
+          "0": 2,
+          "1": 4,
+          "2": 2,
+          "4": 2,
+          "5": 2,
+          "6": 2,
+          "7": 2
+        }
+      }
+    },
+    {
+      "step": 90,
+      "active_nodes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "dormant_nodes": [],
+      "active_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "active_edge_count": 8,
+      "births_this_window": 1,
+      "birth_candidates_this_window": 6,
+      "extinctions_this_window": 0,
+      "mean_link_rank": 1.25,
+      "mean_link_score": 0.38608031433527973,
+      "dominant_core": {
+        "core_pair": [
+          1,
+          7
+        ],
+        "core_score": 0.00016332504749094512,
+        "pair_mi": 6.59696724358895e-05,
+        "pair_corr": 0.8252531881204821,
+        "pair_bandwidth": 0.3343465751810334,
+        "pair_bandwidth_rank": 1,
+        "daughter_count": 1,
+        "shell_nodes": [
+          0,
+          1,
+          3,
+          4,
+          6,
+          7
+        ],
+        "shell_edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            7
+          ]
+        ],
+        "shell_size": 6,
+        "shell_triangle_count": 1,
+        "shell_triangles": [
+          [
+            1,
+            3,
+            7
+          ]
+        ]
+      },
+      "metric": {
+        "coords": {
+          "0": -0.37796447300922564,
+          "1": -0.37796447300922564,
+          "2": -0.37796447300923086,
+          "3": -0.37796447300922953,
+          "4": -0.37796447300922353,
+          "5": 2.64575131106459,
+          "6": -0.37796447300922914,
+          "7": -0.37796447300922914
+        },
+        "metric_extent": 3.0237157840738207,
+        "total_edge_length": 2.070565940925917e-14,
+        "mean_edge_length": 2.588207426157396e-15
+      },
+      "graph_stats": {
+        "mean_degree": 2.0,
+        "triangle_count": 1,
+        "degree_map": {
+          "0": 2,
+          "1": 4,
+          "2": 1,
+          "3": 2,
+          "4": 2,
+          "5": 0,
+          "6": 2,
+          "7": 3
+        }
+      }
+    },
+    {
+      "step": 100,
+      "active_nodes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        7
+      ],
+      "dormant_nodes": [
+        6
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          7
+        ]
+      ],
+      "active_edge_count": 6,
+      "births_this_window": 0,
+      "birth_candidates_this_window": 6,
+      "extinctions_this_window": 1,
+      "mean_link_rank": 1.5,
+      "mean_link_score": 0.3606011749589208,
+      "dominant_core": {
+        "core_pair": [
+          1,
+          7
+        ],
+        "core_score": 0.00035253657660320727,
+        "pair_mi": 0.00015128750347685602,
+        "pair_corr": 0.7767475138423849,
+        "pair_bandwidth": 0.28678395158679765,
+        "pair_bandwidth_rank": 1,
+        "daughter_count": 1,
+        "shell_nodes": [
+          0,
+          1,
+          3,
+          4,
+          7
+        ],
+        "shell_edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            7
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            7
+          ]
+        ],
+        "shell_size": 5,
+        "shell_triangle_count": 1,
+        "shell_triangles": [
+          [
+            1,
+            3,
+            7
+          ]
+        ]
+      },
+      "metric": {
+        "coords": {
+          "0": -0.40824829046386296,
+          "1": -0.40824829046386296,
+          "2": -0.40824829046386296,
+          "3": -0.40824829046386296,
+          "4": -0.40824829046386296,
+          "5": 2.4494897427831783,
+          "7": -0.40824829046386296
+        },
+        "metric_extent": 2.8577380332470415,
+        "total_edge_length": 0.0,
+        "mean_edge_length": 0.0
+      },
+      "graph_stats": {
+        "mean_degree": 1.7142857142857142,
+        "triangle_count": 1,
+        "degree_map": {
+          "0": 2,
+          "1": 3,
+          "2": 0,
+          "3": 2,
+          "4": 2,
+          "5": 0,
+          "7": 3
+        }
+      }
+    },
+    {
+      "step": 110,
+      "active_nodes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "dormant_nodes": [],
+      "active_edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "active_edge_count": 6,
+      "births_this_window": 1,
+      "birth_candidates_this_window": 4,
+      "extinctions_this_window": 0,
+      "mean_link_rank": 2.0,
+      "mean_link_score": 0.4261880977507661,
+      "dominant_core": {
+        "core_pair": [
+          0,
+          4
+        ],
+        "core_score": 0.00043872950527914893,
+        "pair_mi": 8.923330542822781e-05,
+        "pair_corr": 0.8194427390343025,
+        "pair_bandwidth": 0.3150751668105311,
+        "pair_bandwidth_rank": 4,
+        "daughter_count": 1,
+        "shell_nodes": [
+          0,
+          1,
+          4,
+          6
+        ],
+        "shell_edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            4,
+            6
+          ]
+        ],
+        "shell_size": 4,
+        "shell_triangle_count": 1,
+        "shell_triangles": [
+          [
+            0,
+            4,
+            6
+          ]
+        ]
+      },
+      "metric": {
+        "coords": {
+          "0": -0.534251916991392,
+          "1": -0.5342519169913922,
+          "2": 2.3609764776047966,
+          "3": -0.5342519169913942,
+          "4": -0.5342519169913921,
+          "5": 0.8445350243435601,
+          "6": -0.5342519169913912,
+          "7": -0.534251916991395
+        },
+        "metric_extent": 2.8952283945961916,
+        "total_edge_length": 4.773959005888173e-15,
+        "mean_edge_length": 7.956598343146956e-16
+      },
+      "graph_stats": {
+        "mean_degree": 1.5,
+        "triangle_count": 1,
+        "degree_map": {
+          "0": 3,
+          "1": 2,
+          "2": 0,
+          "3": 2,
+          "4": 2,
+          "5": 0,
+          "6": 2,
+          "7": 1
+        }
+      }
+    },
+    {
+      "step": 120,
+      "active_nodes": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "dormant_nodes": [
+        2
+      ],
+      "active_edges": [
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "active_edge_count": 4,
+      "births_this_window": 0,
+      "birth_candidates_this_window": 4,
+      "extinctions_this_window": 1,
+      "mean_link_rank": 1.75,
+      "mean_link_score": 0.4123805493799123,
+      "dominant_core": {
+        "core_pair": [
+          1,
+          3
+        ],
+        "core_score": 0.00010684675182230983,
+        "pair_mi": 0.00010646606431984323,
+        "pair_corr": 0.6690504466056774,
+        "pair_bandwidth": 0.34619224778658275,
+        "pair_bandwidth_rank": 1,
+        "daughter_count": 0,
+        "shell_nodes": [
+          1,
+          3,
+          7
+        ],
+        "shell_edges": [
+          [
+            1,
+            3
+          ],
+          [
+            3,
+            7
+          ]
+        ],
+        "shell_size": 3,
+        "shell_triangle_count": 0,
+        "shell_triangles": []
+      },
+      "metric": {
+        "coords": {
+          "0": -1.154700538379252,
+          "1": 0.8660254037844385,
+          "3": 0.8660254037844388,
+          "4": -1.154700538379251,
+          "5": 0.8660254037844388,
+          "6": -1.154700538379252,
+          "7": 0.8660254037844388
+        },
+        "metric_extent": 2.0207259421636907,
+        "total_edge_length": 1.2212453270876722e-15,
+        "mean_edge_length": 3.0531133177191805e-16
+      },
+      "graph_stats": {
+        "mean_degree": 1.1428571428571428,
+        "triangle_count": 0,
+        "degree_map": {
+          "0": 1,
+          "1": 1,
+          "3": 2,
+          "4": 1,
+          "5": 0,
+          "6": 2,
+          "7": 1
+        }
+      }
+    },
+    {
+      "step": 130,
+      "active_nodes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "dormant_nodes": [],
+      "active_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "active_edge_count": 6,
+      "births_this_window": 1,
+      "birth_candidates_this_window": 4,
+      "extinctions_this_window": 0,
+      "mean_link_rank": 2.0,
+      "mean_link_score": 0.434810046767732,
+      "dominant_core": {
+        "core_pair": [
+          0,
+          6
+        ],
+        "core_score": 0.0005096336183120057,
+        "pair_mi": 0.00011857822718064164,
+        "pair_corr": 0.7163114039134572,
+        "pair_bandwidth": 0.44880664311882146,
+        "pair_bandwidth_rank": 4,
+        "daughter_count": 1,
+        "shell_nodes": [
+          0,
+          2,
+          4,
+          6
+        ],
+        "shell_edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            4,
+            6
+          ]
+        ],
+        "shell_size": 4,
+        "shell_triangle_count": 1,
+        "shell_triangles": [
+          [
+            0,
+            2,
+            6
+          ]
+        ]
+      },
+      "metric": {
+        "coords": {
+          "0": -0.6404118939068941,
+          "1": 1.2675071052544662,
+          "2": -0.6404118939068942,
+          "3": 1.2675071052544666,
+          "4": -0.6404118939068942,
+          "5": -1.2408737401358239,
+          "6": -0.6404118939068938,
+          "7": 1.2675071052544673
+        },
+        "metric_extent": 2.508380845390291,
+        "total_edge_length": 2.4424906541753444e-15,
+        "mean_edge_length": 4.070817756958907e-16
+      },
+      "graph_stats": {
+        "mean_degree": 1.5,
+        "triangle_count": 1,
+        "degree_map": {
+          "0": 2,
+          "1": 1,
+          "2": 2,
+          "3": 2,
+          "4": 1,
+          "5": 0,
+          "6": 3,
+          "7": 1
+        }
+      }
+    },
+    {
+      "step": 140,
+      "active_nodes": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6,
+        7
+      ],
+      "dormant_nodes": [
+        3
+      ],
+      "active_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "active_edge_count": 4,
+      "births_this_window": 0,
+      "birth_candidates_this_window": 4,
+      "extinctions_this_window": 1,
+      "mean_link_rank": 2.75,
+      "mean_link_score": 0.43740182674360567,
+      "dominant_core": {
+        "core_pair": [
+          0,
+          6
+        ],
+        "core_score": 0.0010310628650298,
+        "pair_mi": 0.0002592784107187857,
+        "pair_corr": 0.6627771682258669,
+        "pair_bandwidth": 0.40683762470906526,
+        "pair_bandwidth_rank": 4,
+        "daughter_count": 1,
+        "shell_nodes": [
+          0,
+          2,
+          4,
+          6
+        ],
+        "shell_edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            4,
+            6
+          ]
+        ],
+        "shell_size": 4,
+        "shell_triangle_count": 1,
+        "shell_triangles": [
+          [
+            0,
+            2,
+            6
+          ]
+        ]
+      },
+      "metric": {
+        "coords": {
+          "0": 0.40824829046386296,
+          "1": 0.40824829046386296,
+          "2": 0.40824829046386296,
+          "4": 0.40824829046386296,
+          "5": -2.4494897427831783,
+          "6": 0.40824829046386296,
+          "7": 0.40824829046386296
+        },
+        "metric_extent": 2.8577380332470415,
+        "total_edge_length": 0.0,
+        "mean_edge_length": 0.0
+      },
+      "graph_stats": {
+        "mean_degree": 1.1428571428571428,
+        "triangle_count": 1,
+        "degree_map": {
+          "0": 2,
+          "1": 0,
+          "2": 2,
+          "4": 1,
+          "5": 0,
+          "6": 3,
+          "7": 0
+        }
+      }
+    }
+  ]
+}
