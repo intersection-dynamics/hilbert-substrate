@@ -1,0 +1,464 @@
+{
+  "config": {
+    "n_max": 8,
+    "n_init": 2,
+    "seed": 0,
+    "local_scale": 0.1,
+    "pair_scale": 0.16,
+    "spawn_pair_scale": 0.12,
+    "total_steps": 24,
+    "dt": 0.2,
+    "spawn_every": 4,
+    "spawn_mi_threshold": 0.25,
+    "spawn_corr_threshold": 0.5,
+    "max_spawns": 4,
+    "json_out": "hsf_full_hilbert_subsystems_su3_sparse_spawn_v3.json"
+  },
+  "active_nodes_final": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "active_edges_final": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      2,
+      4
+    ]
+  ],
+  "spawn_events": [
+    {
+      "parents": [
+        0,
+        1
+      ],
+      "new_node": 2,
+      "trigger_mi": 0.33094470563252554,
+      "trigger_corr": 0.5389528765480571,
+      "spawn_links": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "step": 8
+    },
+    {
+      "parents": [
+        0,
+        2
+      ],
+      "new_node": 3,
+      "trigger_mi": 0.7060631574802974,
+      "trigger_corr": 0.5679776545093133,
+      "spawn_links": [
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "step": 20
+    },
+    {
+      "parents": [
+        0,
+        2
+      ],
+      "new_node": 4,
+      "trigger_mi": 0.6616173004514568,
+      "trigger_corr": 0.5960133845234473,
+      "spawn_links": [
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "step": 24
+    }
+  ],
+  "history": [
+    {
+      "step": 1,
+      "n_active": 2,
+      "n_edges": 1
+    },
+    {
+      "step": 2,
+      "n_active": 2,
+      "n_edges": 1
+    },
+    {
+      "step": 3,
+      "n_active": 2,
+      "n_edges": 1
+    },
+    {
+      "step": 4,
+      "n_active": 2,
+      "n_edges": 1
+    },
+    {
+      "step": 5,
+      "n_active": 2,
+      "n_edges": 1
+    },
+    {
+      "step": 6,
+      "n_active": 2,
+      "n_edges": 1
+    },
+    {
+      "step": 7,
+      "n_active": 2,
+      "n_edges": 1
+    },
+    {
+      "step": 8,
+      "n_active": 3,
+      "n_edges": 3
+    },
+    {
+      "step": 9,
+      "n_active": 3,
+      "n_edges": 3
+    },
+    {
+      "step": 10,
+      "n_active": 3,
+      "n_edges": 3
+    },
+    {
+      "step": 11,
+      "n_active": 3,
+      "n_edges": 3
+    },
+    {
+      "step": 12,
+      "n_active": 3,
+      "n_edges": 3
+    },
+    {
+      "step": 13,
+      "n_active": 3,
+      "n_edges": 3
+    },
+    {
+      "step": 14,
+      "n_active": 3,
+      "n_edges": 3
+    },
+    {
+      "step": 15,
+      "n_active": 3,
+      "n_edges": 3
+    },
+    {
+      "step": 16,
+      "n_active": 3,
+      "n_edges": 3
+    },
+    {
+      "step": 17,
+      "n_active": 3,
+      "n_edges": 3
+    },
+    {
+      "step": 18,
+      "n_active": 3,
+      "n_edges": 3
+    },
+    {
+      "step": 19,
+      "n_active": 3,
+      "n_edges": 3
+    },
+    {
+      "step": 20,
+      "n_active": 4,
+      "n_edges": 5
+    },
+    {
+      "step": 21,
+      "n_active": 4,
+      "n_edges": 5
+    },
+    {
+      "step": 22,
+      "n_active": 4,
+      "n_edges": 5
+    },
+    {
+      "step": 23,
+      "n_active": 4,
+      "n_edges": 5
+    },
+    {
+      "step": 24,
+      "n_active": 5,
+      "n_edges": 7
+    }
+  ],
+  "summary": {
+    "n_active_final": 5,
+    "n_edges_final": 7,
+    "n_spawn_events": 3,
+    "mean_single_subsystem_entropy": 0.34658220344349705,
+    "mean_pair_mutual_information": 0.23751134205838484,
+    "mean_chain_cmi": 0.20996404593181026,
+    "mean_triangle_pair_mi": 0.33175711059017865,
+    "mean_triangle_frustration": 0.439736927380132,
+    "top_pairs": [
+      {
+        "edge": [
+          0,
+          2
+        ],
+        "mutual_information": 0.6616173004514568,
+        "su3_pair_correlator_strength": 0.5960133845234473,
+        "entropy_i": 0.5406202126294778,
+        "entropy_j": 0.6272239968125897
+      },
+      {
+        "edge": [
+          1,
+          2
+        ],
+        "mutual_information": 0.36464642132119396,
+        "su3_pair_correlator_strength": 0.5186601997594085,
+        "entropy_i": 0.3178704215209299,
+        "entropy_j": 0.6272239968125897
+      },
+      {
+        "edge": [
+          2,
+          3
+        ],
+        "mutual_information": 0.2224384098405371,
+        "su3_pair_correlator_strength": 0.22365739250867095,
+        "entropy_i": 0.6272239968125897,
+        "entropy_j": 0.2471963862544878
+      },
+      {
+        "edge": [
+          0,
+          3
+        ],
+        "mutual_information": 0.20736860187164063,
+        "su3_pair_correlator_strength": 0.2515434407587471,
+        "entropy_i": 0.5406202126294778,
+        "entropy_j": 0.2471963862544878
+      },
+      {
+        "edge": [
+          0,
+          1
+        ],
+        "mutual_information": 0.20650866092386555,
+        "su3_pair_correlator_strength": 0.3922327630839864,
+        "entropy_i": 0.5406202126294778,
+        "entropy_j": 0.3178704215209299
+      },
+      {
+        "edge": [
+          0,
+          4
+        ],
+        "mutual_information": 1.1102230246251565e-16,
+        "su3_pair_correlator_strength": 0.2792829181442363,
+        "entropy_i": 0.5406202126294778,
+        "entropy_j": -0.0
+      },
+      {
+        "edge": [
+          2,
+          4
+        ],
+        "mutual_information": -2.220446049250313e-16,
+        "su3_pair_correlator_strength": 0.17877573125719967,
+        "entropy_i": 0.6272239968125897,
+        "entropy_j": -0.0
+      }
+    ],
+    "top_chains": [
+      {
+        "chain": [
+          0,
+          1,
+          2
+        ],
+        "conditional_mutual_information": 0.6673631624634495,
+        "has_direct_ac_edge": true,
+        "three_body_entropy": 0.2471963862544882
+      },
+      {
+        "chain": [
+          0,
+          3,
+          2
+        ],
+        "conditional_mutual_information": 0.6673631624634477,
+        "has_direct_ac_edge": true,
+        "three_body_entropy": 0.3178704215209299
+      },
+      {
+        "chain": [
+          0,
+          4,
+          2
+        ],
+        "conditional_mutual_information": 0.6616173004514566,
+        "has_direct_ac_edge": true,
+        "three_body_entropy": 0.506226908990611
+      },
+      {
+        "chain": [
+          1,
+          0,
+          2
+        ],
+        "conditional_mutual_information": 0.3703922833331868,
+        "has_direct_ac_edge": true,
+        "three_body_entropy": 0.2471963862544882
+      },
+      {
+        "chain": [
+          2,
+          0,
+          3
+        ],
+        "conditional_mutual_information": 0.22818427185252776,
+        "has_direct_ac_edge": true,
+        "three_body_entropy": 0.3178704215209299
+      },
+      {
+        "chain": [
+          0,
+          2,
+          3
+        ],
+        "conditional_mutual_information": 0.21311446388363142,
+        "has_direct_ac_edge": true,
+        "three_body_entropy": 0.3178704215209299
+      },
+      {
+        "chain": [
+          0,
+          2,
+          1
+        ],
+        "conditional_mutual_information": 0.21225452293585828,
+        "has_direct_ac_edge": true,
+        "three_body_entropy": 0.2471963862544882
+      },
+      {
+        "chain": [
+          1,
+          0,
+          3
+        ],
+        "conditional_mutual_information": 0.06458576079679967,
+        "has_direct_ac_edge": false,
+        "three_body_entropy": 0.6272239968125898
+      },
+      {
+        "chain": [
+          1,
+          2,
+          3
+        ],
+        "conditional_mutual_information": 0.06458576079679834,
+        "has_direct_ac_edge": false,
+        "three_body_entropy": 0.5406202126294779
+      },
+      {
+        "chain": [
+          1,
+          2,
+          4
+        ],
+        "conditional_mutual_information": 2.220446049250313e-16,
+        "has_direct_ac_edge": false,
+        "three_body_entropy": 0.5804479970123257
+      }
+    ],
+    "top_triangles": [
+      {
+        "triangle": [
+          0,
+          1,
+          2
+        ],
+        "pair_mi_mean": 0.4109241275655055,
+        "pair_mi_std": 0.18865698682103782,
+        "three_body_entropy": 0.2471963862544882,
+        "triangle_frustration_proxy": 0.33191329924261315
+      },
+      {
+        "triangle": [
+          0,
+          2,
+          3
+        ],
+        "pair_mi_mean": 0.36380810405454483,
+        "pair_mi_std": 0.21067275234667585,
+        "three_body_entropy": 0.3178704215209299,
+        "triangle_frustration_proxy": 0.3956739543740655
+      },
+      {
+        "triangle": [
+          0,
+          2,
+          4
+        ],
+        "pair_mi_mean": 0.22053910015048558,
+        "pair_mi_std": 0.3118893864663751,
+        "three_body_entropy": 0.506226908990611,
+        "triangle_frustration_proxy": 0.5916235285237175
+      }
+    ],
+    "single_subsystem_entropies": {
+      "0": 0.5406202126294778,
+      "1": 0.3178704215209299,
+      "2": 0.6272239968125897,
+      "3": 0.2471963862544878,
+      "4": -0.0
+    }
+  }
+}

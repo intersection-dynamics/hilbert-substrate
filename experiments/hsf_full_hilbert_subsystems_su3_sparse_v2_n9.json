@@ -1,0 +1,266 @@
+{
+  "config": {
+    "n": 9,
+    "graph_type": "ring",
+    "seed": 0,
+    "local_scale": 0.12,
+    "pair_scale": 0.18,
+    "time": 1.2
+  },
+  "edges": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      8
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      7,
+      8
+    ]
+  ],
+  "edge_strengths": {
+    "0-1": 0.1714143102790729,
+    "0-8": 0.24546103109146616,
+    "1-2": 0.17998499717102118,
+    "2-3": 0.1692329219782669,
+    "3-4": 0.1973107370902144,
+    "4-5": 0.2512938967538867,
+    "5-6": 0.24464788919103825,
+    "6-7": 0.17424650006050985,
+    "7-8": 0.217112953724394
+  },
+  "summary": {
+    "n_edges": 9,
+    "n_pairs": 9,
+    "n_chains": 9,
+    "n_triangles": 0,
+    "mean_single_subsystem_entropy": 0.5560493989214639,
+    "mean_pair_mutual_information": 0.41887802028466425,
+    "mean_chain_cmi": 0.11786617386742486,
+    "mean_triangle_pair_mi": 0.0,
+    "mean_triangle_frustration": 0.0,
+    "top_pairs": [
+      {
+        "edge": [
+          0,
+          8
+        ],
+        "mutual_information": 0.6554722469629722,
+        "su3_pair_correlator_strength": 0.3488383023262908,
+        "entropy_i": 0.538833334810394,
+        "entropy_j": 0.7495572492028948
+      },
+      {
+        "edge": [
+          7,
+          8
+        ],
+        "mutual_information": 0.6087823183124904,
+        "su3_pair_correlator_strength": 0.3446224130109658,
+        "entropy_i": 0.700671248252208,
+        "entropy_j": 0.7495572492028948
+      },
+      {
+        "edge": [
+          1,
+          2
+        ],
+        "mutual_information": 0.6066053009553611,
+        "su3_pair_correlator_strength": 0.18260906014179076,
+        "entropy_i": 0.49813213146694196,
+        "entropy_j": 0.6382291141424864
+      },
+      {
+        "edge": [
+          2,
+          3
+        ],
+        "mutual_information": 0.47213479099529543,
+        "su3_pair_correlator_strength": 0.270094786798305,
+        "entropy_i": 0.6382291141424864,
+        "entropy_j": 0.5208178192120645
+      },
+      {
+        "edge": [
+          5,
+          6
+        ],
+        "mutual_information": 0.42015409248777347,
+        "su3_pair_correlator_strength": 0.2238432896709887,
+        "entropy_i": 0.4489921901445284,
+        "entropy_j": 0.5237992898816557
+      },
+      {
+        "edge": [
+          6,
+          7
+        ],
+        "mutual_information": 0.3797715355402107,
+        "su3_pair_correlator_strength": 0.3079097938872721,
+        "entropy_i": 0.5237992898816557,
+        "entropy_j": 0.700671248252208
+      },
+      {
+        "edge": [
+          3,
+          4
+        ],
+        "mutual_information": 0.31112644064134776,
+        "su3_pair_correlator_strength": 0.42923670620752286,
+        "entropy_i": 0.5208178192120645,
+        "entropy_j": 0.3854122131800005
+      },
+      {
+        "edge": [
+          4,
+          5
+        ],
+        "mutual_information": 0.20266273163054171,
+        "su3_pair_correlator_strength": 0.3845898773635141,
+        "entropy_i": 0.3854122131800005,
+        "entropy_j": 0.4489921901445284
+      },
+      {
+        "edge": [
+          0,
+          1
+        ],
+        "mutual_information": 0.11319272503598521,
+        "su3_pair_correlator_strength": 0.2372708806451687,
+        "entropy_i": 0.538833334810394,
+        "entropy_j": 0.49813213146694196
+      }
+    ],
+    "top_chains": [
+      {
+        "chain": [
+          0,
+          8,
+          7
+        ],
+        "conditional_mutual_information": 0.20857159065463327,
+        "has_direct_ac_edge": false,
+        "three_body_entropy": 0.5162356763354008
+      },
+      {
+        "chain": [
+          1,
+          2,
+          3
+        ],
+        "conditional_mutual_information": 0.15034483676191152,
+        "has_direct_ac_edge": false,
+        "three_body_entropy": 0.4280941361089247
+      },
+      {
+        "chain": [
+          5,
+          6,
+          7
+        ],
+        "conditional_mutual_information": 0.14970198776811483,
+        "has_direct_ac_edge": false,
+        "three_body_entropy": 0.7238351124822932
+      },
+      {
+        "chain": [
+          6,
+          7,
+          8
+        ],
+        "conditional_mutual_information": 0.11377837753431541,
+        "has_direct_ac_edge": false,
+        "three_body_entropy": 0.871695555949742
+      },
+      {
+        "chain": [
+          2,
+          3,
+          4
+        ],
+        "conditional_mutual_information": 0.10950542059164281,
+        "has_direct_ac_edge": false,
+        "three_body_entropy": 0.6516924943062654
+      },
+      {
+        "chain": [
+          4,
+          5,
+          6
+        ],
+        "conditional_mutual_information": 0.10089544034575071,
+        "has_direct_ac_edge": false,
+        "three_body_entropy": 0.6344914287421188
+      },
+      {
+        "chain": [
+          1,
+          0,
+          8
+        ],
+        "conditional_mutual_information": 0.08532597546201881,
+        "has_direct_ac_edge": false,
+        "three_body_entropy": 0.9325317680192544
+      },
+      {
+        "chain": [
+          3,
+          4,
+          5
+        ],
+        "conditional_mutual_information": 0.08157717995873381,
+        "has_direct_ac_edge": false,
+        "three_body_entropy": 0.7598558703059701
+      },
+      {
+        "chain": [
+          0,
+          1,
+          2
+        ],
+        "conditional_mutual_information": 0.061094755729702466,
+        "has_direct_ac_edge": false,
+        "three_body_entropy": 0.8943017986987735
+      }
+    ],
+    "top_triangles": [],
+    "single_subsystem_entropies": [
+      0.538833334810394,
+      0.49813213146694196,
+      0.6382291141424864,
+      0.5208178192120645,
+      0.3854122131800005,
+      0.4489921901445284,
+      0.5237992898816557,
+      0.700671248252208,
+      0.7495572492028948
+    ]
+  }
+}
