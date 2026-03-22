@@ -1,0 +1,1360 @@
+{
+  "script": "hsf_mesoscape_shell_witness_audit.py",
+  "input_json": "hsf_mesoscape_N8_T300_seed3_graded_support_v7shellreplace.json",
+  "overall_summary": {
+    "n_rows": 30,
+    "winner_counts": {
+      "raise_support": 17,
+      "edge_down": 2,
+      "edge_up": 3,
+      "lower_support": 8
+    },
+    "case_counts": {
+      "non_shell_dominant_loss": 11,
+      "mixed": 1,
+      "shell_node_wins": 8,
+      "high_shell_penalty_loss": 10
+    },
+    "shell_penalty_mean": 0.5489016666666667,
+    "shell_penalty_stdev": 0.37138544920729233,
+    "retirement_readiness_mean": 0.5491814831107386,
+    "lower_deltaF_mean": -0.10997179315325858,
+    "gap_to_winner_mean": -0.004042672708988924,
+    "neighbor_cluster_mean": 0.4222222222222222,
+    "cross_replaceability_mean": 0.31666666666666665,
+    "bridge_unique_mean": 0.6833333333333333
+  },
+  "late_summary": {
+    "n_rows": 10,
+    "winner_counts": {
+      "lower_support": 5,
+      "raise_support": 4,
+      "edge_up": 1
+    },
+    "case_counts": {
+      "shell_node_wins": 5,
+      "high_shell_penalty_loss": 5
+    },
+    "shell_penalty_mean": 0.84833,
+    "shell_penalty_stdev": 0.008946713782166047,
+    "retirement_readiness_mean": 0.49530950646956756,
+    "lower_deltaF_mean": 0.01064876800265611,
+    "gap_to_winner_mean": -0.2051987848150732,
+    "neighbor_cluster_mean": 0.3333333333333333,
+    "cross_replaceability_mean": 0.0,
+    "bridge_unique_mean": 1.0
+  },
+  "late_top_nodes": [
+    2,
+    6
+  ],
+  "late_node_comparisons": {
+    "2": {
+      "n": 5,
+      "winner_types": {
+        "lower_support": 5
+      },
+      "case_counts": {
+        "shell_node_wins": 5
+      },
+      "shell_penalty_mean": 0.84791,
+      "shell_penalty_stdev": 0.013403629988738118,
+      "retirement_readiness_mean": 0.49170434491890597,
+      "bookkeeping_safety_mean": 0.3333333333333333,
+      "substitutability_mean": 0.7000000000000001,
+      "functional_ready_mean": 0.46530831300895736,
+      "lower_deltaF_mean": 0.21956513003531247,
+      "gap_to_winner_mean": -0.759940053603126,
+      "core_neighbors_mean": 2.0,
+      "noncore_neighbors_mean": 1.0,
+      "neighbor_cluster_mean": 0.3333333333333333,
+      "cross_replaceability_mean": 0.0,
+      "bridge_unique_mean": 1.0
+    },
+    "6": {
+      "n": 5,
+      "winner_types": {
+        "raise_support": 4,
+        "edge_up": 1
+      },
+      "case_counts": {
+        "high_shell_penalty_loss": 5
+      },
+      "shell_penalty_mean": 0.8487500000000001,
+      "shell_penalty_stdev": 1.2412670766236366e-16,
+      "retirement_readiness_mean": 0.4989146680202291,
+      "bookkeeping_safety_mean": 0.3333333333333333,
+      "substitutability_mean": 0.75,
+      "functional_ready_mean": 0.4652920054142499,
+      "lower_deltaF_mean": -0.19826759403000027,
+      "gap_to_winner_mean": 0.3495424839729796,
+      "core_neighbors_mean": 2.0,
+      "noncore_neighbors_mean": 1.0,
+      "neighbor_cluster_mean": 0.3333333333333333,
+      "cross_replaceability_mean": 0.0,
+      "bridge_unique_mean": 1.0
+    }
+  },
+  "flagged_rows": [
+    {
+      "step": 210,
+      "winner_move_type": "lower_support",
+      "winner_deltaF": -0.5411516218073861,
+      "lower_node": 2,
+      "lower_deltaF": 0.21442272327546535,
+      "deltaF_gap_to_winner": -0.7555743450828514,
+      "shell_penalty": 0.86375,
+      "shell_indispensability": 0.86375,
+      "retirement_readiness": 0.4863069405706868,
+      "edge_ready": 0.9490000000000001,
+      "functional_ready": 0.46526109561608026,
+      "bookkeeping_safety": 0.3333333333333333,
+      "substitutability": 0.7000000000000001,
+      "core_penalty": 0.0,
+      "W_NR": 3.304982920693256e-05,
+      "dCF": 9.914948762079767e-05,
+      "dE_expr_raw": -0.00896763361044961,
+      "dE_expr": 0.21445412061321195,
+      "delta_Odiff_R": -0.006265874999999976,
+      "core_pair": [
+        0,
+        1
+      ],
+      "shell_nodes": [
+        2,
+        5,
+        6,
+        7
+      ],
+      "neighbors": [
+        0,
+        1,
+        3
+      ],
+      "core_neighbor_count": 2,
+      "noncore_neighbor_count": 1,
+      "neighbor_cluster": 0.3333333333333333,
+      "cross_replaceability": 0.0,
+      "bridge_unique": 1.0,
+      "case": "shell_node_wins"
+    },
+    {
+      "step": 280,
+      "winner_move_type": "lower_support",
+      "winner_deltaF": -0.541025926904564,
+      "lower_node": 2,
+      "lower_deltaF": 0.2157843494995021,
+      "deltaF_gap_to_winner": -0.7568102764040661,
+      "shell_penalty": 0.86075,
+      "shell_indispensability": 0.86075,
+      "retirement_readiness": 0.487348077336073,
+      "edge_ready": 0.9514,
+      "functional_ready": 0.46534564267762535,
+      "bookkeeping_safety": 0.3333333333333333,
+      "substitutability": 0.7000000000000001,
+      "core_penalty": 0.0,
+      "W_NR": 3.3048789959855274e-05,
+      "dCF": 9.914636987956582e-05,
+      "dE_expr_raw": -0.008563925228489921,
+      "dE_expr": 0.21581574584996396,
+      "delta_Odiff_R": -0.005961698076923483,
+      "core_pair": [
+        0,
+        1
+      ],
+      "shell_nodes": [
+        2,
+        5,
+        6,
+        7
+      ],
+      "neighbors": [
+        0,
+        1,
+        3
+      ],
+      "core_neighbor_count": 2,
+      "noncore_neighbor_count": 1,
+      "neighbor_cluster": 0.3333333333333333,
+      "cross_replaceability": 0.0,
+      "bridge_unique": 1.0,
+      "case": "shell_node_wins"
+    },
+    {
+      "step": 230,
+      "winner_move_type": "raise_support",
+      "winner_deltaF": 0.18748161352210038,
+      "lower_node": 6,
+      "lower_deltaF": -0.1982927219721234,
+      "deltaF_gap_to_winner": 0.3857743354942238,
+      "shell_penalty": 0.84875,
+      "shell_indispensability": 0.84875,
+      "retirement_readiness": 0.4989106145243193,
+      "edge_ready": 0.961,
+      "functional_ready": 0.46527579143061065,
+      "bookkeeping_safety": 0.3333333333333333,
+      "substitutability": 0.75,
+      "core_penalty": 0.0,
+      "W_NR": 2.480453440184549e-05,
+      "dCF": 7.441360320553647e-05,
+      "dE_expr_raw": -0.3626347583235141,
+      "dE_expr": -0.19601843025127194,
+      "delta_Odiff_R": -0.13205274999999972,
+      "core_pair": [
+        0,
+        1
+      ],
+      "shell_nodes": [
+        2,
+        5,
+        6,
+        7
+      ],
+      "neighbors": [
+        0,
+        1,
+        4
+      ],
+      "core_neighbor_count": 2,
+      "noncore_neighbor_count": 1,
+      "neighbor_cluster": 0.3333333333333333,
+      "cross_replaceability": 0.0,
+      "bridge_unique": 1.0,
+      "case": "high_shell_penalty_loss"
+    },
+    {
+      "step": 250,
+      "winner_move_type": "raise_support",
+      "winner_deltaF": 0.18747387413576247,
+      "lower_node": 6,
+      "lower_deltaF": -0.19828285768326037,
+      "deltaF_gap_to_winner": 0.3857567318190228,
+      "shell_penalty": 0.84875,
+      "shell_indispensability": 0.84875,
+      "retirement_readiness": 0.4989127473344317,
+      "edge_ready": 0.961,
+      "functional_ready": 0.46528432267106035,
+      "bookkeeping_safety": 0.3333333333333333,
+      "substitutability": 0.75,
+      "core_penalty": 0.0,
+      "W_NR": 2.4799074913484098e-05,
+      "dCF": 7.43972247404523e-05,
+      "dE_expr_raw": -0.3626258967684466,
+      "dE_expr": -0.19600857114892284,
+      "delta_Odiff_R": -0.13205274999999994,
+      "core_pair": [
+        0,
+        1
+      ],
+      "shell_nodes": [
+        2,
+        5,
+        6,
+        7
+      ],
+      "neighbors": [
+        0,
+        1,
+        4
+      ],
+      "core_neighbor_count": 2,
+      "noncore_neighbor_count": 1,
+      "neighbor_cluster": 0.3333333333333333,
+      "cross_replaceability": 0.0,
+      "bridge_unique": 1.0,
+      "case": "high_shell_penalty_loss"
+    },
+    {
+      "step": 260,
+      "winner_move_type": "raise_support",
+      "winner_deltaF": 0.18747438300556116,
+      "lower_node": 6,
+      "lower_deltaF": -0.19826879378776893,
+      "deltaF_gap_to_winner": 0.3857431767933301,
+      "shell_penalty": 0.84875,
+      "shell_indispensability": 0.84875,
+      "retirement_readiness": 0.49891402277029573,
+      "edge_ready": 0.961,
+      "functional_ready": 0.46528942441451643,
+      "bookkeeping_safety": 0.3333333333333333,
+      "substitutability": 0.75,
+      "core_penalty": 0.0,
+      "W_NR": 2.781284179637078e-05,
+      "dCF": 8.343852538911234e-05,
+      "dE_expr_raw": -0.3626095663349016,
+      "dE_expr": -0.19599164417489268,
+      "delta_Odiff_R": -0.13205274999999994,
+      "core_pair": [
+        0,
+        1
+      ],
+      "shell_nodes": [
+        2,
+        5,
+        6,
+        7
+      ],
+      "neighbors": [
+        0,
+        1,
+        4
+      ],
+      "core_neighbor_count": 2,
+      "noncore_neighbor_count": 1,
+      "neighbor_cluster": 0.3333333333333333,
+      "cross_replaceability": 0.0,
+      "bridge_unique": 1.0,
+      "case": "high_shell_penalty_loss"
+    },
+    {
+      "step": 300,
+      "winner_move_type": "raise_support",
+      "winner_deltaF": 0.18745489333720444,
+      "lower_node": 6,
+      "lower_deltaF": -0.1982366650329365,
+      "deltaF_gap_to_winner": 0.3856915583701409,
+      "shell_penalty": 0.84875,
+      "shell_indispensability": 0.84875,
+      "retirement_readiness": 0.4989205173839697,
+      "edge_ready": 0.961,
+      "functional_ready": 0.4653154028692123,
+      "bookkeeping_safety": 0.3333333333333333,
+      "substitutability": 0.75,
+      "core_penalty": 0.0,
+      "W_NR": 2.4780064616980457e-05,
+      "dCF": 7.434019385094137e-05,
+      "dE_expr_raw": -0.3625833563466241,
+      "dE_expr": -0.19596239655838066,
+      "delta_Odiff_R": -0.13205274999999994,
+      "core_pair": [
+        0,
+        1
+      ],
+      "shell_nodes": [
+        2,
+        5,
+        6,
+        7
+      ],
+      "neighbors": [
+        0,
+        1,
+        4
+      ],
+      "core_neighbor_count": 2,
+      "noncore_neighbor_count": 1,
+      "neighbor_cluster": 0.3333333333333333,
+      "cross_replaceability": 0.0,
+      "bridge_unique": 1.0,
+      "case": "high_shell_penalty_loss"
+    },
+    {
+      "step": 200,
+      "winner_move_type": "edge_up",
+      "winner_deltaF": 0.006516018970227383,
+      "lower_node": 6,
+      "lower_deltaF": -0.19829137788193527,
+      "deltaF_gap_to_winner": 0.20480739685216265,
+      "shell_penalty": 0.84875,
+      "shell_indispensability": 0.84875,
+      "retirement_readiness": 0.4989084568090716,
+      "edge_ready": 0.961,
+      "functional_ready": 0.46526716056961964,
+      "bookkeeping_safety": 0.3333333333333333,
+      "substitutability": 0.75,
+      "core_penalty": 0.0,
+      "W_NR": 3.304818812072119e-05,
+      "dCF": 9.914456436216357e-05,
+      "dE_expr_raw": -0.3626245735665057,
+      "dE_expr": -0.19600925469005087,
+      "delta_Odiff_R": -0.13205275000000016,
+      "core_pair": [
+        0,
+        1
+      ],
+      "shell_nodes": [
+        2,
+        5,
+        6,
+        7
+      ],
+      "neighbors": [
+        0,
+        1,
+        4
+      ],
+      "core_neighbor_count": 2,
+      "noncore_neighbor_count": 1,
+      "neighbor_cluster": 0.3333333333333333,
+      "cross_replaceability": 0.0,
+      "bridge_unique": 1.0,
+      "case": "high_shell_penalty_loss"
+    },
+    {
+      "step": 270,
+      "winner_move_type": "edge_up",
+      "winner_deltaF": 0.00648968571426828,
+      "lower_node": 6,
+      "lower_deltaF": -0.19825693167391217,
+      "deltaF_gap_to_winner": 0.20474661738818045,
+      "shell_penalty": 0.84875,
+      "shell_indispensability": 0.84875,
+      "retirement_readiness": 0.4989154380881291,
+      "edge_ready": 0.961,
+      "functional_ready": 0.46529508568584993,
+      "bookkeeping_safety": 0.3333333333333333,
+      "substitutability": 0.75,
+      "core_penalty": 0.0,
+      "W_NR": 3.304982392915434e-05,
+      "dCF": 9.914947178746303e-05,
+      "dE_expr_raw": -0.36259339105339894,
+      "dE_expr": -0.19597480692800975,
+      "delta_Odiff_R": -0.13205275000000016,
+      "core_pair": [
+        0,
+        1
+      ],
+      "shell_nodes": [
+        2,
+        5,
+        6,
+        7
+      ],
+      "neighbors": [
+        0,
+        1,
+        4
+      ],
+      "core_neighbor_count": 2,
+      "noncore_neighbor_count": 1,
+      "neighbor_cluster": 0.3333333333333333,
+      "cross_replaceability": 0.0,
+      "bridge_unique": 1.0,
+      "case": "high_shell_penalty_loss"
+    },
+    {
+      "step": 110,
+      "winner_move_type": "lower_support",
+      "winner_deltaF": -0.537670592110138,
+      "lower_node": 6,
+      "lower_deltaF": 0.22350345573746264,
+      "deltaF_gap_to_winner": -0.7611740478476007,
+      "shell_penalty": 0.8450000000000001,
+      "shell_indispensability": 0.8450000000000001,
+      "retirement_readiness": 0.5001642459111169,
+      "edge_ready": 0.964,
+      "functional_ready": 0.4651903169778013,
+      "bookkeeping_safety": 0.3333333333333333,
+      "substitutability": 0.75,
+      "core_penalty": 0.0,
+      "W_NR": 2.2409477617058027e-05,
+      "dCF": 6.722843285117408e-05,
+      "dE_expr_raw": -0.00891610574750512,
+      "dE_expr": 0.22352474474119885,
+      "delta_Odiff_R": -0.005617500000000053,
+      "core_pair": [
+        0,
+        1
+      ],
+      "shell_nodes": [
+        2,
+        5,
+        6,
+        7
+      ],
+      "neighbors": [
+        0,
+        1,
+        4
+      ],
+      "core_neighbor_count": 2,
+      "noncore_neighbor_count": 1,
+      "neighbor_cluster": 0.3333333333333333,
+      "cross_replaceability": 0.0,
+      "bridge_unique": 1.0,
+      "case": "shell_node_wins"
+    },
+    {
+      "step": 220,
+      "winner_move_type": "lower_support",
+      "winner_deltaF": -0.5399418290914606,
+      "lower_node": 2,
+      "lower_deltaF": 0.22071123734959747,
+      "deltaF_gap_to_winner": -0.760653066441058,
+      "shell_penalty": 0.8414375000000001,
+      "shell_indispensability": 0.8414375000000001,
+      "retirement_readiness": 0.4938958847410914,
+      "edge_ready": 0.96685,
+      "functional_ready": 0.46527187229769895,
+      "bookkeeping_safety": 0.3333333333333333,
+      "substitutability": 0.7000000000000001,
+      "core_penalty": 0.0,
+      "W_NR": 3.0037697232643268e-05,
+      "dCF": 9.01130916979298e-05,
+      "dE_expr_raw": -0.008979810961317725,
+      "dE_expr": 0.22073977316196847,
+      "delta_Odiff_R": -0.006265874999999976,
+      "core_pair": [
+        0,
+        1
+      ],
+      "shell_nodes": [
+        2,
+        5,
+        6,
+        7
+      ],
+      "neighbors": [
+        0,
+        1,
+        3
+      ],
+      "core_neighbor_count": 2,
+      "noncore_neighbor_count": 1,
+      "neighbor_cluster": 0.3333333333333333,
+      "cross_replaceability": 0.0,
+      "bridge_unique": 1.0,
+      "case": "shell_node_wins"
+    },
+    {
+      "step": 290,
+      "winner_move_type": "lower_support",
+      "winner_deltaF": -0.5398664393868162,
+      "lower_node": 2,
+      "lower_deltaF": 0.22178558676840385,
+      "deltaF_gap_to_winner": -0.7616520261552201,
+      "shell_penalty": 0.8394875,
+      "shell_indispensability": 0.8394875,
+      "retirement_readiness": 0.4945807771120837,
+      "edge_ready": 0.96841,
+      "functional_ready": 0.46535944178166844,
+      "bookkeeping_safety": 0.3333333333333333,
+      "substitutability": 0.7000000000000001,
+      "core_penalty": 0.0,
+      "W_NR": 3.0026784886727498e-05,
+      "dCF": 9.00803546601825e-05,
+      "dE_expr_raw": -0.00857656734690515,
+      "dE_expr": 0.22181411221404626,
+      "delta_Odiff_R": -0.005961698076922817,
+      "core_pair": [
+        0,
+        1
+      ],
+      "shell_nodes": [
+        2,
+        5,
+        6,
+        7
+      ],
+      "neighbors": [
+        0,
+        1,
+        3
+      ],
+      "core_neighbor_count": 2,
+      "noncore_neighbor_count": 1,
+      "neighbor_cluster": 0.3333333333333333,
+      "cross_replaceability": 0.0,
+      "bridge_unique": 1.0,
+      "case": "shell_node_wins"
+    },
+    {
+      "step": 160,
+      "winner_move_type": "lower_support",
+      "winner_deltaF": -0.5388323603705244,
+      "lower_node": 2,
+      "lower_deltaF": 0.2238945733794156,
+      "deltaF_gap_to_winner": -0.76272693374994,
+      "shell_penalty": 0.8375,
+      "shell_indispensability": 0.8375,
+      "retirement_readiness": 0.4952244705104871,
+      "edge_ready": 0.97,
+      "functional_ready": 0.4652312153752817,
+      "bookkeeping_safety": 0.3333333333333333,
+      "substitutability": 0.7000000000000001,
+      "core_penalty": 0.0,
+      "W_NR": 2.5726269522796663e-05,
+      "dCF": 7.717880856838999e-05,
+      "dE_expr_raw": -0.007326486263247389,
+      "dE_expr": 0.22391901333546224,
+      "delta_Odiff_R": -0.005092500000000166,
+      "core_pair": [
+        0,
+        1
+      ],
+      "shell_nodes": [
+        2,
+        5,
+        6,
+        7
+      ],
+      "neighbors": [
+        0,
+        1,
+        3
+      ],
+      "core_neighbor_count": 2,
+      "noncore_neighbor_count": 1,
+      "neighbor_cluster": 0.3333333333333333,
+      "cross_replaceability": 0.0,
+      "bridge_unique": 1.0,
+      "case": "shell_node_wins"
+    },
+    {
+      "step": 130,
+      "winner_move_type": "lower_support",
+      "winner_deltaF": -0.5376751504204144,
+      "lower_node": 6,
+      "lower_deltaF": 0.2276759463004362,
+      "deltaF_gap_to_winner": -0.7653510967208506,
+      "shell_penalty": 0.8375,
+      "shell_indispensability": 0.8375,
+      "retirement_readiness": 0.5027191694109052,
+      "edge_ready": 0.97,
+      "functional_ready": 0.4652100109769542,
+      "bookkeeping_safety": 0.3333333333333333,
+      "substitutability": 0.75,
+      "core_penalty": 0.0,
+      "W_NR": 2.2408450670752256e-05,
+      "dCF": 6.722535201225677e-05,
+      "dE_expr_raw": -0.007212708337728024,
+      "dE_expr": 0.22769723432857342,
+      "delta_Odiff_R": -0.004698749999999974,
+      "core_pair": [
+        0,
+        1
+      ],
+      "shell_nodes": [
+        2,
+        5,
+        6,
+        7
+      ],
+      "neighbors": [
+        0,
+        1,
+        4
+      ],
+      "core_neighbor_count": 2,
+      "noncore_neighbor_count": 1,
+      "neighbor_cluster": 0.3333333333333333,
+      "cross_replaceability": 0.0,
+      "bridge_unique": 1.0,
+      "case": "shell_node_wins"
+    },
+    {
+      "step": 240,
+      "winner_move_type": "lower_support",
+      "winner_deltaF": -0.5398888006488409,
+      "lower_node": 2,
+      "lower_deltaF": 0.22512175328359368,
+      "deltaF_gap_to_winner": -0.7650105539324346,
+      "shell_penalty": 0.834125,
+      "shell_indispensability": 0.834125,
+      "retirement_readiness": 0.49639004483459503,
+      "edge_ready": 0.9727,
+      "functional_ready": 0.46530351267171366,
+      "bookkeeping_safety": 0.3333333333333333,
+      "substitutability": 0.7000000000000001,
+      "core_penalty": 0.0,
+      "W_NR": 3.003606421692062e-05,
+      "dCF": 9.010819265076186e-05,
+      "dE_expr_raw": -0.007123663362373911,
+      "dE_expr": 0.22515028754459976,
+      "delta_Odiff_R": -0.004927326923076736,
+      "core_pair": [
+        0,
+        1
+      ],
+      "shell_nodes": [
+        2,
+        5,
+        6,
+        7
+      ],
+      "neighbors": [
+        0,
+        1,
+        3
+      ],
+      "core_neighbor_count": 2,
+      "noncore_neighbor_count": 1,
+      "neighbor_cluster": 0.3333333333333333,
+      "cross_replaceability": 0.0,
+      "bridge_unique": 1.0,
+      "case": "shell_node_wins"
+    },
+    {
+      "step": 170,
+      "winner_move_type": "raise_support",
+      "winner_deltaF": 0.1875008642944439,
+      "lower_node": 6,
+      "lower_deltaF": -0.19464901385463415,
+      "deltaF_gap_to_winner": 0.3821498781490781,
+      "shell_penalty": 0.83375,
+      "shell_indispensability": 0.83375,
+      "retirement_readiness": 0.5040036692765424,
+      "edge_ready": 0.973,
+      "functional_ready": 0.46524801043950326,
+      "bookkeeping_safety": 0.3333333333333333,
+      "substitutability": 0.75,
+      "core_penalty": 0.0,
+      "W_NR": 2.2403616791011327e-05,
+      "dCF": 6.721085037303398e-05,
+      "dE_expr_raw": -0.36279546305105637,
+      "dE_expr": -0.192377003005513,
+      "delta_Odiff_R": -0.13286124999999993,
+      "core_pair": [
+        0,
+        1
+      ],
+      "shell_nodes": [
+        2,
+        5,
+        6,
+        7
+      ],
+      "neighbors": [
+        0,
+        1,
+        4
+      ],
+      "core_neighbor_count": 2,
+      "noncore_neighbor_count": 1,
+      "neighbor_cluster": 0.3333333333333333,
+      "cross_replaceability": 0.0,
+      "bridge_unique": 1.0,
+      "case": "high_shell_penalty_loss"
+    },
+    {
+      "step": 150,
+      "winner_move_type": "raise_support",
+      "winner_deltaF": 0.1875076646124726,
+      "lower_node": 6,
+      "lower_deltaF": -0.19463820802231638,
+      "deltaF_gap_to_winner": 0.38214587263478894,
+      "shell_penalty": 0.83375,
+      "shell_indispensability": 0.83375,
+      "retirement_readiness": 0.5039997169229102,
+      "edge_ready": 0.973,
+      "functional_ready": 0.465232201024974,
+      "bookkeeping_safety": 0.3333333333333333,
+      "substitutability": 0.75,
+      "core_penalty": 0.0,
+      "W_NR": 2.2407278928660013e-05,
+      "dCF": 6.722183678598004e-05,
+      "dE_expr_raw": -0.36278279022473203,
+      "dE_expr": -0.19236619369416444,
+      "delta_Odiff_R": -0.13286124999999993,
+      "core_pair": [
+        0,
+        1
+      ],
+      "shell_nodes": [
+        2,
+        5,
+        6,
+        7
+      ],
+      "neighbors": [
+        0,
+        1,
+        4
+      ],
+      "core_neighbor_count": 2,
+      "noncore_neighbor_count": 1,
+      "neighbor_cluster": 0.3333333333333333,
+      "cross_replaceability": 0.0,
+      "bridge_unique": 1.0,
+      "case": "high_shell_penalty_loss"
+    },
+    {
+      "step": 180,
+      "winner_move_type": "raise_support",
+      "winner_deltaF": 0.16166778078615698,
+      "lower_node": 6,
+      "lower_deltaF": -0.19464684407946178,
+      "deltaF_gap_to_winner": 0.35631462486561877,
+      "shell_penalty": 0.83375,
+      "shell_indispensability": 0.83375,
+      "retirement_readiness": 0.5040057928646695,
+      "edge_ready": 0.973,
+      "functional_ready": 0.4652565047920117,
+      "bookkeeping_safety": 0.3333333333333333,
+      "substitutability": 0.75,
+      "core_penalty": 0.0,
+      "W_NR": 2.5723578377934153e-05,
+      "dCF": 7.717073513380246e-05,
+      "dE_expr_raw": -0.36279114057356043,
+      "dE_expr": -0.19237167926683305,
+      "delta_Odiff_R": -0.13286124999999993,
+      "core_pair": [
+        0,
+        1
+      ],
+      "shell_nodes": [
+        2,
+        5,
+        6,
+        7
+      ],
+      "neighbors": [
+        0,
+        1,
+        4
+      ],
+      "core_neighbor_count": 2,
+      "noncore_neighbor_count": 1,
+      "neighbor_cluster": 0.3333333333333333,
+      "cross_replaceability": 0.0,
+      "bridge_unique": 1.0,
+      "case": "high_shell_penalty_loss"
+    },
+    {
+      "step": 190,
+      "winner_move_type": "raise_support",
+      "winner_deltaF": -1.6379853856040414,
+      "lower_node": 6,
+      "lower_deltaF": -0.19464820265526417,
+      "deltaF_gap_to_winner": -1.443337182948777,
+      "shell_penalty": 0.83375,
+      "shell_indispensability": 0.83375,
+      "retirement_readiness": 0.5040080146368835,
+      "edge_ready": 0.973,
+      "functional_ready": 0.4652653918808677,
+      "bookkeeping_safety": 0.3333333333333333,
+      "substitutability": 0.75,
+      "core_penalty": 0.0,
+      "W_NR": 3.0333749475752736e-05,
+      "dCF": 9.100124842725821e-05,
+      "dE_expr_raw": -0.3627891670413099,
+      "dE_expr": -0.1923686581800925,
+      "delta_Odiff_R": -0.13286124999999993,
+      "core_pair": [
+        0,
+        1
+      ],
+      "shell_nodes": [
+        2,
+        5,
+        6,
+        7
+      ],
+      "neighbors": [
+        0,
+        1,
+        4
+      ],
+      "core_neighbor_count": 2,
+      "noncore_neighbor_count": 1,
+      "neighbor_cluster": 0.3333333333333333,
+      "cross_replaceability": 0.0,
+      "bridge_unique": 1.0,
+      "case": "high_shell_penalty_loss"
+    },
+    {
+      "step": 50,
+      "winner_move_type": "raise_support",
+      "winner_deltaF": 0.21059028551939238,
+      "lower_node": 4,
+      "lower_deltaF": -0.11457280752905316,
+      "deltaF_gap_to_winner": 0.32516309304844554,
+      "shell_penalty": 0.22250000000000003,
+      "shell_indispensability": 0.22250000000000003,
+      "retirement_readiness": 0.6269642095759839,
+      "edge_ready": 0.982,
+      "functional_ready": 0.4651235049706025,
+      "bookkeeping_safety": 0.6666666666666666,
+      "substitutability": 0.7000000000000001,
+      "core_penalty": 0.0,
+      "W_NR": 0.20002130711590776,
+      "dCF": 6.392134772326141e-05,
+      "dE_expr_raw": -0.42077594040790123,
+      "dE_expr": -0.033562370633020866,
+      "delta_Odiff_R": -0.03892416666666687,
+      "core_pair": [
+        0,
+        1
+      ],
+      "shell_nodes": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "neighbors": [
+        0,
+        3,
+        5
+      ],
+      "core_neighbor_count": 1,
+      "noncore_neighbor_count": 2,
+      "neighbor_cluster": 0.6666666666666666,
+      "cross_replaceability": 1.0,
+      "bridge_unique": 0.0,
+      "case": "non_shell_dominant_loss"
+    },
+    {
+      "step": 60,
+      "winner_move_type": "raise_support",
+      "winner_deltaF": 0.18682423774779436,
+      "lower_node": 3,
+      "lower_deltaF": -0.03604674891121733,
+      "deltaF_gap_to_winner": 0.22287098665901167,
+      "shell_penalty": 0.22250000000000003,
+      "shell_indispensability": 0.22250000000000003,
+      "retirement_readiness": 0.634464545354838,
+      "edge_ready": 0.982,
+      "functional_ready": 0.46512484808601906,
+      "bookkeeping_safety": 0.6666666666666666,
+      "substitutability": 0.75,
+      "core_penalty": 0.0,
+      "W_NR": 0.1578947414624861,
+      "dCF": 1.3861142567073159e-08,
+      "dE_expr_raw": -0.17462097405879184,
+      "dE_expr": 0.021414160389583353,
+      "delta_Odiff_R": -0.5383883333333335,
+      "core_pair": [
+        0,
+        1
+      ],
+      "shell_nodes": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "neighbors": [
+        0,
+        2,
+        4
+      ],
+      "core_neighbor_count": 1,
+      "noncore_neighbor_count": 2,
+      "neighbor_cluster": 0.6666666666666666,
+      "cross_replaceability": 1.0,
+      "bridge_unique": 0.0,
+      "case": "non_shell_dominant_loss"
+    },
+    {
+      "step": 70,
+      "winner_move_type": "edge_down",
+      "winner_deltaF": -0.5300982997152281,
+      "lower_node": 3,
+      "lower_deltaF": 0.12444955135868367,
+      "deltaF_gap_to_winner": -0.6545478510739118,
+      "shell_penalty": 0.22250000000000003,
+      "shell_indispensability": 0.22250000000000003,
+      "retirement_readiness": 0.6398225158306534,
+      "edge_ready": 0.982,
+      "functional_ready": 0.4651281585607089,
+      "bookkeeping_safety": 0.6666666666666666,
+      "substitutability": 0.7857142857142858,
+      "core_penalty": 0.0,
+      "W_NR": 0.13043478836923453,
+      "dCF": 1.7281616637720987e-08,
+      "dE_expr_raw": -0.04825583816952772,
+      "dE_expr": 0.1693765932574363,
+      "delta_Odiff_R": -0.4657011904761905,
+      "core_pair": [
+        0,
+        1
+      ],
+      "shell_nodes": [
+        2,
+        4,
+        5,
+        6,
+        7
+      ],
+      "neighbors": [
+        2,
+        4
+      ],
+      "core_neighbor_count": 0,
+      "noncore_neighbor_count": 2,
+      "neighbor_cluster": 0.0,
+      "cross_replaceability": 1.0,
+      "bridge_unique": 0.0,
+      "case": "mixed"
+    },
+    {
+      "step": 30,
+      "winner_move_type": "raise_support",
+      "winner_deltaF": 0.21074415949512967,
+      "lower_node": 3,
+      "lower_deltaF": -0.28392264831601177,
+      "deltaF_gap_to_winner": 0.4946668078111415,
+      "shell_penalty": 0.1225,
+      "shell_indispensability": 0.1225,
+      "retirement_readiness": 0.7238601175996903,
+      "edge_ready": 0.982,
+      "functional_ready": 0.5660404703987612,
+      "bookkeeping_safety": 1.0,
+      "substitutability": 0.6666666666666666,
+      "core_penalty": 0.0,
+      "W_NR": 0.2500191020775163,
+      "dCF": 5.730623254895928e-05,
+      "dE_expr_raw": -0.6752305703152925,
+      "dE_expr": -0.22040450134236167,
+      "delta_Odiff_R": -0.470175,
+      "core_pair": [
+        0,
+        1
+      ],
+      "shell_nodes": [
+        2,
+        3,
+        4
+      ],
+      "neighbors": [
+        0,
+        2,
+        4
+      ],
+      "core_neighbor_count": 1,
+      "noncore_neighbor_count": 2,
+      "neighbor_cluster": 0.6666666666666666,
+      "cross_replaceability": 1.0,
+      "bridge_unique": 0.0,
+      "case": "non_shell_dominant_loss"
+    },
+    {
+      "step": 20,
+      "winner_move_type": "raise_support",
+      "winner_deltaF": 0.2122294224071991,
+      "lower_node": 2,
+      "lower_deltaF": -0.22714678639223712,
+      "deltaF_gap_to_winner": 0.43937620879943623,
+      "shell_penalty": 0.1225,
+      "shell_indispensability": 0.1225,
+      "retirement_readiness": 0.6988596370144989,
+      "edge_ready": 0.982,
+      "functional_ready": 0.5660385480579957,
+      "bookkeeping_safety": 1.0,
+      "substitutability": 0.5,
+      "core_penalty": 0.0,
+      "W_NR": 0.5000179996512264,
+      "dCF": 5.3998953679024186e-05,
+      "dE_expr_raw": -0.8263458258947489,
+      "dE_expr": -0.0521296867235721,
+      "delta_Odiff_R": 0.41136666666666666,
+      "core_pair": [
+        0,
+        1
+      ],
+      "shell_nodes": [
+        2,
+        3
+      ],
+      "neighbors": [
+        0,
+        1,
+        3
+      ],
+      "core_neighbor_count": 2,
+      "noncore_neighbor_count": 1,
+      "neighbor_cluster": 0.6666666666666666,
+      "cross_replaceability": 0.5,
+      "bridge_unique": 0.5,
+      "case": "non_shell_dominant_loss"
+    },
+    {
+      "step": 40,
+      "winner_move_type": "raise_support",
+      "winner_deltaF": 0.2106490603718027,
+      "lower_node": 4,
+      "lower_deltaF": -0.14050099802450622,
+      "deltaF_gap_to_winner": 0.3511500583963089,
+      "shell_penalty": 0.1225,
+      "shell_indispensability": 0.1225,
+      "retirement_readiness": 0.7310040079419349,
+      "edge_ready": 0.982,
+      "functional_ready": 0.5660446031963114,
+      "bookkeeping_safety": 1.0,
+      "substitutability": 0.7142857142857143,
+      "core_penalty": 0.0,
+      "W_NR": 0.16668687118568784,
+      "dCF": 6.0613557063549095e-05,
+      "dE_expr_raw": -0.5704380088503025,
+      "dE_expr": -0.09021981942759183,
+      "delta_Odiff_R": -0.39416249999999997,
+      "core_pair": [
+        0,
+        1
+      ],
+      "shell_nodes": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "neighbors": [
+        0,
+        3,
+        5
+      ],
+      "core_neighbor_count": 1,
+      "noncore_neighbor_count": 2,
+      "neighbor_cluster": 0.6666666666666666,
+      "cross_replaceability": 1.0,
+      "bridge_unique": 0.0,
+      "case": "non_shell_dominant_loss"
+    },
+    {
+      "step": 90,
+      "winner_move_type": "edge_up",
+      "winner_deltaF": 0.006536376967833579,
+      "lower_node": 6,
+      "lower_deltaF": -0.11334575748732031,
+      "deltaF_gap_to_winner": 0.11988213445515389,
+      "shell_penalty": 0.1225,
+      "shell_indispensability": 0.1225,
+      "retirement_readiness": 0.7363803626672528,
+      "edge_ready": 0.982,
+      "functional_ready": 0.5661214506690112,
+      "bookkeeping_safety": 1.0,
+      "substitutability": 0.75,
+      "core_penalty": 0.0,
+      "W_NR": 0.16668797170064079,
+      "dCF": 6.391510192238492e-05,
+      "dE_expr_raw": -0.5651208731051334,
+      "dE_expr": -0.06324944836092927,
+      "delta_Odiff_R": -0.32678249999999986,
+      "core_pair": [
+        0,
+        1
+      ],
+      "shell_nodes": [
+        2,
+        5,
+        6,
+        7
+      ],
+      "neighbors": [
+        0,
+        1,
+        4
+      ],
+      "core_neighbor_count": 2,
+      "noncore_neighbor_count": 1,
+      "neighbor_cluster": 0.3333333333333333,
+      "cross_replaceability": 0.0,
+      "bridge_unique": 1.0,
+      "case": "non_shell_dominant_loss"
+    },
+    {
+      "step": 80,
+      "winner_move_type": "edge_down",
+      "winner_deltaF": -0.6994607103198469,
+      "lower_node": 7,
+      "lower_deltaF": -0.2655352415970268,
+      "deltaF_gap_to_winner": -0.4339254687228201,
+      "shell_penalty": 0.1225,
+      "shell_indispensability": 0.1225,
+      "retirement_readiness": 0.743869232599629,
+      "edge_ready": 0.982,
+      "functional_ready": 0.5660769303985164,
+      "bookkeeping_safety": 1.0,
+      "substitutability": 0.8,
+      "core_penalty": 0.0,
+      "W_NR": 0.3447052118052434,
+      "dCF": 0.2335941177512075,
+      "dE_expr_raw": -0.631016221545412,
+      "dE_expr": -0.10951540075458577,
+      "delta_Odiff_R": -0.2750549999999998,
+      "core_pair": [
+        0,
+        1
+      ],
+      "shell_nodes": [
+        2,
+        5,
+        6,
+        7
+      ],
+      "neighbors": [
+        0,
+        4
+      ],
+      "core_neighbor_count": 1,
+      "noncore_neighbor_count": 1,
+      "neighbor_cluster": 0.0,
+      "cross_replaceability": 0.0,
+      "bridge_unique": 1.0,
+      "case": "non_shell_dominant_loss"
+    },
+    {
+      "step": 10,
+      "winner_move_type": "raise_support",
+      "winner_deltaF": 0.8634870595434234,
+      "lower_node": 0,
+      "lower_deltaF": -0.446575218827592,
+      "deltaF_gap_to_winner": 1.3100622783710154,
+      "shell_penalty": 0.0,
+      "shell_indispensability": 0.0,
+      "retirement_readiness": 0.49472289156626503,
+      "edge_ready": 0.88,
+      "functional_ready": 0.7228915662650602,
+      "bookkeeping_safety": 1.0,
+      "substitutability": 0.0,
+      "core_penalty": 1.0,
+      "W_NR": 1.5000128023333106,
+      "dCF": 3.840699993190588e-05,
+      "dE_expr_raw": -0.009030181912151769,
+      "dE_expr": 0.07843694338905302,
+      "delta_Odiff_R": -0.014700000000000157,
+      "core_pair": [
+        0,
+        1
+      ],
+      "shell_nodes": [
+        2
+      ],
+      "neighbors": [
+        1,
+        2
+      ],
+      "core_neighbor_count": 1,
+      "noncore_neighbor_count": 1,
+      "neighbor_cluster": 1.0,
+      "cross_replaceability": 1.0,
+      "bridge_unique": 0.0,
+      "case": "non_shell_dominant_loss"
+    },
+    {
+      "step": 140,
+      "winner_move_type": "raise_support",
+      "winner_deltaF": 0.18750440914036598,
+      "lower_node": 1,
+      "lower_deltaF": -0.5335560719069038,
+      "deltaF_gap_to_winner": 0.7210604810472698,
+      "shell_penalty": 0.0,
+      "shell_indispensability": 0.0,
+      "retirement_readiness": 0.4931284715415908,
+      "edge_ready": 0.948,
+      "functional_ready": 0.4652169164693934,
+      "bookkeeping_safety": 0.6666666666666666,
+      "substitutability": 0.7272727272727273,
+      "core_penalty": 1.0,
+      "W_NR": 1.5000172116069583,
+      "dCF": 5.163482087466864e-05,
+      "dE_expr_raw": -0.006653220880293631,
+      "dE_expr": -0.008539720880293556,
+      "delta_Odiff_R": -0.005389999999999784,
+      "core_pair": [
+        0,
+        1
+      ],
+      "shell_nodes": [
+        2,
+        5,
+        6,
+        7
+      ],
+      "neighbors": [
+        0,
+        2,
+        6
+      ],
+      "core_neighbor_count": 1,
+      "noncore_neighbor_count": 2,
+      "neighbor_cluster": 0.6666666666666666,
+      "cross_replaceability": 1.0,
+      "bridge_unique": 0.0,
+      "case": "non_shell_dominant_loss"
+    },
+    {
+      "step": 120,
+      "winner_move_type": "raise_support",
+      "winner_deltaF": 0.18751191640203718,
+      "lower_node": 1,
+      "lower_deltaF": -0.5335483865518491,
+      "deltaF_gap_to_winner": 0.7210603029538862,
+      "shell_penalty": 0.0,
+      "shell_indispensability": 0.0,
+      "retirement_readiness": 0.4931225107853433,
+      "edge_ready": 0.948,
+      "functional_ready": 0.46519307344440364,
+      "bookkeeping_safety": 0.6666666666666666,
+      "substitutability": 0.7272727272727273,
+      "core_penalty": 1.0,
+      "W_NR": 1.5000172122737967,
+      "dCF": 5.1636821389922094e-05,
+      "dE_expr_raw": -0.006645534891742244,
+      "dE_expr": -0.008532034891742323,
+      "delta_Odiff_R": -0.005390000000000228,
+      "core_pair": [
+        0,
+        1
+      ],
+      "shell_nodes": [
+        2,
+        5,
+        6,
+        7
+      ],
+      "neighbors": [
+        0,
+        2,
+        6
+      ],
+      "core_neighbor_count": 1,
+      "noncore_neighbor_count": 2,
+      "neighbor_cluster": 0.6666666666666666,
+      "cross_replaceability": 1.0,
+      "bridge_unique": 0.0,
+      "case": "non_shell_dominant_loss"
+    },
+    {
+      "step": 100,
+      "winner_move_type": "raise_support",
+      "winner_deltaF": 0.1875194345386599,
+      "lower_node": 1,
+      "lower_deltaF": -0.533540689362987,
+      "deltaF_gap_to_winner": 0.721060123901647,
+      "shell_penalty": 0.0,
+      "shell_indispensability": 0.0,
+      "retirement_readiness": 0.4931173898062171,
+      "edge_ready": 0.948,
+      "functional_ready": 0.4651725895278988,
+      "bookkeeping_safety": 0.6666666666666666,
+      "substitutability": 0.7272727272727273,
+      "core_penalty": 1.0,
+      "W_NR": 1.5000172128716607,
+      "dCF": 5.1638614982196795e-05,
+      "dE_expr_raw": -0.006637837134909397,
+      "dE_expr": -0.0085243371349094,
+      "delta_Odiff_R": -0.005390000000000006,
+      "core_pair": [
+        0,
+        1
+      ],
+      "shell_nodes": [
+        2,
+        5,
+        6,
+        7
+      ],
+      "neighbors": [
+        0,
+        2,
+        6
+      ],
+      "core_neighbor_count": 1,
+      "noncore_neighbor_count": 2,
+      "neighbor_cluster": 0.6666666666666666,
+      "cross_replaceability": 1.0,
+      "bridge_unique": 0.0,
+      "case": "non_shell_dominant_loss"
+    }
+  ],
+  "readout": [
+    "High shell-penalty losses remain common among the best lower_support candidates.",
+    "In the late regime, shell protection is still the dominant demotion blocker for some recurrent nodes.",
+    "Late-time shell demotion does sometimes win, so shell protection is no longer absolute."
+  ]
+}

@@ -1,0 +1,323 @@
+{
+  "script": "hsf_mesoscape_local_expression_alignment_audit.py",
+  "input_json": "hsf_mesoscape_N8_T300_seed3_graded_support_v3hard.json",
+  "accepted_summary": {
+    "n_rows": 13,
+    "move_type_summary": {
+      "edge_down": {
+        "n": 4,
+        "dE_expr_raw_mean": -6.0987548920421464e-05,
+        "dE_expr_mean": -3.9470702313892934e-05,
+        "delta_Odiff_mean": 3.3217260852813624e-05,
+        "support_mass_delta_mean": 0.0,
+        "interface_count_delta_mean": 0.0,
+        "role_gain_proxy_mean": 4.94540265402188e-05,
+        "touches_core_fraction": 1.0
+      },
+      "edge_up": {
+        "n": 3,
+        "dE_expr_raw_mean": -2.008373900641375,
+        "dE_expr_mean": -1.929630535355919,
+        "delta_Odiff_mean": 0.2037859097555735,
+        "support_mass_delta_mean": 0.0,
+        "interface_count_delta_mean": 1.0,
+        "role_gain_proxy_mean": 0.2037859097555735,
+        "touches_core_fraction": 1.0
+      },
+      "raise_support": {
+        "n": 6,
+        "dE_expr_raw_mean": -1.266676124180769,
+        "dE_expr_mean": -1.0445888480944634,
+        "delta_Odiff_mean": 0.21284135263150816,
+        "support_mass_delta_mean": 0.0,
+        "interface_count_delta_mean": 0.0,
+        "role_gain_proxy_mean": 1.0,
+        "touches_core_fraction": 1.0
+      }
+    },
+    "case_summary": {
+      "ordinary": 3,
+      "core_touch_penalized_despite_role_gain": 7,
+      "interface_growth_penalized_despite_role_gain": 3
+    },
+    "correlation_summary": {
+      "cov_raw_vs_odiff": -0.08962215255512032,
+      "cov_raw_vs_role_gain_proxy": -0.14601963909250587,
+      "cov_raw_vs_support_mass_delta": 0.0,
+      "cov_raw_vs_interface_count_delta": -0.22159949664733947
+    }
+  },
+  "late_summary": {
+    "n_rows": 5,
+    "move_type_summary": {
+      "edge_down": {
+        "n": 2,
+        "dE_expr_raw_mean": -0.00010004208660419067,
+        "dE_expr_mean": -8.834567119468395e-05,
+        "delta_Odiff_mean": 9.519754681774906e-06,
+        "support_mass_delta_mean": 0.0,
+        "interface_count_delta_mean": 0.0,
+        "role_gain_proxy_mean": 4.1822506354427524e-05,
+        "touches_core_fraction": 1.0
+      },
+      "edge_up": {
+        "n": 2,
+        "dE_expr_raw_mean": -2.0083821906443897,
+        "dE_expr_mean": -1.9424791329353002,
+        "delta_Odiff_mean": 0.16174306929041327,
+        "support_mass_delta_mean": 0.0,
+        "interface_count_delta_mean": 1.0,
+        "role_gain_proxy_mean": 0.16174306929041327,
+        "touches_core_fraction": 1.0
+      },
+      "raise_support": {
+        "n": 1,
+        "dE_expr_raw_mean": -2.0083694930935465,
+        "dE_expr_mean": -1.8022492821063305,
+        "delta_Odiff_mean": 0.13891488853490275,
+        "support_mass_delta_mean": 0.0,
+        "interface_count_delta_mean": 0.0,
+        "role_gain_proxy_mean": 1.0,
+        "touches_core_fraction": 1.0
+      }
+    },
+    "case_summary": {
+      "interface_growth_penalized_despite_role_gain": 2,
+      "core_touch_penalized_despite_role_gain": 2,
+      "ordinary": 1
+    },
+    "correlation_summary": {
+      "cov_raw_vs_odiff": -0.07428570201262455,
+      "cov_raw_vs_role_gain_proxy": -0.21261253177284428,
+      "cov_raw_vs_support_mass_delta": 0.0,
+      "cov_raw_vs_interface_count_delta": -0.3213261595733131
+    }
+  },
+  "flagged_cases": [
+    {
+      "step": 20,
+      "move_type": "raise_support",
+      "case": "core_touch_penalized_despite_role_gain",
+      "deltaF": 0.1516623648813415,
+      "dE_expr_raw": -1.3439841568541055e-06,
+      "dE_expr": 0.15168365395206884,
+      "delta_Odiff_R": 5.237505588295832e-05,
+      "role_gain_proxy": 1.0,
+      "support_mass_delta": 0.0,
+      "interface_count_delta": 0.0,
+      "touches_core": true,
+      "move_descriptor": {
+        "parents": [
+          0,
+          1
+        ],
+        "child": 2,
+        "edge": null,
+        "node": null
+      }
+    },
+    {
+      "step": 40,
+      "move_type": "raise_support",
+      "case": "core_touch_penalized_despite_role_gain",
+      "deltaF": -1.9137487075205826,
+      "dE_expr_raw": -2.0083374819374944,
+      "dE_expr": -1.7633374819374943,
+      "delta_Odiff_R": 0.33930709172046924,
+      "role_gain_proxy": 1.0,
+      "support_mass_delta": 0.0,
+      "interface_count_delta": 0.0,
+      "touches_core": true,
+      "move_descriptor": {
+        "parents": [
+          0,
+          1
+        ],
+        "child": 2,
+        "edge": null,
+        "node": null
+      }
+    },
+    {
+      "step": 50,
+      "move_type": "raise_support",
+      "case": "core_touch_penalized_despite_role_gain",
+      "deltaF": -1.902607267802277,
+      "dE_expr_raw": -2.008338037959906,
+      "dE_expr": -1.7686195903655157,
+      "delta_Odiff_R": 0.2349098502696867,
+      "role_gain_proxy": 1.0,
+      "support_mass_delta": 0.0,
+      "interface_count_delta": 0.0,
+      "touches_core": true,
+      "move_descriptor": {
+        "parents": [
+          0,
+          1
+        ],
+        "child": 2,
+        "edge": null,
+        "node": null
+      }
+    },
+    {
+      "step": 60,
+      "move_type": "raise_support",
+      "case": "core_touch_penalized_despite_role_gain",
+      "deltaF": -1.8667479808060308,
+      "dE_expr_raw": -2.0083425384471787,
+      "dE_expr": -1.7633425384471786,
+      "delta_Odiff_R": 0.29847441166691757,
+      "role_gain_proxy": 1.0,
+      "support_mass_delta": 0.0,
+      "interface_count_delta": 0.0,
+      "touches_core": true,
+      "move_descriptor": {
+        "parents": [
+          0,
+          1
+        ],
+        "child": 2,
+        "edge": null,
+        "node": null
+      }
+    },
+    {
+      "step": 70,
+      "move_type": "edge_down",
+      "case": "core_touch_penalized_despite_role_gain",
+      "deltaF": -0.5249943318716649,
+      "dE_expr_raw": -3.583577032451046e-05,
+      "dE_expr": 2.695833107410061e-05,
+      "delta_Odiff_R": 0.00011417109345202014,
+      "role_gain_proxy": 0.00011417109345202014,
+      "support_mass_delta": 0.0,
+      "interface_count_delta": 0.0,
+      "touches_core": true,
+      "move_descriptor": {
+        "parents": null,
+        "child": null,
+        "edge": [
+          0,
+          1
+        ],
+        "node": null
+      }
+    },
+    {
+      "step": 80,
+      "move_type": "edge_up",
+      "case": "interface_growth_penalized_despite_role_gain",
+      "deltaF": -6.000166384167898,
+      "dE_expr_raw": -2.008357320635346,
+      "dE_expr": -1.9039333401971572,
+      "delta_Odiff_R": 0.28787159068589396,
+      "role_gain_proxy": 0.28787159068589396,
+      "support_mass_delta": 0.0,
+      "interface_count_delta": 1.0,
+      "touches_core": true,
+      "move_descriptor": {
+        "parents": null,
+        "child": null,
+        "edge": [
+          0,
+          2
+        ],
+        "node": null
+      }
+    },
+    {
+      "step": 90,
+      "move_type": "edge_up",
+      "case": "interface_growth_penalized_despite_role_gain",
+      "deltaF": -2.003380602972364,
+      "dE_expr_raw": -2.0083761790546646,
+      "dE_expr": -1.9194653646492041,
+      "delta_Odiff_R": 0.21575220791681948,
+      "role_gain_proxy": 0.21575220791681948,
+      "support_mass_delta": 0.0,
+      "interface_count_delta": 1.0,
+      "touches_core": true,
+      "move_descriptor": {
+        "parents": null,
+        "child": null,
+        "edge": [
+          0,
+          2
+        ],
+        "node": null
+      }
+    },
+    {
+      "step": 100,
+      "move_type": "raise_support",
+      "case": "core_touch_penalized_despite_role_gain",
+      "deltaF": -1.8851549425876137,
+      "dE_expr_raw": -2.0083694930935465,
+      "dE_expr": -1.8022492821063305,
+      "delta_Odiff_R": 0.13891488853490275,
+      "role_gain_proxy": 1.0,
+      "support_mass_delta": 0.0,
+      "interface_count_delta": 0.0,
+      "touches_core": true,
+      "move_descriptor": {
+        "parents": [
+          0,
+          1
+        ],
+        "child": 2,
+        "edge": null,
+        "node": null
+      }
+    },
+    {
+      "step": 110,
+      "move_type": "edge_up",
+      "case": "interface_growth_penalized_despite_role_gain",
+      "deltaF": -2.0374295634168194,
+      "dE_expr_raw": -2.008388202234115,
+      "dE_expr": -1.9654929012213962,
+      "delta_Odiff_R": 0.10773393066400705,
+      "role_gain_proxy": 0.10773393066400705,
+      "support_mass_delta": 0.0,
+      "interface_count_delta": 1.0,
+      "touches_core": true,
+      "move_descriptor": {
+        "parents": null,
+        "child": null,
+        "edge": [
+          0,
+          2
+        ],
+        "node": null
+      }
+    },
+    {
+      "step": 130,
+      "move_type": "edge_down",
+      "case": "core_touch_penalized_despite_role_gain",
+      "deltaF": -0.5250734032443486,
+      "dE_expr_raw": -9.811716197738463e-05,
+      "dE_expr": -5.211240498751435e-05,
+      "delta_Odiff_R": 8.364501270885505e-05,
+      "role_gain_proxy": 8.364501270885505e-05,
+      "support_mass_delta": 0.0,
+      "interface_count_delta": 0.0,
+      "touches_core": true,
+      "move_descriptor": {
+        "parents": null,
+        "child": null,
+        "edge": [
+          0,
+          1
+        ],
+        "node": null
+      }
+    }
+  ],
+  "readout": [
+    "Raw expression is still penalizing some interface growth even when move-local role evidence is positive.",
+    "The late bottleneck still includes edge/interface additions that look role-positive locally but raw-negative globally.",
+    "The old false-positive edge_up pattern appears to remain suppressed in the late regime."
+  ]
+}

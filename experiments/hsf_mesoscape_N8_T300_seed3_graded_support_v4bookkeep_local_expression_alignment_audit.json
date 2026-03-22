@@ -1,0 +1,76 @@
+{
+  "script": "hsf_mesoscape_local_expression_alignment_audit.py",
+  "input_json": "hsf_mesoscape_N8_T300_seed3_graded_support_v4bookkeep.json",
+  "accepted_summary": {
+    "n_rows": 30,
+    "move_type_summary": {
+      "edge_down": {
+        "n": 2,
+        "dE_expr_raw_mean": -0.004054245002059975,
+        "dE_expr_mean": -0.005130495002059876,
+        "delta_Odiff_mean": -0.003074999999999717,
+        "support_mass_delta_mean": 0.0,
+        "interface_count_delta_mean": 0.0,
+        "role_gain_proxy_mean": 0.0,
+        "touches_core_fraction": 1.0
+      },
+      "edge_up": {
+        "n": 18,
+        "dE_expr_raw_mean": 0.0053591061235237865,
+        "dE_expr_mean": 0.006535106123523788,
+        "delta_Odiff_mean": 0.003360000000000005,
+        "support_mass_delta_mean": 0.0,
+        "interface_count_delta_mean": 0.0,
+        "role_gain_proxy_mean": 0.003360000000000005,
+        "touches_core_fraction": 0.9444444444444444
+      },
+      "raise_support": {
+        "n": 10,
+        "dE_expr_raw_mean": 0.08733324128944667,
+        "dE_expr_mean": 0.2593163037894467,
+        "delta_Odiff_mean": -0.03727791666666661,
+        "support_mass_delta_mean": 0.0,
+        "interface_count_delta_mean": 0.0,
+        "role_gain_proxy_mean": 1.0,
+        "touches_core_fraction": 1.0
+      }
+    },
+    "case_summary": {
+      "ordinary": 30
+    },
+    "correlation_summary": {
+      "cov_raw_vs_odiff": -0.010972373736501862,
+      "cov_raw_vs_role_gain_proxy": 0.01837183859744451,
+      "cov_raw_vs_support_mass_delta": 0.0,
+      "cov_raw_vs_interface_count_delta": 0.0
+    }
+  },
+  "late_summary": {
+    "n_rows": 10,
+    "move_type_summary": {
+      "edge_up": {
+        "n": 10,
+        "dE_expr_raw_mean": 0.00534250067116151,
+        "dE_expr_mean": 0.006518500671161489,
+        "delta_Odiff_mean": 0.0033599999999999407,
+        "support_mass_delta_mean": 0.0,
+        "interface_count_delta_mean": 0.0,
+        "role_gain_proxy_mean": 0.0033599999999999407,
+        "touches_core_fraction": 0.9
+      }
+    },
+    "case_summary": {
+      "ordinary": 10
+    },
+    "correlation_summary": {
+      "cov_raw_vs_odiff": -8.724010098373262e-22,
+      "cov_raw_vs_role_gain_proxy": -8.724010098373262e-22,
+      "cov_raw_vs_support_mass_delta": 0.0,
+      "cov_raw_vs_interface_count_delta": 0.0
+    }
+  },
+  "flagged_cases": [],
+  "readout": [
+    "The old false-positive edge_up pattern appears to remain suppressed in the late regime."
+  ]
+}

@@ -1,0 +1,530 @@
+{
+  "script": "hsf_mesoscape_graded_raw_expression_audit.py",
+  "input_json": "hsf_mesoscape_N8_T300_seed3_graded_support_v3hard.json",
+  "accepted_move_summary": {
+    "label": "all_accepted_moves",
+    "n_rows": 13,
+    "move_type_counts": {
+      "raise_support": 6,
+      "edge_down": 4,
+      "edge_up": 3
+    },
+    "case_counts": {
+      "ordinary": 3,
+      "negative_raw_with_positive_role_gain": 10
+    },
+    "dE_expr_raw_mean": -1.0481094151695707,
+    "dE_expr_mean": -0.9274294290341379,
+    "delta_Odiff_mean": 0.14527220877686006,
+    "edge_up_relief_gain_mean": 0.07891099411795288,
+    "edge_up_distinct_gain_mean": 0.07891099411795288,
+    "graded_witness_adjustment_mean": 0.07497816748007521,
+    "graded_redundancy_penalty_mean": 0.0
+  },
+  "late_move_summary": {
+    "label": "late_accepted_moves",
+    "n_rows": 5,
+    "move_type_counts": {
+      "edge_up": 2,
+      "raise_support": 1,
+      "edge_down": 2
+    },
+    "case_counts": {
+      "negative_raw_with_positive_role_gain": 4,
+      "ordinary": 1
+    },
+    "dE_expr_raw_mean": -1.2050667917111069,
+    "dE_expr_mean": -1.1374768478638642,
+    "delta_Odiff_mean": 0.09248401332501857,
+    "edge_up_relief_gain_mean": 0.0619532230496333,
+    "edge_up_distinct_gain_mean": 0.0619532230496333,
+    "graded_witness_adjustment_mean": 0.03522053918348635,
+    "graded_redundancy_penalty_mean": 0.0
+  },
+  "component_attribution": {
+    "raise_support": {
+      "dE_expr_raw": {
+        "mean": -1.266676124180769,
+        "stdev": 1.1571339783877541,
+        "min": -2.0083694930935465,
+        "max": 0.4333321503376699
+      },
+      "expr_odiff_adjustment": {
+        "mean": 0.06555949830852754,
+        "stdev": 0.035508481990964874,
+        "min": 1.833126955903541e-05,
+        "max": 0.0875
+      },
+      "graded_relief_term": {
+        "mean": 0.105,
+        "stdev": 0.0,
+        "min": 0.105,
+        "max": 0.105
+      },
+      "graded_distinct_term": {
+        "mean": 0.0,
+        "stdev": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "graded_persistence_term": {
+        "mean": 0.051527777777777777,
+        "stdev": 0.002381448361039202,
+        "min": 0.04666666666666666,
+        "max": 0.0525
+      },
+      "graded_redundancy_penalty": {
+        "mean": 0.0,
+        "stdev": 0.0,
+        "min": -0.0,
+        "max": -0.0
+      },
+      "graded_witness_adjustment": {
+        "mean": 0.1565277777777778,
+        "stdev": 0.0023814483610391994,
+        "min": 0.15166666666666667,
+        "max": 0.1575
+      },
+      "dE_expr": {
+        "mean": -1.0445888480944634,
+        "stdev": 1.14289115676503,
+        "min": -1.8022492821063305,
+        "max": 0.6783321503376699
+      }
+    },
+    "edge_down": {
+      "dE_expr_raw": {
+        "mean": -6.0987548920421464e-05,
+        "stdev": 4.6529602566250275e-05,
+        "min": -0.00010196701123099672,
+        "max": -8.030252148794048e-06
+      },
+      "expr_odiff_adjustment": {
+        "mean": 1.1626041298484767e-05,
+        "stdev": 2.8428367146304898e-05,
+        "min": -2.2611926170856832e-05,
+        "max": 3.995988270820705e-05
+      },
+      "graded_distinct_term": {
+        "mean": 9.89080530804376e-06,
+        "stdev": 1.1689724129583088e-05,
+        "min": 0.0,
+        "max": 2.283421869040403e-05
+      },
+      "graded_structural_adjustment": {
+        "mean": 0.0,
+        "stdev": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "graded_redundancy_penalty": {
+        "mean": 0.0,
+        "stdev": 0.0,
+        "min": -0.0,
+        "max": -0.0
+      },
+      "graded_witness_adjustment": {
+        "mean": 9.89080530804376e-06,
+        "stdev": 1.1689724129583088e-05,
+        "min": 0.0,
+        "max": 2.283421869040403e-05
+      },
+      "dE_expr": {
+        "mean": -3.9470702313892934e-05,
+        "stdev": 6.531217307138196e-05,
+        "min": -0.00012457893740185354,
+        "max": 2.695833107410061e-05
+      }
+    },
+    "edge_up": {
+      "dE_expr_raw": {
+        "mean": -2.008373900641375,
+        "stdev": 1.556636312592638e-05,
+        "min": -2.008388202234115,
+        "max": -2.008357320635346
+      },
+      "expr_odiff_adjustment": {
+        "mean": 0.0669067161677631,
+        "stdev": 0.02598833235327311,
+        "min": 0.037706875732402466,
+        "max": 0.0875
+      },
+      "graded_relief_term": {
+        "mean": 0.0071019894706157586,
+        "stdev": 0.003612882091767023,
+        "min": 0.0031130551681897664,
+        "max": 0.010154388262913283
+      },
+      "graded_distinct_term": {
+        "mean": 0.004734659647077173,
+        "stdev": 0.0024085880611780155,
+        "min": 0.002075370112126511,
+        "max": 0.006769592175275523
+      },
+      "graded_redundancy_penalty": {
+        "mean": 0.0,
+        "stdev": 0.0,
+        "min": -0.0,
+        "max": -0.0
+      },
+      "graded_witness_adjustment": {
+        "mean": 0.011836649117692931,
+        "stdev": 0.006021470152945039,
+        "min": 0.005188425280316277,
+        "max": 0.016923980438188806
+      },
+      "dE_expr": {
+        "mean": -1.929630535355919,
+        "stdev": 0.03201394867861108,
+        "min": -1.9654929012213962,
+        "max": -1.9039333401971572
+      }
+    }
+  },
+  "late_component_attribution": {
+    "edge_up": {
+      "dE_expr_raw": {
+        "mean": -2.0083821906443897,
+        "stdev": 8.501671720701664e-06,
+        "min": -2.008388202234115,
+        "max": -2.0083761790546646
+      },
+      "expr_odiff_adjustment": {
+        "mean": 0.056610074251644646,
+        "stdev": 0.02673315971814329,
+        "min": 0.037706875732402466,
+        "max": 0.07551327277088682
+      },
+      "graded_relief_term": {
+        "mean": 0.0055757900744669965,
+        "stdev": 0.0034828331049868923,
+        "min": 0.0031130551681897664,
+        "max": 0.008038524980744227
+      },
+      "graded_distinct_term": {
+        "mean": 0.003717193382977998,
+        "stdev": 0.002321888736657928,
+        "min": 0.002075370112126511,
+        "max": 0.005359016653829485
+      },
+      "graded_redundancy_penalty": {
+        "mean": 0.0,
+        "stdev": 0.0,
+        "min": -0.0,
+        "max": -0.0
+      },
+      "graded_witness_adjustment": {
+        "mean": 0.009292983457444995,
+        "stdev": 0.005804721841644821,
+        "min": 0.005188425280316277,
+        "max": 0.013397541634573712
+      },
+      "dE_expr": {
+        "mean": -1.9424791329353002,
+        "stdev": 0.03254638323150882,
+        "min": -1.9654929012213962,
+        "max": -1.9194653646492041
+      }
+    },
+    "raise_support": {
+      "dE_expr_raw": {
+        "mean": -2.0083694930935465,
+        "stdev": 0.0,
+        "min": -2.0083694930935465,
+        "max": -2.0083694930935465
+      },
+      "expr_odiff_adjustment": {
+        "mean": 0.04862021098721596,
+        "stdev": 0.0,
+        "min": 0.04862021098721596,
+        "max": 0.04862021098721596
+      },
+      "graded_relief_term": {
+        "mean": 0.105,
+        "stdev": 0.0,
+        "min": 0.105,
+        "max": 0.105
+      },
+      "graded_distinct_term": {
+        "mean": 0.0,
+        "stdev": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "graded_persistence_term": {
+        "mean": 0.0525,
+        "stdev": 0.0,
+        "min": 0.0525,
+        "max": 0.0525
+      },
+      "graded_redundancy_penalty": {
+        "mean": 0.0,
+        "stdev": 0.0,
+        "min": -0.0,
+        "max": -0.0
+      },
+      "graded_witness_adjustment": {
+        "mean": 0.1575,
+        "stdev": 0.0,
+        "min": 0.1575,
+        "max": 0.1575
+      },
+      "dE_expr": {
+        "mean": -1.8022492821063305,
+        "stdev": 0.0,
+        "min": -1.8022492821063305,
+        "max": -1.8022492821063305
+      }
+    },
+    "edge_down": {
+      "dE_expr_raw": {
+        "mean": -0.00010004208660419067,
+        "stdev": 2.722254513775079e-06,
+        "min": -0.00010196701123099672,
+        "max": -9.811716197738463e-05
+      },
+      "expr_odiff_adjustment": {
+        "mean": 3.331914138621217e-06,
+        "stdev": 3.669013082570565e-05,
+        "min": -2.2611926170856832e-05,
+        "max": 2.9275754448099266e-05
+      },
+      "graded_distinct_term": {
+        "mean": 8.364501270885506e-06,
+        "stdev": 1.1829191139773273e-05,
+        "min": 0.0,
+        "max": 1.6729002541771012e-05
+      },
+      "graded_structural_adjustment": {
+        "mean": 0.0,
+        "stdev": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "graded_redundancy_penalty": {
+        "mean": 0.0,
+        "stdev": 0.0,
+        "min": -0.0,
+        "max": -0.0
+      },
+      "graded_witness_adjustment": {
+        "mean": 8.364501270885506e-06,
+        "stdev": 1.1829191139773273e-05,
+        "min": 0.0,
+        "max": 1.6729002541771012e-05
+      },
+      "dE_expr": {
+        "mean": -8.834567119468395e-05,
+        "stdev": 5.1241576479253995e-05,
+        "min": -0.00012457893740185354,
+        "max": -5.211240498751435e-05
+      }
+    }
+  },
+  "cross_checks": {
+    "edge_up_positive_raw_nonpositive_odiff": 0,
+    "edge_up_negative_raw_positive_total": 0,
+    "edge_up_positive_raw_zero_relief_zero_distinct": 0,
+    "raise_support_positive_raw_nonpositive_odiff": 0
+  },
+  "flagged_cases": [
+    {
+      "step": 20,
+      "move_type": "raise_support",
+      "case": "negative_raw_with_positive_role_gain",
+      "deltaF": 0.1516623648813415,
+      "dE_expr_raw": -1.3439841568541055e-06,
+      "dE_expr": 0.15168365395206884,
+      "delta_Odiff_R": 5.237505588295832e-05,
+      "edge_up_relief_gain": 0.0,
+      "edge_up_distinct_gain": 0.0,
+      "graded_redundancy_penalty": -0.0,
+      "graded_witness_adjustment": 0.15166666666666667,
+      "expr_odiff_adjustment": 1.833126955903541e-05,
+      "move_object": {
+        "parents": [
+          0,
+          1
+        ],
+        "child": 2
+      }
+    },
+    {
+      "step": 40,
+      "move_type": "raise_support",
+      "case": "negative_raw_with_positive_role_gain",
+      "deltaF": -1.9137487075205826,
+      "dE_expr_raw": -2.0083374819374944,
+      "dE_expr": -1.7633374819374943,
+      "delta_Odiff_R": 0.33930709172046924,
+      "edge_up_relief_gain": 0.0,
+      "edge_up_distinct_gain": 0.0,
+      "graded_redundancy_penalty": -0.0,
+      "graded_witness_adjustment": 0.1575,
+      "expr_odiff_adjustment": 0.0875,
+      "move_object": {
+        "parents": [
+          0,
+          1
+        ],
+        "child": 2
+      }
+    },
+    {
+      "step": 50,
+      "move_type": "raise_support",
+      "case": "negative_raw_with_positive_role_gain",
+      "deltaF": -1.902607267802277,
+      "dE_expr_raw": -2.008338037959906,
+      "dE_expr": -1.7686195903655157,
+      "delta_Odiff_R": 0.2349098502696867,
+      "edge_up_relief_gain": 0.0,
+      "edge_up_distinct_gain": 0.0,
+      "graded_redundancy_penalty": -0.0,
+      "graded_witness_adjustment": 0.1575,
+      "expr_odiff_adjustment": 0.08221844759439034,
+      "move_object": {
+        "parents": [
+          0,
+          1
+        ],
+        "child": 2
+      }
+    },
+    {
+      "step": 60,
+      "move_type": "raise_support",
+      "case": "negative_raw_with_positive_role_gain",
+      "deltaF": -1.8667479808060308,
+      "dE_expr_raw": -2.0083425384471787,
+      "dE_expr": -1.7633425384471786,
+      "delta_Odiff_R": 0.29847441166691757,
+      "edge_up_relief_gain": 0.0,
+      "edge_up_distinct_gain": 0.0,
+      "graded_redundancy_penalty": -0.0,
+      "graded_witness_adjustment": 0.1575,
+      "expr_odiff_adjustment": 0.0875,
+      "move_object": {
+        "parents": [
+          0,
+          1
+        ],
+        "child": 2
+      }
+    },
+    {
+      "step": 70,
+      "move_type": "edge_down",
+      "case": "negative_raw_with_positive_role_gain",
+      "deltaF": -0.5249943318716649,
+      "dE_expr_raw": -3.583577032451046e-05,
+      "dE_expr": 2.695833107410061e-05,
+      "delta_Odiff_R": 0.00011417109345202014,
+      "edge_up_relief_gain": 0.0,
+      "edge_up_distinct_gain": 0.0,
+      "graded_redundancy_penalty": -0.0,
+      "graded_witness_adjustment": 2.283421869040403e-05,
+      "expr_odiff_adjustment": 3.995988270820705e-05,
+      "move_object": [
+        0,
+        1
+      ]
+    },
+    {
+      "step": 80,
+      "move_type": "edge_up",
+      "case": "negative_raw_with_positive_role_gain",
+      "deltaF": -6.000166384167898,
+      "dE_expr_raw": -2.008357320635346,
+      "dE_expr": -1.9039333401971572,
+      "delta_Odiff_R": 0.28787159068589396,
+      "edge_up_relief_gain": 0.11282653625459205,
+      "edge_up_distinct_gain": 0.11282653625459205,
+      "graded_redundancy_penalty": -0.0,
+      "graded_witness_adjustment": 0.016923980438188806,
+      "expr_odiff_adjustment": 0.0875,
+      "move_object": [
+        0,
+        2
+      ]
+    },
+    {
+      "step": 90,
+      "move_type": "edge_up",
+      "case": "negative_raw_with_positive_role_gain",
+      "deltaF": -2.003380602972364,
+      "dE_expr_raw": -2.0083761790546646,
+      "dE_expr": -1.9194653646492041,
+      "delta_Odiff_R": 0.21575220791681948,
+      "edge_up_relief_gain": 0.08931694423049141,
+      "edge_up_distinct_gain": 0.08931694423049141,
+      "graded_redundancy_penalty": -0.0,
+      "graded_witness_adjustment": 0.013397541634573712,
+      "expr_odiff_adjustment": 0.07551327277088682,
+      "move_object": [
+        0,
+        2
+      ]
+    },
+    {
+      "step": 100,
+      "move_type": "raise_support",
+      "case": "negative_raw_with_positive_role_gain",
+      "deltaF": -1.8851549425876137,
+      "dE_expr_raw": -2.0083694930935465,
+      "dE_expr": -1.8022492821063305,
+      "delta_Odiff_R": 0.13891488853490275,
+      "edge_up_relief_gain": 0.0,
+      "edge_up_distinct_gain": 0.0,
+      "graded_redundancy_penalty": -0.0,
+      "graded_witness_adjustment": 0.1575,
+      "expr_odiff_adjustment": 0.04862021098721596,
+      "move_object": {
+        "parents": [
+          0,
+          1
+        ],
+        "child": 2
+      }
+    },
+    {
+      "step": 110,
+      "move_type": "edge_up",
+      "case": "negative_raw_with_positive_role_gain",
+      "deltaF": -2.0374295634168194,
+      "dE_expr_raw": -2.008388202234115,
+      "dE_expr": -1.9654929012213962,
+      "delta_Odiff_R": 0.10773393066400705,
+      "edge_up_relief_gain": 0.034589501868775185,
+      "edge_up_distinct_gain": 0.034589501868775185,
+      "graded_redundancy_penalty": -0.0,
+      "graded_witness_adjustment": 0.005188425280316277,
+      "expr_odiff_adjustment": 0.037706875732402466,
+      "move_object": [
+        0,
+        2
+      ]
+    },
+    {
+      "step": 130,
+      "move_type": "edge_down",
+      "case": "negative_raw_with_positive_role_gain",
+      "deltaF": -0.5250734032443486,
+      "dE_expr_raw": -9.811716197738463e-05,
+      "dE_expr": -5.211240498751435e-05,
+      "delta_Odiff_R": 8.364501270885505e-05,
+      "edge_up_relief_gain": 0.0,
+      "edge_up_distinct_gain": 0.0,
+      "graded_redundancy_penalty": -0.0,
+      "graded_witness_adjustment": 1.6729002541771012e-05,
+      "expr_odiff_adjustment": 2.9275754448099266e-05,
+      "move_object": [
+        0,
+        1
+      ]
+    }
+  ],
+  "readout": [
+    "The hardening appears to have mostly removed witness-side rescue of raw-negative edge_up moves."
+  ]
+}

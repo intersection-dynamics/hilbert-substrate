@@ -1,0 +1,262 @@
+{
+  "script": "hsf_mesoscape_partial_mode_probe.py",
+  "target_niche": {
+    "parent_pair": [
+      2,
+      3
+    ],
+    "child": 5
+  },
+  "physics_config": {
+    "n_max": 8,
+    "n_init": 2,
+    "seed": 3,
+    "local_scale": 0.15,
+    "pair_scale": 0.12,
+    "spawn_pair_scale": 0.11,
+    "total_steps": 300,
+    "dt": 0.04,
+    "eval_every": 10,
+    "lookahead_windows": 1,
+    "weaken_factor": 0.55,
+    "demote_edge_threshold": 0.25,
+    "progress_every": 1,
+    "device": "cpu"
+  },
+  "bookkeeping_config": {
+    "lambda_B": 0.18,
+    "lambda_S": 0.12,
+    "lambda_F": 0.2,
+    "lambda_R": 0.35,
+    "w_mi": 1.0,
+    "w_corr": 0.5,
+    "w_link": 0.5,
+    "retirement_edge_weight": 0.3,
+    "retirement_function_weight": 0.25,
+    "retirement_bookkeeping_weight": 0.2,
+    "retirement_sub_weight": 0.15,
+    "retirement_core_penalty": 0.15,
+    "retirement_shell_penalty": 0.1,
+    "retirement_threshold": 0.66,
+    "weaken_protected_core_penalty": 1.5,
+    "weaken_shell_penalty": 0.0,
+    "organizer_large_region_cutoff": 6,
+    "exact_mi_cutoff": 12,
+    "faithful_expr_large_n_cutoff": 12,
+    "shell_reexpression_pm_min": 0.9,
+    "shell_reexpression_pk_min": 0.9,
+    "shell_reexpression_ps_min": 0.75,
+    "birth_redundancy_penalty": 0.7,
+    "birth_novelty_weight": 0.55,
+    "birth_parent_relief_weight": 0.25,
+    "birth_distinctness_weight": 0.2,
+    "odiff_enabled": true,
+    "odiff_audit_only": false,
+    "odiff_gamma_n": 0.5,
+    "odiff_gamma_r": 0.3,
+    "odiff_gamma_d": 0.2,
+    "odiff_similarity_eps": 1e-09,
+    "odiff_region_hops": 1,
+    "odiff_max_logged_roles": 12,
+    "odiff_expr_weight": 0.35,
+    "odiff_expr_clip": 0.25,
+    "odiff_apply_to_birth": true,
+    "odiff_apply_to_weaken": true,
+    "odiff_apply_to_retire": false
+  },
+  "summary": {
+    "n_cycles": 9,
+    "dominant_mode_hypothesis": "partial_relief_mode",
+    "mode_hypothesis_counts": {
+      "partial_relief_mode": 9
+    },
+    "mode_score_means": {
+      "partial_relief_mode": 7.0,
+      "shell_redistribution_mode": 3.5,
+      "shared_support_mode": 4.75
+    },
+    "mean_absent_to_present_deltas": {
+      "role_relief_mean": 0.022391677859359384,
+      "activity_sum_mean": 0.32063492063492127,
+      "local_cluster_mean": -0.01031746031746038,
+      "distinctness_mean": 0.00789871504157219,
+      "anchor_diversity": 0.12063492063492062
+    },
+    "example_cycles": [
+      {
+        "birth_step": 40,
+        "retire_step": 70,
+        "duration_events": 3,
+        "duration_steps": 30,
+        "label": "partial_relief_mode",
+        "scores": {
+          "partial_relief_mode": 7.0,
+          "shell_redistribution_mode": 3.5,
+          "shared_support_mode": 4.75
+        },
+        "evidence": [
+          "birth parent relief is high",
+          "birth raises local differentiated-role occupancy",
+          "retirement removes substantial redundancy",
+          "retirement restores distinctness",
+          "present state raises local activity",
+          "present state raises role relief",
+          "cycle is short, suggesting overcorrection around a real niche"
+        ],
+        "birth_parent_relief": 1.0,
+        "birth_delta_Odiff": 0.18222048193625473,
+        "retire_redundancy_removed": 0.9580000000000001,
+        "retire_distinctness_gain": 0.6878289441529928,
+        "deltas_absent_to_present": {
+          "role_relief_mean": 0.04975124378109452,
+          "distinctness_mean": 0.016666666666666663,
+          "local_cluster_mean": -0.016666666666666607,
+          "activity_sum_mean": 0.5999999999999996,
+          "weight_sum": 0.9361111111111111,
+          "anchor_diversity": 0.1333333333333333,
+          "count": 1.0
+        }
+      },
+      {
+        "birth_step": 80,
+        "retire_step": 90,
+        "duration_events": 1,
+        "duration_steps": 10,
+        "label": "partial_relief_mode",
+        "scores": {
+          "partial_relief_mode": 7.0,
+          "shell_redistribution_mode": 3.5,
+          "shared_support_mode": 4.75
+        },
+        "evidence": [
+          "birth parent relief is high",
+          "birth raises local differentiated-role occupancy",
+          "retirement removes substantial redundancy",
+          "retirement restores distinctness",
+          "present state raises local activity",
+          "present state raises role relief",
+          "cycle is short, suggesting overcorrection around a real niche"
+        ],
+        "birth_parent_relief": 1.0,
+        "birth_delta_Odiff": 0.2124172027035922,
+        "retire_redundancy_removed": 0.9580000000000001,
+        "retire_distinctness_gain": 0.6878304325351625,
+        "deltas_absent_to_present": {
+          "role_relief_mean": 0.018971732119142493,
+          "distinctness_mean": 0.006802721088435382,
+          "local_cluster_mean": -0.009523809523809601,
+          "activity_sum_mean": 0.2857142857142865,
+          "weight_sum": 0.4354771390627965,
+          "anchor_diversity": 0.11904761904761904,
+          "count": 1.0
+        }
+      },
+      {
+        "birth_step": 100,
+        "retire_step": 110,
+        "duration_events": 1,
+        "duration_steps": 10,
+        "label": "partial_relief_mode",
+        "scores": {
+          "partial_relief_mode": 7.0,
+          "shell_redistribution_mode": 3.5,
+          "shared_support_mode": 4.75
+        },
+        "evidence": [
+          "birth parent relief is high",
+          "birth raises local differentiated-role occupancy",
+          "retirement removes substantial redundancy",
+          "retirement restores distinctness",
+          "present state raises local activity",
+          "present state raises role relief",
+          "cycle is short, suggesting overcorrection around a real niche"
+        ],
+        "birth_parent_relief": 1.0,
+        "birth_delta_Odiff": 0.2124172027035922,
+        "retire_redundancy_removed": 0.9580000000000001,
+        "retire_distinctness_gain": 0.687832418698494,
+        "deltas_absent_to_present": {
+          "role_relief_mean": 0.018971732119142493,
+          "distinctness_mean": 0.006802721088435382,
+          "local_cluster_mean": -0.009523809523809601,
+          "activity_sum_mean": 0.2857142857142865,
+          "weight_sum": 0.4354771390627965,
+          "anchor_diversity": 0.11904761904761904,
+          "count": 1.0
+        }
+      },
+      {
+        "birth_step": 120,
+        "retire_step": 130,
+        "duration_events": 1,
+        "duration_steps": 10,
+        "label": "partial_relief_mode",
+        "scores": {
+          "partial_relief_mode": 7.0,
+          "shell_redistribution_mode": 3.5,
+          "shared_support_mode": 4.75
+        },
+        "evidence": [
+          "birth parent relief is high",
+          "birth raises local differentiated-role occupancy",
+          "retirement removes substantial redundancy",
+          "retirement restores distinctness",
+          "present state raises local activity",
+          "present state raises role relief",
+          "cycle is short, suggesting overcorrection around a real niche"
+        ],
+        "birth_parent_relief": 1.0,
+        "birth_delta_Odiff": 0.2124172027035922,
+        "retire_redundancy_removed": 0.9580000000000001,
+        "retire_distinctness_gain": 0.6878349040967302,
+        "deltas_absent_to_present": {
+          "role_relief_mean": 0.018971732119142493,
+          "distinctness_mean": 0.006802721088435382,
+          "local_cluster_mean": -0.009523809523809601,
+          "activity_sum_mean": 0.2857142857142865,
+          "weight_sum": 0.4354771390627965,
+          "anchor_diversity": 0.11904761904761904,
+          "count": 1.0
+        }
+      },
+      {
+        "birth_step": 140,
+        "retire_step": 150,
+        "duration_events": 1,
+        "duration_steps": 10,
+        "label": "partial_relief_mode",
+        "scores": {
+          "partial_relief_mode": 7.0,
+          "shell_redistribution_mode": 3.5,
+          "shared_support_mode": 4.75
+        },
+        "evidence": [
+          "birth parent relief is high",
+          "birth raises local differentiated-role occupancy",
+          "retirement removes substantial redundancy",
+          "retirement restores distinctness",
+          "present state raises local activity",
+          "present state raises role relief",
+          "cycle is short, suggesting overcorrection around a real niche"
+        ],
+        "birth_parent_relief": 1.0,
+        "birth_delta_Odiff": 0.2124172027035922,
+        "retire_redundancy_removed": 0.9580000000000001,
+        "retire_distinctness_gain": 0.6878378904403298,
+        "deltas_absent_to_present": {
+          "role_relief_mean": 0.018971732119142493,
+          "distinctness_mean": 0.006802721088435382,
+          "local_cluster_mean": -0.009523809523809601,
+          "activity_sum_mean": 0.2857142857142865,
+          "weight_sum": 0.4354771390627965,
+          "anchor_diversity": 0.11904761904761904,
+          "count": 1.0
+        }
+      }
+    ]
+  },
+  "recommendations": [
+    "The niche most likely wants sub-full burden sharing: more than zero support, less than a full stable patch.",
+    "The next dynamics-side experiment should approximate partial occupancy or partial local support amplitude before inventing a global recurrence penalty."
+  ]
+}

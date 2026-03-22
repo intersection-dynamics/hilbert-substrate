@@ -1,0 +1,61 @@
+{
+  "script": "hsf_mesoscape_graded_constraint_probe.py",
+  "input_json": "hsf_mesoscape_N8_T300_seed3_graded_support_v2same.json",
+  "finite_bandwidth_probe": {
+    "n_partial_nodes": 6,
+    "partial_nodes": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "partial_degree_mean": 4.0,
+    "partial_degree_stdev": 0.0,
+    "partial_support_mass": 2.0999999999999996,
+    "total_support_mass": 4.1,
+    "diffuse_partial_fraction": 0.5121951219512195,
+    "finite_bandwidth_crowding_proxy": 24.0
+  },
+  "no_refolding_probe": {
+    "late_edge_jaccard_mean": 1.0,
+    "late_edge_jaccard_min": 1.0,
+    "late_sigma_l1_mean": 0.0,
+    "late_sigma_l1_max": 0.0
+  },
+  "no_forgetting_probe": {
+    "first_full_step": 100,
+    "initial_partial_nodes_at_full": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "initial_full_nodes_at_full": [
+      0,
+      1
+    ],
+    "post_full_partial_persistence_fraction": 1.0,
+    "post_full_full_node_stability_fraction": 1.0
+  },
+  "no_signalling_probe": {
+    "late_move_type_counts": {
+      "edge_up": 10
+    },
+    "late_edge_up_fraction": 1.0,
+    "late_edge_down_fraction": 0.0,
+    "late_raise_support_fraction": 0.0,
+    "late_lower_support_fraction": 0.0
+  },
+  "constraint_readout": {
+    "dominant_constraint_reads": [
+      "finite_bandwidth is the strongest live candidate for why support mass stays broadly distributed across many partial carriers",
+      "no_refolding likely contributes to persistent late-time support geometry once a partial network has formed",
+      "no_forgetting-like persistence is visible in the survival of partial carriers after full-site occupancy is reached",
+      "no_signalling-compatible retuning is most visible in late-time dynamics shifting into local interface adjustments instead of further support creation"
+    ]
+  }
+}

@@ -1,0 +1,260 @@
+{
+  "script": "hsf_mesoscape_graded_raw_expression_audit.py",
+  "input_json": "hsf_mesoscape_N8_T300_seed3_graded_support_v4bookkeep.json",
+  "accepted_move_summary": {
+    "label": "all_accepted_moves",
+    "n_rows": 30,
+    "move_type_counts": {
+      "raise_support": 10,
+      "edge_down": 2,
+      "edge_up": 18
+    },
+    "case_counts": {
+      "raw_overcomes_redundancy_penalty": 1,
+      "ordinary": 29
+    },
+    "dE_expr_raw_mean": 0.0320562611037925,
+    "dE_expr_mean": 0.0900177986037925,
+    "delta_Odiff_mean": -0.010614972222222182,
+    "edge_up_relief_gain_mean": 0.0,
+    "edge_up_distinct_gain_mean": 0.0,
+    "graded_witness_adjustment_mean": 0.05979416666666666,
+    "graded_redundancy_penalty_mean": -0.0034280555555555553
+  },
+  "late_move_summary": {
+    "label": "late_accepted_moves",
+    "n_rows": 10,
+    "move_type_counts": {
+      "edge_up": 10
+    },
+    "case_counts": {
+      "ordinary": 10
+    },
+    "dE_expr_raw_mean": 0.00534250067116151,
+    "dE_expr_mean": 0.006518500671161489,
+    "delta_Odiff_mean": 0.0033599999999999407,
+    "edge_up_relief_gain_mean": 0.0,
+    "edge_up_distinct_gain_mean": 0.0,
+    "graded_witness_adjustment_mean": 0.0,
+    "graded_redundancy_penalty_mean": 0.0
+  },
+  "component_attribution": {
+    "raise_support": {
+      "dE_expr_raw": {
+        "mean": 0.08733324128944667,
+        "stdev": 0.2596627784217651,
+        "min": 0.004704658756176094,
+        "max": 0.826345825894749
+      },
+      "expr_odiff_adjustment": {
+        "mean": -0.007399437499999981,
+        "stdev": 0.02814584173952811,
+        "min": -0.0875,
+        "max": 0.002205000000000029
+      },
+      "graded_relief_term": {
+        "mean": 0.10200000000000001,
+        "stdev": 0.006324555320336753,
+        "min": 0.09000000000000001,
+        "max": 0.105
+      },
+      "graded_distinct_term": {
+        "mean": 0.0445,
+        "stdev": 0.013322912594474223,
+        "min": 0.030000000000000006,
+        "max": 0.06999999999999999
+      },
+      "graded_persistence_term": {
+        "mean": 0.043166666666666666,
+        "stdev": 0.00563553540129589,
+        "min": 0.035,
+        "max": 0.0525
+      },
+      "graded_redundancy_penalty": {
+        "mean": -0.010284166666666667,
+        "stdev": 0.03252139050344831,
+        "min": -0.10284166666666666,
+        "max": -0.0
+      },
+      "graded_witness_adjustment": {
+        "mean": 0.17938249999999997,
+        "stdev": 0.02717654513932696,
+        "min": 0.12465833333333332,
+        "max": 0.20416666666666664
+      },
+      "dE_expr": {
+        "mean": 0.2593163037894467,
+        "stdev": 0.2131668086266179,
+        "min": 0.1617173237659057,
+        "max": 0.8635041592280823
+      }
+    },
+    "edge_down": {
+      "dE_expr_raw": {
+        "mean": -0.004054245002059975,
+        "stdev": 8.415551027668808e-06,
+        "min": -0.004060195695259061,
+        "max": -0.004048294308860889
+      },
+      "expr_odiff_adjustment": {
+        "mean": -0.0010762499999999009,
+        "stdev": 3.712310601231707e-05,
+        "min": -0.0011024999999999173,
+        "max": -0.0010499999999998844
+      },
+      "graded_distinct_term": {
+        "mean": 0.0,
+        "stdev": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "graded_structural_adjustment": {
+        "mean": 0.0,
+        "stdev": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "graded_redundancy_penalty": {
+        "mean": 0.0,
+        "stdev": 0.0,
+        "min": -0.0,
+        "max": -0.0
+      },
+      "graded_witness_adjustment": {
+        "mean": 0.0,
+        "stdev": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "dE_expr": {
+        "mean": -0.005130495002059876,
+        "stdev": 4.553865703998618e-05,
+        "min": -0.005162695695258979,
+        "max": -0.0050982943088607735
+      }
+    },
+    "edge_up": {
+      "dE_expr_raw": {
+        "mean": 0.0053591061235237865,
+        "stdev": 2.2084623126768338e-05,
+        "min": 0.0053231402498647995,
+        "max": 0.005392782404946672
+      },
+      "expr_odiff_adjustment": {
+        "mean": 0.0011760000000000017,
+        "stdev": 7.949574703417265e-17,
+        "min": 0.0011759999999999325,
+        "max": 0.001176000000000088
+      },
+      "graded_relief_term": {
+        "mean": 0.0,
+        "stdev": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "graded_distinct_term": {
+        "mean": 0.0,
+        "stdev": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "graded_redundancy_penalty": {
+        "mean": 0.0,
+        "stdev": 0.0,
+        "min": -0.0,
+        "max": -0.0
+      },
+      "graded_witness_adjustment": {
+        "mean": 0.0,
+        "stdev": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "dE_expr": {
+        "mean": 0.006535106123523788,
+        "stdev": 2.2084623126777456e-05,
+        "min": 0.006499140249864732,
+        "max": 0.0065687824049466045
+      }
+    }
+  },
+  "late_component_attribution": {
+    "edge_up": {
+      "dE_expr_raw": {
+        "mean": 0.00534250067116151,
+        "stdev": 1.3097364344528613e-05,
+        "min": 0.0053231402498647995,
+        "max": 0.0053620632800504
+      },
+      "expr_odiff_adjustment": {
+        "mean": 0.0011759999999999791,
+        "stdev": 7.510136615775245e-17,
+        "min": 0.0011759999999999325,
+        "max": 0.001176000000000088
+      },
+      "graded_relief_term": {
+        "mean": 0.0,
+        "stdev": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "graded_distinct_term": {
+        "mean": 0.0,
+        "stdev": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "graded_redundancy_penalty": {
+        "mean": 0.0,
+        "stdev": 0.0,
+        "min": -0.0,
+        "max": -0.0
+      },
+      "graded_witness_adjustment": {
+        "mean": 0.0,
+        "stdev": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "dE_expr": {
+        "mean": 0.006518500671161489,
+        "stdev": 1.3097364344502593e-05,
+        "min": 0.006499140249864732,
+        "max": 0.006538063280050332
+      }
+    }
+  },
+  "cross_checks": {
+    "edge_up_positive_raw_nonpositive_odiff": 0,
+    "edge_up_negative_raw_positive_total": 0,
+    "edge_up_positive_raw_zero_relief_zero_distinct": 18,
+    "raise_support_positive_raw_nonpositive_odiff": 1
+  },
+  "flagged_cases": [
+    {
+      "step": 10,
+      "move_type": "raise_support",
+      "case": "raw_overcomes_redundancy_penalty",
+      "deltaF": 0.8634870595434234,
+      "dE_expr_raw": 0.826345825894749,
+      "dE_expr": 0.8635041592280823,
+      "delta_Odiff_R": -0.41136666666666666,
+      "edge_up_relief_gain": 0.0,
+      "edge_up_distinct_gain": 0.0,
+      "graded_redundancy_penalty": -0.10284166666666666,
+      "graded_witness_adjustment": 0.12465833333333332,
+      "expr_odiff_adjustment": -0.0875,
+      "move_object": {
+        "parents": [
+          0,
+          1
+        ],
+        "child": 2
+      }
+    }
+  ],
+  "readout": [
+    "Some accepted edge_up moves still look positive at the raw layer even without measurable relief or distinctness gain.",
+    "The hardening appears to have mostly removed witness-side rescue of raw-negative edge_up moves."
+  ]
+}
