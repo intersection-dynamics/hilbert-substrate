@@ -1,0 +1,1280 @@
+{
+  "script": "hsf_mesoscape_constraint_native_retirement_move_audit.py",
+  "input_json": "hsf_mesoscape_N8_T300_seed3_graded_support_v7shellreplace.json",
+  "audit_config": {
+    "lambda_B": 0.18,
+    "lambda_R": 0.35,
+    "lambda_S": 0.12,
+    "lambda_F": 0.2,
+    "win_threshold": 0.0,
+    "evacuate_PC_min": 0.5,
+    "evacuate_PS_min": 0.55,
+    "evacuate_PM_min": 0.6,
+    "evacuate_PK_min": 0.6
+  },
+  "overall_summary": {
+    "n_rows": 30,
+    "winner_counts": {
+      "raise_support": 17,
+      "edge_down": 2,
+      "edge_up": 3,
+      "lower_support": 8
+    },
+    "retire_positive_FR_fraction": 0.3,
+    "retire_evacuated_fraction": 0.13333333333333333,
+    "FR_mean": -0.10997179315325857,
+    "P_C_mean": 0.8666666666666667,
+    "P_S_mean": 0.7696732991857105,
+    "P_M_mean": 0.9692098708098439,
+    "P_K_mean": 0.4753261553261554,
+    "P_B_mean": 0.6371970452116908
+  },
+  "late_summary": {
+    "n_rows": 10,
+    "winner_counts": {
+      "lower_support": 5,
+      "raise_support": 4,
+      "edge_up": 1
+    },
+    "retire_positive_FR_fraction": 0.5,
+    "retire_evacuated_fraction": 0.0,
+    "FR_mean": 0.01064876800265611,
+    "P_C_mean": 1.0,
+    "P_S_mean": 0.7239736012608353,
+    "P_M_mean": 0.9856190571419285,
+    "P_K_mean": 0.4761904761904763,
+    "P_B_mean": 0.6226554922779481
+  },
+  "late_top_nodes": [
+    2,
+    6
+  ],
+  "late_node_summaries": {
+    "2": {
+      "n": 5,
+      "winner_counts": {
+        "lower_support": 5
+      },
+      "retire_positive_FR_fraction": 1.0,
+      "retire_evacuated_fraction": 0.0,
+      "FR_mean": 0.21956513003531247,
+      "P_C_mean": 1.0,
+      "P_S_mean": 0.7746808510638298,
+      "P_M_mean": 0.9988272062522483,
+      "P_K_mean": 0.4761904761904763,
+      "P_B_mean": 0.625,
+      "dE_expr_mean": 0.21959480787675809,
+      "W_NR_mean": 3.123983310061584e-05,
+      "dCF_mean": 9.371949930184754e-05
+    },
+    "6": {
+      "n": 5,
+      "winner_counts": {
+        "raise_support": 4,
+        "edge_up": 1
+      },
+      "retire_positive_FR_fraction": 0.0,
+      "retire_evacuated_fraction": 0.0,
+      "FR_mean": -0.19826759403000027,
+      "P_C_mean": 1.0,
+      "P_S_mean": 0.6732663514578408,
+      "P_M_mean": 0.9724109080316088,
+      "P_K_mean": 0.4761904761904763,
+      "P_B_mean": 0.6203109845558963,
+      "dE_expr_mean": -0.19599116981229558,
+      "W_NR_mean": 2.7049267931567034e-05,
+      "dCF_mean": 8.11478037947011e-05
+    }
+  },
+  "flagged_rows": [
+    {
+      "step": 130,
+      "node": 6,
+      "winner_move_type": "lower_support",
+      "core_pair": [
+        0,
+        1
+      ],
+      "touches_core": false,
+      "F_R_retire": 0.2276759463004362,
+      "retire_would_win_by_F_R": true,
+      "organizer_evacuated": false,
+      "P_C": 1.0,
+      "P_S": 0.75,
+      "P_M": 0.9990164320477262,
+      "P_K": 0.4761904761904763,
+      "P_B": 0.625,
+      "core_strength_before": 1.0,
+      "core_strength_after": 1.0,
+      "core_expr_before": -0.012777777777777749,
+      "core_expr_after": 0.1322222222222222,
+      "shell_overlap": 0.75,
+      "shell_mass_retention": 0.7499999999999999,
+      "retained_activity_ratio": 1.0,
+      "bookkeeping_retained": 0.7142857142857143,
+      "core_adjacent_loss_fraction": 0.6666666666666666,
+      "edge_contraction": 0.25,
+      "dE_expr": 0.22769723432857342,
+      "dE_expr_raw": -0.007212708337728024,
+      "delta_Odiff_R": -0.004698749999999974,
+      "Odiff_before_R": 1.9108999999999998,
+      "Odiff_after_R": 1.9062012499999998,
+      "dCB": 0.0,
+      "dCS": 0.0,
+      "dCF": 6.722535201225677e-05,
+      "W_NR": 2.2408450670752256e-05,
+      "expr_redundancy_removed": 0.5228333333333333,
+      "expr_distinctness_gain": 0.26283833907366827,
+      "incident_edges": [
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "neighbor_edges": [
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "step": 240,
+      "node": 2,
+      "winner_move_type": "lower_support",
+      "core_pair": [
+        0,
+        1
+      ],
+      "touches_core": false,
+      "F_R_retire": 0.22512175328359368,
+      "retire_would_win_by_F_R": true,
+      "organizer_evacuated": false,
+      "P_C": 1.0,
+      "P_S": 0.8,
+      "P_M": 0.9990144816027076,
+      "P_K": 0.4761904761904763,
+      "P_B": 0.625,
+      "core_strength_before": 1.0,
+      "core_strength_after": 1.0,
+      "core_expr_before": -0.012777777777777749,
+      "core_expr_after": 0.1322222222222222,
+      "shell_overlap": 0.75,
+      "shell_mass_retention": 0.85,
+      "retained_activity_ratio": 1.0,
+      "bookkeeping_retained": 0.7142857142857143,
+      "core_adjacent_loss_fraction": 0.6666666666666666,
+      "edge_contraction": 0.25,
+      "dE_expr": 0.22515028754459976,
+      "dE_expr_raw": -0.007123663362373911,
+      "delta_Odiff_R": -0.004927326923076736,
+      "Odiff_before_R": 1.9998924166666665,
+      "Odiff_after_R": 1.9949650897435898,
+      "dCB": 0.0,
+      "dCS": 0.0,
+      "dCF": 9.010819265076186e-05,
+      "W_NR": 3.003606421692062e-05,
+      "expr_redundancy_removed": 0.5237783333333333,
+      "expr_distinctness_gain": 0.2599983503667228,
+      "incident_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "neighbor_edges": [
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "step": 160,
+      "node": 2,
+      "winner_move_type": "lower_support",
+      "core_pair": [
+        0,
+        1
+      ],
+      "touches_core": false,
+      "F_R_retire": 0.2238945733794156,
+      "retire_would_win_by_F_R": true,
+      "organizer_evacuated": false,
+      "P_C": 1.0,
+      "P_S": 0.7749999999999999,
+      "P_M": 0.9989811162204429,
+      "P_K": 0.4761904761904763,
+      "P_B": 0.625,
+      "core_strength_before": 1.0,
+      "core_strength_after": 1.0,
+      "core_expr_before": -0.012777777777777749,
+      "core_expr_after": 0.1322222222222222,
+      "shell_overlap": 0.75,
+      "shell_mass_retention": 0.7999999999999999,
+      "retained_activity_ratio": 1.0,
+      "bookkeeping_retained": 0.7142857142857143,
+      "core_adjacent_loss_fraction": 0.6666666666666666,
+      "edge_contraction": 0.25,
+      "dE_expr": 0.22391901333546224,
+      "dE_expr_raw": -0.007326486263247389,
+      "delta_Odiff_R": -0.005092500000000166,
+      "Odiff_before_R": 1.9992466666666668,
+      "Odiff_after_R": 1.9941541666666667,
+      "dCB": 0.0,
+      "dCS": 0.0,
+      "dCF": 7.717880856838999e-05,
+      "W_NR": 2.5726269522796663e-05,
+      "expr_redundancy_removed": 0.5228333333333333,
+      "expr_distinctness_gain": 0.258919860665233,
+      "incident_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "neighbor_edges": [
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "step": 110,
+      "node": 6,
+      "winner_move_type": "lower_support",
+      "core_pair": [
+        0,
+        1
+      ],
+      "touches_core": false,
+      "F_R_retire": 0.22350345573746264,
+      "retire_would_win_by_F_R": true,
+      "organizer_evacuated": false,
+      "P_C": 1.0,
+      "P_S": 0.75,
+      "P_M": 0.9988252439239571,
+      "P_K": 0.4761904761904763,
+      "P_B": 0.625,
+      "core_strength_before": 1.0,
+      "core_strength_after": 1.0,
+      "core_expr_before": -0.012777777777777749,
+      "core_expr_after": 0.1322222222222222,
+      "shell_overlap": 0.75,
+      "shell_mass_retention": 0.7499999999999999,
+      "retained_activity_ratio": 1.0,
+      "bookkeeping_retained": 0.7142857142857143,
+      "core_adjacent_loss_fraction": 0.6666666666666666,
+      "edge_contraction": 0.25,
+      "dE_expr": 0.22352474474119885,
+      "dE_expr_raw": -0.00891610574750512,
+      "delta_Odiff_R": -0.005617500000000053,
+      "Odiff_before_R": 1.9127375,
+      "Odiff_after_R": 1.90712,
+      "dCB": 0.0,
+      "dCS": 0.0,
+      "dCF": 6.722843285117408e-05,
+      "W_NR": 2.2409477617058027e-05,
+      "expr_redundancy_removed": 0.5207333333333333,
+      "expr_distinctness_gain": 0.26045219498744887,
+      "incident_edges": [
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "neighbor_edges": [
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "step": 290,
+      "node": 2,
+      "winner_move_type": "lower_support",
+      "core_pair": [
+        0,
+        1
+      ],
+      "touches_core": false,
+      "F_R_retire": 0.22178558676840385,
+      "retire_would_win_by_F_R": true,
+      "organizer_evacuated": false,
+      "P_C": 1.0,
+      "P_S": 0.8,
+      "P_M": 0.9988087404946453,
+      "P_K": 0.4761904761904763,
+      "P_B": 0.625,
+      "core_strength_before": 1.0,
+      "core_strength_after": 1.0,
+      "core_expr_before": -0.012777777777777749,
+      "core_expr_after": 0.1322222222222222,
+      "shell_overlap": 0.75,
+      "shell_mass_retention": 0.85,
+      "retained_activity_ratio": 1.0,
+      "bookkeeping_retained": 0.7142857142857143,
+      "core_adjacent_loss_fraction": 0.6666666666666666,
+      "edge_contraction": 0.25,
+      "dE_expr": 0.22181411221404626,
+      "dE_expr_raw": -0.00857656734690515,
+      "delta_Odiff_R": -0.005961698076922817,
+      "Odiff_before_R": 2.0018133916666665,
+      "Odiff_after_R": 1.9958516935897437,
+      "dCB": 0.0,
+      "dCS": 0.0,
+      "dCF": 9.00803546601825e-05,
+      "W_NR": 3.0026784886727498e-05,
+      "expr_redundancy_removed": 0.5222768333333333,
+      "expr_distinctness_gain": 0.2583080820976382,
+      "incident_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "neighbor_edges": [
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "step": 220,
+      "node": 2,
+      "winner_move_type": "lower_support",
+      "core_pair": [
+        0,
+        1
+      ],
+      "touches_core": false,
+      "F_R_retire": 0.22071123734959747,
+      "retire_would_win_by_F_R": true,
+      "organizer_evacuated": false,
+      "P_C": 1.0,
+      "P_S": 0.8,
+      "P_M": 0.9987483134378601,
+      "P_K": 0.4761904761904763,
+      "P_B": 0.625,
+      "core_strength_before": 1.0,
+      "core_strength_after": 1.0,
+      "core_expr_before": -0.012777777777777749,
+      "core_expr_after": 0.1322222222222222,
+      "shell_overlap": 0.75,
+      "shell_mass_retention": 0.85,
+      "retained_activity_ratio": 1.0,
+      "bookkeeping_retained": 0.7142857142857143,
+      "core_adjacent_loss_fraction": 0.6666666666666666,
+      "edge_contraction": 0.25,
+      "dE_expr": 0.22073977316196847,
+      "dE_expr_raw": -0.008979810961317725,
+      "delta_Odiff_R": -0.006265874999999976,
+      "Odiff_before_R": 2.0023782916666666,
+      "Odiff_after_R": 1.9961124166666666,
+      "dCB": 0.0,
+      "dCS": 0.0,
+      "dCF": 9.01130916979298e-05,
+      "W_NR": 3.0037697232643268e-05,
+      "expr_redundancy_removed": 0.5217308333333333,
+      "expr_distinctness_gain": 0.2576807115258735,
+      "incident_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "neighbor_edges": [
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "step": 280,
+      "node": 2,
+      "winner_move_type": "lower_support",
+      "core_pair": [
+        0,
+        1
+      ],
+      "touches_core": false,
+      "F_R_retire": 0.2157843494995021,
+      "retire_would_win_by_F_R": true,
+      "organizer_evacuated": false,
+      "P_C": 1.0,
+      "P_S": 0.7367021276595744,
+      "P_M": 0.9988122777083195,
+      "P_K": 0.4761904761904763,
+      "P_B": 0.625,
+      "core_strength_before": 1.0,
+      "core_strength_after": 1.0,
+      "core_expr_before": -0.012777777777777749,
+      "core_expr_after": 0.1322222222222222,
+      "shell_overlap": 0.75,
+      "shell_mass_retention": 0.7234042553191489,
+      "retained_activity_ratio": 1.0,
+      "bookkeeping_retained": 0.7142857142857143,
+      "core_adjacent_loss_fraction": 0.6666666666666666,
+      "edge_contraction": 0.25,
+      "dE_expr": 0.21581574584996396,
+      "dE_expr_raw": -0.008563925228489921,
+      "delta_Odiff_R": -0.005961698076923483,
+      "Odiff_before_R": 2.00777508974359,
+      "Odiff_after_R": 2.0018133916666665,
+      "dCB": 0.0,
+      "dCS": 0.0,
+      "dCF": 9.914636987956582e-05,
+      "W_NR": 3.3048789959855274e-05,
+      "expr_redundancy_removed": 0.5163233333333334,
+      "expr_distinctness_gain": 0.2516291837837523,
+      "incident_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "neighbor_edges": [
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "step": 210,
+      "node": 2,
+      "winner_move_type": "lower_support",
+      "core_pair": [
+        0,
+        1
+      ],
+      "touches_core": false,
+      "F_R_retire": 0.21442272327546535,
+      "retire_would_win_by_F_R": true,
+      "organizer_evacuated": false,
+      "P_C": 1.0,
+      "P_S": 0.7367021276595744,
+      "P_M": 0.9987522180177093,
+      "P_K": 0.4761904761904763,
+      "P_B": 0.625,
+      "core_strength_before": 1.0,
+      "core_strength_after": 1.0,
+      "core_expr_before": -0.012777777777777749,
+      "core_expr_after": 0.1322222222222222,
+      "shell_overlap": 0.75,
+      "shell_mass_retention": 0.7234042553191489,
+      "retained_activity_ratio": 1.0,
+      "bookkeeping_retained": 0.7142857142857143,
+      "core_adjacent_loss_fraction": 0.6666666666666666,
+      "edge_contraction": 0.25,
+      "dE_expr": 0.21445412061321195,
+      "dE_expr_raw": -0.00896763361044961,
+      "delta_Odiff_R": -0.006265874999999976,
+      "Odiff_before_R": 2.0086441666666666,
+      "Odiff_after_R": 2.0023782916666666,
+      "dCB": 0.0,
+      "dCS": 0.0,
+      "dCF": 9.914948762079767e-05,
+      "W_NR": 3.304982920693256e-05,
+      "expr_redundancy_removed": 0.5154833333333333,
+      "expr_distinctness_gain": 0.25068312274851284,
+      "incident_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "neighbor_edges": [
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "step": 70,
+      "node": 3,
+      "winner_move_type": "edge_down",
+      "core_pair": [
+        0,
+        1
+      ],
+      "touches_core": false,
+      "F_R_retire": 0.12444955135868369,
+      "retire_would_win_by_F_R": true,
+      "organizer_evacuated": true,
+      "P_C": 1.0,
+      "P_S": 1.0,
+      "P_M": 0.9070407005412084,
+      "P_K": 1.0,
+      "P_B": 0.5833333333333334,
+      "core_strength_before": 1.0,
+      "core_strength_after": 1.0,
+      "core_expr_before": -0.012777777777777749,
+      "core_expr_after": -0.012777777777777749,
+      "shell_overlap": 1.0,
+      "shell_mass_retention": 1.0,
+      "retained_activity_ratio": 1.0,
+      "bookkeeping_retained": 1.0,
+      "core_adjacent_loss_fraction": 0.0,
+      "edge_contraction": 0.16666666666666666,
+      "dE_expr": 0.1693765932574363,
+      "dE_expr_raw": -0.04825583816952772,
+      "delta_Odiff_R": -0.4657011904761905,
+      "Odiff_before_R": 2.003892857142857,
+      "Odiff_after_R": 1.5381916666666666,
+      "dCB": -4.440892098500626e-16,
+      "dCS": -0.006042812390022689,
+      "dCF": 1.7281616637720987e-08,
+      "W_NR": 0.13043478836923453,
+      "expr_redundancy_removed": 0.7103666666666666,
+      "expr_distinctness_gain": 0.4545085878289018,
+      "incident_edges": [
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "neighbor_edges": []
+    },
+    {
+      "step": 60,
+      "node": 3,
+      "winner_move_type": "raise_support",
+      "core_pair": [
+        0,
+        1
+      ],
+      "touches_core": false,
+      "F_R_retire": -0.03604674891121733,
+      "retire_would_win_by_F_R": false,
+      "organizer_evacuated": true,
+      "P_C": 1.0,
+      "P_S": 0.8333333333333335,
+      "P_M": 0.8917635627259057,
+      "P_K": 0.6410256410256411,
+      "P_B": 0.6108059757664863,
+      "core_strength_before": 1.0,
+      "core_strength_after": 1.0,
+      "core_expr_before": -0.012777777777777749,
+      "core_expr_after": -0.012777777777777749,
+      "shell_overlap": 0.8333333333333334,
+      "shell_mass_retention": 0.8333333333333335,
+      "retained_activity_ratio": 1.0,
+      "bookkeeping_retained": 0.7692307692307693,
+      "core_adjacent_loss_fraction": 0.3333333333333333,
+      "edge_contraction": 0.23076923076923078,
+      "dE_expr": 0.021414160389583353,
+      "dE_expr_raw": -0.17462097405879184,
+      "delta_Odiff_R": -0.5383883333333335,
+      "Odiff_before_R": 1.989675,
+      "Odiff_after_R": 1.4512866666666666,
+      "dCB": 4.440892098500626e-16,
+      "dCS": 0.01831455847251623,
+      "dCF": 1.3861142567073159e-08,
+      "W_NR": 0.1578947414624861,
+      "expr_redundancy_removed": 0.7103666666666666,
+      "expr_distinctness_gain": 0.45070246420189836,
+      "incident_edges": [
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "neighbor_edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ]
+      ]
+    },
+    {
+      "step": 90,
+      "node": 6,
+      "winner_move_type": "edge_up",
+      "core_pair": [
+        0,
+        1
+      ],
+      "touches_core": false,
+      "F_R_retire": -0.11334575748732033,
+      "retire_would_win_by_F_R": false,
+      "organizer_evacuated": false,
+      "P_C": 1.0,
+      "P_S": 0.75,
+      "P_M": 0.8877007139359263,
+      "P_K": 0.4761904761904763,
+      "P_B": 0.625,
+      "core_strength_before": 1.0,
+      "core_strength_after": 1.0,
+      "core_expr_before": -0.012777777777777749,
+      "core_expr_after": 0.1322222222222222,
+      "shell_overlap": 0.75,
+      "shell_mass_retention": 0.7499999999999999,
+      "retained_activity_ratio": 1.0,
+      "bookkeeping_retained": 0.7142857142857143,
+      "core_adjacent_loss_fraction": 0.6666666666666666,
+      "edge_contraction": 0.25,
+      "dE_expr": -0.06324944836092927,
+      "dE_expr_raw": -0.5651208731051334,
+      "delta_Odiff_R": -0.32678249999999986,
+      "Odiff_before_R": 1.16397,
+      "Odiff_after_R": 0.8371875000000001,
+      "dCB": 4.440892098500626e-16,
+      "dCS": -0.06881053324348152,
+      "dCF": 6.391510192238492e-05,
+      "W_NR": 0.16668797170064079,
+      "expr_redundancy_removed": 0.9936999999999999,
+      "expr_distinctness_gain": 0.731741166382449,
+      "incident_edges": [
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "neighbor_edges": [
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "step": 50,
+      "node": 4,
+      "winner_move_type": "raise_support",
+      "core_pair": [
+        0,
+        1
+      ],
+      "touches_core": false,
+      "F_R_retire": -0.11457280752905316,
+      "retire_would_win_by_F_R": false,
+      "organizer_evacuated": true,
+      "P_C": 1.0,
+      "P_S": 0.8,
+      "P_M": 0.9914369808982471,
+      "P_K": 0.6060606060606061,
+      "P_B": 0.6134673964971364,
+      "core_strength_before": 1.0,
+      "core_strength_after": 1.0,
+      "core_expr_before": -0.012777777777777749,
+      "core_expr_after": -0.012777777777777749,
+      "shell_overlap": 0.8,
+      "shell_mass_retention": 0.7999999999999999,
+      "retained_activity_ratio": 1.0,
+      "bookkeeping_retained": 0.7272727272727273,
+      "core_adjacent_loss_fraction": 0.3333333333333333,
+      "edge_contraction": 0.2727272727272727,
+      "dE_expr": -0.033562370633020866,
+      "dE_expr_raw": -0.42077594040790123,
+      "delta_Odiff_R": -0.03892416666666687,
+      "Odiff_before_R": 1.8182450000000001,
+      "Odiff_after_R": 1.7793208333333332,
+      "dCB": 0.0,
+      "dCS": 0.09158495946599948,
+      "dCF": 6.392134772326141e-05,
+      "W_NR": 0.20002130711590776,
+      "expr_redundancy_removed": 0.7103666666666666,
+      "expr_distinctness_gain": 0.445374475675793,
+      "incident_edges": [
+        [
+          0,
+          4
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "neighbor_edges": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          5
+        ]
+      ]
+    },
+    {
+      "step": 40,
+      "node": 4,
+      "winner_move_type": "raise_support",
+      "core_pair": [
+        0,
+        1
+      ],
+      "touches_core": false,
+      "F_R_retire": -0.1405009980245062,
+      "retire_would_win_by_F_R": false,
+      "organizer_evacuated": false,
+      "P_C": 1.0,
+      "P_S": 0.75,
+      "P_M": 0.8909009131090397,
+      "P_K": 0.5555555555555556,
+      "P_B": 0.6666666666666666,
+      "core_strength_before": 1.0,
+      "core_strength_after": 1.0,
+      "core_expr_before": 0.1322222222222222,
+      "core_expr_after": 0.1322222222222222,
+      "shell_overlap": 0.75,
+      "shell_mass_retention": 0.7499999999999999,
+      "retained_activity_ratio": 1.0,
+      "bookkeeping_retained": 0.6666666666666666,
+      "core_adjacent_loss_fraction": 0.3333333333333333,
+      "edge_contraction": 0.3333333333333333,
+      "dE_expr": -0.09021981942759183,
+      "dE_expr_raw": -0.5704380088503025,
+      "delta_Odiff_R": -0.39416249999999997,
+      "Odiff_before_R": 1.4451541666666667,
+      "Odiff_after_R": 1.0509916666666668,
+      "dCB": 0.0,
+      "dCS": -0.06726124191240893,
+      "dCF": 6.0613557063549095e-05,
+      "W_NR": 0.16668687118568784,
+      "expr_redundancy_removed": 0.9936999999999999,
+      "expr_distinctness_gain": 0.7263986826919007,
+      "incident_edges": [
+        [
+          0,
+          4
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "neighbor_edges": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          5
+        ]
+      ]
+    },
+    {
+      "step": 150,
+      "node": 6,
+      "winner_move_type": "raise_support",
+      "core_pair": [
+        0,
+        1
+      ],
+      "touches_core": false,
+      "F_R_retire": -0.19463820802231638,
+      "retire_would_win_by_F_R": false,
+      "organizer_evacuated": false,
+      "P_C": 1.0,
+      "P_S": 0.7083333333333334,
+      "P_M": 0.9721753813028269,
+      "P_K": 0.4761904761904763,
+      "P_B": 0.6203109845558963,
+      "core_strength_before": 1.0,
+      "core_strength_after": 1.0,
+      "core_expr_before": -0.012777777777777749,
+      "core_expr_after": 0.1322222222222222,
+      "shell_overlap": 0.75,
+      "shell_mass_retention": 0.6666666666666667,
+      "retained_activity_ratio": 1.0,
+      "bookkeeping_retained": 0.7142857142857143,
+      "core_adjacent_loss_fraction": 0.6666666666666666,
+      "edge_contraction": 0.25,
+      "dE_expr": -0.19236619369416444,
+      "dE_expr_raw": -0.36278279022473203,
+      "delta_Odiff_R": -0.13286124999999993,
+      "Odiff_before_R": 1.90998125,
+      "Odiff_after_R": 1.77712,
+      "dCB": -4.440892098500626e-16,
+      "dCS": 0.018756061776414923,
+      "dCF": 6.722183678598004e-05,
+      "W_NR": 2.2407278928660013e-05,
+      "expr_redundancy_removed": 0.5238833333333333,
+      "expr_distinctness_gain": 0.2640370517006306,
+      "incident_edges": [
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "neighbor_edges": [
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "step": 180,
+      "node": 6,
+      "winner_move_type": "raise_support",
+      "core_pair": [
+        0,
+        1
+      ],
+      "touches_core": false,
+      "F_R_retire": -0.19464684407946178,
+      "retire_would_win_by_F_R": false,
+      "organizer_evacuated": false,
+      "P_C": 1.0,
+      "P_S": 0.7291666666666667,
+      "P_M": 0.9721998340448654,
+      "P_K": 0.4761904761904763,
+      "P_B": 0.6203109845558963,
+      "core_strength_before": 1.0,
+      "core_strength_after": 1.0,
+      "core_expr_before": -0.012777777777777749,
+      "core_expr_after": 0.1322222222222222,
+      "shell_overlap": 0.75,
+      "shell_mass_retention": 0.7083333333333334,
+      "retained_activity_ratio": 1.0,
+      "bookkeeping_retained": 0.7142857142857143,
+      "core_adjacent_loss_fraction": 0.6666666666666666,
+      "edge_contraction": 0.25,
+      "dE_expr": -0.19237167926683305,
+      "dE_expr_raw": -0.36279114057356043,
+      "delta_Odiff_R": -0.13286124999999993,
+      "Odiff_before_R": 1.9116612499999999,
+      "Odiff_after_R": 1.7788,
+      "dCB": -4.440892098500626e-16,
+      "dCS": 0.018756061776414923,
+      "dCF": 7.717073513380246e-05,
+      "W_NR": 2.5723578377934153e-05,
+      "expr_redundancy_removed": 0.5238833333333333,
+      "expr_distinctness_gain": 0.26404023478525257,
+      "incident_edges": [
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "neighbor_edges": [
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "step": 190,
+      "node": 6,
+      "winner_move_type": "raise_support",
+      "core_pair": [
+        0,
+        1
+      ],
+      "touches_core": false,
+      "F_R_retire": -0.19464820265526417,
+      "retire_would_win_by_F_R": false,
+      "organizer_evacuated": false,
+      "P_C": 1.0,
+      "P_S": 0.6898148148148148,
+      "P_M": 0.972224243845681,
+      "P_K": 0.4761904761904763,
+      "P_B": 0.6203109845558963,
+      "core_strength_before": 1.0,
+      "core_strength_after": 1.0,
+      "core_expr_before": -0.012777777777777749,
+      "core_expr_after": 0.1322222222222222,
+      "shell_overlap": 0.75,
+      "shell_mass_retention": 0.6296296296296295,
+      "retained_activity_ratio": 1.0,
+      "bookkeeping_retained": 0.7142857142857143,
+      "core_adjacent_loss_fraction": 0.6666666666666666,
+      "edge_contraction": 0.25,
+      "dE_expr": -0.1923686581800925,
+      "dE_expr_raw": -0.3627891670413099,
+      "delta_Odiff_R": -0.13286124999999993,
+      "Odiff_before_R": 1.91334125,
+      "Odiff_after_R": 1.78048,
+      "dCB": -4.440892098500626e-16,
+      "dCS": 0.018756061776414923,
+      "dCF": 9.100124842725821e-05,
+      "W_NR": 3.0333749475752736e-05,
+      "expr_redundancy_removed": 0.5238833333333333,
+      "expr_distinctness_gain": 0.26404139873468596,
+      "incident_edges": [
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "neighbor_edges": [
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "step": 170,
+      "node": 6,
+      "winner_move_type": "raise_support",
+      "core_pair": [
+        0,
+        1
+      ],
+      "touches_core": false,
+      "F_R_retire": -0.19464901385463415,
+      "retire_would_win_by_F_R": false,
+      "organizer_evacuated": false,
+      "P_C": 1.0,
+      "P_S": 0.7083333333333334,
+      "P_M": 0.9721753813028269,
+      "P_K": 0.4761904761904763,
+      "P_B": 0.6203109845558963,
+      "core_strength_before": 1.0,
+      "core_strength_after": 1.0,
+      "core_expr_before": -0.012777777777777749,
+      "core_expr_after": 0.1322222222222222,
+      "shell_overlap": 0.75,
+      "shell_mass_retention": 0.6666666666666667,
+      "retained_activity_ratio": 1.0,
+      "bookkeeping_retained": 0.7142857142857143,
+      "core_adjacent_loss_fraction": 0.6666666666666666,
+      "edge_contraction": 0.25,
+      "dE_expr": -0.192377003005513,
+      "dE_expr_raw": -0.36279546305105637,
+      "delta_Odiff_R": -0.13286124999999993,
+      "Odiff_before_R": 1.90998125,
+      "Odiff_after_R": 1.77712,
+      "dCB": -4.440892098500626e-16,
+      "dCS": 0.018756061776414923,
+      "dCF": 6.721085037303398e-05,
+      "W_NR": 2.2403616791011327e-05,
+      "expr_redundancy_removed": 0.5238833333333333,
+      "expr_distinctness_gain": 0.2640391222728259,
+      "incident_edges": [
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "neighbor_edges": [
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "step": 300,
+      "node": 6,
+      "winner_move_type": "raise_support",
+      "core_pair": [
+        0,
+        1
+      ],
+      "touches_core": false,
+      "F_R_retire": -0.1982366650329365,
+      "retire_would_win_by_F_R": false,
+      "organizer_evacuated": false,
+      "P_C": 1.0,
+      "P_S": 0.6622340425531915,
+      "P_M": 0.9723960082442586,
+      "P_K": 0.4761904761904763,
+      "P_B": 0.6203109845558963,
+      "core_strength_before": 1.0,
+      "core_strength_after": 1.0,
+      "core_expr_before": -0.012777777777777749,
+      "core_expr_after": 0.1322222222222222,
+      "shell_overlap": 0.75,
+      "shell_mass_retention": 0.574468085106383,
+      "retained_activity_ratio": 1.0,
+      "bookkeeping_retained": 0.7142857142857143,
+      "core_adjacent_loss_fraction": 0.6666666666666666,
+      "edge_contraction": 0.25,
+      "dE_expr": -0.19596239655838066,
+      "dE_expr_raw": -0.3625833563466241,
+      "delta_Odiff_R": -0.13205274999999994,
+      "Odiff_before_R": 1.9135312192307692,
+      "Odiff_after_R": 1.7814784692307692,
+      "dCB": -4.440892098500626e-16,
+      "dCS": 0.018756061776414923,
+      "dCF": 7.434019385094137e-05,
+      "W_NR": 2.4780064616980457e-05,
+      "expr_redundancy_removed": 0.5196833333333333,
+      "expr_distinctness_gain": 0.2592806775424926,
+      "incident_edges": [
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "neighbor_edges": [
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "step": 270,
+      "node": 6,
+      "winner_move_type": "edge_up",
+      "core_pair": [
+        0,
+        1
+      ],
+      "touches_core": false,
+      "F_R_retire": -0.19825693167391217,
+      "retire_would_win_by_F_R": false,
+      "organizer_evacuated": false,
+      "P_C": 1.0,
+      "P_S": 0.6898148148148148,
+      "P_M": 0.9724447279573976,
+      "P_K": 0.4761904761904763,
+      "P_B": 0.6203109845558963,
+      "core_strength_before": 1.0,
+      "core_strength_after": 1.0,
+      "core_expr_before": -0.012777777777777749,
+      "core_expr_after": 0.1322222222222222,
+      "shell_overlap": 0.75,
+      "shell_mass_retention": 0.6296296296296295,
+      "retained_activity_ratio": 1.0,
+      "bookkeeping_retained": 0.7142857142857143,
+      "core_adjacent_loss_fraction": 0.6666666666666666,
+      "edge_contraction": 0.25,
+      "dE_expr": -0.19597480692800975,
+      "dE_expr_raw": -0.36259339105339894,
+      "delta_Odiff_R": -0.13205275000000016,
+      "Odiff_before_R": 1.9169144807692309,
+      "Odiff_after_R": 1.7848617307692307,
+      "dCB": -4.440892098500626e-16,
+      "dCS": 0.018756061776414923,
+      "dCF": 9.914947178746303e-05,
+      "W_NR": 3.304982392915434e-05,
+      "expr_redundancy_removed": 0.5196833333333333,
+      "expr_distinctness_gain": 0.2592780379170992,
+      "incident_edges": [
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "neighbor_edges": [
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "step": 260,
+      "node": 6,
+      "winner_move_type": "raise_support",
+      "core_pair": [
+        0,
+        1
+      ],
+      "touches_core": false,
+      "F_R_retire": -0.19826879378776893,
+      "retire_would_win_by_F_R": false,
+      "organizer_evacuated": false,
+      "P_C": 1.0,
+      "P_S": 0.6898148148148148,
+      "P_M": 0.972420557101298,
+      "P_K": 0.4761904761904763,
+      "P_B": 0.6203109845558963,
+      "core_strength_before": 1.0,
+      "core_strength_after": 1.0,
+      "core_expr_before": -0.012777777777777749,
+      "core_expr_after": 0.1322222222222222,
+      "shell_overlap": 0.75,
+      "shell_mass_retention": 0.6296296296296295,
+      "retained_activity_ratio": 1.0,
+      "bookkeeping_retained": 0.7142857142857143,
+      "core_adjacent_loss_fraction": 0.6666666666666666,
+      "edge_contraction": 0.25,
+      "dE_expr": -0.19599164417489268,
+      "dE_expr_raw": -0.3626095663349016,
+      "delta_Odiff_R": -0.13205274999999994,
+      "Odiff_before_R": 1.9152344807692308,
+      "Odiff_after_R": 1.7831817307692308,
+      "dCB": -4.440892098500626e-16,
+      "dCS": 0.018756061776414923,
+      "dCF": 8.343852538911234e-05,
+      "W_NR": 2.781284179637078e-05,
+      "expr_redundancy_removed": 0.5196833333333333,
+      "expr_distinctness_gain": 0.25927730240000985,
+      "incident_edges": [
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "neighbor_edges": [
+        [
+          0,
+          1
+        ]
+      ]
+    }
+  ],
+  "readout": [
+    "Some late demotion candidates are positive under the constraint-native local F_R audit.",
+    "Node 2 preserves the function-bearing MR sector better than node 6.",
+    "Node 6 is not mainly losing on KR relative to node 2.",
+    "The node-2 / node-6 split remains concentrated in the local constraint-native retirement score."
+  ]
+}
