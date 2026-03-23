@@ -12,7 +12,7 @@ import numpy as np
 
 import hsf_mesoscale_bookkeeping as bk
 import hsf_mesoscale_physics_core as phys
-from hsf_mesoscale_physics_core import PhysicsConfig, GM_MATRICES, apply_one_body
+from hsf_mesoscale_physics_core import PhysicsConfig, GM_MATRICES, apply_one_body, canonical_edge
 
 Edge = Tuple[int, int]
 
@@ -20,9 +20,10 @@ Edge = Tuple[int, int]
 def parse_args() -> argparse.Namespace:
     p = argparse.ArgumentParser(
         description=(
-            "HSF one-to-two fission observer. Starts with one active subsystem and observes whether "
-            "a second subsystem candidate becomes persistently distinguished from the dormant background, "
-            "without applying any birth/pruning moves."
+            "HSF one-to-two fission susceptibility observer. Starts with one active subsystem and "
+            "measures which dormant candidate is most favored by a minimal split-probe branch. "
+            "Unlike the earlier observer, pair_scale matters here because each candidate is tested "
+            "through a weak active-dormant probe interface before comparing the probed branch to baseline."
         )
     )
     p.add_argument("--device", choices=["cpu", "gpu"], default="cpu")
@@ -40,6 +41,12 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--initial-state", choices=["basis_zero", "random", "perturbed_zero"], default="perturbed_zero")
     p.add_argument("--perturb-eps", type=float, default=0.02)
 
+    p.add_argument("--probe-sigma", type=float, default=0.12)
+    p.add_argument("--probe-edge", type=float, default=0.12)
+    p.add_argument("--probe-steps", type=int, default=1)
+    p.add_argument("--probe-weight-mi", type=float, default=1.0)
+    p.add_argument("--probe-weight-ccorr", type=float, default=0.25)
+    p.add_argument("--probe-weight-expr", type=float, default=0.25)
     p.add_argument("--w-mi", type=float, default=1.0)
     p.add_argument("--w-ccorr", type=float, default=0.25)
     p.add_argument("--ccorr-scale", type=float, default=4.0)
@@ -101,10 +108,74 @@ def make_initial_state(initial_state: str, n_sites: int, xp, seed: int, perturb_
     raise ValueError(initial_state)
 
 
-def init_prepared_state(cfg: PhysicsConfig, xp, initial_state: str, perturb_eps: float):
-    psi, active_nodes, dormant_nodes, active_edges, local_coeffs, edge_strengths, link_regs, _rng = phys.init_state(cfg, xp)
+def init_graded_state(cfg: PhysicsConfig, xp, initial_state: str, perturb_eps: float):
+    psi, _active_nodes, _dormant_nodes, _active_edges, _local_coeffs, _edge_strengths, _link_regs, _rng = phys.init_state(cfg, xp)
     psi = make_initial_state(initial_state, cfg.n_max, xp, cfg.seed, perturb_eps)
+    sigma = np.zeros(cfg.n_max, dtype=np.float64)
+    sigma[: cfg.n_init] = 1.0
+    interface_commitment: Dict[Edge, float] = {}
+    for i in range(cfg.n_max):
+        for j in range(i + 1, cfg.n_max):
+            interface_commitment[canonical_edge(i, j)] = 0.0
+    link_memory = {canonical_edge(i, j): phys.default_linkreg().copy() for i in range(cfg.n_max) for j in range(i + 1, cfg.n_max)}
+    return psi, sigma, interface_commitment, link_memory
+
+
+def clone_graded_state(psi, sigma: np.ndarray, interface_commitment: Dict[Edge, float], link_memory: Dict[Edge, np.ndarray]):
+    return (
+        psi.copy(),
+        np.array(sigma, copy=True),
+        dict(interface_commitment),
+        {canonical_edge(*e): np.array(reg, copy=True) for e, reg in link_memory.items()},
+    )
+
+
+def materialize_state(
+    psi,
+    sigma: np.ndarray,
+    interface_commitment: Dict[Edge, float],
+    link_memory: Dict[Edge, np.ndarray],
+    cfg: PhysicsConfig,
+    sigma_on_threshold: float = 1e-12,
+    edge_on_threshold: float = 1e-12,
+):
+    active_nodes: Set[int] = {i for i in range(len(sigma)) if float(sigma[i]) > float(sigma_on_threshold)}
+    dormant_nodes: Set[int] = set(range(len(sigma))) - active_nodes
+
+    local_coeffs = np.zeros(len(sigma), dtype=np.float64)
+    for i in active_nodes:
+        local_coeffs[i] = float(cfg.local_scale) * float(np.clip(sigma[i], 0.0, 1.0))
+
+    active_edges: Set[Edge] = set()
+    edge_strengths: Dict[Edge, float] = {}
+    link_regs: Dict[Edge, np.ndarray] = {}
+
+    for e, w in interface_commitment.items():
+        i, j = e
+        if i not in active_nodes or j not in active_nodes:
+            continue
+        if float(w) <= float(edge_on_threshold):
+            continue
+        active_edges.add(e)
+        strength = float(cfg.pair_scale) * float(np.clip(w, 0.0, 1.0)) * float(np.clip(sigma[i], 0.0, 1.0)) * float(np.clip(sigma[j], 0.0, 1.0))
+        edge_strengths[e] = strength
+        link_regs[e] = np.array(link_memory.get(e, phys.default_linkreg()), copy=True)
+
+    phys.sanitize_graph_state(active_nodes, dormant_nodes, active_edges, edge_strengths, link_regs)
     return psi, active_nodes, dormant_nodes, active_edges, local_coeffs, edge_strengths, link_regs
+
+
+def evolve_graded_state(graded_state, cfg: PhysicsConfig, xp, steps: int = 1):
+    state = graded_state
+    for _ in range(max(1, int(steps))):
+        prepared = materialize_state(state[0], state[1], state[2], state[3], cfg)
+        prepared = phys.evolve_prepared_state(prepared, cfg, xp)
+        psi, active_nodes, dormant_nodes, active_edges, _local_coeffs, _edge_strengths, link_regs = prepared
+        link_memory = dict(state[3])
+        for e, reg in link_regs.items():
+            link_memory[canonical_edge(*e)] = np.array(reg, copy=True)
+        state = (psi, np.array(state[1], copy=True), dict(state[2]), link_memory)
+    return state
 
 
 def connected_pair_correlator_strength(psi, i: int, j: int, GM, xp) -> float:
@@ -122,29 +193,126 @@ def connected_pair_correlator_strength(psi, i: int, j: int, GM, xp) -> float:
     return float(np.mean(vals) if vals else 0.0)
 
 
-def compute_pair_matrices(psi, n_sites: int, n_max: int, xp, args: argparse.Namespace):
-    mi = np.zeros((n_max, n_max), dtype=np.float64)
-    ccorr = np.zeros((n_max, n_max), dtype=np.float64)
-    signal = np.zeros((n_max, n_max), dtype=np.float64)
-
-    for i in range(n_max):
-        for j in range(i + 1, n_max):
-            mij = float(bk.mutual_information_from_state(psi, i, j, n_sites, xp))
-            ccij = float(connected_pair_correlator_strength(psi, i, j, GM_MATRICES, xp))
-            sij = float(
-                args.w_mi * np.tanh(max(0.0, mij))
-                + args.w_ccorr * np.tanh(args.ccorr_scale * max(0.0, ccij))
-            )
-            mi[i, j] = mi[j, i] = mij
-            ccorr[i, j] = ccorr[j, i] = ccij
-            signal[i, j] = signal[j, i] = sij
-    return mi, ccorr, signal
+def evaluate_pair(psi, i: int, j: int, n_sites: int, xp, args: argparse.Namespace) -> Dict[str, float]:
+    mi = float(bk.mutual_information_from_state(psi, i, j, n_sites, xp))
+    cc = float(connected_pair_correlator_strength(psi, i, j, GM_MATRICES, xp))
+    signal = float(args.w_mi * np.tanh(max(0.0, mi)) + args.w_ccorr * np.tanh(args.ccorr_scale * max(0.0, cc)))
+    return {"mi": mi, "ccorr": cc, "signal": signal}
 
 
-def find_active_reference(active_nodes: Set[int]) -> int:
-    if not active_nodes:
-        raise ValueError("No active nodes present for fission observer.")
-    return int(sorted(active_nodes)[0])
+def expression_value(prepared_state, xp) -> float:
+    psi, active_nodes, _dormant_nodes, active_edges, local_coeffs, edge_strengths, link_regs = prepared_state
+    n_sites = int(local_coeffs.shape[0])
+
+    class SimpleScoreCfg:
+        # expression weights
+        w_mi = 1.0
+        w_corr = 0.5
+        w_link = 0.5
+
+        # MI path
+        exact_mi_cutoff = 64
+
+        # local_expression() may touch these even in observer mode
+        birth_parent_relief_weight = 0.0
+        birth_novelty_weight = 0.0
+        birth_distinctness_weight = 0.0
+        birth_redundancy_penalty = 0.0
+
+        retirement_threshold = 1.0
+        retirement_bookkeeping_weight = 0.0
+        retirement_function_weight = 0.0
+        retirement_core_penalty = 0.0
+        retirement_shell_penalty = 0.0
+        retirement_edge_weight = 0.0
+        retirement_sub_weight = 0.0
+
+        weaken_shell_penalty = 0.0
+        weaken_protected_core_penalty = 0.0
+
+        shell_reexpression_pk_min = 0.0
+        shell_reexpression_pm_min = 0.0
+        shell_reexpression_ps_min = 0.0
+
+        # harmless placeholders
+        lambda_B = 0.0
+        lambda_S = 0.0
+        lambda_F = 0.0
+        lambda_R = 0.0
+        organizer_large_region_cutoff = 64
+
+    return float(
+        bk.local_expression(
+            psi,
+            active_nodes,
+            active_edges,
+            edge_strengths,
+            link_regs,
+            SimpleScoreCfg(),
+            GM_MATRICES,
+            xp,
+            n_sites,
+        )
+    )
+def candidate_probe_rows(
+    baseline_state,
+    cfg: PhysicsConfig,
+    xp,
+    args: argparse.Namespace,
+    reference_active: int,
+) -> List[Dict[str, Any]]:
+    psi_b, sigma_b, interface_b, link_mem_b = baseline_state
+    n_sites = int(psi_b.ndim)
+
+    baseline_prepared = materialize_state(psi_b, sigma_b, interface_b, link_mem_b, cfg)
+    baseline_expr = expression_value(baseline_prepared, xp)
+
+    rows: List[Dict[str, Any]] = []
+    for cand in range(cfg.n_max):
+        if cand == reference_active:
+            continue
+
+        probed = clone_graded_state(psi_b, sigma_b, interface_b, link_mem_b)
+        psi_p, sigma_p, interface_p, link_p = probed
+        sigma_p[cand] = max(float(sigma_p[cand]), float(args.probe_sigma))
+        interface_p[canonical_edge(reference_active, cand)] = max(
+            float(interface_p.get(canonical_edge(reference_active, cand), 0.0)),
+            float(args.probe_edge),
+        )
+
+        evolved = evolve_graded_state((psi_p, sigma_p, interface_p, link_p), cfg, xp, steps=args.probe_steps)
+        psi_e, sigma_e, interface_e, link_e = evolved
+        prepared_e = materialize_state(psi_e, sigma_e, interface_e, link_e, cfg)
+        expr_e = expression_value(prepared_e, xp)
+
+        base_pair = evaluate_pair(psi_b, reference_active, cand, n_sites, xp, args)
+        probed_pair = evaluate_pair(psi_e, reference_active, cand, n_sites, xp, args)
+
+        dmi = float(probed_pair["mi"] - base_pair["mi"])
+        dcc = float(probed_pair["ccorr"] - base_pair["ccorr"])
+        dexpr = float(expr_e - baseline_expr)
+        score = float(
+            args.probe_weight_mi * max(0.0, dmi)
+            + args.probe_weight_ccorr * max(0.0, dcc)
+            + args.probe_weight_expr * max(0.0, dexpr)
+        )
+
+        rows.append(
+            {
+                "candidate": int(cand),
+                "baseline_mi": float(base_pair["mi"]),
+                "baseline_ccorr": float(base_pair["ccorr"]),
+                "probed_mi": float(probed_pair["mi"]),
+                "probed_ccorr": float(probed_pair["ccorr"]),
+                "delta_mi": dmi,
+                "delta_ccorr": dcc,
+                "delta_expression": dexpr,
+                "score": score,
+            }
+        )
+
+    rows.sort(key=lambda r: r["score"], reverse=True)
+    return rows
 
 
 def longest_positive_run(trace: List[float], threshold: float) -> Dict[str, Any]:
@@ -153,7 +321,6 @@ def longest_positive_run(trace: List[float], threshold: float) -> Dict[str, Any]
     best_end = None
     cur_len = 0
     cur_start = None
-
     for idx, x in enumerate(trace, start=1):
         val = float(x)
         if val > threshold:
@@ -167,12 +334,10 @@ def longest_positive_run(trace: List[float], threshold: float) -> Dict[str, Any]
                 best_end = idx - 1
             cur_len = 0
             cur_start = None
-
     if cur_len > best_len:
         best_len = cur_len
         best_start = cur_start
         best_end = len(trace)
-
     return {
         "length": int(best_len),
         "start_step": None if best_start is None else int(best_start),
@@ -244,15 +409,14 @@ def strict_fission_runs(
     margin_trace: List[Optional[float]],
     delta_mi_by_candidate: Dict[int, List[float]],
     delta_ccorr_by_candidate: Dict[int, List[float]],
+    delta_expr_by_candidate: Dict[int, List[float]],
     mi_threshold: float,
     cc_threshold: float,
+    expr_threshold: float,
     margin_threshold: float,
     window: int,
 ) -> List[Dict[str, Any]]:
     episodes: List[Dict[str, Any]] = []
-    if not top_trace:
-        return episodes
-
     current_candidate = None
     current_start = None
     current_len = 0
@@ -276,11 +440,13 @@ def strict_fission_runs(
         margin = margin_trace[idx - 1]
         mi_val = delta_mi_by_candidate.get(int(cand), [0.0] * len(top_trace))[idx - 1]
         cc_val = delta_ccorr_by_candidate.get(int(cand), [0.0] * len(top_trace))[idx - 1]
+        ex_val = delta_expr_by_candidate.get(int(cand), [0.0] * len(top_trace))[idx - 1]
         ok = (
             margin is not None
             and float(margin) > margin_threshold
             and float(mi_val) > mi_threshold
             and float(cc_val) > cc_threshold
+            and float(ex_val) > expr_threshold
         )
 
         if ok:
@@ -329,69 +495,43 @@ def strict_fission_runs(
 def run_observer(args: argparse.Namespace) -> Dict[str, Any]:
     cfg = build_config(args)
     xp, is_gpu = phys.get_array_module(args.device)
-    prepared = init_prepared_state(cfg, xp, args.initial_state, args.perturb_eps)
+    state = init_graded_state(cfg, xp, args.initial_state, args.perturb_eps)
 
-    pair_mi_traces: Dict[int, List[float]] = {i: [] for i in range(cfg.n_max)}
-    pair_ccorr_traces: Dict[int, List[float]] = {i: [] for i in range(cfg.n_max)}
-    delta_pair_mi_traces: Dict[int, List[float]] = {i: [] for i in range(cfg.n_max)}
-    delta_pair_ccorr_traces: Dict[int, List[float]] = {i: [] for i in range(cfg.n_max)}
-
+    reference_active = 0
     top_candidate_trace: List[Optional[int]] = []
     top_candidate_margin_trace: List[Optional[float]] = []
     top_candidate_delta_mi_trace: List[Optional[float]] = []
     top_candidate_delta_ccorr_trace: List[Optional[float]] = []
+    top_candidate_delta_expression_trace: List[Optional[float]] = []
+
+    delta_mi_by_candidate: Dict[int, List[float]] = {i: [] for i in range(cfg.n_max) if i != reference_active}
+    delta_ccorr_by_candidate: Dict[int, List[float]] = {i: [] for i in range(cfg.n_max) if i != reference_active}
+    delta_expr_by_candidate: Dict[int, List[float]] = {i: [] for i in range(cfg.n_max) if i != reference_active}
 
     snapshots: List[Dict[str, Any]] = []
 
-    reference_active: Optional[int] = None
-    baseline_mi: Optional[np.ndarray] = None
-    baseline_ccorr: Optional[np.ndarray] = None
-
     for step in range(1, args.total_steps + 1):
-        prepared = phys.evolve_prepared_state(prepared, cfg, xp)
-        psi, active_nodes, dormant_nodes, active_edges, local_coeffs, edge_strengths, link_regs = prepared
+        state = evolve_graded_state(state, cfg, xp, steps=1)
+        psi, sigma, interface_commitment, link_memory = state
+        prepared = materialize_state(psi, sigma, interface_commitment, link_memory, cfg)
+        _psi_p, active_nodes, dormant_nodes, active_edges, local_coeffs, edge_strengths, link_regs = prepared
         n_sites = int(psi.ndim)
 
-        if reference_active is None:
-            reference_active = find_active_reference(active_nodes)
+        rows = candidate_probe_rows(state, cfg, xp, args, reference_active)
 
-        mi, ccorr, signal = compute_pair_matrices(psi, n_sites, cfg.n_max, xp, args)
+        for row in rows:
+            c = int(row["candidate"])
+            delta_mi_by_candidate[c].append(float(row["delta_mi"]))
+            delta_ccorr_by_candidate[c].append(float(row["delta_ccorr"]))
+            delta_expr_by_candidate[c].append(float(row["delta_expression"]))
 
-        if baseline_mi is None:
-            baseline_mi = np.array(mi, copy=True)
-            baseline_ccorr = np.array(ccorr, copy=True)
-
-        delta_mi = mi - baseline_mi
-        delta_ccorr = ccorr - baseline_ccorr
-
-        dormant_rows: List[Dict[str, Any]] = []
-        for j in sorted(int(x) for x in dormant_nodes):
-            pair_mi_traces[j].append(float(mi[reference_active, j]))
-            pair_ccorr_traces[j].append(float(ccorr[reference_active, j]))
-            delta_pair_mi_traces[j].append(float(delta_mi[reference_active, j]))
-            delta_pair_ccorr_traces[j].append(float(delta_ccorr[reference_active, j]))
-
-            dormant_rows.append(
-                {
-                    "candidate": int(j),
-                    "raw_mi": float(mi[reference_active, j]),
-                    "raw_ccorr": float(ccorr[reference_active, j]),
-                    "delta_mi": float(delta_mi[reference_active, j]),
-                    "delta_ccorr": float(delta_ccorr[reference_active, j]),
-                    "score": float(
-                        args.w_mi * max(0.0, float(delta_mi[reference_active, j]))
-                        + args.w_ccorr * max(0.0, float(delta_ccorr[reference_active, j]))
-                    ),
-                }
-            )
-
-        dormant_rows.sort(key=lambda r: r["score"], reverse=True)
-        top_row = dormant_rows[0] if dormant_rows else None
-        second_row = dormant_rows[1] if len(dormant_rows) > 1 else None
+        top_row = rows[0] if rows else None
+        second_row = rows[1] if len(rows) > 1 else None
 
         top_candidate_trace.append(None if top_row is None else int(top_row["candidate"]))
         top_candidate_delta_mi_trace.append(None if top_row is None else float(top_row["delta_mi"]))
         top_candidate_delta_ccorr_trace.append(None if top_row is None else float(top_row["delta_ccorr"]))
+        top_candidate_delta_expression_trace.append(None if top_row is None else float(top_row["delta_expression"]))
         if top_row is None or second_row is None:
             top_candidate_margin_trace.append(None)
         else:
@@ -422,7 +562,7 @@ def run_observer(args: argparse.Namespace) -> Dict[str, Any]:
                     "top_fission_candidate": top_row,
                     "second_fission_candidate": second_row,
                     "top_candidate_margin": top_candidate_margin_trace[-1],
-                    "top_candidates": dormant_rows[: max(1, int(args.top_candidates))],
+                    "top_candidates": rows[: max(1, int(args.top_candidates))],
                     "dominant_core": core,
                     "metric": metrics,
                     "graph_stats": gstats,
@@ -438,31 +578,9 @@ def run_observer(args: argparse.Namespace) -> Dict[str, Any]:
                     f"top_cand={top_row['candidate']} "
                     f"dMI={top_row['delta_mi']:.3e} "
                     f"dCC={top_row['delta_ccorr']:.3e} "
+                    f"dExpr={top_row['delta_expression']:.3e} "
                     f"margin={(top_candidate_margin_trace[-1] if top_candidate_margin_trace[-1] is not None else None)}"
                 )
-
-    candidate_summaries: Dict[str, Any] = {}
-    for j in range(cfg.n_max):
-        if j == reference_active:
-            continue
-        if not delta_pair_mi_traces[j] and not delta_pair_ccorr_traces[j]:
-            continue
-        mi_run = longest_positive_run(delta_pair_mi_traces[j], args.candidate_threshold_mi)
-        cc_run = longest_positive_run(delta_pair_ccorr_traces[j], args.candidate_threshold_ccorr)
-        candidate_summaries[str(j)] = {
-            "delta_mi_trace_summary": {
-                "turning_points": find_turning_points(delta_pair_mi_traces[j]),
-                "fft": dominant_fft_component(delta_pair_mi_traces[j], args.dt),
-                "positive_run": mi_run,
-                "activation_detected": bool(mi_run["length"] >= args.candidate_window),
-            },
-            "delta_ccorr_trace_summary": {
-                "turning_points": find_turning_points(delta_pair_ccorr_traces[j]),
-                "fft": dominant_fft_component(delta_pair_ccorr_traces[j], args.dt),
-                "positive_run": cc_run,
-                "activation_detected": bool(cc_run["length"] >= args.candidate_window),
-            },
-        }
 
     stable_counts: Dict[int, int] = {}
     for x in top_candidate_trace:
@@ -475,13 +593,26 @@ def run_observer(args: argparse.Namespace) -> Dict[str, Any]:
     if stable_counts:
         winner_candidate, winner_count = max(stable_counts.items(), key=lambda kv: kv[1])
 
+    candidate_summaries: Dict[str, Any] = {}
+    for c in sorted(delta_mi_by_candidate.keys()):
+        candidate_summaries[str(c)] = {
+            "delta_mi_positive_run": longest_positive_run(delta_mi_by_candidate[c], args.candidate_threshold_mi),
+            "delta_ccorr_positive_run": longest_positive_run(delta_ccorr_by_candidate[c], args.candidate_threshold_ccorr),
+            "delta_expression_positive_run": longest_positive_run(delta_expr_by_candidate[c], 0.0),
+            "delta_mi_fft": dominant_fft_component(delta_mi_by_candidate[c], args.dt),
+            "delta_ccorr_fft": dominant_fft_component(delta_ccorr_by_candidate[c], args.dt),
+            "delta_expression_fft": dominant_fft_component(delta_expr_by_candidate[c], args.dt),
+        }
+
     episodes = strict_fission_runs(
         top_trace=top_candidate_trace,
         margin_trace=top_candidate_margin_trace,
-        delta_mi_by_candidate=delta_pair_mi_traces,
-        delta_ccorr_by_candidate=delta_pair_ccorr_traces,
+        delta_mi_by_candidate=delta_mi_by_candidate,
+        delta_ccorr_by_candidate=delta_ccorr_by_candidate,
+        delta_expr_by_candidate=delta_expr_by_candidate,
         mi_threshold=args.candidate_threshold_mi,
         cc_threshold=args.candidate_threshold_ccorr,
+        expr_threshold=0.0,
         margin_threshold=args.margin_threshold,
         window=args.consensus_window,
     )
@@ -497,24 +628,32 @@ def run_observer(args: argparse.Namespace) -> Dict[str, Any]:
         "observer_config": {
             "initial_state": args.initial_state,
             "perturb_eps": float(args.perturb_eps),
+            "probe_sigma": float(args.probe_sigma),
+            "probe_edge": float(args.probe_edge),
+            "probe_steps": int(args.probe_steps),
+            "probe_weight_mi": float(args.probe_weight_mi),
+            "probe_weight_ccorr": float(args.probe_weight_ccorr),
+            "probe_weight_expr": float(args.probe_weight_expr),
             "w_mi": float(args.w_mi),
             "w_ccorr": float(args.w_ccorr),
             "ccorr_scale": float(args.ccorr_scale),
             "candidate_threshold_mi": float(args.candidate_threshold_mi),
             "candidate_threshold_ccorr": float(args.candidate_threshold_ccorr),
             "candidate_window": int(args.candidate_window),
-            "margin-threshold": float(args.margin_threshold),
+            "margin_threshold": float(args.margin_threshold),
             "consensus_window": int(args.consensus_window),
             "top_candidates": int(args.top_candidates),
-            "principle": "observe whether one active subsystem develops a persistently distinguished second subsystem candidate without applying birth moves; require dual-channel support, margin over runner-up, and persistence before calling the signal fission-like",
+            "principle": "observe whether one active subsystem develops a persistently distinguished second subsystem candidate through a minimal split-probe branch; require dual-channel support, expression gain, margin over runner-up, and persistence before calling the signal fission-like",
         },
-        "reference_active": None if reference_active is None else int(reference_active),
+        "reference_active": int(reference_active),
         "top_candidate_trace": top_candidate_trace,
         "top_candidate_margin_trace": top_candidate_margin_trace,
         "top_candidate_delta_mi_trace": top_candidate_delta_mi_trace,
         "top_candidate_delta_ccorr_trace": top_candidate_delta_ccorr_trace,
-        "pair_delta_mi_traces": {str(k): v for k, v in delta_pair_mi_traces.items() if v},
-        "pair_delta_ccorr_traces": {str(k): v for k, v in delta_pair_ccorr_traces.items() if v},
+        "top_candidate_delta_expression_trace": top_candidate_delta_expression_trace,
+        "pair_delta_mi_traces": {str(k): v for k, v in delta_mi_by_candidate.items()},
+        "pair_delta_ccorr_traces": {str(k): v for k, v in delta_ccorr_by_candidate.items()},
+        "pair_delta_expression_traces": {str(k): v for k, v in delta_expr_by_candidate.items()},
         "candidate_summaries": candidate_summaries,
         "stable_candidate_counts": {str(k): int(v) for k, v in stable_counts.items()},
         "winner_candidate": None if winner_candidate is None else int(winner_candidate),
