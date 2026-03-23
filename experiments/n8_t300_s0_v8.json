@@ -1,0 +1,8066 @@
+{
+  "run_metadata": {
+    "script": "hsf_gs_v4.py",
+    "rewrite": "persistent_link_memory_and_continuous_background_evolution",
+    "seed": 0,
+    "n_nodes": 8,
+    "n_init": 2,
+    "total_steps": 300,
+    "eval_every": 10,
+    "sigma_on_threshold": 0.5,
+    "edge_on_threshold": 0.5,
+    "support_step": 0.15,
+    "edge_step": 0.15,
+    "compact_json": true,
+    "enable_odiff_logging": false
+  },
+  "move_counts": {
+    "raise_support": 30,
+    "lower_support": 0,
+    "edge_up": 0,
+    "edge_down": 0
+  },
+  "final_state": {
+    "step": 300,
+    "accepted_moves": 30,
+    "sigma": [
+      1.0,
+      1.0,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.0
+    ],
+    "active_nodes": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "active_edges": [
+      [
+        0,
+        1
+      ]
+    ],
+    "mean_sigma": 0.8125,
+    "sum_sigma": 6.5,
+    "mean_interface_commitment": 0.02142857142857143
+  },
+  "snapshots": [
+    {
+      "step": 10,
+      "accepted_moves": 1,
+      "sigma": [
+        1.0,
+        1.0,
+        0.15,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "active_nodes": [
+        0,
+        1
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "mean_sigma": 0.26875,
+      "sum_sigma": 2.15,
+      "mean_interface_commitment": 0.02142857142857143
+    },
+    {
+      "step": 20,
+      "accepted_moves": 2,
+      "sigma": [
+        1.0,
+        1.0,
+        0.3,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "active_nodes": [
+        0,
+        1
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "mean_sigma": 0.2875,
+      "sum_sigma": 2.3,
+      "mean_interface_commitment": 0.02142857142857143
+    },
+    {
+      "step": 30,
+      "accepted_moves": 3,
+      "sigma": [
+        1.0,
+        1.0,
+        0.44999999999999996,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "active_nodes": [
+        0,
+        1
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "mean_sigma": 0.30625,
+      "sum_sigma": 2.45,
+      "mean_interface_commitment": 0.02142857142857143
+    },
+    {
+      "step": 40,
+      "accepted_moves": 4,
+      "sigma": [
+        1.0,
+        1.0,
+        0.6,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "active_nodes": [
+        0,
+        1,
+        2
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "mean_sigma": 0.325,
+      "sum_sigma": 2.6,
+      "mean_interface_commitment": 0.02142857142857143
+    },
+    {
+      "step": 50,
+      "accepted_moves": 5,
+      "sigma": [
+        1.0,
+        1.0,
+        0.75,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "active_nodes": [
+        0,
+        1,
+        2
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "mean_sigma": 0.34375,
+      "sum_sigma": 2.75,
+      "mean_interface_commitment": 0.02142857142857143
+    },
+    {
+      "step": 60,
+      "accepted_moves": 6,
+      "sigma": [
+        1.0,
+        1.0,
+        0.9,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "active_nodes": [
+        0,
+        1,
+        2
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "mean_sigma": 0.3625,
+      "sum_sigma": 2.9,
+      "mean_interface_commitment": 0.02142857142857143
+    },
+    {
+      "step": 70,
+      "accepted_moves": 7,
+      "sigma": [
+        1.0,
+        1.0,
+        0.9,
+        0.15,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "active_nodes": [
+        0,
+        1,
+        2
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "mean_sigma": 0.38125,
+      "sum_sigma": 3.05,
+      "mean_interface_commitment": 0.02142857142857143
+    },
+    {
+      "step": 80,
+      "accepted_moves": 8,
+      "sigma": [
+        1.0,
+        1.0,
+        0.9,
+        0.3,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "active_nodes": [
+        0,
+        1,
+        2
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "mean_sigma": 0.4,
+      "sum_sigma": 3.2,
+      "mean_interface_commitment": 0.02142857142857143
+    },
+    {
+      "step": 90,
+      "accepted_moves": 9,
+      "sigma": [
+        1.0,
+        1.0,
+        0.9,
+        0.44999999999999996,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "active_nodes": [
+        0,
+        1,
+        2
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "mean_sigma": 0.41875,
+      "sum_sigma": 3.35,
+      "mean_interface_commitment": 0.02142857142857143
+    },
+    {
+      "step": 100,
+      "accepted_moves": 10,
+      "sigma": [
+        1.0,
+        1.0,
+        0.9,
+        0.6,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "active_nodes": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "mean_sigma": 0.4375,
+      "sum_sigma": 3.5,
+      "mean_interface_commitment": 0.02142857142857143
+    },
+    {
+      "step": 110,
+      "accepted_moves": 11,
+      "sigma": [
+        1.0,
+        1.0,
+        0.9,
+        0.75,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "active_nodes": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "mean_sigma": 0.45625,
+      "sum_sigma": 3.65,
+      "mean_interface_commitment": 0.02142857142857143
+    },
+    {
+      "step": 120,
+      "accepted_moves": 12,
+      "sigma": [
+        1.0,
+        1.0,
+        0.9,
+        0.9,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "active_nodes": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "mean_sigma": 0.475,
+      "sum_sigma": 3.8,
+      "mean_interface_commitment": 0.02142857142857143
+    },
+    {
+      "step": 130,
+      "accepted_moves": 13,
+      "sigma": [
+        1.0,
+        1.0,
+        0.9,
+        0.9,
+        0.15,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "active_nodes": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "mean_sigma": 0.49374999999999997,
+      "sum_sigma": 3.9499999999999997,
+      "mean_interface_commitment": 0.02142857142857143
+    },
+    {
+      "step": 140,
+      "accepted_moves": 14,
+      "sigma": [
+        1.0,
+        1.0,
+        0.9,
+        0.9,
+        0.3,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "active_nodes": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "mean_sigma": 0.5125,
+      "sum_sigma": 4.1,
+      "mean_interface_commitment": 0.02142857142857143
+    },
+    {
+      "step": 150,
+      "accepted_moves": 15,
+      "sigma": [
+        1.0,
+        1.0,
+        0.9,
+        0.9,
+        0.44999999999999996,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "active_nodes": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "mean_sigma": 0.53125,
+      "sum_sigma": 4.25,
+      "mean_interface_commitment": 0.02142857142857143
+    },
+    {
+      "step": 160,
+      "accepted_moves": 16,
+      "sigma": [
+        1.0,
+        1.0,
+        0.9,
+        0.9,
+        0.6,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "active_nodes": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "mean_sigma": 0.5499999999999999,
+      "sum_sigma": 4.3999999999999995,
+      "mean_interface_commitment": 0.02142857142857143
+    },
+    {
+      "step": 170,
+      "accepted_moves": 17,
+      "sigma": [
+        1.0,
+        1.0,
+        0.9,
+        0.9,
+        0.75,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "active_nodes": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "mean_sigma": 0.56875,
+      "sum_sigma": 4.55,
+      "mean_interface_commitment": 0.02142857142857143
+    },
+    {
+      "step": 180,
+      "accepted_moves": 18,
+      "sigma": [
+        1.0,
+        1.0,
+        0.9,
+        0.9,
+        0.9,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "active_nodes": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "mean_sigma": 0.5875,
+      "sum_sigma": 4.7,
+      "mean_interface_commitment": 0.02142857142857143
+    },
+    {
+      "step": 190,
+      "accepted_moves": 19,
+      "sigma": [
+        1.0,
+        1.0,
+        0.9,
+        0.9,
+        0.9,
+        0.15,
+        0.0,
+        0.0
+      ],
+      "active_nodes": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "mean_sigma": 0.60625,
+      "sum_sigma": 4.85,
+      "mean_interface_commitment": 0.02142857142857143
+    },
+    {
+      "step": 200,
+      "accepted_moves": 20,
+      "sigma": [
+        1.0,
+        1.0,
+        0.9,
+        0.9,
+        0.9,
+        0.3,
+        0.0,
+        0.0
+      ],
+      "active_nodes": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "mean_sigma": 0.625,
+      "sum_sigma": 5.0,
+      "mean_interface_commitment": 0.02142857142857143
+    },
+    {
+      "step": 210,
+      "accepted_moves": 21,
+      "sigma": [
+        1.0,
+        1.0,
+        0.9,
+        0.9,
+        0.9,
+        0.44999999999999996,
+        0.0,
+        0.0
+      ],
+      "active_nodes": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "mean_sigma": 0.64375,
+      "sum_sigma": 5.15,
+      "mean_interface_commitment": 0.02142857142857143
+    },
+    {
+      "step": 220,
+      "accepted_moves": 22,
+      "sigma": [
+        1.0,
+        1.0,
+        0.9,
+        0.9,
+        0.9,
+        0.6,
+        0.0,
+        0.0
+      ],
+      "active_nodes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "mean_sigma": 0.6625,
+      "sum_sigma": 5.3,
+      "mean_interface_commitment": 0.02142857142857143
+    },
+    {
+      "step": 230,
+      "accepted_moves": 23,
+      "sigma": [
+        1.0,
+        1.0,
+        0.9,
+        0.9,
+        0.9,
+        0.75,
+        0.0,
+        0.0
+      ],
+      "active_nodes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "mean_sigma": 0.6812499999999999,
+      "sum_sigma": 5.449999999999999,
+      "mean_interface_commitment": 0.02142857142857143
+    },
+    {
+      "step": 240,
+      "accepted_moves": 24,
+      "sigma": [
+        1.0,
+        1.0,
+        0.9,
+        0.9,
+        0.9,
+        0.9,
+        0.0,
+        0.0
+      ],
+      "active_nodes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "mean_sigma": 0.7,
+      "sum_sigma": 5.6,
+      "mean_interface_commitment": 0.02142857142857143
+    },
+    {
+      "step": 250,
+      "accepted_moves": 25,
+      "sigma": [
+        1.0,
+        1.0,
+        0.9,
+        0.9,
+        0.9,
+        0.9,
+        0.15,
+        0.0
+      ],
+      "active_nodes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "mean_sigma": 0.71875,
+      "sum_sigma": 5.75,
+      "mean_interface_commitment": 0.02142857142857143
+    },
+    {
+      "step": 260,
+      "accepted_moves": 26,
+      "sigma": [
+        1.0,
+        1.0,
+        0.9,
+        0.9,
+        0.9,
+        0.9,
+        0.3,
+        0.0
+      ],
+      "active_nodes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "mean_sigma": 0.7375,
+      "sum_sigma": 5.9,
+      "mean_interface_commitment": 0.02142857142857143
+    },
+    {
+      "step": 270,
+      "accepted_moves": 27,
+      "sigma": [
+        1.0,
+        1.0,
+        0.9,
+        0.9,
+        0.9,
+        0.9,
+        0.44999999999999996,
+        0.0
+      ],
+      "active_nodes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "mean_sigma": 0.75625,
+      "sum_sigma": 6.05,
+      "mean_interface_commitment": 0.02142857142857143
+    },
+    {
+      "step": 280,
+      "accepted_moves": 28,
+      "sigma": [
+        1.0,
+        1.0,
+        0.9,
+        0.9,
+        0.9,
+        0.9,
+        0.6,
+        0.0
+      ],
+      "active_nodes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "mean_sigma": 0.7749999999999999,
+      "sum_sigma": 6.199999999999999,
+      "mean_interface_commitment": 0.02142857142857143
+    },
+    {
+      "step": 290,
+      "accepted_moves": 29,
+      "sigma": [
+        1.0,
+        1.0,
+        0.9,
+        0.9,
+        0.9,
+        0.9,
+        0.75,
+        0.0
+      ],
+      "active_nodes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "mean_sigma": 0.79375,
+      "sum_sigma": 6.35,
+      "mean_interface_commitment": 0.02142857142857143
+    },
+    {
+      "step": 300,
+      "accepted_moves": 30,
+      "sigma": [
+        1.0,
+        1.0,
+        0.9,
+        0.9,
+        0.9,
+        0.9,
+        0.9,
+        0.0
+      ],
+      "active_nodes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "active_edges": [
+        [
+          0,
+          1
+        ]
+      ],
+      "mean_sigma": 0.8125,
+      "sum_sigma": 6.5,
+      "mean_interface_commitment": 0.02142857142857143
+    }
+  ],
+  "accepted_moves": [
+    {
+      "move": {
+        "kind": "raise_support",
+        "node": 2,
+        "delta": 0.15
+      },
+      "score": {
+        "total_score": 0.1499999999999999,
+        "dE_expr_raw": 0.1499999999999999,
+        "dCB": 0.0,
+        "dCR": 0.0,
+        "dCS": 0.0,
+        "dCF": 0.0,
+        "fallback_iface_gain": 0.0
+      },
+      "resulting_state": {
+        "step": 10,
+        "accepted_moves": 1,
+        "sigma": [
+          1.0,
+          1.0,
+          0.15,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "active_nodes": [
+          0,
+          1
+        ],
+        "active_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "mean_sigma": 0.26875,
+        "sum_sigma": 2.15,
+        "mean_interface_commitment": 0.02142857142857143
+      },
+      "window": 0
+    },
+    {
+      "move": {
+        "kind": "raise_support",
+        "node": 2,
+        "delta": 0.15
+      },
+      "score": {
+        "total_score": 0.1499999999999999,
+        "dE_expr_raw": 0.1499999999999999,
+        "dCB": 0.0,
+        "dCR": 0.0,
+        "dCS": 0.0,
+        "dCF": 0.0,
+        "fallback_iface_gain": 0.0
+      },
+      "resulting_state": {
+        "step": 20,
+        "accepted_moves": 2,
+        "sigma": [
+          1.0,
+          1.0,
+          0.3,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "active_nodes": [
+          0,
+          1
+        ],
+        "active_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "mean_sigma": 0.2875,
+        "sum_sigma": 2.3,
+        "mean_interface_commitment": 0.02142857142857143
+      },
+      "window": 1
+    },
+    {
+      "move": {
+        "kind": "raise_support",
+        "node": 2,
+        "delta": 0.15
+      },
+      "score": {
+        "total_score": 0.15000000000000036,
+        "dE_expr_raw": 0.15000000000000036,
+        "dCB": 0.0,
+        "dCR": 0.0,
+        "dCS": 0.0,
+        "dCF": 0.0,
+        "fallback_iface_gain": 0.0
+      },
+      "resulting_state": {
+        "step": 30,
+        "accepted_moves": 3,
+        "sigma": [
+          1.0,
+          1.0,
+          0.44999999999999996,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "active_nodes": [
+          0,
+          1
+        ],
+        "active_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "mean_sigma": 0.30625,
+        "sum_sigma": 2.45,
+        "mean_interface_commitment": 0.02142857142857143
+      },
+      "window": 2
+    },
+    {
+      "move": {
+        "kind": "raise_support",
+        "node": 2,
+        "delta": 0.15
+      },
+      "score": {
+        "total_score": 0.1499999999999999,
+        "dE_expr_raw": 0.1499999999999999,
+        "dCB": 0.0,
+        "dCR": 0.0,
+        "dCS": 0.0,
+        "dCF": 0.0,
+        "fallback_iface_gain": 0.0
+      },
+      "resulting_state": {
+        "step": 40,
+        "accepted_moves": 4,
+        "sigma": [
+          1.0,
+          1.0,
+          0.6,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "active_nodes": [
+          0,
+          1,
+          2
+        ],
+        "active_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "mean_sigma": 0.325,
+        "sum_sigma": 2.6,
+        "mean_interface_commitment": 0.02142857142857143
+      },
+      "window": 3
+    },
+    {
+      "move": {
+        "kind": "raise_support",
+        "node": 2,
+        "delta": 0.15
+      },
+      "score": {
+        "total_score": 0.1499999999999999,
+        "dE_expr_raw": 0.1499999999999999,
+        "dCB": 0.0,
+        "dCR": 0.0,
+        "dCS": 0.0,
+        "dCF": 0.0,
+        "fallback_iface_gain": 0.0
+      },
+      "resulting_state": {
+        "step": 50,
+        "accepted_moves": 5,
+        "sigma": [
+          1.0,
+          1.0,
+          0.75,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "active_nodes": [
+          0,
+          1,
+          2
+        ],
+        "active_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "mean_sigma": 0.34375,
+        "sum_sigma": 2.75,
+        "mean_interface_commitment": 0.02142857142857143
+      },
+      "window": 4
+    },
+    {
+      "move": {
+        "kind": "raise_support",
+        "node": 2,
+        "delta": 0.15
+      },
+      "score": {
+        "total_score": 0.1499999999999999,
+        "dE_expr_raw": 0.1499999999999999,
+        "dCB": 0.0,
+        "dCR": 0.0,
+        "dCS": 0.0,
+        "dCF": 0.0,
+        "fallback_iface_gain": 0.0
+      },
+      "resulting_state": {
+        "step": 60,
+        "accepted_moves": 6,
+        "sigma": [
+          1.0,
+          1.0,
+          0.9,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "active_nodes": [
+          0,
+          1,
+          2
+        ],
+        "active_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "mean_sigma": 0.3625,
+        "sum_sigma": 2.9,
+        "mean_interface_commitment": 0.02142857142857143
+      },
+      "window": 5
+    },
+    {
+      "move": {
+        "kind": "raise_support",
+        "node": 3,
+        "delta": 0.15
+      },
+      "score": {
+        "total_score": 0.1499999999999999,
+        "dE_expr_raw": 0.1499999999999999,
+        "dCB": 0.0,
+        "dCR": 0.0,
+        "dCS": 0.0,
+        "dCF": 0.0,
+        "fallback_iface_gain": 0.0
+      },
+      "resulting_state": {
+        "step": 70,
+        "accepted_moves": 7,
+        "sigma": [
+          1.0,
+          1.0,
+          0.9,
+          0.15,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "active_nodes": [
+          0,
+          1,
+          2
+        ],
+        "active_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "mean_sigma": 0.38125,
+        "sum_sigma": 3.05,
+        "mean_interface_commitment": 0.02142857142857143
+      },
+      "window": 6
+    },
+    {
+      "move": {
+        "kind": "raise_support",
+        "node": 3,
+        "delta": 0.15
+      },
+      "score": {
+        "total_score": 0.15000000000000036,
+        "dE_expr_raw": 0.15000000000000036,
+        "dCB": 0.0,
+        "dCR": 0.0,
+        "dCS": 0.0,
+        "dCF": 0.0,
+        "fallback_iface_gain": 0.0
+      },
+      "resulting_state": {
+        "step": 80,
+        "accepted_moves": 8,
+        "sigma": [
+          1.0,
+          1.0,
+          0.9,
+          0.3,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "active_nodes": [
+          0,
+          1,
+          2
+        ],
+        "active_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "mean_sigma": 0.4,
+        "sum_sigma": 3.2,
+        "mean_interface_commitment": 0.02142857142857143
+      },
+      "window": 7
+    },
+    {
+      "move": {
+        "kind": "raise_support",
+        "node": 3,
+        "delta": 0.15
+      },
+      "score": {
+        "total_score": 0.1499999999999999,
+        "dE_expr_raw": 0.1499999999999999,
+        "dCB": 0.0,
+        "dCR": 0.0,
+        "dCS": 0.0,
+        "dCF": 0.0,
+        "fallback_iface_gain": 0.0
+      },
+      "resulting_state": {
+        "step": 90,
+        "accepted_moves": 9,
+        "sigma": [
+          1.0,
+          1.0,
+          0.9,
+          0.44999999999999996,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "active_nodes": [
+          0,
+          1,
+          2
+        ],
+        "active_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "mean_sigma": 0.41875,
+        "sum_sigma": 3.35,
+        "mean_interface_commitment": 0.02142857142857143
+      },
+      "window": 8
+    },
+    {
+      "move": {
+        "kind": "raise_support",
+        "node": 3,
+        "delta": 0.15
+      },
+      "score": {
+        "total_score": 0.1499999999999999,
+        "dE_expr_raw": 0.1499999999999999,
+        "dCB": 0.0,
+        "dCR": 0.0,
+        "dCS": 0.0,
+        "dCF": 0.0,
+        "fallback_iface_gain": 0.0
+      },
+      "resulting_state": {
+        "step": 100,
+        "accepted_moves": 10,
+        "sigma": [
+          1.0,
+          1.0,
+          0.9,
+          0.6,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "active_nodes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "active_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "mean_sigma": 0.4375,
+        "sum_sigma": 3.5,
+        "mean_interface_commitment": 0.02142857142857143
+      },
+      "window": 9
+    },
+    {
+      "move": {
+        "kind": "raise_support",
+        "node": 3,
+        "delta": 0.15
+      },
+      "score": {
+        "total_score": 0.1499999999999999,
+        "dE_expr_raw": 0.1499999999999999,
+        "dCB": 0.0,
+        "dCR": 0.0,
+        "dCS": 0.0,
+        "dCF": 0.0,
+        "fallback_iface_gain": 0.0
+      },
+      "resulting_state": {
+        "step": 110,
+        "accepted_moves": 11,
+        "sigma": [
+          1.0,
+          1.0,
+          0.9,
+          0.75,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "active_nodes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "active_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "mean_sigma": 0.45625,
+        "sum_sigma": 3.65,
+        "mean_interface_commitment": 0.02142857142857143
+      },
+      "window": 10
+    },
+    {
+      "move": {
+        "kind": "raise_support",
+        "node": 3,
+        "delta": 0.15
+      },
+      "score": {
+        "total_score": 0.1499999999999999,
+        "dE_expr_raw": 0.1499999999999999,
+        "dCB": 0.0,
+        "dCR": 0.0,
+        "dCS": 0.0,
+        "dCF": 0.0,
+        "fallback_iface_gain": 0.0
+      },
+      "resulting_state": {
+        "step": 120,
+        "accepted_moves": 12,
+        "sigma": [
+          1.0,
+          1.0,
+          0.9,
+          0.9,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "active_nodes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "active_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "mean_sigma": 0.475,
+        "sum_sigma": 3.8,
+        "mean_interface_commitment": 0.02142857142857143
+      },
+      "window": 11
+    },
+    {
+      "move": {
+        "kind": "raise_support",
+        "node": 4,
+        "delta": 0.15
+      },
+      "score": {
+        "total_score": 0.1499999999999999,
+        "dE_expr_raw": 0.1499999999999999,
+        "dCB": 0.0,
+        "dCR": 0.0,
+        "dCS": 0.0,
+        "dCF": 0.0,
+        "fallback_iface_gain": 0.0
+      },
+      "resulting_state": {
+        "step": 130,
+        "accepted_moves": 13,
+        "sigma": [
+          1.0,
+          1.0,
+          0.9,
+          0.9,
+          0.15,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "active_nodes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "active_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "mean_sigma": 0.49374999999999997,
+        "sum_sigma": 3.9499999999999997,
+        "mean_interface_commitment": 0.02142857142857143
+      },
+      "window": 12
+    },
+    {
+      "move": {
+        "kind": "raise_support",
+        "node": 4,
+        "delta": 0.15
+      },
+      "score": {
+        "total_score": 0.1499999999999999,
+        "dE_expr_raw": 0.1499999999999999,
+        "dCB": 0.0,
+        "dCR": 0.0,
+        "dCS": 0.0,
+        "dCF": 0.0,
+        "fallback_iface_gain": 0.0
+      },
+      "resulting_state": {
+        "step": 140,
+        "accepted_moves": 14,
+        "sigma": [
+          1.0,
+          1.0,
+          0.9,
+          0.9,
+          0.3,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "active_nodes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "active_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "mean_sigma": 0.5125,
+        "sum_sigma": 4.1,
+        "mean_interface_commitment": 0.02142857142857143
+      },
+      "window": 13
+    },
+    {
+      "move": {
+        "kind": "raise_support",
+        "node": 4,
+        "delta": 0.15
+      },
+      "score": {
+        "total_score": 0.15000000000000036,
+        "dE_expr_raw": 0.15000000000000036,
+        "dCB": 0.0,
+        "dCR": 0.0,
+        "dCS": 0.0,
+        "dCF": 0.0,
+        "fallback_iface_gain": 0.0
+      },
+      "resulting_state": {
+        "step": 150,
+        "accepted_moves": 15,
+        "sigma": [
+          1.0,
+          1.0,
+          0.9,
+          0.9,
+          0.44999999999999996,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "active_nodes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "active_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "mean_sigma": 0.53125,
+        "sum_sigma": 4.25,
+        "mean_interface_commitment": 0.02142857142857143
+      },
+      "window": 14
+    },
+    {
+      "move": {
+        "kind": "raise_support",
+        "node": 4,
+        "delta": 0.15
+      },
+      "score": {
+        "total_score": 0.14999999999999947,
+        "dE_expr_raw": 0.14999999999999947,
+        "dCB": 0.0,
+        "dCR": 0.0,
+        "dCS": 0.0,
+        "dCF": 0.0,
+        "fallback_iface_gain": 0.0
+      },
+      "resulting_state": {
+        "step": 160,
+        "accepted_moves": 16,
+        "sigma": [
+          1.0,
+          1.0,
+          0.9,
+          0.9,
+          0.6,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "active_nodes": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "active_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "mean_sigma": 0.5499999999999999,
+        "sum_sigma": 4.3999999999999995,
+        "mean_interface_commitment": 0.02142857142857143
+      },
+      "window": 15
+    },
+    {
+      "move": {
+        "kind": "raise_support",
+        "node": 4,
+        "delta": 0.15
+      },
+      "score": {
+        "total_score": 0.15000000000000036,
+        "dE_expr_raw": 0.15000000000000036,
+        "dCB": 0.0,
+        "dCR": 0.0,
+        "dCS": 0.0,
+        "dCF": 0.0,
+        "fallback_iface_gain": 0.0
+      },
+      "resulting_state": {
+        "step": 170,
+        "accepted_moves": 17,
+        "sigma": [
+          1.0,
+          1.0,
+          0.9,
+          0.9,
+          0.75,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "active_nodes": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "active_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "mean_sigma": 0.56875,
+        "sum_sigma": 4.55,
+        "mean_interface_commitment": 0.02142857142857143
+      },
+      "window": 16
+    },
+    {
+      "move": {
+        "kind": "raise_support",
+        "node": 4,
+        "delta": 0.15
+      },
+      "score": {
+        "total_score": 0.15000000000000036,
+        "dE_expr_raw": 0.15000000000000036,
+        "dCB": 0.0,
+        "dCR": 0.0,
+        "dCS": 0.0,
+        "dCF": 0.0,
+        "fallback_iface_gain": 0.0
+      },
+      "resulting_state": {
+        "step": 180,
+        "accepted_moves": 18,
+        "sigma": [
+          1.0,
+          1.0,
+          0.9,
+          0.9,
+          0.9,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "active_nodes": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "active_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "mean_sigma": 0.5875,
+        "sum_sigma": 4.7,
+        "mean_interface_commitment": 0.02142857142857143
+      },
+      "window": 17
+    },
+    {
+      "move": {
+        "kind": "raise_support",
+        "node": 5,
+        "delta": 0.15
+      },
+      "score": {
+        "total_score": 0.14999999999999947,
+        "dE_expr_raw": 0.14999999999999947,
+        "dCB": 0.0,
+        "dCR": 0.0,
+        "dCS": 0.0,
+        "dCF": 0.0,
+        "fallback_iface_gain": 0.0
+      },
+      "resulting_state": {
+        "step": 190,
+        "accepted_moves": 19,
+        "sigma": [
+          1.0,
+          1.0,
+          0.9,
+          0.9,
+          0.9,
+          0.15,
+          0.0,
+          0.0
+        ],
+        "active_nodes": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "active_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "mean_sigma": 0.60625,
+        "sum_sigma": 4.85,
+        "mean_interface_commitment": 0.02142857142857143
+      },
+      "window": 18
+    },
+    {
+      "move": {
+        "kind": "raise_support",
+        "node": 5,
+        "delta": 0.15
+      },
+      "score": {
+        "total_score": 0.15000000000000036,
+        "dE_expr_raw": 0.15000000000000036,
+        "dCB": 0.0,
+        "dCR": 0.0,
+        "dCS": 0.0,
+        "dCF": 0.0,
+        "fallback_iface_gain": 0.0
+      },
+      "resulting_state": {
+        "step": 200,
+        "accepted_moves": 20,
+        "sigma": [
+          1.0,
+          1.0,
+          0.9,
+          0.9,
+          0.9,
+          0.3,
+          0.0,
+          0.0
+        ],
+        "active_nodes": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "active_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "mean_sigma": 0.625,
+        "sum_sigma": 5.0,
+        "mean_interface_commitment": 0.02142857142857143
+      },
+      "window": 19
+    },
+    {
+      "move": {
+        "kind": "raise_support",
+        "node": 5,
+        "delta": 0.15
+      },
+      "score": {
+        "total_score": 0.15000000000000036,
+        "dE_expr_raw": 0.15000000000000036,
+        "dCB": 0.0,
+        "dCR": 0.0,
+        "dCS": 0.0,
+        "dCF": 0.0,
+        "fallback_iface_gain": 0.0
+      },
+      "resulting_state": {
+        "step": 210,
+        "accepted_moves": 21,
+        "sigma": [
+          1.0,
+          1.0,
+          0.9,
+          0.9,
+          0.9,
+          0.44999999999999996,
+          0.0,
+          0.0
+        ],
+        "active_nodes": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "active_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "mean_sigma": 0.64375,
+        "sum_sigma": 5.15,
+        "mean_interface_commitment": 0.02142857142857143
+      },
+      "window": 20
+    },
+    {
+      "move": {
+        "kind": "raise_support",
+        "node": 5,
+        "delta": 0.15
+      },
+      "score": {
+        "total_score": 0.14999999999999947,
+        "dE_expr_raw": 0.14999999999999947,
+        "dCB": 0.0,
+        "dCR": 0.0,
+        "dCS": 0.0,
+        "dCF": 0.0,
+        "fallback_iface_gain": 0.0
+      },
+      "resulting_state": {
+        "step": 220,
+        "accepted_moves": 22,
+        "sigma": [
+          1.0,
+          1.0,
+          0.9,
+          0.9,
+          0.9,
+          0.6,
+          0.0,
+          0.0
+        ],
+        "active_nodes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "active_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "mean_sigma": 0.6625,
+        "sum_sigma": 5.3,
+        "mean_interface_commitment": 0.02142857142857143
+      },
+      "window": 21
+    },
+    {
+      "move": {
+        "kind": "raise_support",
+        "node": 5,
+        "delta": 0.15
+      },
+      "score": {
+        "total_score": 0.14999999999999947,
+        "dE_expr_raw": 0.14999999999999947,
+        "dCB": 0.0,
+        "dCR": 0.0,
+        "dCS": 0.0,
+        "dCF": 0.0,
+        "fallback_iface_gain": 0.0
+      },
+      "resulting_state": {
+        "step": 230,
+        "accepted_moves": 23,
+        "sigma": [
+          1.0,
+          1.0,
+          0.9,
+          0.9,
+          0.9,
+          0.75,
+          0.0,
+          0.0
+        ],
+        "active_nodes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "active_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "mean_sigma": 0.6812499999999999,
+        "sum_sigma": 5.449999999999999,
+        "mean_interface_commitment": 0.02142857142857143
+      },
+      "window": 22
+    },
+    {
+      "move": {
+        "kind": "raise_support",
+        "node": 5,
+        "delta": 0.15
+      },
+      "score": {
+        "total_score": 0.15000000000000036,
+        "dE_expr_raw": 0.15000000000000036,
+        "dCB": 0.0,
+        "dCR": 0.0,
+        "dCS": 0.0,
+        "dCF": 0.0,
+        "fallback_iface_gain": 0.0
+      },
+      "resulting_state": {
+        "step": 240,
+        "accepted_moves": 24,
+        "sigma": [
+          1.0,
+          1.0,
+          0.9,
+          0.9,
+          0.9,
+          0.9,
+          0.0,
+          0.0
+        ],
+        "active_nodes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "active_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "mean_sigma": 0.7,
+        "sum_sigma": 5.6,
+        "mean_interface_commitment": 0.02142857142857143
+      },
+      "window": 23
+    },
+    {
+      "move": {
+        "kind": "raise_support",
+        "node": 6,
+        "delta": 0.15
+      },
+      "score": {
+        "total_score": 0.15000000000000036,
+        "dE_expr_raw": 0.15000000000000036,
+        "dCB": 0.0,
+        "dCR": 0.0,
+        "dCS": 0.0,
+        "dCF": 0.0,
+        "fallback_iface_gain": 0.0
+      },
+      "resulting_state": {
+        "step": 250,
+        "accepted_moves": 25,
+        "sigma": [
+          1.0,
+          1.0,
+          0.9,
+          0.9,
+          0.9,
+          0.9,
+          0.15,
+          0.0
+        ],
+        "active_nodes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "active_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "mean_sigma": 0.71875,
+        "sum_sigma": 5.75,
+        "mean_interface_commitment": 0.02142857142857143
+      },
+      "window": 24
+    },
+    {
+      "move": {
+        "kind": "raise_support",
+        "node": 6,
+        "delta": 0.15
+      },
+      "score": {
+        "total_score": 0.15000000000000036,
+        "dE_expr_raw": 0.15000000000000036,
+        "dCB": 0.0,
+        "dCR": 0.0,
+        "dCS": 0.0,
+        "dCF": 0.0,
+        "fallback_iface_gain": 0.0
+      },
+      "resulting_state": {
+        "step": 260,
+        "accepted_moves": 26,
+        "sigma": [
+          1.0,
+          1.0,
+          0.9,
+          0.9,
+          0.9,
+          0.9,
+          0.3,
+          0.0
+        ],
+        "active_nodes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "active_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "mean_sigma": 0.7375,
+        "sum_sigma": 5.9,
+        "mean_interface_commitment": 0.02142857142857143
+      },
+      "window": 25
+    },
+    {
+      "move": {
+        "kind": "raise_support",
+        "node": 6,
+        "delta": 0.15
+      },
+      "score": {
+        "total_score": 0.14999999999999947,
+        "dE_expr_raw": 0.14999999999999947,
+        "dCB": 0.0,
+        "dCR": 0.0,
+        "dCS": 0.0,
+        "dCF": 0.0,
+        "fallback_iface_gain": 0.0
+      },
+      "resulting_state": {
+        "step": 270,
+        "accepted_moves": 27,
+        "sigma": [
+          1.0,
+          1.0,
+          0.9,
+          0.9,
+          0.9,
+          0.9,
+          0.44999999999999996,
+          0.0
+        ],
+        "active_nodes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "active_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "mean_sigma": 0.75625,
+        "sum_sigma": 6.05,
+        "mean_interface_commitment": 0.02142857142857143
+      },
+      "window": 26
+    },
+    {
+      "move": {
+        "kind": "raise_support",
+        "node": 6,
+        "delta": 0.15
+      },
+      "score": {
+        "total_score": 0.14999999999999947,
+        "dE_expr_raw": 0.14999999999999947,
+        "dCB": 0.0,
+        "dCR": 0.0,
+        "dCS": 0.0,
+        "dCF": 0.0,
+        "fallback_iface_gain": 0.0
+      },
+      "resulting_state": {
+        "step": 280,
+        "accepted_moves": 28,
+        "sigma": [
+          1.0,
+          1.0,
+          0.9,
+          0.9,
+          0.9,
+          0.9,
+          0.6,
+          0.0
+        ],
+        "active_nodes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "active_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "mean_sigma": 0.7749999999999999,
+        "sum_sigma": 6.199999999999999,
+        "mean_interface_commitment": 0.02142857142857143
+      },
+      "window": 27
+    },
+    {
+      "move": {
+        "kind": "raise_support",
+        "node": 6,
+        "delta": 0.15
+      },
+      "score": {
+        "total_score": 0.15000000000000036,
+        "dE_expr_raw": 0.15000000000000036,
+        "dCB": 0.0,
+        "dCR": 0.0,
+        "dCS": 0.0,
+        "dCF": 0.0,
+        "fallback_iface_gain": 0.0
+      },
+      "resulting_state": {
+        "step": 290,
+        "accepted_moves": 29,
+        "sigma": [
+          1.0,
+          1.0,
+          0.9,
+          0.9,
+          0.9,
+          0.9,
+          0.75,
+          0.0
+        ],
+        "active_nodes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "active_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "mean_sigma": 0.79375,
+        "sum_sigma": 6.35,
+        "mean_interface_commitment": 0.02142857142857143
+      },
+      "window": 28
+    },
+    {
+      "move": {
+        "kind": "raise_support",
+        "node": 6,
+        "delta": 0.15
+      },
+      "score": {
+        "total_score": 0.15000000000000036,
+        "dE_expr_raw": 0.15000000000000036,
+        "dCB": 0.0,
+        "dCR": 0.0,
+        "dCS": 0.0,
+        "dCF": 0.0,
+        "fallback_iface_gain": 0.0
+      },
+      "resulting_state": {
+        "step": 300,
+        "accepted_moves": 30,
+        "sigma": [
+          1.0,
+          1.0,
+          0.9,
+          0.9,
+          0.9,
+          0.9,
+          0.9,
+          0.0
+        ],
+        "active_nodes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "active_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "mean_sigma": 0.8125,
+        "sum_sigma": 6.5,
+        "mean_interface_commitment": 0.02142857142857143
+      },
+      "window": 29
+    }
+  ],
+  "eval_windows": [
+    {
+      "window": 0,
+      "baseline_after_background": {
+        "step": 10,
+        "accepted_moves": 0,
+        "sigma": [
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "active_nodes": [
+          0,
+          1
+        ],
+        "active_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "mean_sigma": 0.25,
+        "sum_sigma": 2.0,
+        "mean_interface_commitment": 0.02142857142857143
+      },
+      "top_candidates": [
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 2,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 3,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 4,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 5,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 6,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 7,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "edge_up",
+            "edge": [
+              0,
+              1
+            ],
+            "delta": 0.15
+          },
+          "total_score": 0.037500000000000006,
+          "dE_expr_raw": 0.0,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "edge_down",
+            "edge": [
+              0,
+              1
+            ],
+            "delta": 0.15
+          },
+          "total_score": -0.045000000000000005,
+          "dE_expr_raw": 0.0,
+          "dCB": 0.0,
+          "dCR": 0.15000000000000002,
+          "dCS": 0.0,
+          "dCF": 0.0
+        }
+      ],
+      "winner": {
+        "move": {
+          "kind": "raise_support",
+          "node": 2,
+          "delta": 0.15
+        },
+        "score": {
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0,
+          "fallback_iface_gain": 0.0
+        },
+        "resulting_state": {
+          "step": 10,
+          "accepted_moves": 1,
+          "sigma": [
+            1.0,
+            1.0,
+            0.15,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "active_nodes": [
+            0,
+            1
+          ],
+          "active_edges": [
+            [
+              0,
+              1
+            ]
+          ],
+          "mean_sigma": 0.26875,
+          "sum_sigma": 2.15,
+          "mean_interface_commitment": 0.02142857142857143
+        },
+        "window": 0
+      }
+    },
+    {
+      "window": 1,
+      "baseline_after_background": {
+        "step": 20,
+        "accepted_moves": 1,
+        "sigma": [
+          1.0,
+          1.0,
+          0.15,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "active_nodes": [
+          0,
+          1
+        ],
+        "active_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "mean_sigma": 0.26875,
+        "sum_sigma": 2.15,
+        "mean_interface_commitment": 0.02142857142857143
+      },
+      "top_candidates": [
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 2,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 3,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 4,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 5,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 6,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 7,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "edge_up",
+            "edge": [
+              0,
+              1
+            ],
+            "delta": 0.15
+          },
+          "total_score": 0.037500000000000006,
+          "dE_expr_raw": 0.0,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "edge_up",
+            "edge": [
+              0,
+              2
+            ],
+            "delta": 0.15
+          },
+          "total_score": 0.037500000000000006,
+          "dE_expr_raw": 0.0,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        }
+      ],
+      "winner": {
+        "move": {
+          "kind": "raise_support",
+          "node": 2,
+          "delta": 0.15
+        },
+        "score": {
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0,
+          "fallback_iface_gain": 0.0
+        },
+        "resulting_state": {
+          "step": 20,
+          "accepted_moves": 2,
+          "sigma": [
+            1.0,
+            1.0,
+            0.3,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "active_nodes": [
+            0,
+            1
+          ],
+          "active_edges": [
+            [
+              0,
+              1
+            ]
+          ],
+          "mean_sigma": 0.2875,
+          "sum_sigma": 2.3,
+          "mean_interface_commitment": 0.02142857142857143
+        },
+        "window": 1
+      }
+    },
+    {
+      "window": 2,
+      "baseline_after_background": {
+        "step": 30,
+        "accepted_moves": 2,
+        "sigma": [
+          1.0,
+          1.0,
+          0.3,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "active_nodes": [
+          0,
+          1
+        ],
+        "active_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "mean_sigma": 0.2875,
+        "sum_sigma": 2.3,
+        "mean_interface_commitment": 0.02142857142857143
+      },
+      "top_candidates": [
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 2,
+            "delta": 0.15
+          },
+          "total_score": 0.15000000000000036,
+          "dE_expr_raw": 0.15000000000000036,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 3,
+            "delta": 0.15
+          },
+          "total_score": 0.15000000000000036,
+          "dE_expr_raw": 0.15000000000000036,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 4,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 5,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 6,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 7,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "edge_up",
+            "edge": [
+              0,
+              1
+            ],
+            "delta": 0.15
+          },
+          "total_score": 0.037500000000000006,
+          "dE_expr_raw": 0.0,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "edge_up",
+            "edge": [
+              0,
+              2
+            ],
+            "delta": 0.15
+          },
+          "total_score": 0.037500000000000006,
+          "dE_expr_raw": 0.0,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        }
+      ],
+      "winner": {
+        "move": {
+          "kind": "raise_support",
+          "node": 2,
+          "delta": 0.15
+        },
+        "score": {
+          "total_score": 0.15000000000000036,
+          "dE_expr_raw": 0.15000000000000036,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0,
+          "fallback_iface_gain": 0.0
+        },
+        "resulting_state": {
+          "step": 30,
+          "accepted_moves": 3,
+          "sigma": [
+            1.0,
+            1.0,
+            0.44999999999999996,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "active_nodes": [
+            0,
+            1
+          ],
+          "active_edges": [
+            [
+              0,
+              1
+            ]
+          ],
+          "mean_sigma": 0.30625,
+          "sum_sigma": 2.45,
+          "mean_interface_commitment": 0.02142857142857143
+        },
+        "window": 2
+      }
+    },
+    {
+      "window": 3,
+      "baseline_after_background": {
+        "step": 40,
+        "accepted_moves": 3,
+        "sigma": [
+          1.0,
+          1.0,
+          0.44999999999999996,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "active_nodes": [
+          0,
+          1
+        ],
+        "active_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "mean_sigma": 0.30625,
+        "sum_sigma": 2.45,
+        "mean_interface_commitment": 0.02142857142857143
+      },
+      "top_candidates": [
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 2,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 3,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 4,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 5,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 6,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 7,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "edge_up",
+            "edge": [
+              0,
+              1
+            ],
+            "delta": 0.15
+          },
+          "total_score": 0.037500000000000006,
+          "dE_expr_raw": 0.0,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "edge_up",
+            "edge": [
+              0,
+              2
+            ],
+            "delta": 0.15
+          },
+          "total_score": 0.037500000000000006,
+          "dE_expr_raw": 0.0,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        }
+      ],
+      "winner": {
+        "move": {
+          "kind": "raise_support",
+          "node": 2,
+          "delta": 0.15
+        },
+        "score": {
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0,
+          "fallback_iface_gain": 0.0
+        },
+        "resulting_state": {
+          "step": 40,
+          "accepted_moves": 4,
+          "sigma": [
+            1.0,
+            1.0,
+            0.6,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "active_nodes": [
+            0,
+            1,
+            2
+          ],
+          "active_edges": [
+            [
+              0,
+              1
+            ]
+          ],
+          "mean_sigma": 0.325,
+          "sum_sigma": 2.6,
+          "mean_interface_commitment": 0.02142857142857143
+        },
+        "window": 3
+      }
+    },
+    {
+      "window": 4,
+      "baseline_after_background": {
+        "step": 50,
+        "accepted_moves": 4,
+        "sigma": [
+          1.0,
+          1.0,
+          0.6,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "active_nodes": [
+          0,
+          1,
+          2
+        ],
+        "active_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "mean_sigma": 0.325,
+        "sum_sigma": 2.6,
+        "mean_interface_commitment": 0.02142857142857143
+      },
+      "top_candidates": [
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 2,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 3,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 4,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 5,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 6,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 7,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "edge_up",
+            "edge": [
+              0,
+              1
+            ],
+            "delta": 0.15
+          },
+          "total_score": 0.037500000000000006,
+          "dE_expr_raw": 0.0,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "edge_up",
+            "edge": [
+              0,
+              2
+            ],
+            "delta": 0.15
+          },
+          "total_score": 0.037500000000000006,
+          "dE_expr_raw": 0.0,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        }
+      ],
+      "winner": {
+        "move": {
+          "kind": "raise_support",
+          "node": 2,
+          "delta": 0.15
+        },
+        "score": {
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0,
+          "fallback_iface_gain": 0.0
+        },
+        "resulting_state": {
+          "step": 50,
+          "accepted_moves": 5,
+          "sigma": [
+            1.0,
+            1.0,
+            0.75,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "active_nodes": [
+            0,
+            1,
+            2
+          ],
+          "active_edges": [
+            [
+              0,
+              1
+            ]
+          ],
+          "mean_sigma": 0.34375,
+          "sum_sigma": 2.75,
+          "mean_interface_commitment": 0.02142857142857143
+        },
+        "window": 4
+      }
+    },
+    {
+      "window": 5,
+      "baseline_after_background": {
+        "step": 60,
+        "accepted_moves": 5,
+        "sigma": [
+          1.0,
+          1.0,
+          0.75,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "active_nodes": [
+          0,
+          1,
+          2
+        ],
+        "active_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "mean_sigma": 0.34375,
+        "sum_sigma": 2.75,
+        "mean_interface_commitment": 0.02142857142857143
+      },
+      "top_candidates": [
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 2,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 3,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 4,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 5,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 6,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 7,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "edge_up",
+            "edge": [
+              0,
+              1
+            ],
+            "delta": 0.15
+          },
+          "total_score": 0.037500000000000006,
+          "dE_expr_raw": 0.0,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "edge_up",
+            "edge": [
+              0,
+              2
+            ],
+            "delta": 0.15
+          },
+          "total_score": 0.037500000000000006,
+          "dE_expr_raw": 0.0,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        }
+      ],
+      "winner": {
+        "move": {
+          "kind": "raise_support",
+          "node": 2,
+          "delta": 0.15
+        },
+        "score": {
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0,
+          "fallback_iface_gain": 0.0
+        },
+        "resulting_state": {
+          "step": 60,
+          "accepted_moves": 6,
+          "sigma": [
+            1.0,
+            1.0,
+            0.9,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "active_nodes": [
+            0,
+            1,
+            2
+          ],
+          "active_edges": [
+            [
+              0,
+              1
+            ]
+          ],
+          "mean_sigma": 0.3625,
+          "sum_sigma": 2.9,
+          "mean_interface_commitment": 0.02142857142857143
+        },
+        "window": 5
+      }
+    },
+    {
+      "window": 6,
+      "baseline_after_background": {
+        "step": 70,
+        "accepted_moves": 6,
+        "sigma": [
+          1.0,
+          1.0,
+          0.9,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "active_nodes": [
+          0,
+          1,
+          2
+        ],
+        "active_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "mean_sigma": 0.3625,
+        "sum_sigma": 2.9,
+        "mean_interface_commitment": 0.02142857142857143
+      },
+      "top_candidates": [
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 3,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 4,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 5,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 6,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 7,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 2,
+            "delta": 0.15
+          },
+          "total_score": 0.10000000000000009,
+          "dE_expr_raw": 0.10000000000000009,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "edge_up",
+            "edge": [
+              0,
+              1
+            ],
+            "delta": 0.15
+          },
+          "total_score": 0.037500000000000006,
+          "dE_expr_raw": 0.0,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "edge_up",
+            "edge": [
+              0,
+              2
+            ],
+            "delta": 0.15
+          },
+          "total_score": 0.037500000000000006,
+          "dE_expr_raw": 0.0,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        }
+      ],
+      "winner": {
+        "move": {
+          "kind": "raise_support",
+          "node": 3,
+          "delta": 0.15
+        },
+        "score": {
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0,
+          "fallback_iface_gain": 0.0
+        },
+        "resulting_state": {
+          "step": 70,
+          "accepted_moves": 7,
+          "sigma": [
+            1.0,
+            1.0,
+            0.9,
+            0.15,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "active_nodes": [
+            0,
+            1,
+            2
+          ],
+          "active_edges": [
+            [
+              0,
+              1
+            ]
+          ],
+          "mean_sigma": 0.38125,
+          "sum_sigma": 3.05,
+          "mean_interface_commitment": 0.02142857142857143
+        },
+        "window": 6
+      }
+    },
+    {
+      "window": 7,
+      "baseline_after_background": {
+        "step": 80,
+        "accepted_moves": 7,
+        "sigma": [
+          1.0,
+          1.0,
+          0.9,
+          0.15,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "active_nodes": [
+          0,
+          1,
+          2
+        ],
+        "active_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "mean_sigma": 0.38125,
+        "sum_sigma": 3.05,
+        "mean_interface_commitment": 0.02142857142857143
+      },
+      "top_candidates": [
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 3,
+            "delta": 0.15
+          },
+          "total_score": 0.15000000000000036,
+          "dE_expr_raw": 0.15000000000000036,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 4,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 5,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 6,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 7,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 2,
+            "delta": 0.15
+          },
+          "total_score": 0.10000000000000009,
+          "dE_expr_raw": 0.10000000000000009,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "edge_up",
+            "edge": [
+              0,
+              1
+            ],
+            "delta": 0.15
+          },
+          "total_score": 0.037500000000000006,
+          "dE_expr_raw": 0.0,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "edge_up",
+            "edge": [
+              0,
+              2
+            ],
+            "delta": 0.15
+          },
+          "total_score": 0.037500000000000006,
+          "dE_expr_raw": 0.0,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        }
+      ],
+      "winner": {
+        "move": {
+          "kind": "raise_support",
+          "node": 3,
+          "delta": 0.15
+        },
+        "score": {
+          "total_score": 0.15000000000000036,
+          "dE_expr_raw": 0.15000000000000036,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0,
+          "fallback_iface_gain": 0.0
+        },
+        "resulting_state": {
+          "step": 80,
+          "accepted_moves": 8,
+          "sigma": [
+            1.0,
+            1.0,
+            0.9,
+            0.3,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "active_nodes": [
+            0,
+            1,
+            2
+          ],
+          "active_edges": [
+            [
+              0,
+              1
+            ]
+          ],
+          "mean_sigma": 0.4,
+          "sum_sigma": 3.2,
+          "mean_interface_commitment": 0.02142857142857143
+        },
+        "window": 7
+      }
+    },
+    {
+      "window": 8,
+      "baseline_after_background": {
+        "step": 90,
+        "accepted_moves": 8,
+        "sigma": [
+          1.0,
+          1.0,
+          0.9,
+          0.3,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "active_nodes": [
+          0,
+          1,
+          2
+        ],
+        "active_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "mean_sigma": 0.4,
+        "sum_sigma": 3.2,
+        "mean_interface_commitment": 0.02142857142857143
+      },
+      "top_candidates": [
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 3,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 4,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 5,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 6,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 7,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 2,
+            "delta": 0.15
+          },
+          "total_score": 0.09999999999999964,
+          "dE_expr_raw": 0.09999999999999964,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "edge_up",
+            "edge": [
+              0,
+              1
+            ],
+            "delta": 0.15
+          },
+          "total_score": 0.037500000000000006,
+          "dE_expr_raw": 0.0,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "edge_up",
+            "edge": [
+              0,
+              2
+            ],
+            "delta": 0.15
+          },
+          "total_score": 0.037500000000000006,
+          "dE_expr_raw": 0.0,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        }
+      ],
+      "winner": {
+        "move": {
+          "kind": "raise_support",
+          "node": 3,
+          "delta": 0.15
+        },
+        "score": {
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0,
+          "fallback_iface_gain": 0.0
+        },
+        "resulting_state": {
+          "step": 90,
+          "accepted_moves": 9,
+          "sigma": [
+            1.0,
+            1.0,
+            0.9,
+            0.44999999999999996,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "active_nodes": [
+            0,
+            1,
+            2
+          ],
+          "active_edges": [
+            [
+              0,
+              1
+            ]
+          ],
+          "mean_sigma": 0.41875,
+          "sum_sigma": 3.35,
+          "mean_interface_commitment": 0.02142857142857143
+        },
+        "window": 8
+      }
+    },
+    {
+      "window": 9,
+      "baseline_after_background": {
+        "step": 100,
+        "accepted_moves": 9,
+        "sigma": [
+          1.0,
+          1.0,
+          0.9,
+          0.44999999999999996,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "active_nodes": [
+          0,
+          1,
+          2
+        ],
+        "active_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "mean_sigma": 0.41875,
+        "sum_sigma": 3.35,
+        "mean_interface_commitment": 0.02142857142857143
+      },
+      "top_candidates": [
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 3,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 4,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 5,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 6,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 7,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 2,
+            "delta": 0.15
+          },
+          "total_score": 0.10000000000000009,
+          "dE_expr_raw": 0.10000000000000009,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "edge_up",
+            "edge": [
+              0,
+              1
+            ],
+            "delta": 0.15
+          },
+          "total_score": 0.037500000000000006,
+          "dE_expr_raw": 0.0,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "edge_up",
+            "edge": [
+              0,
+              2
+            ],
+            "delta": 0.15
+          },
+          "total_score": 0.037500000000000006,
+          "dE_expr_raw": 0.0,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        }
+      ],
+      "winner": {
+        "move": {
+          "kind": "raise_support",
+          "node": 3,
+          "delta": 0.15
+        },
+        "score": {
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0,
+          "fallback_iface_gain": 0.0
+        },
+        "resulting_state": {
+          "step": 100,
+          "accepted_moves": 10,
+          "sigma": [
+            1.0,
+            1.0,
+            0.9,
+            0.6,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "active_nodes": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "active_edges": [
+            [
+              0,
+              1
+            ]
+          ],
+          "mean_sigma": 0.4375,
+          "sum_sigma": 3.5,
+          "mean_interface_commitment": 0.02142857142857143
+        },
+        "window": 9
+      }
+    },
+    {
+      "window": 10,
+      "baseline_after_background": {
+        "step": 110,
+        "accepted_moves": 10,
+        "sigma": [
+          1.0,
+          1.0,
+          0.9,
+          0.6,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "active_nodes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "active_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "mean_sigma": 0.4375,
+        "sum_sigma": 3.5,
+        "mean_interface_commitment": 0.02142857142857143
+      },
+      "top_candidates": [
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 3,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 4,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 5,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 6,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 7,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 2,
+            "delta": 0.15
+          },
+          "total_score": 0.10000000000000009,
+          "dE_expr_raw": 0.10000000000000009,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "edge_up",
+            "edge": [
+              0,
+              1
+            ],
+            "delta": 0.15
+          },
+          "total_score": 0.037500000000000006,
+          "dE_expr_raw": 0.0,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "edge_up",
+            "edge": [
+              0,
+              2
+            ],
+            "delta": 0.15
+          },
+          "total_score": 0.037500000000000006,
+          "dE_expr_raw": 0.0,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        }
+      ],
+      "winner": {
+        "move": {
+          "kind": "raise_support",
+          "node": 3,
+          "delta": 0.15
+        },
+        "score": {
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0,
+          "fallback_iface_gain": 0.0
+        },
+        "resulting_state": {
+          "step": 110,
+          "accepted_moves": 11,
+          "sigma": [
+            1.0,
+            1.0,
+            0.9,
+            0.75,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "active_nodes": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "active_edges": [
+            [
+              0,
+              1
+            ]
+          ],
+          "mean_sigma": 0.45625,
+          "sum_sigma": 3.65,
+          "mean_interface_commitment": 0.02142857142857143
+        },
+        "window": 10
+      }
+    },
+    {
+      "window": 11,
+      "baseline_after_background": {
+        "step": 120,
+        "accepted_moves": 11,
+        "sigma": [
+          1.0,
+          1.0,
+          0.9,
+          0.75,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "active_nodes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "active_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "mean_sigma": 0.45625,
+        "sum_sigma": 3.65,
+        "mean_interface_commitment": 0.02142857142857143
+      },
+      "top_candidates": [
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 3,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 4,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 5,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 6,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 7,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 2,
+            "delta": 0.15
+          },
+          "total_score": 0.10000000000000009,
+          "dE_expr_raw": 0.10000000000000009,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "edge_up",
+            "edge": [
+              0,
+              1
+            ],
+            "delta": 0.15
+          },
+          "total_score": 0.037500000000000006,
+          "dE_expr_raw": 0.0,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "edge_up",
+            "edge": [
+              0,
+              2
+            ],
+            "delta": 0.15
+          },
+          "total_score": 0.037500000000000006,
+          "dE_expr_raw": 0.0,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        }
+      ],
+      "winner": {
+        "move": {
+          "kind": "raise_support",
+          "node": 3,
+          "delta": 0.15
+        },
+        "score": {
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0,
+          "fallback_iface_gain": 0.0
+        },
+        "resulting_state": {
+          "step": 120,
+          "accepted_moves": 12,
+          "sigma": [
+            1.0,
+            1.0,
+            0.9,
+            0.9,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "active_nodes": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "active_edges": [
+            [
+              0,
+              1
+            ]
+          ],
+          "mean_sigma": 0.475,
+          "sum_sigma": 3.8,
+          "mean_interface_commitment": 0.02142857142857143
+        },
+        "window": 11
+      }
+    },
+    {
+      "window": 12,
+      "baseline_after_background": {
+        "step": 130,
+        "accepted_moves": 12,
+        "sigma": [
+          1.0,
+          1.0,
+          0.9,
+          0.9,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "active_nodes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "active_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "mean_sigma": 0.475,
+        "sum_sigma": 3.8,
+        "mean_interface_commitment": 0.02142857142857143
+      },
+      "top_candidates": [
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 4,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 5,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 6,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 7,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 2,
+            "delta": 0.15
+          },
+          "total_score": 0.10000000000000009,
+          "dE_expr_raw": 0.10000000000000009,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 3,
+            "delta": 0.15
+          },
+          "total_score": 0.10000000000000009,
+          "dE_expr_raw": 0.10000000000000009,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "edge_up",
+            "edge": [
+              0,
+              1
+            ],
+            "delta": 0.15
+          },
+          "total_score": 0.037500000000000006,
+          "dE_expr_raw": 0.0,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "edge_up",
+            "edge": [
+              0,
+              2
+            ],
+            "delta": 0.15
+          },
+          "total_score": 0.037500000000000006,
+          "dE_expr_raw": 0.0,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        }
+      ],
+      "winner": {
+        "move": {
+          "kind": "raise_support",
+          "node": 4,
+          "delta": 0.15
+        },
+        "score": {
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0,
+          "fallback_iface_gain": 0.0
+        },
+        "resulting_state": {
+          "step": 130,
+          "accepted_moves": 13,
+          "sigma": [
+            1.0,
+            1.0,
+            0.9,
+            0.9,
+            0.15,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "active_nodes": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "active_edges": [
+            [
+              0,
+              1
+            ]
+          ],
+          "mean_sigma": 0.49374999999999997,
+          "sum_sigma": 3.9499999999999997,
+          "mean_interface_commitment": 0.02142857142857143
+        },
+        "window": 12
+      }
+    },
+    {
+      "window": 13,
+      "baseline_after_background": {
+        "step": 140,
+        "accepted_moves": 13,
+        "sigma": [
+          1.0,
+          1.0,
+          0.9,
+          0.9,
+          0.15,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "active_nodes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "active_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "mean_sigma": 0.49374999999999997,
+        "sum_sigma": 3.9499999999999997,
+        "mean_interface_commitment": 0.02142857142857143
+      },
+      "top_candidates": [
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 4,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 5,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 6,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 7,
+            "delta": 0.15
+          },
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 2,
+            "delta": 0.15
+          },
+          "total_score": 0.10000000000000009,
+          "dE_expr_raw": 0.10000000000000009,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 3,
+            "delta": 0.15
+          },
+          "total_score": 0.10000000000000009,
+          "dE_expr_raw": 0.10000000000000009,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "edge_up",
+            "edge": [
+              0,
+              1
+            ],
+            "delta": 0.15
+          },
+          "total_score": 0.037500000000000006,
+          "dE_expr_raw": 0.0,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "edge_up",
+            "edge": [
+              0,
+              2
+            ],
+            "delta": 0.15
+          },
+          "total_score": 0.037500000000000006,
+          "dE_expr_raw": 0.0,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        }
+      ],
+      "winner": {
+        "move": {
+          "kind": "raise_support",
+          "node": 4,
+          "delta": 0.15
+        },
+        "score": {
+          "total_score": 0.1499999999999999,
+          "dE_expr_raw": 0.1499999999999999,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0,
+          "fallback_iface_gain": 0.0
+        },
+        "resulting_state": {
+          "step": 140,
+          "accepted_moves": 14,
+          "sigma": [
+            1.0,
+            1.0,
+            0.9,
+            0.9,
+            0.3,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "active_nodes": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "active_edges": [
+            [
+              0,
+              1
+            ]
+          ],
+          "mean_sigma": 0.5125,
+          "sum_sigma": 4.1,
+          "mean_interface_commitment": 0.02142857142857143
+        },
+        "window": 13
+      }
+    },
+    {
+      "window": 14,
+      "baseline_after_background": {
+        "step": 150,
+        "accepted_moves": 14,
+        "sigma": [
+          1.0,
+          1.0,
+          0.9,
+          0.9,
+          0.3,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "active_nodes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "active_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "mean_sigma": 0.5125,
+        "sum_sigma": 4.1,
+        "mean_interface_commitment": 0.02142857142857143
+      },
+      "top_candidates": [
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 4,
+            "delta": 0.15
+          },
+          "total_score": 0.15000000000000036,
+          "dE_expr_raw": 0.15000000000000036,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 5,
+            "delta": 0.15
+          },
+          "total_score": 0.15000000000000036,
+          "dE_expr_raw": 0.15000000000000036,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 6,
+            "delta": 0.15
+          },
+          "total_score": 0.15000000000000036,
+          "dE_expr_raw": 0.15000000000000036,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 7,
+            "delta": 0.15
+          },
+          "total_score": 0.15000000000000036,
+          "dE_expr_raw": 0.15000000000000036,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 2,
+            "delta": 0.15
+          },
+          "total_score": 0.10000000000000053,
+          "dE_expr_raw": 0.10000000000000053,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 3,
+            "delta": 0.15
+          },
+          "total_score": 0.10000000000000053,
+          "dE_expr_raw": 0.10000000000000053,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "edge_up",
+            "edge": [
+              0,
+              1
+            ],
+            "delta": 0.15
+          },
+          "total_score": 0.037500000000000006,
+          "dE_expr_raw": 0.0,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "edge_up",
+            "edge": [
+              0,
+              2
+            ],
+            "delta": 0.15
+          },
+          "total_score": 0.037500000000000006,
+          "dE_expr_raw": 0.0,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        }
+      ],
+      "winner": {
+        "move": {
+          "kind": "raise_support",
+          "node": 4,
+          "delta": 0.15
+        },
+        "score": {
+          "total_score": 0.15000000000000036,
+          "dE_expr_raw": 0.15000000000000036,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0,
+          "fallback_iface_gain": 0.0
+        },
+        "resulting_state": {
+          "step": 150,
+          "accepted_moves": 15,
+          "sigma": [
+            1.0,
+            1.0,
+            0.9,
+            0.9,
+            0.44999999999999996,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "active_nodes": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "active_edges": [
+            [
+              0,
+              1
+            ]
+          ],
+          "mean_sigma": 0.53125,
+          "sum_sigma": 4.25,
+          "mean_interface_commitment": 0.02142857142857143
+        },
+        "window": 14
+      }
+    },
+    {
+      "window": 15,
+      "baseline_after_background": {
+        "step": 160,
+        "accepted_moves": 15,
+        "sigma": [
+          1.0,
+          1.0,
+          0.9,
+          0.9,
+          0.44999999999999996,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "active_nodes": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "active_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "mean_sigma": 0.53125,
+        "sum_sigma": 4.25,
+        "mean_interface_commitment": 0.02142857142857143
+      },
+      "top_candidates": [
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 4,
+            "delta": 0.15
+          },
+          "total_score": 0.14999999999999947,
+          "dE_expr_raw": 0.14999999999999947,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 5,
+            "delta": 0.15
+          },
+          "total_score": 0.14999999999999947,
+          "dE_expr_raw": 0.14999999999999947,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 6,
+            "delta": 0.15
+          },
+          "total_score": 0.14999999999999947,
+          "dE_expr_raw": 0.14999999999999947,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 7,
+            "delta": 0.15
+          },
+          "total_score": 0.14999999999999947,
+          "dE_expr_raw": 0.14999999999999947,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 2,
+            "delta": 0.15
+          },
+          "total_score": 0.09999999999999964,
+          "dE_expr_raw": 0.09999999999999964,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 3,
+            "delta": 0.15
+          },
+          "total_score": 0.09999999999999964,
+          "dE_expr_raw": 0.09999999999999964,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "edge_up",
+            "edge": [
+              0,
+              1
+            ],
+            "delta": 0.15
+          },
+          "total_score": 0.037500000000000006,
+          "dE_expr_raw": 0.0,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "edge_up",
+            "edge": [
+              0,
+              2
+            ],
+            "delta": 0.15
+          },
+          "total_score": 0.037500000000000006,
+          "dE_expr_raw": 0.0,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        }
+      ],
+      "winner": {
+        "move": {
+          "kind": "raise_support",
+          "node": 4,
+          "delta": 0.15
+        },
+        "score": {
+          "total_score": 0.14999999999999947,
+          "dE_expr_raw": 0.14999999999999947,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0,
+          "fallback_iface_gain": 0.0
+        },
+        "resulting_state": {
+          "step": 160,
+          "accepted_moves": 16,
+          "sigma": [
+            1.0,
+            1.0,
+            0.9,
+            0.9,
+            0.6,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "active_nodes": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "active_edges": [
+            [
+              0,
+              1
+            ]
+          ],
+          "mean_sigma": 0.5499999999999999,
+          "sum_sigma": 4.3999999999999995,
+          "mean_interface_commitment": 0.02142857142857143
+        },
+        "window": 15
+      }
+    },
+    {
+      "window": 16,
+      "baseline_after_background": {
+        "step": 170,
+        "accepted_moves": 16,
+        "sigma": [
+          1.0,
+          1.0,
+          0.9,
+          0.9,
+          0.6,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "active_nodes": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "active_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "mean_sigma": 0.5499999999999999,
+        "sum_sigma": 4.3999999999999995,
+        "mean_interface_commitment": 0.02142857142857143
+      },
+      "top_candidates": [
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 4,
+            "delta": 0.15
+          },
+          "total_score": 0.15000000000000036,
+          "dE_expr_raw": 0.15000000000000036,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 5,
+            "delta": 0.15
+          },
+          "total_score": 0.15000000000000036,
+          "dE_expr_raw": 0.15000000000000036,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 6,
+            "delta": 0.15
+          },
+          "total_score": 0.15000000000000036,
+          "dE_expr_raw": 0.15000000000000036,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 7,
+            "delta": 0.15
+          },
+          "total_score": 0.15000000000000036,
+          "dE_expr_raw": 0.15000000000000036,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 2,
+            "delta": 0.15
+          },
+          "total_score": 0.10000000000000053,
+          "dE_expr_raw": 0.10000000000000053,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 3,
+            "delta": 0.15
+          },
+          "total_score": 0.10000000000000053,
+          "dE_expr_raw": 0.10000000000000053,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "edge_up",
+            "edge": [
+              0,
+              1
+            ],
+            "delta": 0.15
+          },
+          "total_score": 0.037500000000000006,
+          "dE_expr_raw": 0.0,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "edge_up",
+            "edge": [
+              0,
+              2
+            ],
+            "delta": 0.15
+          },
+          "total_score": 0.037500000000000006,
+          "dE_expr_raw": 0.0,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        }
+      ],
+      "winner": {
+        "move": {
+          "kind": "raise_support",
+          "node": 4,
+          "delta": 0.15
+        },
+        "score": {
+          "total_score": 0.15000000000000036,
+          "dE_expr_raw": 0.15000000000000036,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0,
+          "fallback_iface_gain": 0.0
+        },
+        "resulting_state": {
+          "step": 170,
+          "accepted_moves": 17,
+          "sigma": [
+            1.0,
+            1.0,
+            0.9,
+            0.9,
+            0.75,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "active_nodes": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "active_edges": [
+            [
+              0,
+              1
+            ]
+          ],
+          "mean_sigma": 0.56875,
+          "sum_sigma": 4.55,
+          "mean_interface_commitment": 0.02142857142857143
+        },
+        "window": 16
+      }
+    },
+    {
+      "window": 17,
+      "baseline_after_background": {
+        "step": 180,
+        "accepted_moves": 17,
+        "sigma": [
+          1.0,
+          1.0,
+          0.9,
+          0.9,
+          0.75,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "active_nodes": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "active_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "mean_sigma": 0.56875,
+        "sum_sigma": 4.55,
+        "mean_interface_commitment": 0.02142857142857143
+      },
+      "top_candidates": [
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 4,
+            "delta": 0.15
+          },
+          "total_score": 0.15000000000000036,
+          "dE_expr_raw": 0.15000000000000036,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 5,
+            "delta": 0.15
+          },
+          "total_score": 0.15000000000000036,
+          "dE_expr_raw": 0.15000000000000036,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 6,
+            "delta": 0.15
+          },
+          "total_score": 0.15000000000000036,
+          "dE_expr_raw": 0.15000000000000036,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 7,
+            "delta": 0.15
+          },
+          "total_score": 0.15000000000000036,
+          "dE_expr_raw": 0.15000000000000036,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 2,
+            "delta": 0.15
+          },
+          "total_score": 0.10000000000000053,
+          "dE_expr_raw": 0.10000000000000053,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 3,
+            "delta": 0.15
+          },
+          "total_score": 0.10000000000000053,
+          "dE_expr_raw": 0.10000000000000053,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "edge_up",
+            "edge": [
+              0,
+              1
+            ],
+            "delta": 0.15
+          },
+          "total_score": 0.037500000000000006,
+          "dE_expr_raw": 0.0,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "edge_up",
+            "edge": [
+              0,
+              2
+            ],
+            "delta": 0.15
+          },
+          "total_score": 0.037500000000000006,
+          "dE_expr_raw": 0.0,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        }
+      ],
+      "winner": {
+        "move": {
+          "kind": "raise_support",
+          "node": 4,
+          "delta": 0.15
+        },
+        "score": {
+          "total_score": 0.15000000000000036,
+          "dE_expr_raw": 0.15000000000000036,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0,
+          "fallback_iface_gain": 0.0
+        },
+        "resulting_state": {
+          "step": 180,
+          "accepted_moves": 18,
+          "sigma": [
+            1.0,
+            1.0,
+            0.9,
+            0.9,
+            0.9,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "active_nodes": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "active_edges": [
+            [
+              0,
+              1
+            ]
+          ],
+          "mean_sigma": 0.5875,
+          "sum_sigma": 4.7,
+          "mean_interface_commitment": 0.02142857142857143
+        },
+        "window": 17
+      }
+    },
+    {
+      "window": 18,
+      "baseline_after_background": {
+        "step": 190,
+        "accepted_moves": 18,
+        "sigma": [
+          1.0,
+          1.0,
+          0.9,
+          0.9,
+          0.9,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "active_nodes": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "active_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "mean_sigma": 0.5875,
+        "sum_sigma": 4.7,
+        "mean_interface_commitment": 0.02142857142857143
+      },
+      "top_candidates": [
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 5,
+            "delta": 0.15
+          },
+          "total_score": 0.14999999999999947,
+          "dE_expr_raw": 0.14999999999999947,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 6,
+            "delta": 0.15
+          },
+          "total_score": 0.14999999999999947,
+          "dE_expr_raw": 0.14999999999999947,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 7,
+            "delta": 0.15
+          },
+          "total_score": 0.14999999999999947,
+          "dE_expr_raw": 0.14999999999999947,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 2,
+            "delta": 0.15
+          },
+          "total_score": 0.09999999999999964,
+          "dE_expr_raw": 0.09999999999999964,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 3,
+            "delta": 0.15
+          },
+          "total_score": 0.09999999999999964,
+          "dE_expr_raw": 0.09999999999999964,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 4,
+            "delta": 0.15
+          },
+          "total_score": 0.09999999999999964,
+          "dE_expr_raw": 0.09999999999999964,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "edge_up",
+            "edge": [
+              0,
+              1
+            ],
+            "delta": 0.15
+          },
+          "total_score": 0.037500000000000006,
+          "dE_expr_raw": 0.0,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "edge_up",
+            "edge": [
+              0,
+              2
+            ],
+            "delta": 0.15
+          },
+          "total_score": 0.037500000000000006,
+          "dE_expr_raw": 0.0,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        }
+      ],
+      "winner": {
+        "move": {
+          "kind": "raise_support",
+          "node": 5,
+          "delta": 0.15
+        },
+        "score": {
+          "total_score": 0.14999999999999947,
+          "dE_expr_raw": 0.14999999999999947,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0,
+          "fallback_iface_gain": 0.0
+        },
+        "resulting_state": {
+          "step": 190,
+          "accepted_moves": 19,
+          "sigma": [
+            1.0,
+            1.0,
+            0.9,
+            0.9,
+            0.9,
+            0.15,
+            0.0,
+            0.0
+          ],
+          "active_nodes": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "active_edges": [
+            [
+              0,
+              1
+            ]
+          ],
+          "mean_sigma": 0.60625,
+          "sum_sigma": 4.85,
+          "mean_interface_commitment": 0.02142857142857143
+        },
+        "window": 18
+      }
+    },
+    {
+      "window": 19,
+      "baseline_after_background": {
+        "step": 200,
+        "accepted_moves": 19,
+        "sigma": [
+          1.0,
+          1.0,
+          0.9,
+          0.9,
+          0.9,
+          0.15,
+          0.0,
+          0.0
+        ],
+        "active_nodes": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "active_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "mean_sigma": 0.60625,
+        "sum_sigma": 4.85,
+        "mean_interface_commitment": 0.02142857142857143
+      },
+      "top_candidates": [
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 5,
+            "delta": 0.15
+          },
+          "total_score": 0.15000000000000036,
+          "dE_expr_raw": 0.15000000000000036,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 6,
+            "delta": 0.15
+          },
+          "total_score": 0.15000000000000036,
+          "dE_expr_raw": 0.15000000000000036,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 7,
+            "delta": 0.15
+          },
+          "total_score": 0.15000000000000036,
+          "dE_expr_raw": 0.15000000000000036,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 2,
+            "delta": 0.15
+          },
+          "total_score": 0.10000000000000053,
+          "dE_expr_raw": 0.10000000000000053,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 3,
+            "delta": 0.15
+          },
+          "total_score": 0.10000000000000053,
+          "dE_expr_raw": 0.10000000000000053,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 4,
+            "delta": 0.15
+          },
+          "total_score": 0.09999999999999964,
+          "dE_expr_raw": 0.09999999999999964,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "edge_up",
+            "edge": [
+              0,
+              1
+            ],
+            "delta": 0.15
+          },
+          "total_score": 0.037500000000000006,
+          "dE_expr_raw": 0.0,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "edge_up",
+            "edge": [
+              0,
+              2
+            ],
+            "delta": 0.15
+          },
+          "total_score": 0.037500000000000006,
+          "dE_expr_raw": 0.0,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        }
+      ],
+      "winner": {
+        "move": {
+          "kind": "raise_support",
+          "node": 5,
+          "delta": 0.15
+        },
+        "score": {
+          "total_score": 0.15000000000000036,
+          "dE_expr_raw": 0.15000000000000036,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0,
+          "fallback_iface_gain": 0.0
+        },
+        "resulting_state": {
+          "step": 200,
+          "accepted_moves": 20,
+          "sigma": [
+            1.0,
+            1.0,
+            0.9,
+            0.9,
+            0.9,
+            0.3,
+            0.0,
+            0.0
+          ],
+          "active_nodes": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "active_edges": [
+            [
+              0,
+              1
+            ]
+          ],
+          "mean_sigma": 0.625,
+          "sum_sigma": 5.0,
+          "mean_interface_commitment": 0.02142857142857143
+        },
+        "window": 19
+      }
+    },
+    {
+      "window": 20,
+      "baseline_after_background": {
+        "step": 210,
+        "accepted_moves": 20,
+        "sigma": [
+          1.0,
+          1.0,
+          0.9,
+          0.9,
+          0.9,
+          0.3,
+          0.0,
+          0.0
+        ],
+        "active_nodes": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "active_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "mean_sigma": 0.625,
+        "sum_sigma": 5.0,
+        "mean_interface_commitment": 0.02142857142857143
+      },
+      "top_candidates": [
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 5,
+            "delta": 0.15
+          },
+          "total_score": 0.15000000000000036,
+          "dE_expr_raw": 0.15000000000000036,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 6,
+            "delta": 0.15
+          },
+          "total_score": 0.14999999999999947,
+          "dE_expr_raw": 0.14999999999999947,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 7,
+            "delta": 0.15
+          },
+          "total_score": 0.14999999999999947,
+          "dE_expr_raw": 0.14999999999999947,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 2,
+            "delta": 0.15
+          },
+          "total_score": 0.09999999999999964,
+          "dE_expr_raw": 0.09999999999999964,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 3,
+            "delta": 0.15
+          },
+          "total_score": 0.09999999999999964,
+          "dE_expr_raw": 0.09999999999999964,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 4,
+            "delta": 0.15
+          },
+          "total_score": 0.09999999999999964,
+          "dE_expr_raw": 0.09999999999999964,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "edge_up",
+            "edge": [
+              0,
+              1
+            ],
+            "delta": 0.15
+          },
+          "total_score": 0.037500000000000006,
+          "dE_expr_raw": 0.0,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "edge_up",
+            "edge": [
+              0,
+              2
+            ],
+            "delta": 0.15
+          },
+          "total_score": 0.037500000000000006,
+          "dE_expr_raw": 0.0,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        }
+      ],
+      "winner": {
+        "move": {
+          "kind": "raise_support",
+          "node": 5,
+          "delta": 0.15
+        },
+        "score": {
+          "total_score": 0.15000000000000036,
+          "dE_expr_raw": 0.15000000000000036,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0,
+          "fallback_iface_gain": 0.0
+        },
+        "resulting_state": {
+          "step": 210,
+          "accepted_moves": 21,
+          "sigma": [
+            1.0,
+            1.0,
+            0.9,
+            0.9,
+            0.9,
+            0.44999999999999996,
+            0.0,
+            0.0
+          ],
+          "active_nodes": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "active_edges": [
+            [
+              0,
+              1
+            ]
+          ],
+          "mean_sigma": 0.64375,
+          "sum_sigma": 5.15,
+          "mean_interface_commitment": 0.02142857142857143
+        },
+        "window": 20
+      }
+    },
+    {
+      "window": 21,
+      "baseline_after_background": {
+        "step": 220,
+        "accepted_moves": 21,
+        "sigma": [
+          1.0,
+          1.0,
+          0.9,
+          0.9,
+          0.9,
+          0.44999999999999996,
+          0.0,
+          0.0
+        ],
+        "active_nodes": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "active_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "mean_sigma": 0.64375,
+        "sum_sigma": 5.15,
+        "mean_interface_commitment": 0.02142857142857143
+      },
+      "top_candidates": [
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 5,
+            "delta": 0.15
+          },
+          "total_score": 0.14999999999999947,
+          "dE_expr_raw": 0.14999999999999947,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 6,
+            "delta": 0.15
+          },
+          "total_score": 0.14999999999999947,
+          "dE_expr_raw": 0.14999999999999947,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 7,
+            "delta": 0.15
+          },
+          "total_score": 0.14999999999999947,
+          "dE_expr_raw": 0.14999999999999947,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 2,
+            "delta": 0.15
+          },
+          "total_score": 0.09999999999999964,
+          "dE_expr_raw": 0.09999999999999964,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 3,
+            "delta": 0.15
+          },
+          "total_score": 0.09999999999999964,
+          "dE_expr_raw": 0.09999999999999964,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 4,
+            "delta": 0.15
+          },
+          "total_score": 0.09999999999999964,
+          "dE_expr_raw": 0.09999999999999964,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "edge_up",
+            "edge": [
+              0,
+              1
+            ],
+            "delta": 0.15
+          },
+          "total_score": 0.037500000000000006,
+          "dE_expr_raw": 0.0,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "edge_up",
+            "edge": [
+              0,
+              2
+            ],
+            "delta": 0.15
+          },
+          "total_score": 0.037500000000000006,
+          "dE_expr_raw": 0.0,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        }
+      ],
+      "winner": {
+        "move": {
+          "kind": "raise_support",
+          "node": 5,
+          "delta": 0.15
+        },
+        "score": {
+          "total_score": 0.14999999999999947,
+          "dE_expr_raw": 0.14999999999999947,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0,
+          "fallback_iface_gain": 0.0
+        },
+        "resulting_state": {
+          "step": 220,
+          "accepted_moves": 22,
+          "sigma": [
+            1.0,
+            1.0,
+            0.9,
+            0.9,
+            0.9,
+            0.6,
+            0.0,
+            0.0
+          ],
+          "active_nodes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "active_edges": [
+            [
+              0,
+              1
+            ]
+          ],
+          "mean_sigma": 0.6625,
+          "sum_sigma": 5.3,
+          "mean_interface_commitment": 0.02142857142857143
+        },
+        "window": 21
+      }
+    },
+    {
+      "window": 22,
+      "baseline_after_background": {
+        "step": 230,
+        "accepted_moves": 22,
+        "sigma": [
+          1.0,
+          1.0,
+          0.9,
+          0.9,
+          0.9,
+          0.6,
+          0.0,
+          0.0
+        ],
+        "active_nodes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "active_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "mean_sigma": 0.6625,
+        "sum_sigma": 5.3,
+        "mean_interface_commitment": 0.02142857142857143
+      },
+      "top_candidates": [
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 5,
+            "delta": 0.15
+          },
+          "total_score": 0.14999999999999947,
+          "dE_expr_raw": 0.14999999999999947,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 6,
+            "delta": 0.15
+          },
+          "total_score": 0.14999999999999947,
+          "dE_expr_raw": 0.14999999999999947,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 7,
+            "delta": 0.15
+          },
+          "total_score": 0.14999999999999947,
+          "dE_expr_raw": 0.14999999999999947,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 2,
+            "delta": 0.15
+          },
+          "total_score": 0.10000000000000053,
+          "dE_expr_raw": 0.10000000000000053,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 3,
+            "delta": 0.15
+          },
+          "total_score": 0.10000000000000053,
+          "dE_expr_raw": 0.10000000000000053,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 4,
+            "delta": 0.15
+          },
+          "total_score": 0.10000000000000053,
+          "dE_expr_raw": 0.10000000000000053,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "edge_up",
+            "edge": [
+              0,
+              1
+            ],
+            "delta": 0.15
+          },
+          "total_score": 0.037500000000000006,
+          "dE_expr_raw": 0.0,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "edge_up",
+            "edge": [
+              0,
+              2
+            ],
+            "delta": 0.15
+          },
+          "total_score": 0.037500000000000006,
+          "dE_expr_raw": 0.0,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        }
+      ],
+      "winner": {
+        "move": {
+          "kind": "raise_support",
+          "node": 5,
+          "delta": 0.15
+        },
+        "score": {
+          "total_score": 0.14999999999999947,
+          "dE_expr_raw": 0.14999999999999947,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0,
+          "fallback_iface_gain": 0.0
+        },
+        "resulting_state": {
+          "step": 230,
+          "accepted_moves": 23,
+          "sigma": [
+            1.0,
+            1.0,
+            0.9,
+            0.9,
+            0.9,
+            0.75,
+            0.0,
+            0.0
+          ],
+          "active_nodes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "active_edges": [
+            [
+              0,
+              1
+            ]
+          ],
+          "mean_sigma": 0.6812499999999999,
+          "sum_sigma": 5.449999999999999,
+          "mean_interface_commitment": 0.02142857142857143
+        },
+        "window": 22
+      }
+    },
+    {
+      "window": 23,
+      "baseline_after_background": {
+        "step": 240,
+        "accepted_moves": 23,
+        "sigma": [
+          1.0,
+          1.0,
+          0.9,
+          0.9,
+          0.9,
+          0.75,
+          0.0,
+          0.0
+        ],
+        "active_nodes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "active_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "mean_sigma": 0.6812499999999999,
+        "sum_sigma": 5.449999999999999,
+        "mean_interface_commitment": 0.02142857142857143
+      },
+      "top_candidates": [
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 5,
+            "delta": 0.15
+          },
+          "total_score": 0.15000000000000036,
+          "dE_expr_raw": 0.15000000000000036,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 6,
+            "delta": 0.15
+          },
+          "total_score": 0.15000000000000036,
+          "dE_expr_raw": 0.15000000000000036,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 7,
+            "delta": 0.15
+          },
+          "total_score": 0.15000000000000036,
+          "dE_expr_raw": 0.15000000000000036,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 2,
+            "delta": 0.15
+          },
+          "total_score": 0.10000000000000053,
+          "dE_expr_raw": 0.10000000000000053,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 3,
+            "delta": 0.15
+          },
+          "total_score": 0.10000000000000053,
+          "dE_expr_raw": 0.10000000000000053,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 4,
+            "delta": 0.15
+          },
+          "total_score": 0.10000000000000053,
+          "dE_expr_raw": 0.10000000000000053,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "edge_up",
+            "edge": [
+              0,
+              1
+            ],
+            "delta": 0.15
+          },
+          "total_score": 0.037500000000000006,
+          "dE_expr_raw": 0.0,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "edge_up",
+            "edge": [
+              0,
+              2
+            ],
+            "delta": 0.15
+          },
+          "total_score": 0.037500000000000006,
+          "dE_expr_raw": 0.0,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        }
+      ],
+      "winner": {
+        "move": {
+          "kind": "raise_support",
+          "node": 5,
+          "delta": 0.15
+        },
+        "score": {
+          "total_score": 0.15000000000000036,
+          "dE_expr_raw": 0.15000000000000036,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0,
+          "fallback_iface_gain": 0.0
+        },
+        "resulting_state": {
+          "step": 240,
+          "accepted_moves": 24,
+          "sigma": [
+            1.0,
+            1.0,
+            0.9,
+            0.9,
+            0.9,
+            0.9,
+            0.0,
+            0.0
+          ],
+          "active_nodes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "active_edges": [
+            [
+              0,
+              1
+            ]
+          ],
+          "mean_sigma": 0.7,
+          "sum_sigma": 5.6,
+          "mean_interface_commitment": 0.02142857142857143
+        },
+        "window": 23
+      }
+    },
+    {
+      "window": 24,
+      "baseline_after_background": {
+        "step": 250,
+        "accepted_moves": 24,
+        "sigma": [
+          1.0,
+          1.0,
+          0.9,
+          0.9,
+          0.9,
+          0.9,
+          0.0,
+          0.0
+        ],
+        "active_nodes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "active_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "mean_sigma": 0.7,
+        "sum_sigma": 5.6,
+        "mean_interface_commitment": 0.02142857142857143
+      },
+      "top_candidates": [
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 6,
+            "delta": 0.15
+          },
+          "total_score": 0.15000000000000036,
+          "dE_expr_raw": 0.15000000000000036,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 7,
+            "delta": 0.15
+          },
+          "total_score": 0.15000000000000036,
+          "dE_expr_raw": 0.15000000000000036,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 2,
+            "delta": 0.15
+          },
+          "total_score": 0.10000000000000053,
+          "dE_expr_raw": 0.10000000000000053,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 3,
+            "delta": 0.15
+          },
+          "total_score": 0.10000000000000053,
+          "dE_expr_raw": 0.10000000000000053,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 4,
+            "delta": 0.15
+          },
+          "total_score": 0.09999999999999964,
+          "dE_expr_raw": 0.09999999999999964,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 5,
+            "delta": 0.15
+          },
+          "total_score": 0.09999999999999964,
+          "dE_expr_raw": 0.09999999999999964,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "edge_up",
+            "edge": [
+              0,
+              1
+            ],
+            "delta": 0.15
+          },
+          "total_score": 0.037500000000000006,
+          "dE_expr_raw": 0.0,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "edge_up",
+            "edge": [
+              0,
+              2
+            ],
+            "delta": 0.15
+          },
+          "total_score": 0.037500000000000006,
+          "dE_expr_raw": 0.0,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        }
+      ],
+      "winner": {
+        "move": {
+          "kind": "raise_support",
+          "node": 6,
+          "delta": 0.15
+        },
+        "score": {
+          "total_score": 0.15000000000000036,
+          "dE_expr_raw": 0.15000000000000036,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0,
+          "fallback_iface_gain": 0.0
+        },
+        "resulting_state": {
+          "step": 250,
+          "accepted_moves": 25,
+          "sigma": [
+            1.0,
+            1.0,
+            0.9,
+            0.9,
+            0.9,
+            0.9,
+            0.15,
+            0.0
+          ],
+          "active_nodes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "active_edges": [
+            [
+              0,
+              1
+            ]
+          ],
+          "mean_sigma": 0.71875,
+          "sum_sigma": 5.75,
+          "mean_interface_commitment": 0.02142857142857143
+        },
+        "window": 24
+      }
+    },
+    {
+      "window": 25,
+      "baseline_after_background": {
+        "step": 260,
+        "accepted_moves": 25,
+        "sigma": [
+          1.0,
+          1.0,
+          0.9,
+          0.9,
+          0.9,
+          0.9,
+          0.15,
+          0.0
+        ],
+        "active_nodes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "active_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "mean_sigma": 0.71875,
+        "sum_sigma": 5.75,
+        "mean_interface_commitment": 0.02142857142857143
+      },
+      "top_candidates": [
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 6,
+            "delta": 0.15
+          },
+          "total_score": 0.15000000000000036,
+          "dE_expr_raw": 0.15000000000000036,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 7,
+            "delta": 0.15
+          },
+          "total_score": 0.15000000000000036,
+          "dE_expr_raw": 0.15000000000000036,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 2,
+            "delta": 0.15
+          },
+          "total_score": 0.09999999999999964,
+          "dE_expr_raw": 0.09999999999999964,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 3,
+            "delta": 0.15
+          },
+          "total_score": 0.09999999999999964,
+          "dE_expr_raw": 0.09999999999999964,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 4,
+            "delta": 0.15
+          },
+          "total_score": 0.09999999999999964,
+          "dE_expr_raw": 0.09999999999999964,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 5,
+            "delta": 0.15
+          },
+          "total_score": 0.09999999999999964,
+          "dE_expr_raw": 0.09999999999999964,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "edge_up",
+            "edge": [
+              0,
+              1
+            ],
+            "delta": 0.15
+          },
+          "total_score": 0.037500000000000006,
+          "dE_expr_raw": 0.0,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "edge_up",
+            "edge": [
+              0,
+              2
+            ],
+            "delta": 0.15
+          },
+          "total_score": 0.037500000000000006,
+          "dE_expr_raw": 0.0,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        }
+      ],
+      "winner": {
+        "move": {
+          "kind": "raise_support",
+          "node": 6,
+          "delta": 0.15
+        },
+        "score": {
+          "total_score": 0.15000000000000036,
+          "dE_expr_raw": 0.15000000000000036,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0,
+          "fallback_iface_gain": 0.0
+        },
+        "resulting_state": {
+          "step": 260,
+          "accepted_moves": 26,
+          "sigma": [
+            1.0,
+            1.0,
+            0.9,
+            0.9,
+            0.9,
+            0.9,
+            0.3,
+            0.0
+          ],
+          "active_nodes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "active_edges": [
+            [
+              0,
+              1
+            ]
+          ],
+          "mean_sigma": 0.7375,
+          "sum_sigma": 5.9,
+          "mean_interface_commitment": 0.02142857142857143
+        },
+        "window": 25
+      }
+    },
+    {
+      "window": 26,
+      "baseline_after_background": {
+        "step": 270,
+        "accepted_moves": 26,
+        "sigma": [
+          1.0,
+          1.0,
+          0.9,
+          0.9,
+          0.9,
+          0.9,
+          0.3,
+          0.0
+        ],
+        "active_nodes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "active_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "mean_sigma": 0.7375,
+        "sum_sigma": 5.9,
+        "mean_interface_commitment": 0.02142857142857143
+      },
+      "top_candidates": [
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 6,
+            "delta": 0.15
+          },
+          "total_score": 0.14999999999999947,
+          "dE_expr_raw": 0.14999999999999947,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 7,
+            "delta": 0.15
+          },
+          "total_score": 0.14999999999999947,
+          "dE_expr_raw": 0.14999999999999947,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 2,
+            "delta": 0.15
+          },
+          "total_score": 0.09999999999999964,
+          "dE_expr_raw": 0.09999999999999964,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 3,
+            "delta": 0.15
+          },
+          "total_score": 0.09999999999999964,
+          "dE_expr_raw": 0.09999999999999964,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 4,
+            "delta": 0.15
+          },
+          "total_score": 0.09999999999999964,
+          "dE_expr_raw": 0.09999999999999964,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 5,
+            "delta": 0.15
+          },
+          "total_score": 0.09999999999999964,
+          "dE_expr_raw": 0.09999999999999964,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "edge_up",
+            "edge": [
+              0,
+              1
+            ],
+            "delta": 0.15
+          },
+          "total_score": 0.037500000000000006,
+          "dE_expr_raw": 0.0,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "edge_up",
+            "edge": [
+              0,
+              2
+            ],
+            "delta": 0.15
+          },
+          "total_score": 0.037500000000000006,
+          "dE_expr_raw": 0.0,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        }
+      ],
+      "winner": {
+        "move": {
+          "kind": "raise_support",
+          "node": 6,
+          "delta": 0.15
+        },
+        "score": {
+          "total_score": 0.14999999999999947,
+          "dE_expr_raw": 0.14999999999999947,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0,
+          "fallback_iface_gain": 0.0
+        },
+        "resulting_state": {
+          "step": 270,
+          "accepted_moves": 27,
+          "sigma": [
+            1.0,
+            1.0,
+            0.9,
+            0.9,
+            0.9,
+            0.9,
+            0.44999999999999996,
+            0.0
+          ],
+          "active_nodes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "active_edges": [
+            [
+              0,
+              1
+            ]
+          ],
+          "mean_sigma": 0.75625,
+          "sum_sigma": 6.05,
+          "mean_interface_commitment": 0.02142857142857143
+        },
+        "window": 26
+      }
+    },
+    {
+      "window": 27,
+      "baseline_after_background": {
+        "step": 280,
+        "accepted_moves": 27,
+        "sigma": [
+          1.0,
+          1.0,
+          0.9,
+          0.9,
+          0.9,
+          0.9,
+          0.44999999999999996,
+          0.0
+        ],
+        "active_nodes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "active_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "mean_sigma": 0.75625,
+        "sum_sigma": 6.05,
+        "mean_interface_commitment": 0.02142857142857143
+      },
+      "top_candidates": [
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 6,
+            "delta": 0.15
+          },
+          "total_score": 0.14999999999999947,
+          "dE_expr_raw": 0.14999999999999947,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 7,
+            "delta": 0.15
+          },
+          "total_score": 0.14999999999999947,
+          "dE_expr_raw": 0.14999999999999947,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 2,
+            "delta": 0.15
+          },
+          "total_score": 0.10000000000000053,
+          "dE_expr_raw": 0.10000000000000053,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 3,
+            "delta": 0.15
+          },
+          "total_score": 0.10000000000000053,
+          "dE_expr_raw": 0.10000000000000053,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 4,
+            "delta": 0.15
+          },
+          "total_score": 0.09999999999999964,
+          "dE_expr_raw": 0.09999999999999964,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 5,
+            "delta": 0.15
+          },
+          "total_score": 0.09999999999999964,
+          "dE_expr_raw": 0.09999999999999964,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "edge_up",
+            "edge": [
+              0,
+              1
+            ],
+            "delta": 0.15
+          },
+          "total_score": 0.037500000000000006,
+          "dE_expr_raw": 0.0,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "edge_up",
+            "edge": [
+              0,
+              2
+            ],
+            "delta": 0.15
+          },
+          "total_score": 0.037500000000000006,
+          "dE_expr_raw": 0.0,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        }
+      ],
+      "winner": {
+        "move": {
+          "kind": "raise_support",
+          "node": 6,
+          "delta": 0.15
+        },
+        "score": {
+          "total_score": 0.14999999999999947,
+          "dE_expr_raw": 0.14999999999999947,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0,
+          "fallback_iface_gain": 0.0
+        },
+        "resulting_state": {
+          "step": 280,
+          "accepted_moves": 28,
+          "sigma": [
+            1.0,
+            1.0,
+            0.9,
+            0.9,
+            0.9,
+            0.9,
+            0.6,
+            0.0
+          ],
+          "active_nodes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "active_edges": [
+            [
+              0,
+              1
+            ]
+          ],
+          "mean_sigma": 0.7749999999999999,
+          "sum_sigma": 6.199999999999999,
+          "mean_interface_commitment": 0.02142857142857143
+        },
+        "window": 27
+      }
+    },
+    {
+      "window": 28,
+      "baseline_after_background": {
+        "step": 290,
+        "accepted_moves": 28,
+        "sigma": [
+          1.0,
+          1.0,
+          0.9,
+          0.9,
+          0.9,
+          0.9,
+          0.6,
+          0.0
+        ],
+        "active_nodes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "active_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "mean_sigma": 0.7749999999999999,
+        "sum_sigma": 6.199999999999999,
+        "mean_interface_commitment": 0.02142857142857143
+      },
+      "top_candidates": [
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 6,
+            "delta": 0.15
+          },
+          "total_score": 0.15000000000000036,
+          "dE_expr_raw": 0.15000000000000036,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 7,
+            "delta": 0.15
+          },
+          "total_score": 0.15000000000000036,
+          "dE_expr_raw": 0.15000000000000036,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 2,
+            "delta": 0.15
+          },
+          "total_score": 0.10000000000000053,
+          "dE_expr_raw": 0.10000000000000053,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 3,
+            "delta": 0.15
+          },
+          "total_score": 0.10000000000000053,
+          "dE_expr_raw": 0.10000000000000053,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 4,
+            "delta": 0.15
+          },
+          "total_score": 0.10000000000000053,
+          "dE_expr_raw": 0.10000000000000053,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 5,
+            "delta": 0.15
+          },
+          "total_score": 0.10000000000000053,
+          "dE_expr_raw": 0.10000000000000053,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "edge_up",
+            "edge": [
+              0,
+              1
+            ],
+            "delta": 0.15
+          },
+          "total_score": 0.037500000000000006,
+          "dE_expr_raw": 0.0,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "edge_up",
+            "edge": [
+              0,
+              2
+            ],
+            "delta": 0.15
+          },
+          "total_score": 0.037500000000000006,
+          "dE_expr_raw": 0.0,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        }
+      ],
+      "winner": {
+        "move": {
+          "kind": "raise_support",
+          "node": 6,
+          "delta": 0.15
+        },
+        "score": {
+          "total_score": 0.15000000000000036,
+          "dE_expr_raw": 0.15000000000000036,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0,
+          "fallback_iface_gain": 0.0
+        },
+        "resulting_state": {
+          "step": 290,
+          "accepted_moves": 29,
+          "sigma": [
+            1.0,
+            1.0,
+            0.9,
+            0.9,
+            0.9,
+            0.9,
+            0.75,
+            0.0
+          ],
+          "active_nodes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "active_edges": [
+            [
+              0,
+              1
+            ]
+          ],
+          "mean_sigma": 0.79375,
+          "sum_sigma": 6.35,
+          "mean_interface_commitment": 0.02142857142857143
+        },
+        "window": 28
+      }
+    },
+    {
+      "window": 29,
+      "baseline_after_background": {
+        "step": 300,
+        "accepted_moves": 29,
+        "sigma": [
+          1.0,
+          1.0,
+          0.9,
+          0.9,
+          0.9,
+          0.9,
+          0.75,
+          0.0
+        ],
+        "active_nodes": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "active_edges": [
+          [
+            0,
+            1
+          ]
+        ],
+        "mean_sigma": 0.79375,
+        "sum_sigma": 6.35,
+        "mean_interface_commitment": 0.02142857142857143
+      },
+      "top_candidates": [
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 6,
+            "delta": 0.15
+          },
+          "total_score": 0.15000000000000036,
+          "dE_expr_raw": 0.15000000000000036,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 7,
+            "delta": 0.15
+          },
+          "total_score": 0.15000000000000036,
+          "dE_expr_raw": 0.15000000000000036,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 2,
+            "delta": 0.15
+          },
+          "total_score": 0.09999999999999964,
+          "dE_expr_raw": 0.09999999999999964,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 3,
+            "delta": 0.15
+          },
+          "total_score": 0.09999999999999964,
+          "dE_expr_raw": 0.09999999999999964,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 4,
+            "delta": 0.15
+          },
+          "total_score": 0.09999999999999964,
+          "dE_expr_raw": 0.09999999999999964,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "raise_support",
+            "node": 5,
+            "delta": 0.15
+          },
+          "total_score": 0.09999999999999964,
+          "dE_expr_raw": 0.09999999999999964,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "edge_up",
+            "edge": [
+              0,
+              1
+            ],
+            "delta": 0.15
+          },
+          "total_score": 0.037500000000000006,
+          "dE_expr_raw": 0.0,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        },
+        {
+          "move": {
+            "kind": "edge_up",
+            "edge": [
+              0,
+              2
+            ],
+            "delta": 0.15
+          },
+          "total_score": 0.037500000000000006,
+          "dE_expr_raw": 0.0,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0
+        }
+      ],
+      "winner": {
+        "move": {
+          "kind": "raise_support",
+          "node": 6,
+          "delta": 0.15
+        },
+        "score": {
+          "total_score": 0.15000000000000036,
+          "dE_expr_raw": 0.15000000000000036,
+          "dCB": 0.0,
+          "dCR": 0.0,
+          "dCS": 0.0,
+          "dCF": 0.0,
+          "fallback_iface_gain": 0.0
+        },
+        "resulting_state": {
+          "step": 300,
+          "accepted_moves": 30,
+          "sigma": [
+            1.0,
+            1.0,
+            0.9,
+            0.9,
+            0.9,
+            0.9,
+            0.9,
+            0.0
+          ],
+          "active_nodes": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "active_edges": [
+            [
+              0,
+              1
+            ]
+          ],
+          "mean_sigma": 0.8125,
+          "sum_sigma": 6.5,
+          "mean_interface_commitment": 0.02142857142857143
+        },
+        "window": 29
+      }
+    }
+  ]
+}

@@ -1,0 +1,5388 @@
+{
+  "script": "hsf_mesoscape_retirement_organizer_relief_credit_sandbox.py",
+  "input_json": "hsf_mesoscape_N8_T300_seed3_graded_support_v7shellreplace.json",
+  "sandbox_config": {
+    "organizer_relief_weight": 1.0,
+    "neighbor_relief_weight": 0.5,
+    "incident_loss_weight": 0.5,
+    "credit_cap": 0.35
+  },
+  "overall_summary": {
+    "n_rows": 30,
+    "winner_counts": {
+      "raise_support": 17,
+      "edge_down": 2,
+      "edge_up": 3,
+      "lower_support": 8
+    },
+    "positive_deltaF_fraction": 0.3,
+    "sandbox_positive_deltaF_fraction": 0.3333333333333333,
+    "would_flip_positive_count": 1,
+    "would_beat_winner_count": 12,
+    "lower_deltaF_mean": -0.10997179315325858,
+    "sandbox_lower_deltaF_mean": 0.009309094277296944,
+    "credit_applied_mean": 0.11928088743055551,
+    "core_relief_mean": 0.09587037037037034,
+    "neighbor_relief_mean": 0.10530314814814813,
+    "incident_loss_mean": 0.06711302143518519
+  },
+  "late_summary": {
+    "n_rows": 10,
+    "winner_counts": {
+      "lower_support": 5,
+      "raise_support": 4,
+      "edge_up": 1
+    },
+    "positive_deltaF_fraction": 0.5,
+    "sandbox_positive_deltaF_fraction": 0.5,
+    "would_flip_positive_count": 0,
+    "would_beat_winner_count": 5,
+    "lower_deltaF_mean": 0.01064876800265611,
+    "sandbox_lower_deltaF_mean": 0.18714469071098938,
+    "credit_applied_mean": 0.17649592270833328,
+    "core_relief_mean": 0.14499999999999996,
+    "neighbor_relief_mean": 0.14499999999999996,
+    "incident_loss_mean": 0.08200815458333334
+  },
+  "late_top_nodes": [
+    2,
+    6
+  ],
+  "late_node_summaries": {
+    "2": {
+      "n": 5,
+      "winner_counts": {
+        "lower_support": 5
+      },
+      "positive_deltaF_fraction": 1.0,
+      "sandbox_positive_deltaF_fraction": 1.0,
+      "lower_deltaF_mean": 0.21956513003531247,
+      "sandbox_lower_deltaF_mean": 0.40403593378531244,
+      "credit_applied_mean": 0.18447080374999994,
+      "core_relief_mean": 0.14499999999999996,
+      "neighbor_relief_mean": 0.14499999999999996,
+      "incident_loss_mean": 0.06605839250000001
+    },
+    "6": {
+      "n": 5,
+      "winner_counts": {
+        "raise_support": 4,
+        "edge_up": 1
+      },
+      "positive_deltaF_fraction": 0.0,
+      "sandbox_positive_deltaF_fraction": 0.0,
+      "lower_deltaF_mean": -0.19826759403000027,
+      "sandbox_lower_deltaF_mean": -0.029746552363333678,
+      "credit_applied_mean": 0.1685210416666666,
+      "core_relief_mean": 0.14499999999999996,
+      "neighbor_relief_mean": 0.14499999999999996,
+      "incident_loss_mean": 0.09795791666666667
+    }
+  },
+  "flagged_rows": [
+    {
+      "step": 240,
+      "node": 2,
+      "winner_move_type": "lower_support",
+      "core_pair": [
+        0,
+        1
+      ],
+      "lower_deltaF": 0.22512175328359368,
+      "sandbox_lower_deltaF": 0.4250616427066706,
+      "deltaF_improvement": 0.1999398894230769,
+      "dE_expr_raw": -0.007123663362373911,
+      "dE_expr": 0.22515028754459976,
+      "sandbox_dE_expr": 0.4250901769676766,
+      "dE_expr_structural_adjustment": 0.23399851533005053,
+      "delta_Odiff_R": -0.004927326923076736,
+      "expr_redundancy_removed": 0.5237783333333333,
+      "expr_distinctness_gain": 0.2599983503667228,
+      "W_NR": 3.003606421692062e-05,
+      "dCF": 9.010819265076186e-05,
+      "shell_penalty": 0.834125,
+      "incident_edges_before": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "neighbor_edges_before": [
+        [
+          0,
+          1
+        ]
+      ],
+      "edge_deltas": [
+        {
+          "edge": [
+            0,
+            2
+          ],
+          "edge_class": "incident_lost",
+          "expr_proxy_before": 0.012398596153846158,
+          "expr_proxy_after": 0.0,
+          "expr_proxy_delta": -0.012398596153846158,
+          "strength_before": 0.13153846153846155,
+          "strength_after": 0.0,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.55,
+          "novelty_after": 0.0,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.0
+        },
+        {
+          "edge": [
+            1,
+            2
+          ],
+          "edge_class": "incident_lost",
+          "expr_proxy_before": 0.012398596153846158,
+          "expr_proxy_after": 0.0,
+          "expr_proxy_delta": -0.012398596153846158,
+          "strength_before": 0.13153846153846155,
+          "strength_after": 0.0,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.55,
+          "novelty_after": 0.0,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.0
+        },
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "edge_class": "incident_lost",
+          "expr_proxy_before": 0.010323028846153848,
+          "expr_proxy_after": 0.0,
+          "expr_proxy_delta": -0.010323028846153848,
+          "strength_before": 0.05192307692307693,
+          "strength_after": 0.0,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.0,
+          "distinctness_before": 1.0,
+          "distinctness_after": 0.0
+        },
+        {
+          "edge": [
+            0,
+            5
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            0,
+            6
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.04241625,
+          "expr_proxy_after": 0.04241625,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.44999999999999996,
+          "strength_after": 0.44999999999999996,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.44999999999999996,
+          "novelty_before": 0.55,
+          "novelty_after": 0.55,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.6666666666666667
+        },
+        {
+          "edge": [
+            0,
+            7
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            4,
+            5
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            4,
+            6
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.013125416666666667,
+          "expr_proxy_after": 0.013125416666666667,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.075,
+          "strength_after": 0.075,
+          "redundancy_before": 0.2333333333333333,
+          "redundancy_after": 0.2333333333333333,
+          "novelty_before": 0.7666666666666667,
+          "novelty_after": 0.7666666666666667,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            4,
+            7
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.03225,
+          "expr_proxy_delta": 0.0024279166666666616,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 1.0,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            1,
+            6
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.04241625,
+          "expr_proxy_after": 0.0595,
+          "expr_proxy_delta": 0.017083749999999995,
+          "strength_before": 0.44999999999999996,
+          "strength_after": 0.44999999999999996,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.3333333333333333,
+          "novelty_before": 0.55,
+          "novelty_after": 0.6666666666666667,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.6666666666666667
+        },
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "edge_class": "neighbor_survives",
+          "expr_proxy_before": -0.012777777777777749,
+          "expr_proxy_after": 0.1322222222222222,
+          "expr_proxy_delta": 0.14499999999999996,
+          "strength_before": 1.0,
+          "strength_after": 1.0,
+          "redundancy_before": 0.6666666666666666,
+          "redundancy_after": 0.3333333333333333,
+          "novelty_before": 0.33333333333333337,
+          "novelty_after": 0.6666666666666667,
+          "distinctness_before": 0.33333333333333337,
+          "distinctness_after": 0.6666666666666667
+        }
+      ],
+      "sum_expr_proxy_before": 0.2694107767094018,
+      "sum_expr_proxy_after": 0.3988022222222222,
+      "sum_expr_proxy_delta": 0.12939144551282045,
+      "organizer_core_relief_credit": 0.14499999999999996,
+      "neighbor_relief_credit": 0.14499999999999996,
+      "incident_loss_burden": 0.035120221153846165,
+      "organizer_relief_credit_gross": 0.21749999999999994,
+      "organizer_relief_credit_net": 0.19993988942307686,
+      "organizer_relief_credit_applied": 0.19993988942307686,
+      "would_flip_positive": false,
+      "would_beat_winner": true
+    },
+    {
+      "step": 130,
+      "node": 6,
+      "winner_move_type": "lower_support",
+      "core_pair": [
+        0,
+        1
+      ],
+      "lower_deltaF": 0.2276759463004362,
+      "sandbox_lower_deltaF": 0.4244744879671028,
+      "deltaF_improvement": 0.1967985416666666,
+      "dE_expr_raw": -0.007212708337728024,
+      "dE_expr": 0.22769723432857342,
+      "sandbox_dE_expr": 0.42449577599524,
+      "dE_expr_structural_adjustment": 0.23655450516630144,
+      "delta_Odiff_R": -0.004698749999999974,
+      "expr_redundancy_removed": 0.5228333333333333,
+      "expr_distinctness_gain": 0.26283833907366827,
+      "W_NR": 2.2408450670752256e-05,
+      "dCF": 6.722535201225677e-05,
+      "shell_penalty": 0.8375,
+      "incident_edges_before": [
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "neighbor_edges_before": [
+        [
+          0,
+          1
+        ]
+      ],
+      "edge_deltas": [
+        {
+          "edge": [
+            0,
+            6
+          ],
+          "edge_class": "incident_lost",
+          "expr_proxy_before": 0.01413875,
+          "expr_proxy_after": 0.0,
+          "expr_proxy_delta": -0.01413875,
+          "strength_before": 0.15,
+          "strength_after": 0.0,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.55,
+          "novelty_after": 0.0,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.0
+        },
+        {
+          "edge": [
+            1,
+            6
+          ],
+          "edge_class": "incident_lost",
+          "expr_proxy_before": 0.01413875,
+          "expr_proxy_after": 0.0,
+          "expr_proxy_delta": -0.01413875,
+          "strength_before": 0.15,
+          "strength_after": 0.0,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.55,
+          "novelty_after": 0.0,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.0
+        },
+        {
+          "edge": [
+            4,
+            6
+          ],
+          "edge_class": "incident_lost",
+          "expr_proxy_before": 0.013125416666666667,
+          "expr_proxy_after": 0.0,
+          "expr_proxy_delta": -0.013125416666666667,
+          "strength_before": 0.075,
+          "strength_after": 0.0,
+          "redundancy_before": 0.2333333333333333,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.7666666666666667,
+          "novelty_after": 0.0,
+          "distinctness_before": 1.0,
+          "distinctness_after": 0.0
+        },
+        {
+          "edge": [
+            0,
+            2
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.01413875,
+          "expr_proxy_after": 0.01413875,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.44999999999999996,
+          "novelty_before": 0.55,
+          "novelty_after": 0.55,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.6666666666666667
+        },
+        {
+          "edge": [
+            0,
+            5
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            0,
+            7
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            4,
+            5
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            4,
+            7
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            1,
+            2
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.01413875,
+          "expr_proxy_after": 0.019833333333333335,
+          "expr_proxy_delta": 0.0056945833333333345,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.3333333333333333,
+          "novelty_before": 0.55,
+          "novelty_after": 0.6666666666666667,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.6666666666666667
+        },
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "edge_class": "neighbor_survives",
+          "expr_proxy_before": -0.012777777777777749,
+          "expr_proxy_after": 0.1322222222222222,
+          "expr_proxy_delta": 0.14499999999999996,
+          "strength_before": 1.0,
+          "strength_after": 1.0,
+          "redundancy_before": 0.6666666666666666,
+          "redundancy_after": 0.3333333333333333,
+          "novelty_before": 0.33333333333333337,
+          "novelty_after": 0.6666666666666667,
+          "distinctness_before": 0.33333333333333337,
+          "distinctness_after": 0.6666666666666667
+        }
+      ],
+      "sum_expr_proxy_before": 0.23583513888888896,
+      "sum_expr_proxy_after": 0.3451268055555556,
+      "sum_expr_proxy_delta": 0.10929166666666663,
+      "organizer_core_relief_credit": 0.14499999999999996,
+      "neighbor_relief_credit": 0.14499999999999996,
+      "incident_loss_burden": 0.041402916666666664,
+      "organizer_relief_credit_gross": 0.21749999999999994,
+      "organizer_relief_credit_net": 0.1967985416666666,
+      "organizer_relief_credit_applied": 0.1967985416666666,
+      "would_flip_positive": false,
+      "would_beat_winner": true
+    },
+    {
+      "step": 160,
+      "node": 2,
+      "winner_move_type": "lower_support",
+      "core_pair": [
+        0,
+        1
+      ],
+      "lower_deltaF": 0.2238945733794156,
+      "sandbox_lower_deltaF": 0.4198003025460822,
+      "deltaF_improvement": 0.1959057291666666,
+      "dE_expr_raw": -0.007326486263247389,
+      "dE_expr": 0.22391901333546224,
+      "sandbox_dE_expr": 0.41982474250212887,
+      "dE_expr_structural_adjustment": 0.2330278745987097,
+      "delta_Odiff_R": -0.005092500000000166,
+      "expr_redundancy_removed": 0.5228333333333333,
+      "expr_distinctness_gain": 0.258919860665233,
+      "W_NR": 2.5726269522796663e-05,
+      "dCF": 7.717880856838999e-05,
+      "shell_penalty": 0.8375,
+      "incident_edges_before": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "neighbor_edges_before": [
+        [
+          0,
+          1
+        ]
+      ],
+      "edge_deltas": [
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "edge_class": "incident_lost",
+          "expr_proxy_before": 0.01491104166666667,
+          "expr_proxy_after": 0.0,
+          "expr_proxy_delta": -0.01491104166666667,
+          "strength_before": 0.075,
+          "strength_after": 0.0,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.0,
+          "distinctness_before": 1.0,
+          "distinctness_after": 0.0
+        },
+        {
+          "edge": [
+            0,
+            2
+          ],
+          "edge_class": "incident_lost",
+          "expr_proxy_before": 0.01413875,
+          "expr_proxy_after": 0.0,
+          "expr_proxy_delta": -0.01413875,
+          "strength_before": 0.15,
+          "strength_after": 0.0,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.55,
+          "novelty_after": 0.0,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.0
+        },
+        {
+          "edge": [
+            1,
+            2
+          ],
+          "edge_class": "incident_lost",
+          "expr_proxy_before": 0.01413875,
+          "expr_proxy_after": 0.0,
+          "expr_proxy_delta": -0.01413875,
+          "strength_before": 0.15,
+          "strength_after": 0.0,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.55,
+          "novelty_after": 0.0,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.0
+        },
+        {
+          "edge": [
+            0,
+            5
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            0,
+            6
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.0282775,
+          "expr_proxy_after": 0.0282775,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.3,
+          "strength_after": 0.3,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.44999999999999996,
+          "novelty_before": 0.55,
+          "novelty_after": 0.55,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.6666666666666667
+        },
+        {
+          "edge": [
+            0,
+            7
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            4,
+            5
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            4,
+            6
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.013125416666666667,
+          "expr_proxy_after": 0.013125416666666667,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.075,
+          "strength_after": 0.075,
+          "redundancy_before": 0.2333333333333333,
+          "redundancy_after": 0.2333333333333333,
+          "novelty_before": 0.7666666666666667,
+          "novelty_after": 0.7666666666666667,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            4,
+            7
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.03225,
+          "expr_proxy_delta": 0.0024279166666666616,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 1.0,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            1,
+            6
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.0282775,
+          "expr_proxy_after": 0.03966666666666667,
+          "expr_proxy_delta": 0.011389166666666669,
+          "strength_before": 0.3,
+          "strength_after": 0.3,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.3333333333333333,
+          "novelty_before": 0.55,
+          "novelty_after": 0.6666666666666667,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.6666666666666667
+        },
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "edge_class": "neighbor_survives",
+          "expr_proxy_before": -0.012777777777777749,
+          "expr_proxy_after": 0.1322222222222222,
+          "expr_proxy_delta": 0.14499999999999996,
+          "strength_before": 1.0,
+          "strength_after": 1.0,
+          "redundancy_before": 0.6666666666666666,
+          "redundancy_after": 0.3333333333333333,
+          "novelty_before": 0.33333333333333337,
+          "novelty_after": 0.6666666666666667,
+          "distinctness_before": 0.33333333333333337,
+          "distinctness_after": 0.6666666666666667
+        }
+      ],
+      "sum_expr_proxy_before": 0.2492015972222223,
+      "sum_expr_proxy_after": 0.36483013888888893,
+      "sum_expr_proxy_delta": 0.11562854166666663,
+      "organizer_core_relief_credit": 0.14499999999999996,
+      "neighbor_relief_credit": 0.14499999999999996,
+      "incident_loss_burden": 0.04318854166666667,
+      "organizer_relief_credit_gross": 0.21749999999999994,
+      "organizer_relief_credit_net": 0.1959057291666666,
+      "organizer_relief_credit_applied": 0.1959057291666666,
+      "would_flip_positive": false,
+      "would_beat_winner": true
+    },
+    {
+      "step": 290,
+      "node": 2,
+      "winner_move_type": "lower_support",
+      "core_pair": [
+        0,
+        1
+      ],
+      "lower_deltaF": 0.22178558676840385,
+      "sandbox_lower_deltaF": 0.41658767859532686,
+      "deltaF_improvement": 0.194802091826923,
+      "dE_expr_raw": -0.00857656734690515,
+      "dE_expr": 0.22181411221404626,
+      "sandbox_dE_expr": 0.4166162040409693,
+      "dE_expr_structural_adjustment": 0.2324772738878744,
+      "delta_Odiff_R": -0.005961698076922817,
+      "expr_redundancy_removed": 0.5222768333333333,
+      "expr_distinctness_gain": 0.2583080820976382,
+      "W_NR": 3.0026784886727498e-05,
+      "dCF": 9.00803546601825e-05,
+      "shell_penalty": 0.8394875,
+      "incident_edges_before": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "neighbor_edges_before": [
+        [
+          0,
+          1
+        ]
+      ],
+      "edge_deltas": [
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "edge_class": "incident_lost",
+          "expr_proxy_before": 0.020990158653846156,
+          "expr_proxy_after": 0.0,
+          "expr_proxy_delta": -0.020990158653846156,
+          "strength_before": 0.10557692307692307,
+          "strength_after": 0.0,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.0,
+          "distinctness_before": 1.0,
+          "distinctness_after": 0.0
+        },
+        {
+          "edge": [
+            0,
+            2
+          ],
+          "edge_class": "incident_lost",
+          "expr_proxy_before": 0.012202828846153849,
+          "expr_proxy_after": 0.0,
+          "expr_proxy_delta": -0.012202828846153849,
+          "strength_before": 0.1294615384615385,
+          "strength_after": 0.0,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.55,
+          "novelty_after": 0.0,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.0
+        },
+        {
+          "edge": [
+            1,
+            2
+          ],
+          "edge_class": "incident_lost",
+          "expr_proxy_before": 0.012202828846153849,
+          "expr_proxy_after": 0.0,
+          "expr_proxy_delta": -0.012202828846153849,
+          "strength_before": 0.1294615384615385,
+          "strength_after": 0.0,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.55,
+          "novelty_after": 0.0,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.0
+        },
+        {
+          "edge": [
+            0,
+            5
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            0,
+            6
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.04241625,
+          "expr_proxy_after": 0.04241625,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.44999999999999996,
+          "strength_after": 0.44999999999999996,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.44999999999999996,
+          "novelty_before": 0.55,
+          "novelty_after": 0.55,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.6666666666666667
+        },
+        {
+          "edge": [
+            0,
+            7
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            4,
+            5
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            4,
+            6
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.013125416666666667,
+          "expr_proxy_after": 0.013125416666666667,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.075,
+          "strength_after": 0.075,
+          "redundancy_before": 0.2333333333333333,
+          "redundancy_after": 0.2333333333333333,
+          "novelty_before": 0.7666666666666667,
+          "novelty_after": 0.7666666666666667,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            4,
+            7
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.03225,
+          "expr_proxy_delta": 0.0024279166666666616,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 1.0,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            1,
+            6
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.04241625,
+          "expr_proxy_after": 0.0595,
+          "expr_proxy_delta": 0.017083749999999995,
+          "strength_before": 0.44999999999999996,
+          "strength_after": 0.44999999999999996,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.3333333333333333,
+          "novelty_before": 0.55,
+          "novelty_after": 0.6666666666666667,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.6666666666666667
+        },
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "edge_class": "neighbor_survives",
+          "expr_proxy_before": -0.012777777777777749,
+          "expr_proxy_after": 0.1322222222222222,
+          "expr_proxy_delta": 0.14499999999999996,
+          "strength_before": 1.0,
+          "strength_after": 1.0,
+          "redundancy_before": 0.6666666666666666,
+          "redundancy_after": 0.3333333333333333,
+          "novelty_before": 0.33333333333333337,
+          "novelty_after": 0.6666666666666667,
+          "distinctness_before": 0.33333333333333337,
+          "distinctness_after": 0.6666666666666667
+        }
+      ],
+      "sum_expr_proxy_before": 0.2796863719017095,
+      "sum_expr_proxy_after": 0.3988022222222222,
+      "sum_expr_proxy_delta": 0.11911585032051276,
+      "organizer_core_relief_credit": 0.14499999999999996,
+      "neighbor_relief_credit": 0.14499999999999996,
+      "incident_loss_burden": 0.045395816346153854,
+      "organizer_relief_credit_gross": 0.21749999999999994,
+      "organizer_relief_credit_net": 0.194802091826923,
+      "organizer_relief_credit_applied": 0.194802091826923,
+      "would_flip_positive": false,
+      "would_beat_winner": true
+    },
+    {
+      "step": 220,
+      "node": 2,
+      "winner_move_type": "lower_support",
+      "core_pair": [
+        0,
+        1
+      ],
+      "lower_deltaF": 0.22071123734959747,
+      "sandbox_lower_deltaF": 0.4143030810995974,
+      "deltaF_improvement": 0.19359184374999994,
+      "dE_expr_raw": -0.008979810961317725,
+      "dE_expr": 0.22073977316196847,
+      "sandbox_dE_expr": 0.4143316169119684,
+      "dE_expr_structural_adjustment": 0.23191264037328618,
+      "delta_Odiff_R": -0.006265874999999976,
+      "expr_redundancy_removed": 0.5217308333333333,
+      "expr_distinctness_gain": 0.2576807115258735,
+      "W_NR": 3.0037697232643268e-05,
+      "dCF": 9.01130916979298e-05,
+      "shell_penalty": 0.8414375000000001,
+      "incident_edges_before": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "neighbor_edges_before": [
+        [
+          0,
+          1
+        ]
+      ],
+      "edge_deltas": [
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "edge_class": "incident_lost",
+          "expr_proxy_before": 0.022366562500000006,
+          "expr_proxy_after": 0.0,
+          "expr_proxy_delta": -0.022366562500000006,
+          "strength_before": 0.11250000000000002,
+          "strength_after": 0.0,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.0,
+          "distinctness_before": 1.0,
+          "distinctness_after": 0.0
+        },
+        {
+          "edge": [
+            0,
+            2
+          ],
+          "edge_class": "incident_lost",
+          "expr_proxy_before": 0.012724875000000004,
+          "expr_proxy_after": 0.0,
+          "expr_proxy_delta": -0.012724875000000004,
+          "strength_before": 0.135,
+          "strength_after": 0.0,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.55,
+          "novelty_after": 0.0,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.0
+        },
+        {
+          "edge": [
+            1,
+            2
+          ],
+          "edge_class": "incident_lost",
+          "expr_proxy_before": 0.012724875000000004,
+          "expr_proxy_after": 0.0,
+          "expr_proxy_delta": -0.012724875000000004,
+          "strength_before": 0.135,
+          "strength_after": 0.0,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.55,
+          "novelty_after": 0.0,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.0
+        },
+        {
+          "edge": [
+            0,
+            5
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            0,
+            6
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.04241625,
+          "expr_proxy_after": 0.04241625,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.44999999999999996,
+          "strength_after": 0.44999999999999996,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.44999999999999996,
+          "novelty_before": 0.55,
+          "novelty_after": 0.55,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.6666666666666667
+        },
+        {
+          "edge": [
+            0,
+            7
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            4,
+            5
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            4,
+            6
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.013125416666666667,
+          "expr_proxy_after": 0.013125416666666667,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.075,
+          "strength_after": 0.075,
+          "redundancy_before": 0.2333333333333333,
+          "redundancy_after": 0.2333333333333333,
+          "novelty_before": 0.7666666666666667,
+          "novelty_after": 0.7666666666666667,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            4,
+            7
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.03225,
+          "expr_proxy_delta": 0.0024279166666666616,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 1.0,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            1,
+            6
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.04241625,
+          "expr_proxy_after": 0.0595,
+          "expr_proxy_delta": 0.017083749999999995,
+          "strength_before": 0.44999999999999996,
+          "strength_after": 0.44999999999999996,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.3333333333333333,
+          "novelty_before": 0.55,
+          "novelty_after": 0.6666666666666667,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.6666666666666667
+        },
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "edge_class": "neighbor_survives",
+          "expr_proxy_before": -0.012777777777777749,
+          "expr_proxy_after": 0.1322222222222222,
+          "expr_proxy_delta": 0.14499999999999996,
+          "strength_before": 1.0,
+          "strength_after": 1.0,
+          "redundancy_before": 0.6666666666666666,
+          "redundancy_after": 0.3333333333333333,
+          "novelty_before": 0.33333333333333337,
+          "novelty_after": 0.6666666666666667,
+          "distinctness_before": 0.33333333333333337,
+          "distinctness_after": 0.6666666666666667
+        }
+      ],
+      "sum_expr_proxy_before": 0.2821068680555556,
+      "sum_expr_proxy_after": 0.3988022222222222,
+      "sum_expr_proxy_delta": 0.1166953541666666,
+      "organizer_core_relief_credit": 0.14499999999999996,
+      "neighbor_relief_credit": 0.14499999999999996,
+      "incident_loss_burden": 0.04781631250000001,
+      "organizer_relief_credit_gross": 0.21749999999999994,
+      "organizer_relief_credit_net": 0.19359184374999994,
+      "organizer_relief_credit_applied": 0.19359184374999994,
+      "would_flip_positive": false,
+      "would_beat_winner": true
+    },
+    {
+      "step": 110,
+      "node": 6,
+      "winner_move_type": "lower_support",
+      "core_pair": [
+        0,
+        1
+      ],
+      "lower_deltaF": 0.22350345573746264,
+      "sandbox_lower_deltaF": 0.41373928907079593,
+      "deltaF_improvement": 0.1902358333333333,
+      "dE_expr_raw": -0.00891610574750512,
+      "dE_expr": 0.22352474474119885,
+      "sandbox_dE_expr": 0.41376057807453215,
+      "dE_expr_structural_adjustment": 0.23440697548870398,
+      "delta_Odiff_R": -0.005617500000000053,
+      "expr_redundancy_removed": 0.5207333333333333,
+      "expr_distinctness_gain": 0.26045219498744887,
+      "W_NR": 2.2409477617058027e-05,
+      "dCF": 6.722843285117408e-05,
+      "shell_penalty": 0.8450000000000001,
+      "incident_edges_before": [
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "neighbor_edges_before": [
+        [
+          0,
+          1
+        ]
+      ],
+      "edge_deltas": [
+        {
+          "edge": [
+            4,
+            6
+          ],
+          "edge_class": "incident_lost",
+          "expr_proxy_before": 0.026250833333333334,
+          "expr_proxy_after": 0.0,
+          "expr_proxy_delta": -0.026250833333333334,
+          "strength_before": 0.15,
+          "strength_after": 0.0,
+          "redundancy_before": 0.2333333333333333,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.7666666666666667,
+          "novelty_after": 0.0,
+          "distinctness_before": 1.0,
+          "distinctness_after": 0.0
+        },
+        {
+          "edge": [
+            0,
+            6
+          ],
+          "edge_class": "incident_lost",
+          "expr_proxy_before": 0.01413875,
+          "expr_proxy_after": 0.0,
+          "expr_proxy_delta": -0.01413875,
+          "strength_before": 0.15,
+          "strength_after": 0.0,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.55,
+          "novelty_after": 0.0,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.0
+        },
+        {
+          "edge": [
+            1,
+            6
+          ],
+          "edge_class": "incident_lost",
+          "expr_proxy_before": 0.01413875,
+          "expr_proxy_after": 0.0,
+          "expr_proxy_delta": -0.01413875,
+          "strength_before": 0.15,
+          "strength_after": 0.0,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.55,
+          "novelty_after": 0.0,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.0
+        },
+        {
+          "edge": [
+            0,
+            2
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.01413875,
+          "expr_proxy_after": 0.01413875,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.44999999999999996,
+          "novelty_before": 0.55,
+          "novelty_after": 0.55,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.6666666666666667
+        },
+        {
+          "edge": [
+            0,
+            5
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            0,
+            7
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            4,
+            5
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            4,
+            7
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            1,
+            2
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.01413875,
+          "expr_proxy_after": 0.019833333333333335,
+          "expr_proxy_delta": 0.0056945833333333345,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.3333333333333333,
+          "novelty_before": 0.55,
+          "novelty_after": 0.6666666666666667,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.6666666666666667
+        },
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "edge_class": "neighbor_survives",
+          "expr_proxy_before": -0.012777777777777749,
+          "expr_proxy_after": 0.1322222222222222,
+          "expr_proxy_delta": 0.14499999999999996,
+          "strength_before": 1.0,
+          "strength_after": 1.0,
+          "redundancy_before": 0.6666666666666666,
+          "redundancy_after": 0.3333333333333333,
+          "novelty_before": 0.33333333333333337,
+          "novelty_after": 0.6666666666666667,
+          "distinctness_before": 0.33333333333333337,
+          "distinctness_after": 0.6666666666666667
+        }
+      ],
+      "sum_expr_proxy_before": 0.24896055555555563,
+      "sum_expr_proxy_after": 0.3451268055555556,
+      "sum_expr_proxy_delta": 0.09616624999999997,
+      "organizer_core_relief_credit": 0.14499999999999996,
+      "neighbor_relief_credit": 0.14499999999999996,
+      "incident_loss_burden": 0.05452833333333333,
+      "organizer_relief_credit_gross": 0.21749999999999994,
+      "organizer_relief_credit_net": 0.19023583333333327,
+      "organizer_relief_credit_applied": 0.19023583333333327,
+      "would_flip_positive": false,
+      "would_beat_winner": true
+    },
+    {
+      "step": 150,
+      "node": 6,
+      "winner_move_type": "raise_support",
+      "core_pair": [
+        0,
+        1
+      ],
+      "lower_deltaF": -0.19463820802231638,
+      "sandbox_lower_deltaF": -0.011978416355649751,
+      "deltaF_improvement": 0.18265979166666663,
+      "dE_expr_raw": -0.36278279022473203,
+      "dE_expr": -0.19236619369416444,
+      "sandbox_dE_expr": -0.009706402027497812,
+      "dE_expr_structural_adjustment": 0.23763334653056753,
+      "delta_Odiff_R": -0.13286124999999993,
+      "expr_redundancy_removed": 0.5238833333333333,
+      "expr_distinctness_gain": 0.2640370517006306,
+      "W_NR": 2.2407278928660013e-05,
+      "dCF": 6.722183678598004e-05,
+      "shell_penalty": 0.83375,
+      "incident_edges_before": [
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "neighbor_edges_before": [
+        [
+          0,
+          1
+        ]
+      ],
+      "edge_deltas": [
+        {
+          "edge": [
+            0,
+            6
+          ],
+          "edge_class": "incident_lost",
+          "expr_proxy_before": 0.0282775,
+          "expr_proxy_after": 0.0,
+          "expr_proxy_delta": -0.0282775,
+          "strength_before": 0.3,
+          "strength_after": 0.0,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.55,
+          "novelty_after": 0.0,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.0
+        },
+        {
+          "edge": [
+            1,
+            6
+          ],
+          "edge_class": "incident_lost",
+          "expr_proxy_before": 0.0282775,
+          "expr_proxy_after": 0.0,
+          "expr_proxy_delta": -0.0282775,
+          "strength_before": 0.3,
+          "strength_after": 0.0,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.55,
+          "novelty_after": 0.0,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.0
+        },
+        {
+          "edge": [
+            4,
+            6
+          ],
+          "edge_class": "incident_lost",
+          "expr_proxy_before": 0.013125416666666667,
+          "expr_proxy_after": 0.0,
+          "expr_proxy_delta": -0.013125416666666667,
+          "strength_before": 0.075,
+          "strength_after": 0.0,
+          "redundancy_before": 0.2333333333333333,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.7666666666666667,
+          "novelty_after": 0.0,
+          "distinctness_before": 1.0,
+          "distinctness_after": 0.0
+        },
+        {
+          "edge": [
+            0,
+            2
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.0282775,
+          "expr_proxy_after": 0.0282775,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.3,
+          "strength_after": 0.3,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.44999999999999996,
+          "novelty_before": 0.55,
+          "novelty_after": 0.55,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.6666666666666667
+        },
+        {
+          "edge": [
+            0,
+            5
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            0,
+            7
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            4,
+            5
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            4,
+            7
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            1,
+            2
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.0282775,
+          "expr_proxy_after": 0.03966666666666667,
+          "expr_proxy_delta": 0.011389166666666669,
+          "strength_before": 0.3,
+          "strength_after": 0.3,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.3333333333333333,
+          "novelty_before": 0.55,
+          "novelty_after": 0.6666666666666667,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.6666666666666667
+        },
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "edge_class": "neighbor_survives",
+          "expr_proxy_before": -0.012777777777777749,
+          "expr_proxy_after": 0.1322222222222222,
+          "expr_proxy_delta": 0.14499999999999996,
+          "strength_before": 1.0,
+          "strength_after": 1.0,
+          "redundancy_before": 0.6666666666666666,
+          "redundancy_after": 0.3333333333333333,
+          "novelty_before": 0.33333333333333337,
+          "novelty_after": 0.6666666666666667,
+          "distinctness_before": 0.33333333333333337,
+          "distinctness_after": 0.6666666666666667
+        }
+      ],
+      "sum_expr_proxy_before": 0.292390138888889,
+      "sum_expr_proxy_after": 0.37909888888888893,
+      "sum_expr_proxy_delta": 0.08670874999999996,
+      "organizer_core_relief_credit": 0.14499999999999996,
+      "neighbor_relief_credit": 0.14499999999999996,
+      "incident_loss_burden": 0.06968041666666666,
+      "organizer_relief_credit_gross": 0.21749999999999994,
+      "organizer_relief_credit_net": 0.18265979166666663,
+      "organizer_relief_credit_applied": 0.18265979166666663,
+      "would_flip_positive": false,
+      "would_beat_winner": false
+    },
+    {
+      "step": 180,
+      "node": 6,
+      "winner_move_type": "raise_support",
+      "core_pair": [
+        0,
+        1
+      ],
+      "lower_deltaF": -0.19464684407946178,
+      "sandbox_lower_deltaF": -0.011987052412795157,
+      "deltaF_improvement": 0.18265979166666663,
+      "dE_expr_raw": -0.36279114057356043,
+      "dE_expr": -0.19237167926683305,
+      "sandbox_dE_expr": -0.009711887600166419,
+      "dE_expr_structural_adjustment": 0.23763621130672732,
+      "delta_Odiff_R": -0.13286124999999993,
+      "expr_redundancy_removed": 0.5238833333333333,
+      "expr_distinctness_gain": 0.26404023478525257,
+      "W_NR": 2.5723578377934153e-05,
+      "dCF": 7.717073513380246e-05,
+      "shell_penalty": 0.83375,
+      "incident_edges_before": [
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "neighbor_edges_before": [
+        [
+          0,
+          1
+        ]
+      ],
+      "edge_deltas": [
+        {
+          "edge": [
+            0,
+            6
+          ],
+          "edge_class": "incident_lost",
+          "expr_proxy_before": 0.0282775,
+          "expr_proxy_after": 0.0,
+          "expr_proxy_delta": -0.0282775,
+          "strength_before": 0.3,
+          "strength_after": 0.0,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.55,
+          "novelty_after": 0.0,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.0
+        },
+        {
+          "edge": [
+            1,
+            6
+          ],
+          "edge_class": "incident_lost",
+          "expr_proxy_before": 0.0282775,
+          "expr_proxy_after": 0.0,
+          "expr_proxy_delta": -0.0282775,
+          "strength_before": 0.3,
+          "strength_after": 0.0,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.55,
+          "novelty_after": 0.0,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.0
+        },
+        {
+          "edge": [
+            4,
+            6
+          ],
+          "edge_class": "incident_lost",
+          "expr_proxy_before": 0.013125416666666667,
+          "expr_proxy_after": 0.0,
+          "expr_proxy_delta": -0.013125416666666667,
+          "strength_before": 0.075,
+          "strength_after": 0.0,
+          "redundancy_before": 0.2333333333333333,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.7666666666666667,
+          "novelty_after": 0.0,
+          "distinctness_before": 1.0,
+          "distinctness_after": 0.0
+        },
+        {
+          "edge": [
+            0,
+            2
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.04241625,
+          "expr_proxy_after": 0.04241625,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.44999999999999996,
+          "strength_after": 0.44999999999999996,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.44999999999999996,
+          "novelty_before": 0.55,
+          "novelty_after": 0.55,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.6666666666666667
+        },
+        {
+          "edge": [
+            0,
+            5
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            0,
+            7
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.01491104166666667,
+          "expr_proxy_after": 0.01491104166666667,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.075,
+          "strength_after": 0.075,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            4,
+            5
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            4,
+            7
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            1,
+            2
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.04241625,
+          "expr_proxy_after": 0.0595,
+          "expr_proxy_delta": 0.017083749999999995,
+          "strength_before": 0.44999999999999996,
+          "strength_after": 0.44999999999999996,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.3333333333333333,
+          "novelty_before": 0.55,
+          "novelty_after": 0.6666666666666667,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.6666666666666667
+        },
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "edge_class": "neighbor_survives",
+          "expr_proxy_before": -0.012777777777777749,
+          "expr_proxy_after": 0.1322222222222222,
+          "expr_proxy_delta": 0.14499999999999996,
+          "strength_before": 1.0,
+          "strength_after": 1.0,
+          "redundancy_before": 0.6666666666666666,
+          "redundancy_after": 0.3333333333333333,
+          "novelty_before": 0.33333333333333337,
+          "novelty_after": 0.6666666666666667,
+          "distinctness_before": 0.33333333333333337,
+          "distinctness_after": 0.6666666666666667
+        }
+      ],
+      "sum_expr_proxy_before": 0.3057565972222223,
+      "sum_expr_proxy_after": 0.3981599305555556,
+      "sum_expr_proxy_delta": 0.09240333333333328,
+      "organizer_core_relief_credit": 0.14499999999999996,
+      "neighbor_relief_credit": 0.14499999999999996,
+      "incident_loss_burden": 0.06968041666666666,
+      "organizer_relief_credit_gross": 0.21749999999999994,
+      "organizer_relief_credit_net": 0.18265979166666663,
+      "organizer_relief_credit_applied": 0.18265979166666663,
+      "would_flip_positive": false,
+      "would_beat_winner": false
+    },
+    {
+      "step": 170,
+      "node": 6,
+      "winner_move_type": "raise_support",
+      "core_pair": [
+        0,
+        1
+      ],
+      "lower_deltaF": -0.19464901385463415,
+      "sandbox_lower_deltaF": -0.011989222187967524,
+      "deltaF_improvement": 0.18265979166666663,
+      "dE_expr_raw": -0.36279546305105637,
+      "dE_expr": -0.192377003005513,
+      "sandbox_dE_expr": -0.009717211338846371,
+      "dE_expr_structural_adjustment": 0.2376352100455433,
+      "delta_Odiff_R": -0.13286124999999993,
+      "expr_redundancy_removed": 0.5238833333333333,
+      "expr_distinctness_gain": 0.2640391222728259,
+      "W_NR": 2.2403616791011327e-05,
+      "dCF": 6.721085037303398e-05,
+      "shell_penalty": 0.83375,
+      "incident_edges_before": [
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "neighbor_edges_before": [
+        [
+          0,
+          1
+        ]
+      ],
+      "edge_deltas": [
+        {
+          "edge": [
+            0,
+            6
+          ],
+          "edge_class": "incident_lost",
+          "expr_proxy_before": 0.0282775,
+          "expr_proxy_after": 0.0,
+          "expr_proxy_delta": -0.0282775,
+          "strength_before": 0.3,
+          "strength_after": 0.0,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.55,
+          "novelty_after": 0.0,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.0
+        },
+        {
+          "edge": [
+            1,
+            6
+          ],
+          "edge_class": "incident_lost",
+          "expr_proxy_before": 0.0282775,
+          "expr_proxy_after": 0.0,
+          "expr_proxy_delta": -0.0282775,
+          "strength_before": 0.3,
+          "strength_after": 0.0,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.55,
+          "novelty_after": 0.0,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.0
+        },
+        {
+          "edge": [
+            4,
+            6
+          ],
+          "edge_class": "incident_lost",
+          "expr_proxy_before": 0.013125416666666667,
+          "expr_proxy_after": 0.0,
+          "expr_proxy_delta": -0.013125416666666667,
+          "strength_before": 0.075,
+          "strength_after": 0.0,
+          "redundancy_before": 0.2333333333333333,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.7666666666666667,
+          "novelty_after": 0.0,
+          "distinctness_before": 1.0,
+          "distinctness_after": 0.0
+        },
+        {
+          "edge": [
+            0,
+            2
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.0282775,
+          "expr_proxy_after": 0.0282775,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.3,
+          "strength_after": 0.3,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.44999999999999996,
+          "novelty_before": 0.55,
+          "novelty_after": 0.55,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.6666666666666667
+        },
+        {
+          "edge": [
+            0,
+            5
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            0,
+            7
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.01491104166666667,
+          "expr_proxy_after": 0.01491104166666667,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.075,
+          "strength_after": 0.075,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            4,
+            5
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            4,
+            7
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            1,
+            2
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.0282775,
+          "expr_proxy_after": 0.03966666666666667,
+          "expr_proxy_delta": 0.011389166666666669,
+          "strength_before": 0.3,
+          "strength_after": 0.3,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.3333333333333333,
+          "novelty_before": 0.55,
+          "novelty_after": 0.6666666666666667,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.6666666666666667
+        },
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "edge_class": "neighbor_survives",
+          "expr_proxy_before": -0.012777777777777749,
+          "expr_proxy_after": 0.1322222222222222,
+          "expr_proxy_delta": 0.14499999999999996,
+          "strength_before": 1.0,
+          "strength_after": 1.0,
+          "redundancy_before": 0.6666666666666666,
+          "redundancy_after": 0.3333333333333333,
+          "novelty_before": 0.33333333333333337,
+          "novelty_after": 0.6666666666666667,
+          "distinctness_before": 0.33333333333333337,
+          "distinctness_after": 0.6666666666666667
+        }
+      ],
+      "sum_expr_proxy_before": 0.2774790972222223,
+      "sum_expr_proxy_after": 0.36418784722222225,
+      "sum_expr_proxy_delta": 0.08670874999999996,
+      "organizer_core_relief_credit": 0.14499999999999996,
+      "neighbor_relief_credit": 0.14499999999999996,
+      "incident_loss_burden": 0.06968041666666666,
+      "organizer_relief_credit_gross": 0.21749999999999994,
+      "organizer_relief_credit_net": 0.18265979166666663,
+      "organizer_relief_credit_applied": 0.18265979166666663,
+      "would_flip_positive": false,
+      "would_beat_winner": false
+    },
+    {
+      "step": 90,
+      "node": 6,
+      "winner_move_type": "edge_up",
+      "core_pair": [
+        0,
+        1
+      ],
+      "lower_deltaF": -0.11334575748732031,
+      "sandbox_lower_deltaF": 0.06376465917934629,
+      "deltaF_improvement": 0.1771104166666666,
+      "dE_expr_raw": -0.5651208731051334,
+      "dE_expr": -0.06324944836092927,
+      "sandbox_dE_expr": 0.11386096830573733,
+      "dE_expr_structural_adjustment": 0.6585670497442041,
+      "delta_Odiff_R": -0.32678249999999986,
+      "expr_redundancy_removed": 0.9936999999999999,
+      "expr_distinctness_gain": 0.731741166382449,
+      "W_NR": 0.16668797170064079,
+      "dCF": 6.391510192238492e-05,
+      "shell_penalty": 0.1225,
+      "incident_edges_before": [
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "neighbor_edges_before": [
+        [
+          0,
+          1
+        ]
+      ],
+      "edge_deltas": [
+        {
+          "edge": [
+            4,
+            6
+          ],
+          "edge_class": "incident_lost",
+          "expr_proxy_before": 0.05250166666666667,
+          "expr_proxy_after": 0.0,
+          "expr_proxy_delta": -0.05250166666666667,
+          "strength_before": 0.3,
+          "strength_after": 0.0,
+          "redundancy_before": 0.2333333333333333,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.7666666666666667,
+          "novelty_after": 0.0,
+          "distinctness_before": 1.0,
+          "distinctness_after": 0.0
+        },
+        {
+          "edge": [
+            0,
+            6
+          ],
+          "edge_class": "incident_lost",
+          "expr_proxy_before": 0.01413875,
+          "expr_proxy_after": 0.0,
+          "expr_proxy_delta": -0.01413875,
+          "strength_before": 0.15,
+          "strength_after": 0.0,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.55,
+          "novelty_after": 0.0,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.0
+        },
+        {
+          "edge": [
+            1,
+            6
+          ],
+          "edge_class": "incident_lost",
+          "expr_proxy_before": 0.01413875,
+          "expr_proxy_after": 0.0,
+          "expr_proxy_delta": -0.01413875,
+          "strength_before": 0.15,
+          "strength_after": 0.0,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.55,
+          "novelty_after": 0.0,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.0
+        },
+        {
+          "edge": [
+            0,
+            2
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.01413875,
+          "expr_proxy_after": 0.01413875,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.44999999999999996,
+          "novelty_before": 0.55,
+          "novelty_after": 0.55,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.6666666666666667
+        },
+        {
+          "edge": [
+            0,
+            5
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            0,
+            7
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            4,
+            5
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            4,
+            7
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            1,
+            2
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.01413875,
+          "expr_proxy_after": 0.019833333333333335,
+          "expr_proxy_delta": 0.0056945833333333345,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.3333333333333333,
+          "novelty_before": 0.55,
+          "novelty_after": 0.6666666666666667,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.6666666666666667
+        },
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "edge_class": "neighbor_survives",
+          "expr_proxy_before": -0.012777777777777749,
+          "expr_proxy_after": 0.1322222222222222,
+          "expr_proxy_delta": 0.14499999999999996,
+          "strength_before": 1.0,
+          "strength_after": 1.0,
+          "redundancy_before": 0.6666666666666666,
+          "redundancy_after": 0.3333333333333333,
+          "novelty_before": 0.33333333333333337,
+          "novelty_after": 0.6666666666666667,
+          "distinctness_before": 0.33333333333333337,
+          "distinctness_after": 0.6666666666666667
+        }
+      ],
+      "sum_expr_proxy_before": 0.27521138888888896,
+      "sum_expr_proxy_after": 0.3451268055555556,
+      "sum_expr_proxy_delta": 0.06991541666666663,
+      "organizer_core_relief_credit": 0.14499999999999996,
+      "neighbor_relief_credit": 0.14499999999999996,
+      "incident_loss_burden": 0.08077916666666668,
+      "organizer_relief_credit_gross": 0.21749999999999994,
+      "organizer_relief_credit_net": 0.1771104166666666,
+      "organizer_relief_credit_applied": 0.1771104166666666,
+      "would_flip_positive": true,
+      "would_beat_winner": true
+    },
+    {
+      "step": 190,
+      "node": 6,
+      "winner_move_type": "raise_support",
+      "core_pair": [
+        0,
+        1
+      ],
+      "lower_deltaF": -0.19464820265526417,
+      "sandbox_lower_deltaF": -0.026127160988597575,
+      "deltaF_improvement": 0.1685210416666666,
+      "dE_expr_raw": -0.3627891670413099,
+      "dE_expr": -0.1923686581800925,
+      "sandbox_dE_expr": -0.0238476165134259,
+      "dE_expr_structural_adjustment": 0.23763725886121737,
+      "delta_Odiff_R": -0.13286124999999993,
+      "expr_redundancy_removed": 0.5238833333333333,
+      "expr_distinctness_gain": 0.26404139873468596,
+      "W_NR": 3.0333749475752736e-05,
+      "dCF": 9.100124842725821e-05,
+      "shell_penalty": 0.83375,
+      "incident_edges_before": [
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "neighbor_edges_before": [
+        [
+          0,
+          1
+        ]
+      ],
+      "edge_deltas": [
+        {
+          "edge": [
+            0,
+            6
+          ],
+          "edge_class": "incident_lost",
+          "expr_proxy_before": 0.04241625,
+          "expr_proxy_after": 0.0,
+          "expr_proxy_delta": -0.04241625,
+          "strength_before": 0.44999999999999996,
+          "strength_after": 0.0,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.55,
+          "novelty_after": 0.0,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.0
+        },
+        {
+          "edge": [
+            1,
+            6
+          ],
+          "edge_class": "incident_lost",
+          "expr_proxy_before": 0.04241625,
+          "expr_proxy_after": 0.0,
+          "expr_proxy_delta": -0.04241625,
+          "strength_before": 0.44999999999999996,
+          "strength_after": 0.0,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.55,
+          "novelty_after": 0.0,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.0
+        },
+        {
+          "edge": [
+            4,
+            6
+          ],
+          "edge_class": "incident_lost",
+          "expr_proxy_before": 0.013125416666666667,
+          "expr_proxy_after": 0.0,
+          "expr_proxy_delta": -0.013125416666666667,
+          "strength_before": 0.075,
+          "strength_after": 0.0,
+          "redundancy_before": 0.2333333333333333,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.7666666666666667,
+          "novelty_after": 0.0,
+          "distinctness_before": 1.0,
+          "distinctness_after": 0.0
+        },
+        {
+          "edge": [
+            0,
+            2
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.04241625,
+          "expr_proxy_after": 0.04241625,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.44999999999999996,
+          "strength_after": 0.44999999999999996,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.44999999999999996,
+          "novelty_before": 0.55,
+          "novelty_after": 0.55,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.6666666666666667
+        },
+        {
+          "edge": [
+            0,
+            5
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            0,
+            7
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.01491104166666667,
+          "expr_proxy_after": 0.01491104166666667,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.075,
+          "strength_after": 0.075,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            4,
+            5
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            4,
+            7
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            1,
+            2
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.04241625,
+          "expr_proxy_after": 0.0595,
+          "expr_proxy_delta": 0.017083749999999995,
+          "strength_before": 0.44999999999999996,
+          "strength_after": 0.44999999999999996,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.3333333333333333,
+          "novelty_before": 0.55,
+          "novelty_after": 0.6666666666666667,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.6666666666666667
+        },
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "edge_class": "neighbor_survives",
+          "expr_proxy_before": -0.012777777777777749,
+          "expr_proxy_after": 0.1322222222222222,
+          "expr_proxy_delta": 0.14499999999999996,
+          "strength_before": 1.0,
+          "strength_after": 1.0,
+          "redundancy_before": 0.6666666666666666,
+          "redundancy_after": 0.3333333333333333,
+          "novelty_before": 0.33333333333333337,
+          "novelty_after": 0.6666666666666667,
+          "distinctness_before": 0.33333333333333337,
+          "distinctness_after": 0.6666666666666667
+        }
+      ],
+      "sum_expr_proxy_before": 0.33403409722222227,
+      "sum_expr_proxy_after": 0.3981599305555556,
+      "sum_expr_proxy_delta": 0.06412583333333328,
+      "organizer_core_relief_credit": 0.14499999999999996,
+      "neighbor_relief_credit": 0.14499999999999996,
+      "incident_loss_burden": 0.09795791666666667,
+      "organizer_relief_credit_gross": 0.21749999999999994,
+      "organizer_relief_credit_net": 0.1685210416666666,
+      "organizer_relief_credit_applied": 0.1685210416666666,
+      "would_flip_positive": false,
+      "would_beat_winner": true
+    },
+    {
+      "step": 300,
+      "node": 6,
+      "winner_move_type": "raise_support",
+      "core_pair": [
+        0,
+        1
+      ],
+      "lower_deltaF": -0.1982366650329365,
+      "sandbox_lower_deltaF": -0.0297156233662699,
+      "deltaF_improvement": 0.1685210416666666,
+      "dE_expr_raw": -0.3625833563466241,
+      "dE_expr": -0.19596239655838066,
+      "sandbox_dE_expr": -0.027441354891714065,
+      "dE_expr_structural_adjustment": 0.23335260978824338,
+      "delta_Odiff_R": -0.13205274999999994,
+      "expr_redundancy_removed": 0.5196833333333333,
+      "expr_distinctness_gain": 0.2592806775424926,
+      "W_NR": 2.4780064616980457e-05,
+      "dCF": 7.434019385094137e-05,
+      "shell_penalty": 0.84875,
+      "incident_edges_before": [
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "neighbor_edges_before": [
+        [
+          0,
+          1
+        ]
+      ],
+      "edge_deltas": [
+        {
+          "edge": [
+            0,
+            6
+          ],
+          "edge_class": "incident_lost",
+          "expr_proxy_before": 0.04241625,
+          "expr_proxy_after": 0.0,
+          "expr_proxy_delta": -0.04241625,
+          "strength_before": 0.44999999999999996,
+          "strength_after": 0.0,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.55,
+          "novelty_after": 0.0,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.0
+        },
+        {
+          "edge": [
+            1,
+            6
+          ],
+          "edge_class": "incident_lost",
+          "expr_proxy_before": 0.04241625,
+          "expr_proxy_after": 0.0,
+          "expr_proxy_delta": -0.04241625,
+          "strength_before": 0.44999999999999996,
+          "strength_after": 0.0,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.55,
+          "novelty_after": 0.0,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.0
+        },
+        {
+          "edge": [
+            4,
+            6
+          ],
+          "edge_class": "incident_lost",
+          "expr_proxy_before": 0.013125416666666667,
+          "expr_proxy_after": 0.0,
+          "expr_proxy_delta": -0.013125416666666667,
+          "strength_before": 0.075,
+          "strength_after": 0.0,
+          "redundancy_before": 0.2333333333333333,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.7666666666666667,
+          "novelty_after": 0.0,
+          "distinctness_before": 1.0,
+          "distinctness_after": 0.0
+        },
+        {
+          "edge": [
+            0,
+            2
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.026341578846153856,
+          "expr_proxy_after": 0.026341578846153856,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.2794615384615385,
+          "strength_after": 0.2794615384615385,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.44999999999999996,
+          "novelty_before": 0.55,
+          "novelty_after": 0.55,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.6666666666666667
+        },
+        {
+          "edge": [
+            0,
+            5
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            0,
+            7
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.020990158653846156,
+          "expr_proxy_after": 0.020990158653846156,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.10557692307692307,
+          "strength_after": 0.10557692307692307,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            4,
+            5
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            4,
+            7
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            1,
+            2
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.026341578846153856,
+          "expr_proxy_after": 0.03695102564102565,
+          "expr_proxy_delta": 0.010609446794871791,
+          "strength_before": 0.2794615384615385,
+          "strength_after": 0.2794615384615385,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.3333333333333333,
+          "novelty_before": 0.55,
+          "novelty_after": 0.6666666666666667,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.6666666666666667
+        },
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "edge_class": "neighbor_survives",
+          "expr_proxy_before": -0.012777777777777749,
+          "expr_proxy_after": 0.1322222222222222,
+          "expr_proxy_delta": 0.14499999999999996,
+          "strength_before": 1.0,
+          "strength_after": 1.0,
+          "redundancy_before": 0.6666666666666666,
+          "redundancy_after": 0.3333333333333333,
+          "novelty_before": 0.33333333333333337,
+          "novelty_after": 0.6666666666666667,
+          "distinctness_before": 0.33333333333333337,
+          "distinctness_after": 0.6666666666666667
+        }
+      ],
+      "sum_expr_proxy_before": 0.3079638719017095,
+      "sum_expr_proxy_after": 0.36561540202991455,
+      "sum_expr_proxy_delta": 0.05765153012820508,
+      "organizer_core_relief_credit": 0.14499999999999996,
+      "neighbor_relief_credit": 0.14499999999999996,
+      "incident_loss_burden": 0.09795791666666667,
+      "organizer_relief_credit_gross": 0.21749999999999994,
+      "organizer_relief_credit_net": 0.1685210416666666,
+      "organizer_relief_credit_applied": 0.1685210416666666,
+      "would_flip_positive": false,
+      "would_beat_winner": false
+    },
+    {
+      "step": 270,
+      "node": 6,
+      "winner_move_type": "edge_up",
+      "core_pair": [
+        0,
+        1
+      ],
+      "lower_deltaF": -0.19825693167391217,
+      "sandbox_lower_deltaF": -0.02973589000724558,
+      "deltaF_improvement": 0.1685210416666666,
+      "dE_expr_raw": -0.36259339105339894,
+      "dE_expr": -0.19597480692800975,
+      "sandbox_dE_expr": -0.02745376526134316,
+      "dE_expr_structural_adjustment": 0.23335023412538927,
+      "delta_Odiff_R": -0.13205275000000016,
+      "expr_redundancy_removed": 0.5196833333333333,
+      "expr_distinctness_gain": 0.2592780379170992,
+      "W_NR": 3.304982392915434e-05,
+      "dCF": 9.914947178746303e-05,
+      "shell_penalty": 0.84875,
+      "incident_edges_before": [
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "neighbor_edges_before": [
+        [
+          0,
+          1
+        ]
+      ],
+      "edge_deltas": [
+        {
+          "edge": [
+            0,
+            6
+          ],
+          "edge_class": "incident_lost",
+          "expr_proxy_before": 0.04241625,
+          "expr_proxy_after": 0.0,
+          "expr_proxy_delta": -0.04241625,
+          "strength_before": 0.44999999999999996,
+          "strength_after": 0.0,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.55,
+          "novelty_after": 0.0,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.0
+        },
+        {
+          "edge": [
+            1,
+            6
+          ],
+          "edge_class": "incident_lost",
+          "expr_proxy_before": 0.04241625,
+          "expr_proxy_after": 0.0,
+          "expr_proxy_delta": -0.04241625,
+          "strength_before": 0.44999999999999996,
+          "strength_after": 0.0,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.55,
+          "novelty_after": 0.0,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.0
+        },
+        {
+          "edge": [
+            4,
+            6
+          ],
+          "edge_class": "incident_lost",
+          "expr_proxy_before": 0.013125416666666667,
+          "expr_proxy_after": 0.0,
+          "expr_proxy_delta": -0.013125416666666667,
+          "strength_before": 0.075,
+          "strength_after": 0.0,
+          "redundancy_before": 0.2333333333333333,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.7666666666666667,
+          "novelty_after": 0.0,
+          "distinctness_before": 1.0,
+          "distinctness_after": 0.0
+        },
+        {
+          "edge": [
+            0,
+            2
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.04067609615384616,
+          "expr_proxy_after": 0.04067609615384616,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.43153846153846154,
+          "strength_after": 0.43153846153846154,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.44999999999999996,
+          "novelty_before": 0.55,
+          "novelty_after": 0.55,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.6666666666666667
+        },
+        {
+          "edge": [
+            0,
+            5
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            0,
+            7
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.06996719551282052,
+          "expr_proxy_after": 0.06996719551282052,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.3519230769230769,
+          "strength_after": 0.3519230769230769,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            4,
+            5
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            4,
+            7
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            1,
+            2
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.04067609615384616,
+          "expr_proxy_after": 0.057058974358974376,
+          "expr_proxy_delta": 0.016382878205128217,
+          "strength_before": 0.43153846153846154,
+          "strength_after": 0.43153846153846154,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.3333333333333333,
+          "novelty_before": 0.55,
+          "novelty_after": 0.6666666666666667,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.6666666666666667
+        },
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "edge_class": "neighbor_survives",
+          "expr_proxy_before": -0.012777777777777749,
+          "expr_proxy_after": 0.1322222222222222,
+          "expr_proxy_delta": 0.14499999999999996,
+          "strength_before": 1.0,
+          "strength_after": 1.0,
+          "redundancy_before": 0.6666666666666666,
+          "redundancy_after": 0.3333333333333333,
+          "novelty_before": 0.33333333333333337,
+          "novelty_after": 0.6666666666666667,
+          "distinctness_before": 0.33333333333333337,
+          "distinctness_after": 0.6666666666666667
+        }
+      ],
+      "sum_expr_proxy_before": 0.38560994337606846,
+      "sum_expr_proxy_after": 0.44903490491452996,
+      "sum_expr_proxy_delta": 0.0634249615384615,
+      "organizer_core_relief_credit": 0.14499999999999996,
+      "neighbor_relief_credit": 0.14499999999999996,
+      "incident_loss_burden": 0.09795791666666667,
+      "organizer_relief_credit_gross": 0.21749999999999994,
+      "organizer_relief_credit_net": 0.1685210416666666,
+      "organizer_relief_credit_applied": 0.1685210416666666,
+      "would_flip_positive": false,
+      "would_beat_winner": false
+    },
+    {
+      "step": 260,
+      "node": 6,
+      "winner_move_type": "raise_support",
+      "core_pair": [
+        0,
+        1
+      ],
+      "lower_deltaF": -0.19826879378776893,
+      "sandbox_lower_deltaF": -0.02974775212110234,
+      "deltaF_improvement": 0.1685210416666666,
+      "dE_expr_raw": -0.3626095663349016,
+      "dE_expr": -0.19599164417489268,
+      "sandbox_dE_expr": -0.027470602508226083,
+      "dE_expr_structural_adjustment": 0.23334957216000887,
+      "delta_Odiff_R": -0.13205274999999994,
+      "expr_redundancy_removed": 0.5196833333333333,
+      "expr_distinctness_gain": 0.25927730240000985,
+      "W_NR": 2.781284179637078e-05,
+      "dCF": 8.343852538911234e-05,
+      "shell_penalty": 0.84875,
+      "incident_edges_before": [
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "neighbor_edges_before": [
+        [
+          0,
+          1
+        ]
+      ],
+      "edge_deltas": [
+        {
+          "edge": [
+            0,
+            6
+          ],
+          "edge_class": "incident_lost",
+          "expr_proxy_before": 0.04241625,
+          "expr_proxy_after": 0.0,
+          "expr_proxy_delta": -0.04241625,
+          "strength_before": 0.44999999999999996,
+          "strength_after": 0.0,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.55,
+          "novelty_after": 0.0,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.0
+        },
+        {
+          "edge": [
+            1,
+            6
+          ],
+          "edge_class": "incident_lost",
+          "expr_proxy_before": 0.04241625,
+          "expr_proxy_after": 0.0,
+          "expr_proxy_delta": -0.04241625,
+          "strength_before": 0.44999999999999996,
+          "strength_after": 0.0,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.55,
+          "novelty_after": 0.0,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.0
+        },
+        {
+          "edge": [
+            4,
+            6
+          ],
+          "edge_class": "incident_lost",
+          "expr_proxy_before": 0.013125416666666667,
+          "expr_proxy_after": 0.0,
+          "expr_proxy_delta": -0.013125416666666667,
+          "strength_before": 0.075,
+          "strength_after": 0.0,
+          "redundancy_before": 0.2333333333333333,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.7666666666666667,
+          "novelty_after": 0.0,
+          "distinctness_before": 1.0,
+          "distinctness_after": 0.0
+        },
+        {
+          "edge": [
+            0,
+            2
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.04067609615384616,
+          "expr_proxy_after": 0.04067609615384616,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.43153846153846154,
+          "strength_after": 0.43153846153846154,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.44999999999999996,
+          "novelty_before": 0.55,
+          "novelty_after": 0.55,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.6666666666666667
+        },
+        {
+          "edge": [
+            0,
+            5
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            0,
+            7
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.010323028846153848,
+          "expr_proxy_after": 0.010323028846153848,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.05192307692307693,
+          "strength_after": 0.05192307692307693,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            4,
+            5
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            4,
+            7
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            1,
+            2
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.04067609615384616,
+          "expr_proxy_after": 0.057058974358974376,
+          "expr_proxy_delta": 0.016382878205128217,
+          "strength_before": 0.43153846153846154,
+          "strength_after": 0.43153846153846154,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.3333333333333333,
+          "novelty_before": 0.55,
+          "novelty_after": 0.6666666666666667,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.6666666666666667
+        },
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "edge_class": "neighbor_survives",
+          "expr_proxy_before": -0.012777777777777749,
+          "expr_proxy_after": 0.1322222222222222,
+          "expr_proxy_delta": 0.14499999999999996,
+          "strength_before": 1.0,
+          "strength_after": 1.0,
+          "redundancy_before": 0.6666666666666666,
+          "redundancy_after": 0.3333333333333333,
+          "novelty_before": 0.33333333333333337,
+          "novelty_after": 0.6666666666666667,
+          "distinctness_before": 0.33333333333333337,
+          "distinctness_after": 0.6666666666666667
+        }
+      ],
+      "sum_expr_proxy_before": 0.3259657767094018,
+      "sum_expr_proxy_after": 0.3893907382478633,
+      "sum_expr_proxy_delta": 0.0634249615384615,
+      "organizer_core_relief_credit": 0.14499999999999996,
+      "neighbor_relief_credit": 0.14499999999999996,
+      "incident_loss_burden": 0.09795791666666667,
+      "organizer_relief_credit_gross": 0.21749999999999994,
+      "organizer_relief_credit_net": 0.1685210416666666,
+      "organizer_relief_credit_applied": 0.1685210416666666,
+      "would_flip_positive": false,
+      "would_beat_winner": false
+    },
+    {
+      "step": 250,
+      "node": 6,
+      "winner_move_type": "raise_support",
+      "core_pair": [
+        0,
+        1
+      ],
+      "lower_deltaF": -0.19828285768326037,
+      "sandbox_lower_deltaF": -0.02976181601659378,
+      "deltaF_improvement": 0.1685210416666666,
+      "dE_expr_raw": -0.3626258967684466,
+      "dE_expr": -0.19600857114892284,
+      "sandbox_dE_expr": -0.027487529482256245,
+      "dE_expr_structural_adjustment": 0.2333489756195237,
+      "delta_Odiff_R": -0.13205274999999994,
+      "expr_redundancy_removed": 0.5196833333333333,
+      "expr_distinctness_gain": 0.25927663957724856,
+      "W_NR": 2.4799074913484098e-05,
+      "dCF": 7.43972247404523e-05,
+      "shell_penalty": 0.84875,
+      "incident_edges_before": [
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "neighbor_edges_before": [
+        [
+          0,
+          1
+        ]
+      ],
+      "edge_deltas": [
+        {
+          "edge": [
+            0,
+            6
+          ],
+          "edge_class": "incident_lost",
+          "expr_proxy_before": 0.04241625,
+          "expr_proxy_after": 0.0,
+          "expr_proxy_delta": -0.04241625,
+          "strength_before": 0.44999999999999996,
+          "strength_after": 0.0,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.55,
+          "novelty_after": 0.0,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.0
+        },
+        {
+          "edge": [
+            1,
+            6
+          ],
+          "edge_class": "incident_lost",
+          "expr_proxy_before": 0.04241625,
+          "expr_proxy_after": 0.0,
+          "expr_proxy_delta": -0.04241625,
+          "strength_before": 0.44999999999999996,
+          "strength_after": 0.0,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.55,
+          "novelty_after": 0.0,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.0
+        },
+        {
+          "edge": [
+            4,
+            6
+          ],
+          "edge_class": "incident_lost",
+          "expr_proxy_before": 0.013125416666666667,
+          "expr_proxy_after": 0.0,
+          "expr_proxy_delta": -0.013125416666666667,
+          "strength_before": 0.075,
+          "strength_after": 0.0,
+          "redundancy_before": 0.2333333333333333,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.7666666666666667,
+          "novelty_after": 0.0,
+          "distinctness_before": 1.0,
+          "distinctness_after": 0.0
+        },
+        {
+          "edge": [
+            0,
+            2
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.026537346153846154,
+          "expr_proxy_after": 0.026537346153846154,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.2815384615384615,
+          "strength_after": 0.2815384615384615,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.44999999999999996,
+          "novelty_before": 0.55,
+          "novelty_after": 0.55,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.6666666666666667
+        },
+        {
+          "edge": [
+            0,
+            5
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            0,
+            7
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.010323028846153848,
+          "expr_proxy_after": 0.010323028846153848,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.05192307692307693,
+          "strength_after": 0.05192307692307693,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            4,
+            5
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            4,
+            7
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            1,
+            2
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.026537346153846154,
+          "expr_proxy_after": 0.03722564102564102,
+          "expr_proxy_delta": 0.010688294871794866,
+          "strength_before": 0.2815384615384615,
+          "strength_after": 0.2815384615384615,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.3333333333333333,
+          "novelty_before": 0.55,
+          "novelty_after": 0.6666666666666667,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.6666666666666667
+        },
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "edge_class": "neighbor_survives",
+          "expr_proxy_before": -0.012777777777777749,
+          "expr_proxy_after": 0.1322222222222222,
+          "expr_proxy_delta": 0.14499999999999996,
+          "strength_before": 1.0,
+          "strength_after": 1.0,
+          "redundancy_before": 0.6666666666666666,
+          "redundancy_after": 0.3333333333333333,
+          "novelty_before": 0.33333333333333337,
+          "novelty_after": 0.6666666666666667,
+          "distinctness_before": 0.33333333333333337,
+          "distinctness_after": 0.6666666666666667
+        }
+      ],
+      "sum_expr_proxy_before": 0.2976882767094018,
+      "sum_expr_proxy_after": 0.35541865491452995,
+      "sum_expr_proxy_delta": 0.057730378205128156,
+      "organizer_core_relief_credit": 0.14499999999999996,
+      "neighbor_relief_credit": 0.14499999999999996,
+      "incident_loss_burden": 0.09795791666666667,
+      "organizer_relief_credit_gross": 0.21749999999999994,
+      "organizer_relief_credit_net": 0.1685210416666666,
+      "organizer_relief_credit_applied": 0.1685210416666666,
+      "would_flip_positive": false,
+      "would_beat_winner": false
+    },
+    {
+      "step": 200,
+      "node": 6,
+      "winner_move_type": "edge_up",
+      "core_pair": [
+        0,
+        1
+      ],
+      "lower_deltaF": -0.19829137788193527,
+      "sandbox_lower_deltaF": -0.029770336215268672,
+      "deltaF_improvement": 0.1685210416666666,
+      "dE_expr_raw": -0.3626245735665057,
+      "dE_expr": -0.19600925469005087,
+      "sandbox_dE_expr": -0.027488213023384278,
+      "dE_expr_structural_adjustment": 0.2333469688764549,
+      "delta_Odiff_R": -0.13205275000000016,
+      "expr_redundancy_removed": 0.5196833333333333,
+      "expr_distinctness_gain": 0.25927440986272765,
+      "W_NR": 3.304818812072119e-05,
+      "dCF": 9.914456436216357e-05,
+      "shell_penalty": 0.84875,
+      "incident_edges_before": [
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "neighbor_edges_before": [
+        [
+          0,
+          1
+        ]
+      ],
+      "edge_deltas": [
+        {
+          "edge": [
+            0,
+            6
+          ],
+          "edge_class": "incident_lost",
+          "expr_proxy_before": 0.04241625,
+          "expr_proxy_after": 0.0,
+          "expr_proxy_delta": -0.04241625,
+          "strength_before": 0.44999999999999996,
+          "strength_after": 0.0,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.55,
+          "novelty_after": 0.0,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.0
+        },
+        {
+          "edge": [
+            1,
+            6
+          ],
+          "edge_class": "incident_lost",
+          "expr_proxy_before": 0.04241625,
+          "expr_proxy_after": 0.0,
+          "expr_proxy_delta": -0.04241625,
+          "strength_before": 0.44999999999999996,
+          "strength_after": 0.0,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.55,
+          "novelty_after": 0.0,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.0
+        },
+        {
+          "edge": [
+            4,
+            6
+          ],
+          "edge_class": "incident_lost",
+          "expr_proxy_before": 0.013125416666666667,
+          "expr_proxy_after": 0.0,
+          "expr_proxy_delta": -0.013125416666666667,
+          "strength_before": 0.075,
+          "strength_after": 0.0,
+          "redundancy_before": 0.2333333333333333,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.7666666666666667,
+          "novelty_after": 0.0,
+          "distinctness_before": 1.0,
+          "distinctness_after": 0.0
+        },
+        {
+          "edge": [
+            0,
+            2
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.04241625,
+          "expr_proxy_after": 0.04241625,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.44999999999999996,
+          "strength_after": 0.44999999999999996,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.44999999999999996,
+          "novelty_before": 0.55,
+          "novelty_after": 0.55,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.6666666666666667
+        },
+        {
+          "edge": [
+            0,
+            5
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            0,
+            7
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.07455520833333333,
+          "expr_proxy_after": 0.07455520833333333,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.375,
+          "strength_after": 0.375,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            4,
+            5
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            4,
+            7
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            1,
+            2
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.04241625,
+          "expr_proxy_after": 0.0595,
+          "expr_proxy_delta": 0.017083749999999995,
+          "strength_before": 0.44999999999999996,
+          "strength_after": 0.44999999999999996,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.3333333333333333,
+          "novelty_before": 0.55,
+          "novelty_after": 0.6666666666666667,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.6666666666666667
+        },
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "edge_class": "neighbor_survives",
+          "expr_proxy_before": -0.012777777777777749,
+          "expr_proxy_after": 0.1322222222222222,
+          "expr_proxy_delta": 0.14499999999999996,
+          "strength_before": 1.0,
+          "strength_after": 1.0,
+          "redundancy_before": 0.6666666666666666,
+          "redundancy_after": 0.3333333333333333,
+          "novelty_before": 0.33333333333333337,
+          "novelty_after": 0.6666666666666667,
+          "distinctness_before": 0.33333333333333337,
+          "distinctness_after": 0.6666666666666667
+        }
+      ],
+      "sum_expr_proxy_before": 0.39367826388888894,
+      "sum_expr_proxy_after": 0.45780409722222226,
+      "sum_expr_proxy_delta": 0.06412583333333328,
+      "organizer_core_relief_credit": 0.14499999999999996,
+      "neighbor_relief_credit": 0.14499999999999996,
+      "incident_loss_burden": 0.09795791666666667,
+      "organizer_relief_credit_gross": 0.21749999999999994,
+      "organizer_relief_credit_net": 0.1685210416666666,
+      "organizer_relief_credit_applied": 0.1685210416666666,
+      "would_flip_positive": false,
+      "would_beat_winner": false
+    },
+    {
+      "step": 230,
+      "node": 6,
+      "winner_move_type": "raise_support",
+      "core_pair": [
+        0,
+        1
+      ],
+      "lower_deltaF": -0.1982927219721234,
+      "sandbox_lower_deltaF": -0.029771680305456794,
+      "deltaF_improvement": 0.1685210416666666,
+      "dE_expr_raw": -0.3626347583235141,
+      "dE_expr": -0.19601843025127194,
+      "sandbox_dE_expr": -0.027497388584605348,
+      "dE_expr_structural_adjustment": 0.23334797807224197,
+      "delta_Odiff_R": -0.13205274999999972,
+      "expr_redundancy_removed": 0.5196833333333333,
+      "expr_distinctness_gain": 0.25927553119137997,
+      "W_NR": 2.480453440184549e-05,
+      "dCF": 7.441360320553647e-05,
+      "shell_penalty": 0.84875,
+      "incident_edges_before": [
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "neighbor_edges_before": [
+        [
+          0,
+          1
+        ]
+      ],
+      "edge_deltas": [
+        {
+          "edge": [
+            0,
+            6
+          ],
+          "edge_class": "incident_lost",
+          "expr_proxy_before": 0.04241625,
+          "expr_proxy_after": 0.0,
+          "expr_proxy_delta": -0.04241625,
+          "strength_before": 0.44999999999999996,
+          "strength_after": 0.0,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.55,
+          "novelty_after": 0.0,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.0
+        },
+        {
+          "edge": [
+            1,
+            6
+          ],
+          "edge_class": "incident_lost",
+          "expr_proxy_before": 0.04241625,
+          "expr_proxy_after": 0.0,
+          "expr_proxy_delta": -0.04241625,
+          "strength_before": 0.44999999999999996,
+          "strength_after": 0.0,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.55,
+          "novelty_after": 0.0,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.0
+        },
+        {
+          "edge": [
+            4,
+            6
+          ],
+          "edge_class": "incident_lost",
+          "expr_proxy_before": 0.013125416666666667,
+          "expr_proxy_after": 0.0,
+          "expr_proxy_delta": -0.013125416666666667,
+          "strength_before": 0.075,
+          "strength_after": 0.0,
+          "redundancy_before": 0.2333333333333333,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.7666666666666667,
+          "novelty_after": 0.0,
+          "distinctness_before": 1.0,
+          "distinctness_after": 0.0
+        },
+        {
+          "edge": [
+            0,
+            2
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.026863625000000012,
+          "expr_proxy_after": 0.026863625000000012,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.28500000000000003,
+          "strength_after": 0.28500000000000003,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.44999999999999996,
+          "novelty_before": 0.55,
+          "novelty_after": 0.55,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.6666666666666667
+        },
+        {
+          "edge": [
+            0,
+            5
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            0,
+            7
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.022366562500000006,
+          "expr_proxy_after": 0.022366562500000006,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.11250000000000002,
+          "strength_after": 0.11250000000000002,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            4,
+            5
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            4,
+            7
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            1,
+            2
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.026863625000000012,
+          "expr_proxy_after": 0.03768333333333334,
+          "expr_proxy_delta": 0.010819708333333327,
+          "strength_before": 0.28500000000000003,
+          "strength_after": 0.28500000000000003,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.3333333333333333,
+          "novelty_before": 0.55,
+          "novelty_after": 0.6666666666666667,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.6666666666666667
+        },
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "edge_class": "neighbor_survives",
+          "expr_proxy_before": -0.012777777777777749,
+          "expr_proxy_after": 0.1322222222222222,
+          "expr_proxy_delta": 0.14499999999999996,
+          "strength_before": 1.0,
+          "strength_after": 1.0,
+          "redundancy_before": 0.6666666666666666,
+          "redundancy_after": 0.3333333333333333,
+          "novelty_before": 0.33333333333333337,
+          "novelty_after": 0.6666666666666667,
+          "distinctness_before": 0.33333333333333337,
+          "distinctness_after": 0.6666666666666667
+        }
+      ],
+      "sum_expr_proxy_before": 0.31038436805555564,
+      "sum_expr_proxy_after": 0.36824615972222224,
+      "sum_expr_proxy_delta": 0.05786179166666662,
+      "organizer_core_relief_credit": 0.14499999999999996,
+      "neighbor_relief_credit": 0.14499999999999996,
+      "incident_loss_burden": 0.09795791666666667,
+      "organizer_relief_credit_gross": 0.21749999999999994,
+      "organizer_relief_credit_net": 0.1685210416666666,
+      "organizer_relief_credit_applied": 0.1685210416666666,
+      "would_flip_positive": false,
+      "would_beat_winner": false
+    },
+    {
+      "step": 280,
+      "node": 2,
+      "winner_move_type": "lower_support",
+      "core_pair": [
+        0,
+        1
+      ],
+      "lower_deltaF": 0.2157843494995021,
+      "sandbox_lower_deltaF": 0.38410554845783534,
+      "deltaF_improvement": 0.16832119895833325,
+      "dE_expr_raw": -0.008563925228489921,
+      "dE_expr": 0.21581574584996396,
+      "sandbox_dE_expr": 0.3841369448082972,
+      "dE_expr_structural_adjustment": 0.2264662654053771,
+      "delta_Odiff_R": -0.005961698076923483,
+      "expr_redundancy_removed": 0.5163233333333334,
+      "expr_distinctness_gain": 0.2516291837837523,
+      "W_NR": 3.3048789959855274e-05,
+      "dCF": 9.914636987956582e-05,
+      "shell_penalty": 0.86075,
+      "incident_edges_before": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "neighbor_edges_before": [
+        [
+          0,
+          1
+        ]
+      ],
+      "edge_deltas": [
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "edge_class": "incident_lost",
+          "expr_proxy_before": 0.045478677083333335,
+          "expr_proxy_after": 0.0,
+          "expr_proxy_delta": -0.045478677083333335,
+          "strength_before": 0.22874999999999998,
+          "strength_after": 0.0,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.0,
+          "distinctness_before": 1.0,
+          "distinctness_after": 0.0
+        },
+        {
+          "edge": [
+            0,
+            2
+          ],
+          "edge_class": "incident_lost",
+          "expr_proxy_before": 0.02643946250000001,
+          "expr_proxy_after": 0.0,
+          "expr_proxy_delta": -0.02643946250000001,
+          "strength_before": 0.2805,
+          "strength_after": 0.0,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.55,
+          "novelty_after": 0.0,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.0
+        },
+        {
+          "edge": [
+            1,
+            2
+          ],
+          "edge_class": "incident_lost",
+          "expr_proxy_before": 0.02643946250000001,
+          "expr_proxy_after": 0.0,
+          "expr_proxy_delta": -0.02643946250000001,
+          "strength_before": 0.2805,
+          "strength_after": 0.0,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.55,
+          "novelty_after": 0.0,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.0
+        },
+        {
+          "edge": [
+            0,
+            5
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            0,
+            6
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.04241625,
+          "expr_proxy_after": 0.04241625,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.44999999999999996,
+          "strength_after": 0.44999999999999996,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.44999999999999996,
+          "novelty_before": 0.55,
+          "novelty_after": 0.55,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.6666666666666667
+        },
+        {
+          "edge": [
+            0,
+            7
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            4,
+            5
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            4,
+            6
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.013125416666666667,
+          "expr_proxy_after": 0.013125416666666667,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.075,
+          "strength_after": 0.075,
+          "redundancy_before": 0.2333333333333333,
+          "redundancy_after": 0.2333333333333333,
+          "novelty_before": 0.7666666666666667,
+          "novelty_after": 0.7666666666666667,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            4,
+            7
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.03225,
+          "expr_proxy_delta": 0.0024279166666666616,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 1.0,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            1,
+            6
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.04241625,
+          "expr_proxy_after": 0.0595,
+          "expr_proxy_delta": 0.017083749999999995,
+          "strength_before": 0.44999999999999996,
+          "strength_after": 0.44999999999999996,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.3333333333333333,
+          "novelty_before": 0.55,
+          "novelty_after": 0.6666666666666667,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.6666666666666667
+        },
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "edge_class": "neighbor_survives",
+          "expr_proxy_before": -0.012777777777777749,
+          "expr_proxy_after": 0.1322222222222222,
+          "expr_proxy_delta": 0.14499999999999996,
+          "strength_before": 1.0,
+          "strength_after": 1.0,
+          "redundancy_before": 0.6666666666666666,
+          "redundancy_after": 0.3333333333333333,
+          "novelty_before": 0.33333333333333337,
+          "novelty_after": 0.6666666666666667,
+          "distinctness_before": 0.33333333333333337,
+          "distinctness_after": 0.6666666666666667
+        }
+      ],
+      "sum_expr_proxy_before": 0.332648157638889,
+      "sum_expr_proxy_after": 0.3988022222222222,
+      "sum_expr_proxy_delta": 0.06615406458333326,
+      "organizer_core_relief_credit": 0.14499999999999996,
+      "neighbor_relief_credit": 0.14499999999999996,
+      "incident_loss_burden": 0.09835760208333336,
+      "organizer_relief_credit_gross": 0.21749999999999994,
+      "organizer_relief_credit_net": 0.16832119895833325,
+      "organizer_relief_credit_applied": 0.16832119895833325,
+      "would_flip_positive": false,
+      "would_beat_winner": true
+    },
+    {
+      "step": 210,
+      "node": 2,
+      "winner_move_type": "lower_support",
+      "core_pair": [
+        0,
+        1
+      ],
+      "lower_deltaF": 0.21442272327546535,
+      "sandbox_lower_deltaF": 0.38012171806713196,
+      "deltaF_improvement": 0.1656989947916666,
+      "dE_expr_raw": -0.00896763361044961,
+      "dE_expr": 0.21445412061321195,
+      "sandbox_dE_expr": 0.38015311540487856,
+      "dE_expr_structural_adjustment": 0.22561481047366155,
+      "delta_Odiff_R": -0.006265874999999976,
+      "expr_redundancy_removed": 0.5154833333333333,
+      "expr_distinctness_gain": 0.25068312274851284,
+      "W_NR": 3.304982920693256e-05,
+      "dCF": 9.914948762079767e-05,
+      "shell_penalty": 0.86375,
+      "incident_edges_before": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "neighbor_edges_before": [
+        [
+          0,
+          1
+        ]
+      ],
+      "edge_deltas": [
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "edge_class": "incident_lost",
+          "expr_proxy_before": 0.048460885416666676,
+          "expr_proxy_after": 0.0,
+          "expr_proxy_delta": -0.048460885416666676,
+          "strength_before": 0.24375000000000002,
+          "strength_after": 0.0,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.0,
+          "distinctness_before": 1.0,
+          "distinctness_after": 0.0
+        },
+        {
+          "edge": [
+            0,
+            2
+          ],
+          "edge_class": "incident_lost",
+          "expr_proxy_before": 0.0275705625,
+          "expr_proxy_after": 0.0,
+          "expr_proxy_delta": -0.0275705625,
+          "strength_before": 0.2925,
+          "strength_after": 0.0,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.55,
+          "novelty_after": 0.0,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.0
+        },
+        {
+          "edge": [
+            1,
+            2
+          ],
+          "edge_class": "incident_lost",
+          "expr_proxy_before": 0.0275705625,
+          "expr_proxy_after": 0.0,
+          "expr_proxy_delta": -0.0275705625,
+          "strength_before": 0.2925,
+          "strength_after": 0.0,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.55,
+          "novelty_after": 0.0,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.0
+        },
+        {
+          "edge": [
+            0,
+            5
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            0,
+            6
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.04241625,
+          "expr_proxy_after": 0.04241625,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.44999999999999996,
+          "strength_after": 0.44999999999999996,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.44999999999999996,
+          "novelty_before": 0.55,
+          "novelty_after": 0.55,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.6666666666666667
+        },
+        {
+          "edge": [
+            0,
+            7
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            4,
+            5
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            4,
+            6
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.013125416666666667,
+          "expr_proxy_after": 0.013125416666666667,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.075,
+          "strength_after": 0.075,
+          "redundancy_before": 0.2333333333333333,
+          "redundancy_after": 0.2333333333333333,
+          "novelty_before": 0.7666666666666667,
+          "novelty_after": 0.7666666666666667,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            4,
+            7
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.02982208333333334,
+          "expr_proxy_delta": 0.0,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.11666666666666665,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 0.8833333333333333,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            3,
+            4
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.02982208333333334,
+          "expr_proxy_after": 0.03225,
+          "expr_proxy_delta": 0.0024279166666666616,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.11666666666666665,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.8833333333333333,
+          "novelty_after": 1.0,
+          "distinctness_before": 1.0,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            1,
+            6
+          ],
+          "edge_class": "other_survives",
+          "expr_proxy_before": 0.04241625,
+          "expr_proxy_after": 0.0595,
+          "expr_proxy_delta": 0.017083749999999995,
+          "strength_before": 0.44999999999999996,
+          "strength_after": 0.44999999999999996,
+          "redundancy_before": 0.44999999999999996,
+          "redundancy_after": 0.3333333333333333,
+          "novelty_before": 0.55,
+          "novelty_after": 0.6666666666666667,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.6666666666666667
+        },
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "edge_class": "neighbor_survives",
+          "expr_proxy_before": -0.012777777777777749,
+          "expr_proxy_after": 0.1322222222222222,
+          "expr_proxy_delta": 0.14499999999999996,
+          "strength_before": 1.0,
+          "strength_after": 1.0,
+          "redundancy_before": 0.6666666666666666,
+          "redundancy_after": 0.3333333333333333,
+          "novelty_before": 0.33333333333333337,
+          "novelty_after": 0.6666666666666667,
+          "distinctness_before": 0.33333333333333337,
+          "distinctness_after": 0.6666666666666667
+        }
+      ],
+      "sum_expr_proxy_before": 0.3378925659722223,
+      "sum_expr_proxy_after": 0.3988022222222222,
+      "sum_expr_proxy_delta": 0.060909656249999944,
+      "organizer_core_relief_credit": 0.14499999999999996,
+      "neighbor_relief_credit": 0.14499999999999996,
+      "incident_loss_burden": 0.10360201041666667,
+      "organizer_relief_credit_gross": 0.21749999999999994,
+      "organizer_relief_credit_net": 0.1656989947916666,
+      "organizer_relief_credit_applied": 0.1656989947916666,
+      "would_flip_positive": false,
+      "would_beat_winner": true
+    },
+    {
+      "step": 20,
+      "node": 2,
+      "winner_move_type": "raise_support",
+      "core_pair": [
+        0,
+        1
+      ],
+      "lower_deltaF": -0.22714678639223712,
+      "sandbox_lower_deltaF": -0.11660511972557044,
+      "deltaF_improvement": 0.11054166666666668,
+      "dE_expr_raw": -0.8263458258947489,
+      "dE_expr": -0.0521296867235721,
+      "sandbox_dE_expr": 0.05841197994309458,
+      "dE_expr_structural_adjustment": 0.6250111391711768,
+      "delta_Odiff_R": 0.41136666666666666,
+      "expr_redundancy_removed": 0.9936999999999999,
+      "expr_distinctness_gain": 0.6944568213013075,
+      "W_NR": 0.5000179996512264,
+      "dCF": 5.3998953679024186e-05,
+      "shell_penalty": 0.1225,
+      "incident_edges_before": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "neighbor_edges_before": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "edge_deltas": [
+        {
+          "edge": [
+            1,
+            2
+          ],
+          "edge_class": "incident_lost",
+          "expr_proxy_before": 0.019833333333333335,
+          "expr_proxy_after": 0.0,
+          "expr_proxy_delta": -0.019833333333333335,
+          "strength_before": 0.15,
+          "strength_after": 0.0,
+          "redundancy_before": 0.3333333333333333,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.6666666666666667,
+          "novelty_after": 0.0,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.0
+        },
+        {
+          "edge": [
+            2,
+            3
+          ],
+          "edge_class": "incident_lost",
+          "expr_proxy_before": 0.019833333333333335,
+          "expr_proxy_after": 0.0,
+          "expr_proxy_delta": -0.019833333333333335,
+          "strength_before": 0.15,
+          "strength_after": 0.0,
+          "redundancy_before": 0.3333333333333333,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.6666666666666667,
+          "novelty_after": 0.0,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 0.0
+        },
+        {
+          "edge": [
+            0,
+            2
+          ],
+          "edge_class": "incident_lost",
+          "expr_proxy_before": -0.0019166666666666603,
+          "expr_proxy_after": 0.0,
+          "expr_proxy_delta": 0.0019166666666666603,
+          "strength_before": 0.15,
+          "strength_after": 0.0,
+          "redundancy_before": 0.6666666666666666,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.33333333333333337,
+          "novelty_after": 0.0,
+          "distinctness_before": 0.33333333333333337,
+          "distinctness_after": 0.0
+        },
+        {
+          "edge": [
+            0,
+            3
+          ],
+          "edge_class": "neighbor_survives",
+          "expr_proxy_before": 0.019833333333333335,
+          "expr_proxy_after": 0.03225,
+          "expr_proxy_delta": 0.012416666666666666,
+          "strength_before": 0.15,
+          "strength_after": 0.15,
+          "redundancy_before": 0.3333333333333333,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.6666666666666667,
+          "novelty_after": 1.0,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 1.0
+        },
+        {
+          "edge": [
+            0,
+            1
+          ],
+          "edge_class": "neighbor_survives",
+          "expr_proxy_before": 0.1322222222222222,
+          "expr_proxy_after": 0.215,
+          "expr_proxy_delta": 0.08277777777777778,
+          "strength_before": 1.0,
+          "strength_after": 1.0,
+          "redundancy_before": 0.3333333333333333,
+          "redundancy_after": 0.0,
+          "novelty_before": 0.6666666666666667,
+          "novelty_after": 1.0,
+          "distinctness_before": 0.6666666666666667,
+          "distinctness_after": 1.0
+        }
+      ],
+      "sum_expr_proxy_before": 0.18980555555555556,
+      "sum_expr_proxy_after": 0.24725,
+      "sum_expr_proxy_delta": 0.05744444444444444,
+      "organizer_core_relief_credit": 0.08277777777777778,
+      "neighbor_relief_credit": 0.09519444444444444,
+      "incident_loss_burden": 0.03966666666666667,
+      "organizer_relief_credit_gross": 0.13037500000000002,
+      "organizer_relief_credit_net": 0.11054166666666668,
+      "organizer_relief_credit_applied": 0.11054166666666668,
+      "would_flip_positive": false,
+      "would_beat_winner": false
+    }
+  ],
+  "readout": [
+    "Organizer-relief credit can make some late retirements beat the accepted winner.",
+    "Node 6 carries a larger incident-edge loss burden than node 2.",
+    "Node 6 does not get extra organizer-edge relief relative to node 2 under the current sandbox.",
+    "Organizer-relief credit partially rescues node 6, even if not enough to reverse the sign."
+  ]
+}
