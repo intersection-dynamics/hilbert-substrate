@@ -1,0 +1,1198 @@
+{
+  "script": "hsf_factorization_native_observer.py",
+  "native_config": {
+    "w_mean_mi": 1.0,
+    "w_pair_entropy": 1.0,
+    "w_anti_dominance": 1.0,
+    "w_pair_count": 1.0,
+    "w_core_persistence": 0.5,
+    "w_single_entropy_balance": 1.0,
+    "w_temporal_stability": 1.0
+  },
+  "initial_state": "perturbed_zero",
+  "perturb_eps": 0.02,
+  "total_dimension": 81,
+  "candidate_factorizations": [
+    [
+      3,
+      27
+    ],
+    [
+      9,
+      9
+    ],
+    [
+      3,
+      3,
+      9
+    ],
+    [
+      3,
+      3,
+      3,
+      3
+    ]
+  ],
+  "max_pairs_in_grid": 6,
+  "results": [
+    {
+      "factorization": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "summary": {
+        "mean_mean_pair_mi_score": 0.0018838089904941006,
+        "mean_pair_entropy_score": 0.9974178021094159,
+        "mean_anti_dominance_score": 0.9739138227498233,
+        "mean_pair_count_score": 1.0,
+        "mean_core_persistence_score": 0.5454545454545453,
+        "mean_single_entropy_balance_score": 0.9521040622833378,
+        "temporal_stability_score": 0.9648306774530488,
+        "accessibility_score": 5.1628774463133915
+      },
+      "snapshots": [
+        {
+          "step": 1,
+          "factorization": [
+            3,
+            3,
+            3,
+            3
+          ],
+          "num_factors": 4,
+          "num_pairs": 6,
+          "single_entropies": [
+            0.0028545554240830945,
+            0.002487808177216914,
+            0.002534898102405544,
+            0.0029240677557880704
+          ],
+          "mean_pair_mi_score": 0.0018784580875132516,
+          "pair_entropy_score": 0.9956042236522363,
+          "anti_dominance_score": 0.9673942859179424,
+          "pair_count_score": 1.0,
+          "single_entropy_balance_score": 0.9338447472599437,
+          "dominant_pair": [
+            0,
+            3
+          ],
+          "core_persistence_score": 0.5454545454545454
+        },
+        {
+          "step": 20,
+          "factorization": [
+            3,
+            3,
+            3,
+            3
+          ],
+          "num_factors": 4,
+          "num_pairs": 6,
+          "single_entropies": [
+            0.002811756413026405,
+            0.0025007439132223243,
+            0.0025671533730765484,
+            0.0029205385810824797
+          ],
+          "mean_pair_mi_score": 0.0018829370229567714,
+          "pair_entropy_score": 0.9965400188067884,
+          "anti_dominance_score": 0.9721608238643937,
+          "pair_count_score": 1.0,
+          "single_entropy_balance_score": 0.9400786623524126,
+          "dominant_pair": [
+            0,
+            3
+          ],
+          "core_persistence_score": 0.5454545454545454
+        },
+        {
+          "step": 40,
+          "factorization": [
+            3,
+            3,
+            3,
+            3
+          ],
+          "num_factors": 4,
+          "num_pairs": 6,
+          "single_entropies": [
+            0.00275295598658635,
+            0.002526285297741828,
+            0.002608145937491343,
+            0.002909207860697353
+          ],
+          "mean_pair_mi_score": 0.0018885591657832237,
+          "pair_entropy_score": 0.9974632825068358,
+          "anti_dominance_score": 0.9801796131634394,
+          "pair_count_score": 1.0,
+          "single_entropy_balance_score": 0.9487076159839946,
+          "dominant_pair": [
+            0,
+            3
+          ],
+          "core_persistence_score": 0.5454545454545454
+        },
+        {
+          "step": 60,
+          "factorization": [
+            3,
+            3,
+            3,
+            3
+          ],
+          "num_factors": 4,
+          "num_pairs": 6,
+          "single_entropies": [
+            0.0026870623882433824,
+            0.002559787588407166,
+            0.002652210360977586,
+            0.002892329052825928
+          ],
+          "mean_pair_mi_score": 0.0018925661648649854,
+          "pair_entropy_score": 0.9980450981536999,
+          "anti_dominance_score": 0.9749273803846757,
+          "pair_count_score": 1.0,
+          "single_entropy_balance_score": 0.9568931609002126,
+          "dominant_pair": [
+            2,
+            3
+          ],
+          "core_persistence_score": 0.5454545454545454
+        },
+        {
+          "step": 80,
+          "factorization": [
+            3,
+            3,
+            3,
+            3
+          ],
+          "num_factors": 4,
+          "num_pairs": 6,
+          "single_entropies": [
+            0.002622224043050042,
+            0.002596217740551361,
+            0.002695491784518237,
+            0.00287272861571653
+          ],
+          "mean_pair_mi_score": 0.0018933953190911571,
+          "pair_entropy_score": 0.998287157020662,
+          "anti_dominance_score": 0.9705160002786989,
+          "pair_count_score": 1.0,
+          "single_entropy_balance_score": 0.9615027029004023,
+          "dominant_pair": [
+            2,
+            3
+          ],
+          "core_persistence_score": 0.5454545454545454
+        },
+        {
+          "step": 100,
+          "factorization": [
+            3,
+            3,
+            3,
+            3
+          ],
+          "num_factors": 4,
+          "num_pairs": 6,
+          "single_entropies": [
+            0.0025658488963122,
+            0.00263043963439497,
+            0.00273509201824543,
+            0.0028531076093134956
+          ],
+          "mean_pair_mi_score": 0.0018913490877739542,
+          "pair_entropy_score": 0.998292512771661,
+          "anti_dominance_score": 0.9693977099219521,
+          "pair_count_score": 1.0,
+          "single_entropy_balance_score": 0.961172229689074,
+          "dominant_pair": [
+            2,
+            3
+          ],
+          "core_persistence_score": 0.5454545454545454
+        },
+        {
+          "step": 120,
+          "factorization": [
+            3,
+            3,
+            3,
+            3
+          ],
+          "num_factors": 4,
+          "num_pairs": 6,
+          "single_entropies": [
+            0.0025232357279100855,
+            0.002657606501769668,
+            0.0027692664787237723,
+            0.0028355270100165098
+          ],
+          "mean_pair_mi_score": 0.0018863748207989521,
+          "pair_entropy_score": 0.9980908819767936,
+          "anti_dominance_score": 0.971258958329624,
+          "pair_count_score": 1.0,
+          "single_entropy_balance_score": 0.9579071571573233,
+          "dominant_pair": [
+            2,
+            3
+          ],
+          "core_persistence_score": 0.5454545454545454
+        },
+        {
+          "step": 140,
+          "factorization": [
+            3,
+            3,
+            3,
+            3
+          ],
+          "num_factors": 4,
+          "num_pairs": 6,
+          "single_entropies": [
+            0.002497121594801767,
+            0.002673525880079623,
+            0.002797294074623471,
+            0.0028212151904282133
+          ],
+          "mean_pair_mi_score": 0.0018807012505327799,
+          "pair_entropy_score": 0.9976946115618783,
+          "anti_dominance_score": 0.9747959733525914,
+          "pair_count_score": 1.0,
+          "single_entropy_balance_score": 0.9545452406680601,
+          "dominant_pair": [
+            2,
+            3
+          ],
+          "core_persistence_score": 0.5454545454545454
+        },
+        {
+          "step": 160,
+          "factorization": [
+            3,
+            3,
+            3,
+            3
+          ],
+          "num_factors": 4,
+          "num_pairs": 6,
+          "single_entropies": [
+            0.0024880715844341457,
+            0.0026751577917933853,
+            0.0028191760020647412,
+            0.0028106649869533923
+          ],
+          "mean_pair_mi_score": 0.0018775112204321388,
+          "pair_entropy_score": 0.9972581824520819,
+          "anti_dominance_score": 0.9758898124070909,
+          "pair_count_score": 1.0,
+          "single_entropy_balance_score": 0.9526427883806025,
+          "dominant_pair": [
+            1,
+            3
+          ],
+          "core_persistence_score": 0.5454545454545454
+        },
+        {
+          "step": 180,
+          "factorization": [
+            3,
+            3,
+            3,
+            3
+          ],
+          "num_factors": 4,
+          "num_pairs": 6,
+          "single_entropies": [
+            0.0024951729014578367,
+            0.002661240623331784,
+            0.0028353296246015646,
+            0.002803843746261688
+          ],
+          "mean_pair_mi_score": 0.0018761580133656152,
+          "pair_entropy_score": 0.9970557780090752,
+          "anti_dominance_score": 0.976230549122129,
+          "pair_count_score": 1.0,
+          "single_entropy_balance_score": 0.9524717180195074,
+          "dominant_pair": [
+            1,
+            3
+          ],
+          "core_persistence_score": 0.5454545454545454
+        },
+        {
+          "step": 200,
+          "factorization": [
+            3,
+            3,
+            3,
+            3
+          ],
+          "num_factors": 4,
+          "num_pairs": 6,
+          "single_entropies": [
+            0.002516492164283863,
+            0.0026328524289190936,
+            0.0028463880667289137,
+            0.002800354155273909
+          ],
+          "mean_pair_mi_score": 0.001873888742322274,
+          "pair_entropy_score": 0.9972640762918623,
+          "anti_dominance_score": 0.9803009435055181,
+          "pair_count_score": 1.0,
+          "single_entropy_balance_score": 0.9533786618051813,
+          "dominant_pair": [
+            2,
+            3
+          ],
+          "core_persistence_score": 0.5454545454545454
+        }
+      ]
+    },
+    {
+      "factorization": [
+        3,
+        3,
+        9
+      ],
+      "summary": {
+        "mean_mean_pair_mi_score": 0.019516100379764097,
+        "mean_pair_entropy_score": 0.853537591610872,
+        "mean_anti_dominance_score": 0.7894668643332249,
+        "mean_pair_count_score": 0.6131471927654585,
+        "mean_core_persistence_score": 0.5454545454545453,
+        "mean_single_entropy_balance_score": 0.8035673103708706,
+        "temporal_stability_score": 0.9477645472574513,
+        "accessibility_score": 4.299726879444914
+      },
+      "snapshots": [
+        {
+          "step": 1,
+          "factorization": [
+            3,
+            3,
+            9
+          ],
+          "num_factors": 3,
+          "num_pairs": 3,
+          "single_entropies": [
+            0.002856304424082037,
+            0.0024854765099433947,
+            0.003541951915166469
+          ],
+          "mean_pair_mi_score": 0.0029612442830640774,
+          "pair_entropy_score": 0.9578646342334685,
+          "anti_dominance_score": 0.83933518222673,
+          "pair_count_score": 0.6131471927654585,
+          "single_entropy_balance_score": 0.8712398665037724,
+          "dominant_pair": [
+            0,
+            2
+          ],
+          "core_persistence_score": 0.5454545454545454
+        },
+        {
+          "step": 20,
+          "factorization": [
+            3,
+            3,
+            9
+          ],
+          "num_factors": 3,
+          "num_pairs": 3,
+          "single_entropies": [
+            0.0028632156949686617,
+            0.002466662588208671,
+            0.0035678379122189375
+          ],
+          "mean_pair_mi_score": 0.0029659053984653614,
+          "pair_entropy_score": 0.9544592984746487,
+          "anti_dominance_score": 0.8316727126511984,
+          "pair_count_score": 0.6131471927654585,
+          "single_entropy_balance_score": 0.8668981205442183,
+          "dominant_pair": [
+            0,
+            2
+          ],
+          "core_persistence_score": 0.5454545454545454
+        },
+        {
+          "step": 40,
+          "factorization": [
+            3,
+            3,
+            9
+          ],
+          "num_factors": 3,
+          "num_pairs": 3,
+          "single_entropies": [
+            0.0032090670682758888,
+            0.0028293289780833117,
+            0.0043280332759878005
+          ],
+          "mean_pair_mi_score": 0.003455476440782442,
+          "pair_entropy_score": 0.9315567950097878,
+          "anti_dominance_score": 0.8187956209717123,
+          "pair_count_score": 0.6131471927654585,
+          "single_entropy_balance_score": 0.8445199721447623,
+          "dominant_pair": [
+            0,
+            2
+          ],
+          "core_persistence_score": 0.5454545454545454
+        },
+        {
+          "step": 60,
+          "factorization": [
+            3,
+            3,
+            9
+          ],
+          "num_factors": 3,
+          "num_pairs": 3,
+          "single_entropies": [
+            0.0045928312428566605,
+            0.004322585266264931,
+            0.007177592663208377
+          ],
+          "mean_pair_mi_score": 0.005364336390777145,
+          "pair_entropy_score": 0.8737829557249447,
+          "anti_dominance_score": 0.8058005597294979,
+          "pair_count_score": 0.6131471927654585,
+          "single_entropy_balance_score": 0.8065167193485469,
+          "dominant_pair": [
+            0,
+            2
+          ],
+          "core_persistence_score": 0.5454545454545454
+        },
+        {
+          "step": 80,
+          "factorization": [
+            3,
+            3,
+            9
+          ],
+          "num_factors": 3,
+          "num_pairs": 3,
+          "single_entropies": [
+            0.007502925056447124,
+            0.007497615584117149,
+            0.012933594968418007
+          ],
+          "mean_pair_mi_score": 0.009311378536327372,
+          "pair_entropy_score": 0.8244103052258293,
+          "anti_dominance_score": 0.805210050785237,
+          "pair_count_score": 0.6131471927654585,
+          "single_entropy_balance_score": 0.7842697542401782,
+          "dominant_pair": [
+            0,
+            2
+          ],
+          "core_persistence_score": 0.5454545454545454
+        },
+        {
+          "step": 100,
+          "factorization": [
+            3,
+            3,
+            9
+          ],
+          "num_factors": 3,
+          "num_pairs": 3,
+          "single_entropies": [
+            0.011871285369577381,
+            0.012355154799943978,
+            0.021407781656852375
+          ],
+          "mean_pair_mi_score": 0.01521140727545866,
+          "pair_entropy_score": 0.8027350419899545,
+          "anti_dominance_score": 0.7804199279267943,
+          "pair_count_score": 0.6131471927654585,
+          "single_entropy_balance_score": 0.7761969011914371,
+          "dominant_pair": [
+            1,
+            2
+          ],
+          "core_persistence_score": 0.5454545454545454
+        },
+        {
+          "step": 120,
+          "factorization": [
+            3,
+            3,
+            9
+          ],
+          "num_factors": 3,
+          "num_pairs": 3,
+          "single_entropies": [
+            0.017126035398840868,
+            0.018339802904129024,
+            0.031500796651864636
+          ],
+          "mean_pair_mi_score": 0.02232221165161152,
+          "pair_entropy_score": 0.7975461526497309,
+          "anti_dominance_score": 0.7672194702806181,
+          "pair_count_score": 0.6131471927654585,
+          "single_entropy_balance_score": 0.7742342800629923,
+          "dominant_pair": [
+            1,
+            2
+          ],
+          "core_persistence_score": 0.5454545454545454
+        },
+        {
+          "step": 140,
+          "factorization": [
+            3,
+            3,
+            9
+          ],
+          "num_factors": 3,
+          "num_pairs": 3,
+          "single_entropies": [
+            0.02246292198831772,
+            0.024577929641717844,
+            0.04165026307282554
+          ],
+          "mean_pair_mi_score": 0.029563704900954002,
+          "pair_entropy_score": 0.8000213164956029,
+          "anti_dominance_score": 0.7598141729385582,
+          "pair_count_score": 0.6131471927654585,
+          "single_entropy_balance_score": 0.7748581708907238,
+          "dominant_pair": [
+            1,
+            2
+          ],
+          "core_persistence_score": 0.5454545454545454
+        },
+        {
+          "step": 160,
+          "factorization": [
+            3,
+            3,
+            9
+          ],
+          "num_factors": 3,
+          "num_pairs": 3,
+          "single_entropies": [
+            0.02722394245423012,
+            0.03025685850862431,
+            0.050503231194214446
+          ],
+          "mean_pair_mi_score": 0.03599467738569049,
+          "pair_entropy_score": 0.8066143887947895,
+          "anti_dominance_score": 0.7563324477816868,
+          "pair_count_score": 0.6131471927654585,
+          "single_entropy_balance_score": 0.7769492355223939,
+          "dominant_pair": [
+            1,
+            2
+          ],
+          "core_persistence_score": 0.5454545454545454
+        },
+        {
+          "step": 180,
+          "factorization": [
+            3,
+            3,
+            9
+          ],
+          "num_factors": 3,
+          "num_pairs": 3,
+          "single_entropies": [
+            0.03127454943968921,
+            0.03502426878850628,
+            0.0576309695798746
+          ],
+          "mean_pair_mi_score": 0.0413099292693569,
+          "pair_entropy_score": 0.8157429248118777,
+          "anti_dominance_score": 0.7570709994627859,
+          "pair_count_score": 0.6131471927654585,
+          "single_entropy_balance_score": 0.7801431130126851,
+          "dominant_pair": [
+            1,
+            2
+          ],
+          "core_persistence_score": 0.5454545454545454
+        },
+        {
+          "step": 200,
+          "factorization": [
+            3,
+            3,
+            9
+          ],
+          "num_factors": 3,
+          "num_pairs": 3,
+          "single_entropies": [
+            0.03523868785835408,
+            0.03927615472228779,
+            0.06413565535410712
+          ],
+          "mean_pair_mi_score": 0.0462168326449171,
+          "pair_entropy_score": 0.8241796943089562,
+          "anti_dominance_score": 0.7624643629106537,
+          "pair_count_score": 0.6131471927654585,
+          "single_entropy_balance_score": 0.7834142806178651,
+          "dominant_pair": [
+            1,
+            2
+          ],
+          "core_persistence_score": 0.5454545454545454
+        }
+      ]
+    },
+    {
+      "factorization": [
+        3,
+        27
+      ],
+      "summary": {
+        "mean_mean_pair_mi_score": 0.05711104464123428,
+        "mean_pair_entropy_score": 0.0,
+        "mean_anti_dominance_score": 0.0,
+        "mean_pair_count_score": 0.0,
+        "mean_core_persistence_score": 0.0,
+        "mean_single_entropy_balance_score": 0.9999999999999908,
+        "temporal_stability_score": 0.894336553424266,
+        "accessibility_score": 1.951447598065491
+      },
+      "snapshots": [
+        {
+          "step": 1,
+          "factorization": [
+            3,
+            27
+          ],
+          "num_factors": 2,
+          "num_pairs": 1,
+          "single_entropies": [
+            0.0028558944133469334,
+            0.0028558944133468206
+          ],
+          "mean_pair_mi_score": 0.005711788826693754,
+          "pair_entropy_score": 0.0,
+          "anti_dominance_score": 0.0,
+          "pair_count_score": 0.0,
+          "single_entropy_balance_score": 0.9999999999999802,
+          "dominant_pair": [
+            0,
+            1
+          ],
+          "core_persistence_score": 0.0
+        },
+        {
+          "step": 20,
+          "factorization": [
+            3,
+            27
+          ],
+          "num_factors": 2,
+          "num_pairs": 1,
+          "single_entropies": [
+            0.002860280202424743,
+            0.002860280202424741
+          ],
+          "mean_pair_mi_score": 0.005720560404849372,
+          "pair_entropy_score": 0.0,
+          "anti_dominance_score": 0.0,
+          "pair_count_score": 0.0,
+          "single_entropy_balance_score": 0.9999999999999996,
+          "dominant_pair": [
+            0,
+            1
+          ],
+          "core_persistence_score": 0.0
+        },
+        {
+          "step": 40,
+          "factorization": [
+            3,
+            27
+          ],
+          "num_factors": 2,
+          "num_pairs": 1,
+          "single_entropies": [
+            0.003257786889627369,
+            0.003257786889627593
+          ],
+          "mean_pair_mi_score": 0.006515573779254962,
+          "pair_entropy_score": 0.0,
+          "anti_dominance_score": 0.0,
+          "pair_count_score": 0.0,
+          "single_entropy_balance_score": 0.9999999999999657,
+          "dominant_pair": [
+            0,
+            1
+          ],
+          "core_persistence_score": 0.0
+        },
+        {
+          "step": 60,
+          "factorization": [
+            3,
+            27
+          ],
+          "num_factors": 2,
+          "num_pairs": 1,
+          "single_entropies": [
+            0.004945205511870242,
+            0.004945205511870202
+          ],
+          "mean_pair_mi_score": 0.009890411023740444,
+          "pair_entropy_score": 0.0,
+          "anti_dominance_score": 0.0,
+          "pair_count_score": 0.0,
+          "single_entropy_balance_score": 0.999999999999996,
+          "dominant_pair": [
+            0,
+            1
+          ],
+          "core_persistence_score": 0.0
+        },
+        {
+          "step": 80,
+          "factorization": [
+            3,
+            27
+          ],
+          "num_factors": 2,
+          "num_pairs": 1,
+          "single_entropies": [
+            0.00887528530375641,
+            0.008875285303756135
+          ],
+          "mean_pair_mi_score": 0.017750570607512436,
+          "pair_entropy_score": 0.0,
+          "anti_dominance_score": 0.0,
+          "pair_count_score": 0.0,
+          "single_entropy_balance_score": 0.9999999999999843,
+          "dominant_pair": [
+            0,
+            1
+          ],
+          "core_persistence_score": 0.0
+        },
+        {
+          "step": 100,
+          "factorization": [
+            3,
+            27
+          ],
+          "num_factors": 2,
+          "num_pairs": 1,
+          "single_entropies": [
+            0.015710707008286192,
+            0.01571070700828591
+          ],
+          "mean_pair_mi_score": 0.0314214140165721,
+          "pair_entropy_score": 0.0,
+          "anti_dominance_score": 0.0,
+          "pair_count_score": 0.0,
+          "single_entropy_balance_score": 0.9999999999999909,
+          "dominant_pair": [
+            0,
+            1
+          ],
+          "core_persistence_score": 0.0
+        },
+        {
+          "step": 120,
+          "factorization": [
+            3,
+            27
+          ],
+          "num_factors": 2,
+          "num_pairs": 1,
+          "single_entropies": [
+            0.025695704776988956,
+            0.02569570477698896
+          ],
+          "mean_pair_mi_score": 0.05139140955397792,
+          "pair_entropy_score": 0.0,
+          "anti_dominance_score": 0.0,
+          "pair_count_score": 0.0,
+          "single_entropy_balance_score": 0.9999999999999999,
+          "dominant_pair": [
+            0,
+            1
+          ],
+          "core_persistence_score": 0.0
+        },
+        {
+          "step": 140,
+          "factorization": [
+            3,
+            27
+          ],
+          "num_factors": 2,
+          "num_pairs": 1,
+          "single_entropies": [
+            0.03861671791542342,
+            0.03861671791542352
+          ],
+          "mean_pair_mi_score": 0.07723343583084694,
+          "pair_entropy_score": 0.0,
+          "anti_dominance_score": 0.0,
+          "pair_count_score": 0.0,
+          "single_entropy_balance_score": 0.9999999999999988,
+          "dominant_pair": [
+            0,
+            1
+          ],
+          "core_persistence_score": 0.0
+        },
+        {
+          "step": 160,
+          "factorization": [
+            3,
+            27
+          ],
+          "num_factors": 2,
+          "num_pairs": 1,
+          "single_entropies": [
+            0.053834011528523906,
+            0.05383401152852306
+          ],
+          "mean_pair_mi_score": 0.10766802305704697,
+          "pair_entropy_score": 0.0,
+          "anti_dominance_score": 0.0,
+          "pair_count_score": 0.0,
+          "single_entropy_balance_score": 0.9999999999999921,
+          "dominant_pair": [
+            0,
+            1
+          ],
+          "core_persistence_score": 0.0
+        },
+        {
+          "step": 180,
+          "factorization": [
+            3,
+            27
+          ],
+          "num_factors": 2,
+          "num_pairs": 1,
+          "single_entropies": [
+            0.07037639546020805,
+            0.07037639546020752
+          ],
+          "mean_pair_mi_score": 0.14075279092041557,
+          "pair_entropy_score": 0.0,
+          "anti_dominance_score": 0.0,
+          "pair_count_score": 0.0,
+          "single_entropy_balance_score": 0.9999999999999962,
+          "dominant_pair": [
+            0,
+            1
+          ],
+          "core_persistence_score": 0.0
+        },
+        {
+          "step": 200,
+          "factorization": [
+            3,
+            27
+          ],
+          "num_factors": 2,
+          "num_pairs": 1,
+          "single_entropies": [
+            0.08708275651633278,
+            0.08708275651633375
+          ],
+          "mean_pair_mi_score": 0.17416551303266653,
+          "pair_entropy_score": 0.0,
+          "anti_dominance_score": 0.0,
+          "pair_count_score": 0.0,
+          "single_entropy_balance_score": 0.9999999999999944,
+          "dominant_pair": [
+            0,
+            1
+          ],
+          "core_persistence_score": 0.0
+        }
+      ]
+    },
+    {
+      "factorization": [
+        9,
+        9
+      ],
+      "summary": {
+        "mean_mean_pair_mi_score": 0.007081273596373543,
+        "mean_pair_entropy_score": 0.0,
+        "mean_anti_dominance_score": 0.0,
+        "mean_pair_count_score": 0.0,
+        "mean_core_persistence_score": 0.0,
+        "mean_single_entropy_balance_score": 0.9999999999999843,
+        "temporal_stability_score": 0.9148934013064893,
+        "accessibility_score": 1.9219746749028472
+      },
+      "snapshots": [
+        {
+          "step": 1,
+          "factorization": [
+            9,
+            9
+          ],
+          "num_factors": 2,
+          "num_pairs": 1,
+          "single_entropies": [
+            0.00354203182250989,
+            0.003542031822509781
+          ],
+          "mean_pair_mi_score": 0.00708406364501956,
+          "pair_entropy_score": 0.0,
+          "anti_dominance_score": 0.0,
+          "pair_count_score": 0.0,
+          "single_entropy_balance_score": 0.9999999999999846,
+          "dominant_pair": [
+            0,
+            1
+          ],
+          "core_persistence_score": 0.0
+        },
+        {
+          "step": 20,
+          "factorization": [
+            9,
+            9
+          ],
+          "num_factors": 2,
+          "num_pairs": 1,
+          "single_entropies": [
+            0.0035417362572301068,
+            0.003541736257230108
+          ],
+          "mean_pair_mi_score": 0.007083472514460214,
+          "pair_entropy_score": 0.0,
+          "anti_dominance_score": 0.0,
+          "pair_count_score": 0.0,
+          "single_entropy_balance_score": 0.9999999999999998,
+          "dominant_pair": [
+            0,
+            1
+          ],
+          "core_persistence_score": 0.0
+        },
+        {
+          "step": 40,
+          "factorization": [
+            9,
+            9
+          ],
+          "num_factors": 2,
+          "num_pairs": 1,
+          "single_entropies": [
+            0.003541433940031651,
+            0.0035414339400314304
+          ],
+          "mean_pair_mi_score": 0.007082867880062859,
+          "pair_entropy_score": 0.0,
+          "anti_dominance_score": 0.0,
+          "pair_count_score": 0.0,
+          "single_entropy_balance_score": 0.9999999999999688,
+          "dominant_pair": [
+            0,
+            1
+          ],
+          "core_persistence_score": 0.0
+        },
+        {
+          "step": 60,
+          "factorization": [
+            9,
+            9
+          ],
+          "num_factors": 2,
+          "num_pairs": 1,
+          "single_entropies": [
+            0.003541141061668534,
+            0.003541141061668534
+          ],
+          "mean_pair_mi_score": 0.007082282123336957,
+          "pair_entropy_score": 0.0,
+          "anti_dominance_score": 0.0,
+          "pair_count_score": 0.0,
+          "single_entropy_balance_score": 1.0,
+          "dominant_pair": [
+            0,
+            1
+          ],
+          "core_persistence_score": 0.0
+        },
+        {
+          "step": 80,
+          "factorization": [
+            9,
+            9
+          ],
+          "num_factors": 2,
+          "num_pairs": 1,
+          "single_entropies": [
+            0.0035408580267529237,
+            0.0035408580267531427
+          ],
+          "mean_pair_mi_score": 0.007081716053506066,
+          "pair_entropy_score": 0.0,
+          "anti_dominance_score": 0.0,
+          "pair_count_score": 0.0,
+          "single_entropy_balance_score": 0.999999999999969,
+          "dominant_pair": [
+            0,
+            1
+          ],
+          "core_persistence_score": 0.0
+        },
+        {
+          "step": 100,
+          "factorization": [
+            9,
+            9
+          ],
+          "num_factors": 2,
+          "num_pairs": 1,
+          "single_entropies": [
+            0.0035405852282730885,
+            0.0035405852282730803
+          ],
+          "mean_pair_mi_score": 0.007081170456546168,
+          "pair_entropy_score": 0.0,
+          "anti_dominance_score": 0.0,
+          "pair_count_score": 0.0,
+          "single_entropy_balance_score": 0.9999999999999988,
+          "dominant_pair": [
+            0,
+            1
+          ],
+          "core_persistence_score": 0.0
+        },
+        {
+          "step": 120,
+          "factorization": [
+            9,
+            9
+          ],
+          "num_factors": 2,
+          "num_pairs": 1,
+          "single_entropies": [
+            0.0035403230473886726,
+            0.0035403230473884705
+          ],
+          "mean_pair_mi_score": 0.007080646094777143,
+          "pair_entropy_score": 0.0,
+          "anti_dominance_score": 0.0,
+          "pair_count_score": 0.0,
+          "single_entropy_balance_score": 0.9999999999999715,
+          "dominant_pair": [
+            0,
+            1
+          ],
+          "core_persistence_score": 0.0
+        },
+        {
+          "step": 140,
+          "factorization": [
+            9,
+            9
+          ],
+          "num_factors": 2,
+          "num_pairs": 1,
+          "single_entropies": [
+            0.00354007185324551,
+            0.0035400718532452736
+          ],
+          "mean_pair_mi_score": 0.007080143706490783,
+          "pair_entropy_score": 0.0,
+          "anti_dominance_score": 0.0,
+          "pair_count_score": 0.0,
+          "single_entropy_balance_score": 0.9999999999999666,
+          "dominant_pair": [
+            0,
+            1
+          ],
+          "core_persistence_score": 0.0
+        },
+        {
+          "step": 160,
+          "factorization": [
+            9,
+            9
+          ],
+          "num_factors": 2,
+          "num_pairs": 1,
+          "single_entropies": [
+            0.00353983200281843,
+            0.003539832002818345
+          ],
+          "mean_pair_mi_score": 0.007079664005636775,
+          "pair_entropy_score": 0.0,
+          "anti_dominance_score": 0.0,
+          "pair_count_score": 0.0,
+          "single_entropy_balance_score": 0.999999999999988,
+          "dominant_pair": [
+            0,
+            1
+          ],
+          "core_persistence_score": 0.0
+        },
+        {
+          "step": 180,
+          "factorization": [
+            9,
+            9
+          ],
+          "num_factors": 2,
+          "num_pairs": 1,
+          "single_entropies": [
+            0.0035396038407736197,
+            0.0035396038407734948
+          ],
+          "mean_pair_mi_score": 0.0070792076815471144,
+          "pair_entropy_score": 0.0,
+          "anti_dominance_score": 0.0,
+          "pair_count_score": 0.0,
+          "single_entropy_balance_score": 0.9999999999999823,
+          "dominant_pair": [
+            0,
+            1
+          ],
+          "core_persistence_score": 0.0
+        },
+        {
+          "step": 200,
+          "factorization": [
+            9,
+            9
+          ],
+          "num_factors": 2,
+          "num_pairs": 1,
+          "single_entropies": [
+            0.0035393876993626686,
+            0.0035393876993626565
+          ],
+          "mean_pair_mi_score": 0.007078775398725325,
+          "pair_entropy_score": 0.0,
+          "anti_dominance_score": 0.0,
+          "pair_count_score": 0.0,
+          "single_entropy_balance_score": 0.9999999999999983,
+          "dominant_pair": [
+            0,
+            1
+          ],
+          "core_persistence_score": 0.0
+        }
+      ]
+    }
+  ],
+  "best_factorization": [
+    3,
+    3,
+    3,
+    3
+  ]
+}

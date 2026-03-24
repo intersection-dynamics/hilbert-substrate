@@ -1,0 +1,1094 @@
+{
+  "script": "hsf_factorization_accessibility_observer.py",
+  "physics_config": {
+    "n_max": 4,
+    "n_init": 2,
+    "seed": 2,
+    "local_scale": 0.15,
+    "pair_scale": 0.12,
+    "spawn_pair_scale": 0.11,
+    "total_steps": 1,
+    "dt": 0.04,
+    "eval_every": 1,
+    "lookahead_windows": 1,
+    "weaken_factor": 0.55,
+    "demote_edge_threshold": 0.25,
+    "progress_every": 0,
+    "device": "cpu"
+  },
+  "accessibility_config": {
+    "w_locality": 1.0,
+    "w_signal_leakage": 1.0,
+    "w_pair_entropy": 1.0,
+    "w_anti_dominance": 1.0,
+    "w_pair_count": 1.0,
+    "w_core_persistence": 0.5,
+    "w_connected_corr": 1.0
+  },
+  "initial_state": "perturbed_zero",
+  "perturb_eps": 0.01,
+  "total_dimension": 81,
+  "candidate_factorizations": [
+    [
+      3,
+      27
+    ],
+    [
+      9,
+      9
+    ],
+    [
+      3,
+      3,
+      9
+    ],
+    [
+      3,
+      3,
+      3,
+      3
+    ]
+  ],
+  "max_pairs_in_grid": 6,
+  "results": [
+    {
+      "factorization": [
+        3,
+        3,
+        3,
+        3
+      ],
+      "summary": {
+        "mean_locality_like_score": 0.8705205922204658,
+        "mean_signal_leakage_score": 0.957520322598119,
+        "mean_pair_entropy_score": 0.9938666107396674,
+        "mean_anti_dominance_score": 0.9445388975838616,
+        "mean_pair_count_score": 1.0,
+        "mean_connected_corr": 0.00019172332241873785,
+        "mean_core_persistence_score": 1.0,
+        "accessibility_score": 5.266638146464532
+      },
+      "snapshots": [
+        {
+          "step": 1,
+          "factorization": [
+            3,
+            3,
+            3,
+            3
+          ],
+          "num_factors": 4,
+          "num_pairs": 6,
+          "mean_mi": 0.0005129957990735427,
+          "mean_connected_corr": 0.00020941210958542992,
+          "pair_entropy_score": 0.9890287680362299,
+          "anti_dominance_score": 0.9079861310269732,
+          "pair_count_score": 1.0,
+          "locality_like_score": 0.8275681580075361,
+          "signal_leakage_score": 0.9574288945869287,
+          "dominant_pair": [
+            0,
+            3
+          ],
+          "core_persistence_score": 1.0
+        },
+        {
+          "step": 20,
+          "factorization": [
+            3,
+            3,
+            3,
+            3
+          ],
+          "num_factors": 4,
+          "num_pairs": 6,
+          "mean_mi": 0.0005131867018111853,
+          "mean_connected_corr": 0.00021675924911481468,
+          "pair_entropy_score": 0.9908783391008947,
+          "anti_dominance_score": 0.9162481818013088,
+          "pair_count_score": 1.0,
+          "locality_like_score": 0.840811093716802,
+          "signal_leakage_score": 0.9564863763755056,
+          "dominant_pair": [
+            0,
+            3
+          ],
+          "core_persistence_score": 1.0
+        },
+        {
+          "step": 40,
+          "factorization": [
+            3,
+            3,
+            3,
+            3
+          ],
+          "num_factors": 4,
+          "num_pairs": 6,
+          "mean_mi": 0.0005132920746407044,
+          "mean_connected_corr": 0.00021898972845189402,
+          "pair_entropy_score": 0.9927866664588763,
+          "anti_dominance_score": 0.9263339780624943,
+          "pair_count_score": 1.0,
+          "locality_like_score": 0.8566195066979212,
+          "signal_leakage_score": 0.95581424121075,
+          "dominant_pair": [
+            0,
+            3
+          ],
+          "core_persistence_score": 1.0
+        },
+        {
+          "step": 60,
+          "factorization": [
+            3,
+            3,
+            3,
+            3
+          ],
+          "num_factors": 4,
+          "num_pairs": 6,
+          "mean_mi": 0.0005132951107577095,
+          "mean_connected_corr": 0.00021672001118917892,
+          "pair_entropy_score": 0.9945067123936067,
+          "anti_dominance_score": 0.9378999505991172,
+          "pair_count_score": 1.0,
+          "locality_like_score": 0.8735878253671985,
+          "signal_leakage_score": 0.9554754895626162,
+          "dominant_pair": [
+            0,
+            3
+          ],
+          "core_persistence_score": 1.0
+        },
+        {
+          "step": 80,
+          "factorization": [
+            3,
+            3,
+            3,
+            3
+          ],
+          "num_factors": 4,
+          "num_pairs": 6,
+          "mean_mi": 0.0005131952885637048,
+          "mean_connected_corr": 0.00021107295602452214,
+          "pair_entropy_score": 0.9958557376001741,
+          "anti_dominance_score": 0.9507922704921387,
+          "pair_count_score": 1.0,
+          "locality_like_score": 0.8896901262852607,
+          "signal_leakage_score": 0.9554752746372734,
+          "dominant_pair": [
+            0,
+            3
+          ],
+          "core_persistence_score": 1.0
+        },
+        {
+          "step": 100,
+          "factorization": [
+            3,
+            3,
+            3,
+            3
+          ],
+          "num_factors": 4,
+          "num_pairs": 6,
+          "mean_mi": 0.0005129929905438227,
+          "mean_connected_corr": 0.00020079166320285762,
+          "pair_entropy_score": 0.996496008145761,
+          "anti_dominance_score": 0.961227458846998,
+          "pair_count_score": 1.0,
+          "locality_like_score": 0.8987056570243205,
+          "signal_leakage_score": 0.9558196393031986,
+          "dominant_pair": [
+            0,
+            3
+          ],
+          "core_persistence_score": 1.0
+        },
+        {
+          "step": 120,
+          "factorization": [
+            3,
+            3,
+            3,
+            3
+          ],
+          "num_factors": 4,
+          "num_pairs": 6,
+          "mean_mi": 0.0005126889196085437,
+          "mean_connected_corr": 0.00019202358255363146,
+          "pair_entropy_score": 0.9959009896862089,
+          "anti_dominance_score": 0.9609816236765952,
+          "pair_count_score": 1.0,
+          "locality_like_score": 0.8914767662878161,
+          "signal_leakage_score": 0.9565142131912427,
+          "dominant_pair": [
+            0,
+            3
+          ],
+          "core_persistence_score": 1.0
+        },
+        {
+          "step": 140,
+          "factorization": [
+            3,
+            3,
+            3,
+            3
+          ],
+          "num_factors": 4,
+          "num_pairs": 6,
+          "mean_mi": 0.0005122981497813708,
+          "mean_connected_corr": 0.0001785039360614692,
+          "pair_entropy_score": 0.9950912842234629,
+          "anti_dominance_score": 0.9593826131975909,
+          "pair_count_score": 1.0,
+          "locality_like_score": 0.8823603912309042,
+          "signal_leakage_score": 0.9575530421320366,
+          "dominant_pair": [
+            0,
+            3
+          ],
+          "core_persistence_score": 1.0
+        },
+        {
+          "step": 160,
+          "factorization": [
+            3,
+            3,
+            3,
+            3
+          ],
+          "num_factors": 4,
+          "num_pairs": 6,
+          "mean_mi": 0.0005118388342541844,
+          "mean_connected_corr": 0.00016687707465530416,
+          "pair_entropy_score": 0.9942319652382057,
+          "anti_dominance_score": 0.9562403932139174,
+          "pair_count_score": 1.0,
+          "locality_like_score": 0.8735798651120724,
+          "signal_leakage_score": 0.958925717510223,
+          "dominant_pair": [
+            0,
+            3
+          ],
+          "core_persistence_score": 1.0
+        },
+        {
+          "step": 180,
+          "factorization": [
+            3,
+            3,
+            3,
+            3
+          ],
+          "num_factors": 4,
+          "num_pairs": 6,
+          "mean_mi": 0.0005113311275945746,
+          "mean_connected_corr": 0.00015352149752409774,
+          "pair_entropy_score": 0.9936374728463401,
+          "anti_dominance_score": 0.9547765142528588,
+          "pair_count_score": 1.0,
+          "locality_like_score": 0.8681776268421767,
+          "signal_leakage_score": 0.960618113049603,
+          "dominant_pair": [
+            0,
+            3
+          ],
+          "core_persistence_score": 1.0
+        },
+        {
+          "step": 200,
+          "factorization": [
+            3,
+            3,
+            3,
+            3
+          ],
+          "num_factors": 4,
+          "num_pairs": 6,
+          "mean_mi": 0.0005107970172435933,
+          "mean_connected_corr": 0.00014428473824291632,
+          "pair_entropy_score": 0.994118774406581,
+          "anti_dominance_score": 0.9580587582524867,
+          "pair_count_score": 1.0,
+          "locality_like_score": 0.8731494978531168,
+          "signal_leakage_score": 0.9626125470199296,
+          "dominant_pair": [
+            0,
+            3
+          ],
+          "core_persistence_score": 1.0
+        }
+      ]
+    },
+    {
+      "factorization": [
+        3,
+        3,
+        9
+      ],
+      "summary": {
+        "mean_locality_like_score": 0.8149588168181287,
+        "mean_signal_leakage_score": 0.8747933395487604,
+        "mean_pair_entropy_score": 0.9748456158312732,
+        "mean_anti_dominance_score": 0.899078013772742,
+        "mean_pair_count_score": 0.6131471927654585,
+        "mean_connected_corr": 0.0001619818749185337,
+        "mean_core_persistence_score": 0.6363636363636365,
+        "accessibility_score": 4.4951667787931
+      },
+      "snapshots": [
+        {
+          "step": 1,
+          "factorization": [
+            3,
+            3,
+            9
+          ],
+          "num_factors": 3,
+          "num_pairs": 3,
+          "mean_mi": 0.0008064480794378895,
+          "mean_connected_corr": 0.00013600417514548902,
+          "pair_entropy_score": 0.9713641619395671,
+          "anti_dominance_score": 0.8826517374358477,
+          "pair_count_score": 0.6131471927654585,
+          "locality_like_score": 0.8042544638366943,
+          "signal_leakage_score": 0.8783040175855502,
+          "dominant_pair": [
+            0,
+            2
+          ],
+          "core_persistence_score": 0.6363636363636364
+        },
+        {
+          "step": 20,
+          "factorization": [
+            3,
+            3,
+            9
+          ],
+          "num_factors": 3,
+          "num_pairs": 3,
+          "mean_mi": 0.000806494331512355,
+          "mean_connected_corr": 0.00015618652073070207,
+          "pair_entropy_score": 0.9740500667914824,
+          "anti_dominance_score": 0.8849251192817389,
+          "pair_count_score": 0.6131471927654585,
+          "locality_like_score": 0.8114159816929427,
+          "signal_leakage_score": 0.8766325953384867,
+          "dominant_pair": [
+            0,
+            2
+          ],
+          "core_persistence_score": 0.6363636363636364
+        },
+        {
+          "step": 40,
+          "factorization": [
+            3,
+            3,
+            9
+          ],
+          "num_factors": 3,
+          "num_pairs": 3,
+          "mean_mi": 0.0008065408123978059,
+          "mean_connected_corr": 0.00017277711296383874,
+          "pair_entropy_score": 0.9771187484925613,
+          "anti_dominance_score": 0.8886006094633501,
+          "pair_count_score": 0.6131471927654585,
+          "locality_like_score": 0.8203428872849423,
+          "signal_leakage_score": 0.8751992704295429,
+          "dominant_pair": [
+            0,
+            2
+          ],
+          "core_persistence_score": 0.6363636363636364
+        },
+        {
+          "step": 60,
+          "factorization": [
+            3,
+            3,
+            9
+          ],
+          "num_factors": 3,
+          "num_pairs": 3,
+          "mean_mi": 0.000806583354492189,
+          "mean_connected_corr": 0.00018594780644901702,
+          "pair_entropy_score": 0.9794660717268562,
+          "anti_dominance_score": 0.8946608261671205,
+          "pair_count_score": 0.6131471927654585,
+          "locality_like_score": 0.8279855728277414,
+          "signal_leakage_score": 0.8741120333533869,
+          "dominant_pair": [
+            0,
+            2
+          ],
+          "core_persistence_score": 0.6363636363636364
+        },
+        {
+          "step": 80,
+          "factorization": [
+            3,
+            3,
+            9
+          ],
+          "num_factors": 3,
+          "num_pairs": 3,
+          "mean_mi": 0.0008066203986205343,
+          "mean_connected_corr": 0.00019661424607500324,
+          "pair_entropy_score": 0.9804218563792533,
+          "anti_dominance_score": 0.903620970260101,
+          "pair_count_score": 0.6131471927654585,
+          "locality_like_score": 0.831656145286445,
+          "signal_leakage_score": 0.873379687162263,
+          "dominant_pair": [
+            0,
+            2
+          ],
+          "core_persistence_score": 0.6363636363636364
+        },
+        {
+          "step": 100,
+          "factorization": [
+            3,
+            3,
+            9
+          ],
+          "num_factors": 3,
+          "num_pairs": 3,
+          "mean_mi": 0.0008066505894788585,
+          "mean_connected_corr": 0.00019748292014805122,
+          "pair_entropy_score": 0.9799773128687237,
+          "anti_dominance_score": 0.9109706688011071,
+          "pair_count_score": 0.6131471927654585,
+          "locality_like_score": 0.8304900293954256,
+          "signal_leakage_score": 0.873007920758418,
+          "dominant_pair": [
+            0,
+            2
+          ],
+          "core_persistence_score": 0.6363636363636364
+        },
+        {
+          "step": 120,
+          "factorization": [
+            3,
+            3,
+            9
+          ],
+          "num_factors": 3,
+          "num_pairs": 3,
+          "mean_mi": 0.0008066728245413544,
+          "mean_connected_corr": 0.00018814447509152806,
+          "pair_entropy_score": 0.9779515442115985,
+          "anti_dominance_score": 0.9162369276264758,
+          "pair_count_score": 0.6131471927654585,
+          "locality_like_score": 0.8240711326829455,
+          "signal_leakage_score": 0.8729993085200543,
+          "dominant_pair": [
+            0,
+            2
+          ],
+          "core_persistence_score": 0.6363636363636364
+        },
+        {
+          "step": 140,
+          "factorization": [
+            3,
+            3,
+            9
+          ],
+          "num_factors": 3,
+          "num_pairs": 3,
+          "mean_mi": 0.0008066862935583622,
+          "mean_connected_corr": 0.00016935823168477096,
+          "pair_entropy_score": 0.9742199079098643,
+          "anti_dominance_score": 0.9179875157257058,
+          "pair_count_score": 0.6131471927654585,
+          "locality_like_score": 0.8129712623715647,
+          "signal_leakage_score": 0.8733533278317844,
+          "dominant_pair": [
+            1,
+            2
+          ],
+          "core_persistence_score": 0.6363636363636364
+        },
+        {
+          "step": 160,
+          "factorization": [
+            3,
+            3,
+            9
+          ],
+          "num_factors": 3,
+          "num_pairs": 3,
+          "mean_mi": 0.0008066905073304877,
+          "mean_connected_corr": 0.0001482261086644624,
+          "pair_entropy_score": 0.971218001565725,
+          "anti_dominance_score": 0.904990517456736,
+          "pair_count_score": 0.6131471927654585,
+          "locality_like_score": 0.804740247857785,
+          "signal_leakage_score": 0.8740663921472909,
+          "dominant_pair": [
+            1,
+            2
+          ],
+          "core_persistence_score": 0.6363636363636364
+        },
+        {
+          "step": 180,
+          "factorization": [
+            3,
+            3,
+            9
+          ],
+          "num_factors": 3,
+          "num_pairs": 3,
+          "mean_mi": 0.0008066853148407373,
+          "mean_connected_corr": 0.00012250687542327888,
+          "pair_entropy_score": 0.9679553632590825,
+          "anti_dominance_score": 0.8928703270232036,
+          "pair_count_score": 0.6131471927654585,
+          "locality_like_score": 0.7963871315338017,
+          "signal_leakage_score": 0.8751318978617744,
+          "dominant_pair": [
+            1,
+            2
+          ],
+          "core_persistence_score": 0.6363636363636364
+        },
+        {
+          "step": 200,
+          "factorization": [
+            3,
+            3,
+            9
+          ],
+          "num_factors": 3,
+          "num_pairs": 3,
+          "mean_mi": 0.0008066709082642691,
+          "mean_connected_corr": 0.00010855215172772888,
+          "pair_entropy_score": 0.9695587389992902,
+          "anti_dominance_score": 0.8923429322587743,
+          "pair_count_score": 0.6131471927654585,
+          "locality_like_score": 0.8002321302291281,
+          "signal_leakage_score": 0.8765402840478133,
+          "dominant_pair": [
+            1,
+            2
+          ],
+          "core_persistence_score": 0.6363636363636364
+        }
+      ]
+    },
+    {
+      "factorization": [
+        9,
+        9
+      ],
+      "summary": {
+        "mean_locality_like_score": 1.0,
+        "mean_signal_leakage_score": 0.0,
+        "mean_pair_entropy_score": 0.0,
+        "mean_anti_dominance_score": 0.0,
+        "mean_pair_count_score": 0.0,
+        "mean_connected_corr": 0.00013908159990688203,
+        "mean_core_persistence_score": 0.0,
+        "accessibility_score": 1.000139081599907
+      },
+      "snapshots": [
+        {
+          "step": 1,
+          "factorization": [
+            9,
+            9
+          ],
+          "num_factors": 2,
+          "num_pairs": 1,
+          "mean_mi": 0.0018934083771896095,
+          "mean_connected_corr": 0.00016091146180866368,
+          "pair_entropy_score": 0.0,
+          "anti_dominance_score": 0.0,
+          "pair_count_score": 0.0,
+          "locality_like_score": 1.0,
+          "signal_leakage_score": 0.0,
+          "dominant_pair": [
+            0,
+            1
+          ],
+          "core_persistence_score": 0.0
+        },
+        {
+          "step": 20,
+          "factorization": [
+            9,
+            9
+          ],
+          "num_factors": 2,
+          "num_pairs": 1,
+          "mean_mi": 0.001893408377189826,
+          "mean_connected_corr": 0.00017875706410814683,
+          "pair_entropy_score": 0.0,
+          "anti_dominance_score": 0.0,
+          "pair_count_score": 0.0,
+          "locality_like_score": 1.0,
+          "signal_leakage_score": 0.0,
+          "dominant_pair": [
+            0,
+            1
+          ],
+          "core_persistence_score": 0.0
+        },
+        {
+          "step": 40,
+          "factorization": [
+            9,
+            9
+          ],
+          "num_factors": 2,
+          "num_pairs": 1,
+          "mean_mi": 0.0018934083771909916,
+          "mean_connected_corr": 0.0001896541893864555,
+          "pair_entropy_score": 0.0,
+          "anti_dominance_score": 0.0,
+          "pair_count_score": 0.0,
+          "locality_like_score": 1.0,
+          "signal_leakage_score": 0.0,
+          "dominant_pair": [
+            0,
+            1
+          ],
+          "core_persistence_score": 0.0
+        },
+        {
+          "step": 60,
+          "factorization": [
+            9,
+            9
+          ],
+          "num_factors": 2,
+          "num_pairs": 1,
+          "mean_mi": 0.0018934083771916849,
+          "mean_connected_corr": 0.00019197435458683586,
+          "pair_entropy_score": 0.0,
+          "anti_dominance_score": 0.0,
+          "pair_count_score": 0.0,
+          "locality_like_score": 1.0,
+          "signal_leakage_score": 0.0,
+          "dominant_pair": [
+            0,
+            1
+          ],
+          "core_persistence_score": 0.0
+        },
+        {
+          "step": 80,
+          "factorization": [
+            9,
+            9
+          ],
+          "num_factors": 2,
+          "num_pairs": 1,
+          "mean_mi": 0.0018934083771928244,
+          "mean_connected_corr": 0.00018572675496015542,
+          "pair_entropy_score": 0.0,
+          "anti_dominance_score": 0.0,
+          "pair_count_score": 0.0,
+          "locality_like_score": 1.0,
+          "signal_leakage_score": 0.0,
+          "dominant_pair": [
+            0,
+            1
+          ],
+          "core_persistence_score": 0.0
+        },
+        {
+          "step": 100,
+          "factorization": [
+            9,
+            9
+          ],
+          "num_factors": 2,
+          "num_pairs": 1,
+          "mean_mi": 0.001893408377192215,
+          "mean_connected_corr": 0.00017140111858227674,
+          "pair_entropy_score": 0.0,
+          "anti_dominance_score": 0.0,
+          "pair_count_score": 0.0,
+          "locality_like_score": 1.0,
+          "signal_leakage_score": 0.0,
+          "dominant_pair": [
+            0,
+            1
+          ],
+          "core_persistence_score": 0.0
+        },
+        {
+          "step": 120,
+          "factorization": [
+            9,
+            9
+          ],
+          "num_factors": 2,
+          "num_pairs": 1,
+          "mean_mi": 0.0018934083771947438,
+          "mean_connected_corr": 0.00014990636899702803,
+          "pair_entropy_score": 0.0,
+          "anti_dominance_score": 0.0,
+          "pair_count_score": 0.0,
+          "locality_like_score": 1.0,
+          "signal_leakage_score": 0.0,
+          "dominant_pair": [
+            0,
+            1
+          ],
+          "core_persistence_score": 0.0
+        },
+        {
+          "step": 140,
+          "factorization": [
+            9,
+            9
+          ],
+          "num_factors": 2,
+          "num_pairs": 1,
+          "mean_mi": 0.001893408377197744,
+          "mean_connected_corr": 0.0001224847674648329,
+          "pair_entropy_score": 0.0,
+          "anti_dominance_score": 0.0,
+          "pair_count_score": 0.0,
+          "locality_like_score": 1.0,
+          "signal_leakage_score": 0.0,
+          "dominant_pair": [
+            0,
+            1
+          ],
+          "core_persistence_score": 0.0
+        },
+        {
+          "step": 160,
+          "factorization": [
+            9,
+            9
+          ],
+          "num_factors": 2,
+          "num_pairs": 1,
+          "mean_mi": 0.0018934083771937576,
+          "mean_connected_corr": 9.060971242605356e-05,
+          "pair_entropy_score": 0.0,
+          "anti_dominance_score": 0.0,
+          "pair_count_score": 0.0,
+          "locality_like_score": 1.0,
+          "signal_leakage_score": 0.0,
+          "dominant_pair": [
+            0,
+            1
+          ],
+          "core_persistence_score": 0.0
+        },
+        {
+          "step": 180,
+          "factorization": [
+            9,
+            9
+          ],
+          "num_factors": 2,
+          "num_pairs": 1,
+          "mean_mi": 0.001893408377196389,
+          "mean_connected_corr": 5.587627846723702e-05,
+          "pair_entropy_score": 0.0,
+          "anti_dominance_score": 0.0,
+          "pair_count_score": 0.0,
+          "locality_like_score": 1.0,
+          "signal_leakage_score": 0.0,
+          "dominant_pair": [
+            0,
+            1
+          ],
+          "core_persistence_score": 0.0
+        },
+        {
+          "step": 200,
+          "factorization": [
+            9,
+            9
+          ],
+          "num_factors": 2,
+          "num_pairs": 1,
+          "mean_mi": 0.001893408377196532,
+          "mean_connected_corr": 3.259552818801692e-05,
+          "pair_entropy_score": 0.0,
+          "anti_dominance_score": 0.0,
+          "pair_count_score": 0.0,
+          "locality_like_score": 1.0,
+          "signal_leakage_score": 0.0,
+          "dominant_pair": [
+            0,
+            1
+          ],
+          "core_persistence_score": 0.0
+        }
+      ]
+    },
+    {
+      "factorization": [
+        3,
+        27
+      ],
+      "summary": {
+        "mean_locality_like_score": 1.0,
+        "mean_signal_leakage_score": 0.0,
+        "mean_pair_entropy_score": 0.0,
+        "mean_anti_dominance_score": 0.0,
+        "mean_pair_count_score": 0.0,
+        "mean_connected_corr": 0.00013664906764004843,
+        "mean_core_persistence_score": 0.0,
+        "accessibility_score": 1.00013664906764
+      },
+      "snapshots": [
+        {
+          "step": 1,
+          "factorization": [
+            3,
+            27
+          ],
+          "num_factors": 2,
+          "num_pairs": 1,
+          "mean_mi": 0.001528666923148385,
+          "mean_connected_corr": 0.00010042253994955717,
+          "pair_entropy_score": 0.0,
+          "anti_dominance_score": 0.0,
+          "pair_count_score": 0.0,
+          "locality_like_score": 1.0,
+          "signal_leakage_score": 0.0,
+          "dominant_pair": [
+            0,
+            1
+          ],
+          "core_persistence_score": 0.0
+        },
+        {
+          "step": 20,
+          "factorization": [
+            3,
+            27
+          ],
+          "num_factors": 2,
+          "num_pairs": 1,
+          "mean_mi": 0.0015315591739650581,
+          "mean_connected_corr": 0.00013019223775447415,
+          "pair_entropy_score": 0.0,
+          "anti_dominance_score": 0.0,
+          "pair_count_score": 0.0,
+          "locality_like_score": 1.0,
+          "signal_leakage_score": 0.0,
+          "dominant_pair": [
+            0,
+            1
+          ],
+          "core_persistence_score": 0.0
+        },
+        {
+          "step": 40,
+          "factorization": [
+            3,
+            27
+          ],
+          "num_factors": 2,
+          "num_pairs": 1,
+          "mean_mi": 0.001534068636031533,
+          "mean_connected_corr": 0.0001615458635066378,
+          "pair_entropy_score": 0.0,
+          "anti_dominance_score": 0.0,
+          "pair_count_score": 0.0,
+          "locality_like_score": 1.0,
+          "signal_leakage_score": 0.0,
+          "dominant_pair": [
+            0,
+            1
+          ],
+          "core_persistence_score": 0.0
+        },
+        {
+          "step": 60,
+          "factorization": [
+            3,
+            27
+          ],
+          "num_factors": 2,
+          "num_pairs": 1,
+          "mean_mi": 0.0015360033176329284,
+          "mean_connected_corr": 0.00018561623287481757,
+          "pair_entropy_score": 0.0,
+          "anti_dominance_score": 0.0,
+          "pair_count_score": 0.0,
+          "locality_like_score": 1.0,
+          "signal_leakage_score": 0.0,
+          "dominant_pair": [
+            0,
+            1
+          ],
+          "core_persistence_score": 0.0
+        },
+        {
+          "step": 80,
+          "factorization": [
+            3,
+            27
+          ],
+          "num_factors": 2,
+          "num_pairs": 1,
+          "mean_mi": 0.0015373422717181225,
+          "mean_connected_corr": 0.00019621139199034354,
+          "pair_entropy_score": 0.0,
+          "anti_dominance_score": 0.0,
+          "pair_count_score": 0.0,
+          "locality_like_score": 1.0,
+          "signal_leakage_score": 0.0,
+          "dominant_pair": [
+            0,
+            1
+          ],
+          "core_persistence_score": 0.0
+        },
+        {
+          "step": 100,
+          "factorization": [
+            3,
+            27
+          ],
+          "num_factors": 2,
+          "num_pairs": 1,
+          "mean_mi": 0.0015380704518768071,
+          "mean_connected_corr": 0.0001906266694097559,
+          "pair_entropy_score": 0.0,
+          "anti_dominance_score": 0.0,
+          "pair_count_score": 0.0,
+          "locality_like_score": 1.0,
+          "signal_leakage_score": 0.0,
+          "dominant_pair": [
+            0,
+            1
+          ],
+          "core_persistence_score": 0.0
+        },
+        {
+          "step": 120,
+          "factorization": [
+            3,
+            27
+          ],
+          "num_factors": 2,
+          "num_pairs": 1,
+          "mean_mi": 0.0015381789339982029,
+          "mean_connected_corr": 0.0001684818239866458,
+          "pair_entropy_score": 0.0,
+          "anti_dominance_score": 0.0,
+          "pair_count_score": 0.0,
+          "locality_like_score": 1.0,
+          "signal_leakage_score": 0.0,
+          "dominant_pair": [
+            0,
+            1
+          ],
+          "core_persistence_score": 0.0
+        },
+        {
+          "step": 140,
+          "factorization": [
+            3,
+            27
+          ],
+          "num_factors": 2,
+          "num_pairs": 1,
+          "mean_mi": 0.0015376650661677134,
+          "mean_connected_corr": 0.00013184354430181874,
+          "pair_entropy_score": 0.0,
+          "anti_dominance_score": 0.0,
+          "pair_count_score": 0.0,
+          "locality_like_score": 1.0,
+          "signal_leakage_score": 0.0,
+          "dominant_pair": [
+            0,
+            1
+          ],
+          "core_persistence_score": 0.0
+        },
+        {
+          "step": 160,
+          "factorization": [
+            3,
+            27
+          ],
+          "num_factors": 2,
+          "num_pairs": 1,
+          "mean_mi": 0.0015365325441467166,
+          "mean_connected_corr": 0.00010123870830244146,
+          "pair_entropy_score": 0.0,
+          "anti_dominance_score": 0.0,
+          "pair_count_score": 0.0,
+          "locality_like_score": 1.0,
+          "signal_leakage_score": 0.0,
+          "dominant_pair": [
+            0,
+            1
+          ],
+          "core_persistence_score": 0.0
+        },
+        {
+          "step": 180,
+          "factorization": [
+            3,
+            27
+          ],
+          "num_factors": 2,
+          "num_pairs": 1,
+          "mean_mi": 0.0015347914107433356,
+          "mean_connected_corr": 6.862858036775304e-05,
+          "pair_entropy_score": 0.0,
+          "anti_dominance_score": 0.0,
+          "pair_count_score": 0.0,
+          "locality_like_score": 1.0,
+          "signal_leakage_score": 0.0,
+          "dominant_pair": [
+            0,
+            1
+          ],
+          "core_persistence_score": 0.0
+        },
+        {
+          "step": 200,
+          "factorization": [
+            3,
+            27
+          ],
+          "num_factors": 2,
+          "num_pairs": 1,
+          "mean_mi": 0.001532457978264879,
+          "mean_connected_corr": 6.833215159628752e-05,
+          "pair_entropy_score": 0.0,
+          "anti_dominance_score": 0.0,
+          "pair_count_score": 0.0,
+          "locality_like_score": 1.0,
+          "signal_leakage_score": 0.0,
+          "dominant_pair": [
+            0,
+            1
+          ],
+          "core_persistence_score": 0.0
+        }
+      ]
+    }
+  ],
+  "best_factorization": [
+    3,
+    3,
+    3,
+    3
+  ],
+  "gpu_enabled": false
+}
